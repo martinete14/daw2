@@ -2,11 +2,18 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Botón contador</title>
+  <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-  <button id="boton">Hacé clic</button>
-  <p>Clics: <span id="contador">0</span></p>
+  <div class="fondo" id="fondo"></div>
+
+  <main>
+    <p class="etiqueta">Clics</p>
+    <p class="numero" id="contador">0</p>
+    <button id="boton">Sumar uno</button>
+  </main>
 
   <script src="boton.js"></script>
 </body>
