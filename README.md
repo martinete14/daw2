@@ -1,14 +1,8 @@
 # DAW2
 
-Acá voy guardando lo que hago en el segundo año de Desarrollo de Aplicaciones Web en ILERNA: ejercicios, prácticas y apuntes. Trabajo desde dos PCs (la de casa y la del centro), y este repo es lo que las mantiene sincronizadas.
+Mis cosas de 2º de DAW en ILERNA. Lo subo todo acá para poder seguir en la PC de casa lo que empecé en clase, y al revés, porque este año no tengo laptop.
 
-Hay una carpeta por asignatura.
+Una carpeta por asignatura, y va creciendo a medida que avanzo.
 
-## Qué hay adentro
-
-- **PYTHON**: mis primeros pasos con Python. Por ahora tiene `hola.py`, el clásico "Hola mundo".
-- **WEBCLIENTE**: prácticas de JavaScript en el navegador. Ahora mismo hay un botón que cuenta cuántas veces le hacés clic (`index.html` y `boton.js`).
-
-## Cómo lo uso
-
-Al sentarme: `git pull`. Al terminar: `git add .`, `git commit -m "lo que hice"` y `git push`.
+- `PYTHON`: lo de Python. Por ahora solo el hola mundo.
+- `WEBCLIENTE`: JavaScript en el navegador. Hay un botón que cuenta los clics, nada más por ahora.
