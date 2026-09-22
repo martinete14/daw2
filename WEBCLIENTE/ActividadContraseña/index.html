@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Generador y evaluador de contraseñas</title>
+  </head>
+  <body>
+    <div class="page">
+      <main class="card">
+        <h1 class="titulo">Crea tu contraseña</h1>
+        <p class="subtitulo">Escribe una contraseña o genera una automáticamente.</p>
+
+        <form id="password-form" novalidate>
+          <label class="field-label" for="password">Contraseña</label>
+          <div class="campo-contraseña">
+            <input
+              id="password"
+              type="password"
+              class="input-contraseña"
+              placeholder="Escribe tu contraseña"
+              autocomplete="new-password"
+              spellcheck="false"
+            />
+            <button type="button" id="toggle-visibility" class="boton-ojo" aria-label="Mostrar contraseña">
+              <span id="toggle-icon">👁️</span>
+            </button>
+          </div>
+
+          <div class="strength" id="strength">
+            <div class="barra-fondo">
+              <div class="barra-relleno" id="strength-fill"></div>
+            </div>
+            <p class="texto-nivel" id="strength-label">
+              Escribe una contraseña para ver su nivel de seguridad
+            </p>
+          </div>
+
+          <ul class="checklist" id="checklist">
+            <li data-check="longitudSuficiente">
+              <span class="check-icono"></span>15 caracteres o más
+            </li>
+            <li data-check="variedad">
+              <span class="check-icono"></span>Combina varios tipos de caracteres (mayúsculas, minúsculas, números, símbolos)
+            </li>
+            <li data-check="sinPatrones">
+              <span class="check-icono"></span>Sin repeticiones ni secuencias
+            </li>
+            <li data-check="sinPalabrasComunes">
+              <span class="check-icono"></span>No es una contraseña habitual
+            </li>
+          </ul>
+
+          <button type="button" id="generate-btn" class="btn">Generar contraseña segura</button>
+        </form>
+      </main>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
