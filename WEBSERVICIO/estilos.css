@@ -53,23 +53,15 @@ body {
   margin-bottom: 0.3rem;
 }
 
-.control-numero {
+.control-accion {
   display: flex;
   align-items: center;
   gap: 0.4rem;
 }
 
-.control-numero input {
+.control-accion select {
   flex: 1;
   margin-bottom: 0;
-  text-align: center;
-}
-
-.control-numero button {
-  width: 2.3rem;
-  height: 2.3rem;
-  padding: 0;
-  font-size: 1.1rem;
 }
 
 .checkbox {
@@ -85,7 +77,8 @@ body {
   margin: 0;
 }
 
-input {
+input,
+select {
   font: inherit;
   width: 100%;
   padding: 0.55rem 0.7rem;
@@ -95,7 +88,8 @@ input {
   margin-bottom: 1rem;
 }
 
-input:focus {
+input:focus,
+select:focus {
   border-color: #4f86c6;
 }
 
