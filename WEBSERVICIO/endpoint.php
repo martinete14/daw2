@@ -1,30 +1,5 @@
 <?php
-function obtenerMinimo($numeros)
-{
-    $minimo = $numeros[0];
-    foreach ($numeros as $n) {
-        if ($n < $minimo) {
-            $minimo = $n;
-        }
-    }
-    return $minimo;
-}
-
-function obtenerMaximo($numeros)
-{
-    $maximo = $numeros[0];
-    foreach ($numeros as $n) {
-        if ($n > $maximo) {
-            $maximo = $n;
-        }
-    }
-    return $maximo;
-}
-
-function obtenerMedia($numeros)
-{
-    return array_sum($numeros) / count($numeros);
-}
+require "Funciones.php";
 
 if ($_SERVER["REQUEST_METHOD"] != "POST") {
     header("Location: index.php");
@@ -107,21 +82,8 @@ try {
 }
 
 $titulo = "Resultado";
+require "cabecera.php";
 ?>
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title><?php echo htmlspecialchars($titulo); ?></title>
-  <link rel="stylesheet" href="estilos.css">
-</head>
-<body>
-  <div class="cabecera">
-    <h1><?php echo htmlspecialchars($titulo); ?></h1>
-  </div>
-
-  <div class="contenido">
     <p class="ok">Números recibidos: <?php echo htmlspecialchars(implode(", ", $numeros)); ?></p>
     <ul class="resultados">
       <li>Mínimo: <?php echo obtenerMinimo($numeros); ?></li>
@@ -132,10 +94,4 @@ $titulo = "Resultado";
     </ul>
 
     <a href="index.php">Volver</a>
-  </div>
-
-  <div class="pie">
-    <p>Martinete daw2 &middot; Desarrollo web en entorno servidor</p>
-  </div>
-</body>
-</html>
+<?php require "pie.php"; ?>

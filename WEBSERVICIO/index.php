@@ -14,68 +14,79 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["aplicar"])) {
         $n4 = $_POST["n4"];
         $n5 = $_POST["n5"];
 
-        if ($_POST["accion"] == "sumar_1") {
-            if (is_numeric($n1)) {
-                $n1 = $n1 + 1;
-            } else {
-                $n1 = 1;
-            }
-        } elseif ($_POST["accion"] == "restar_1") {
-            if (is_numeric($n1)) {
-                $n1 = $n1 - 1;
-            } else {
-                $n1 = -1;
-            }
-        } elseif ($_POST["accion"] == "sumar_2") {
-            if (is_numeric($n2)) {
-                $n2 = $n2 + 1;
-            } else {
-                $n2 = 1;
-            }
-        } elseif ($_POST["accion"] == "restar_2") {
-            if (is_numeric($n2)) {
-                $n2 = $n2 - 1;
-            } else {
-                $n2 = -1;
-            }
-        } elseif ($_POST["accion"] == "sumar_3") {
-            if (is_numeric($n3)) {
-                $n3 = $n3 + 1;
-            } else {
-                $n3 = 1;
-            }
-        } elseif ($_POST["accion"] == "restar_3") {
-            if (is_numeric($n3)) {
-                $n3 = $n3 - 1;
-            } else {
-                $n3 = -1;
-            }
-        } elseif ($_POST["accion"] == "sumar_4") {
-            if (is_numeric($n4)) {
-                $n4 = $n4 + 1;
-            } else {
-                $n4 = 1;
-            }
-        } elseif ($_POST["accion"] == "restar_4") {
-            if (is_numeric($n4)) {
-                $n4 = $n4 - 1;
-            } else {
-                $n4 = -1;
-            }
-        } elseif ($_POST["accion"] == "sumar_5") {
-            if (is_numeric($n5)) {
-                $n5 = $n5 + 1;
-            } else {
-                $n5 = 1;
-            }
-        } elseif ($_POST["accion"] == "restar_5") {
-            if (is_numeric($n5)) {
-                $n5 = $n5 - 1;
-            } else {
-                $n5 = -1;
-            }
-        } else {
-            throw new Exception("La acción elegida no es válida.");
+        switch ($_POST["accion"]) {
+            case "sumar_1":
+                if (is_numeric($n1)) {
+                    $n1 = $n1 + 1;
+                } else {
+                    $n1 = 1;
+                }
+                break;
+            case "restar_1":
+                if (is_numeric($n1)) {
+                    $n1 = $n1 - 1;
+                } else {
+                    $n1 = -1;
+                }
+                break;
+            case "sumar_2":
+                if (is_numeric($n2)) {
+                    $n2 = $n2 + 1;
+                } else {
+                    $n2 = 1;
+                }
+                break;
+            case "restar_2":
+                if (is_numeric($n2)) {
+                    $n2 = $n2 - 1;
+                } else {
+                    $n2 = -1;
+                }
+                break;
+            case "sumar_3":
+                if (is_numeric($n3)) {
+                    $n3 = $n3 + 1;
+                } else {
+                    $n3 = 1;
+                }
+                break;
+            case "restar_3":
+                if (is_numeric($n3)) {
+                    $n3 = $n3 - 1;
+                } else {
+                    $n3 = -1;
+                }
+                break;
+            case "sumar_4":
+                if (is_numeric($n4)) {
+                    $n4 = $n4 + 1;
+                } else {
+                    $n4 = 1;
+                }
+                break;
+            case "restar_4":
+                if (is_numeric($n4)) {
+                    $n4 = $n4 - 1;
+                } else {
+                    $n4 = -1;
+                }
+                break;
+            case "sumar_5":
+                if (is_numeric($n5)) {
+                    $n5 = $n5 + 1;
+                } else {
+                    $n5 = 1;
+                }
+                break;
+            case "restar_5":
+                if (is_numeric($n5)) {
+                    $n5 = $n5 - 1;
+                } else {
+                    $n5 = -1;
+                }
+                break;
+            default:
+                throw new Exception("La acción elegida no es válida.");
         }
 
         $params = "n1=" . urlencode($n1) . "&n2=" . urlencode($n2) . "&n3=" . urlencode($n3)
@@ -99,21 +110,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["enviar"])) {
 }
 
 $titulo = "Form de números";
+require "cabecera.php";
 ?>
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title><?php echo htmlspecialchars($titulo); ?></title>
-  <link rel="stylesheet" href="estilos.css">
-</head>
-<body>
-  <div class="cabecera">
-    <h1><?php echo htmlspecialchars($titulo); ?></h1>
-  </div>
-
-  <div class="contenido">
     <form action="index.php" method="post">
       <?php if (isset($_GET["error"])): ?>
       <p class="error">Por favor, ingrese un valor válido.</p>
@@ -204,10 +202,4 @@ $titulo = "Form de números";
 
       <button type="submit" name="enviar" value="1" class="enviar">Enviar</button>
     </form>
-  </div>
-
-  <div class="pie">
-    <p>Martinete daw2 &middot; Desarrollo web en entorno servidor</p>
-  </div>
-</body>
-</html>
+<?php require "pie.php"; ?>
