@@ -6,57 +6,116 @@ body {
   margin: 0;
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  background: #f4f4f2;
-  color: #262626;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  background: #eef5fb;
+  color: #1c2b3a;
+  font-family: Arial, sans-serif;
 }
 
-main {
-  width: min(90vw, 360px);
+.cabecera,
+.pie,
+.contenido {
+  width: 90%;
+  max-width: 420px;
 }
 
-h1 {
+.cabecera {
+  padding: 1.4rem 0 0.8rem;
+  border-bottom: 3px solid #f2b705;
+}
+
+.cabecera h1 {
   font-size: 1.3rem;
-  margin: 0 0 1.2rem;
+  margin: 0;
 }
 
-label {
+.pie {
+  margin-top: auto;
+  padding: 1.5rem 0;
+  color: #5c6b7a;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.contenido {
+  padding: 1rem 0 2rem;
+}
+
+.campo {
+  margin-bottom: 0.9rem;
+}
+
+.campo label {
   display: block;
   font-size: 0.9rem;
-  color: #6b6b6b;
+  color: #5c6b7a;
   margin-bottom: 0.3rem;
+}
+
+.control-numero {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.control-numero input {
+  flex: 1;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.control-numero button {
+  width: 2.3rem;
+  height: 2.3rem;
+  padding: 0;
+  font-size: 1.1rem;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+}
+
+.checkbox input {
+  width: auto;
+  margin: 0;
 }
 
 input {
   font: inherit;
   width: 100%;
   padding: 0.55rem 0.7rem;
-  border: 1px solid #d0d0cc;
+  border: 1px solid #b8d2ea;
   border-radius: 6px;
   background: #fff;
   margin-bottom: 1rem;
 }
 
 input:focus {
-  outline: 2px solid #3a6ea5;
-  outline-offset: 1px;
-  border-color: #3a6ea5;
+  border-color: #4f86c6;
 }
 
 button {
   font: inherit;
   padding: 0.55rem 1.3rem;
   color: #fff;
-  background: #3a6ea5;
+  background: #4f86c6;
   border: none;
   border-radius: 6px;
   cursor: pointer;
 }
 
 button:hover {
-  background: #305c8a;
+  background: #3d6da8;
+}
+
+button.enviar {
+  width: 100%;
+  margin-top: 0.5rem;
 }
 
 p.ok,
@@ -67,8 +126,8 @@ p.error {
 }
 
 p.ok {
-  background: #e6f2e6;
-  color: #2e6b2e;
+  background: #fdf3d1;
+  color: #7a5c00;
 }
 
 p.error {
@@ -76,13 +135,22 @@ p.error {
   color: #a13a3a;
 }
 
+ul.resultados {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+}
+
+ul.resultados li {
+  background: #fff;
+  border: 1px solid #b8d2ea;
+  border-radius: 6px;
+  padding: 0.5rem 0.8rem;
+  margin-bottom: 0.4rem;
+}
+
 a {
   display: inline-block;
   margin-top: 1rem;
-  color: #3a6ea5;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
+  color: #3d6da8;
 }
