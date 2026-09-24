@@ -8,3 +8,4 @@ Una carpeta por asignatura, y va creciendo a medida que avanzo.
 - `WEBCLIENTE`: JavaScript en el navegador. Hay un botón que cuenta los clics, nada más por ahora.
 - `WEBSERVICIO`: la otra pata, PHP del lado del servidor con formularios. Sin JavaScript, eso ya está en WEBCLIENTE.
 - `INTERFAZ`: diseño de interfaces web. Recién empieza, todavía vacía.
+- `IPE`: Itinerario Personal para la Empleabilidad. No es de programar, pero la pongo para tener todo junto. Por ahora está mi CV.
