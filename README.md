@@ -7,5 +7,5 @@ Una carpeta por asignatura, y va creciendo a medida que avanzo.
 - `PYTHON`: lo de Python. Por ahora solo el hola mundo.
 - `WEBCLIENTE`: JavaScript en el navegador. Hay un botón que cuenta los clics, nada más por ahora.
 - `WEBSERVICIO`: la otra pata, PHP del lado del servidor con formularios. Sin JavaScript, eso ya está en WEBCLIENTE.
-- `INTERFAZ`: diseño de interfaces web. Recién empieza, todavía vacía.
+- `INTERFAZ`: diseño de interfaces web. Por ahora el inicio de sesión y recuperar contraseña en HTML crudo, con logo y favicon.
 - `IPE`: Itinerario Personal para la Empleabilidad. No es de programar, pero la pongo para tener todo junto. Por ahora está mi CV.
