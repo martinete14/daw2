@@ -1,10 +1,18 @@
 <?php
-require "Funciones.php";
+// si no me pasan el exponente, vale 2 (elevar al cuadrado)
+function potencia($base, $exponente = 2)
+{
+    $resultado = 1;
+    for ($i = 0; $i < $exponente; $i++) {
+        $resultado = $resultado * $base;
+    }
+    return $resultado;
+}
 
 $titulo = "Actividad 2.2 · Potencias";
-require "cabecera.php";
+require "../comun/cabecera.php";
 ?>
-    <form action="actividad2_2.php" method="post">
+    <form action="index.php" method="post">
       <div class="campo">
         <label for="base">Base</label>
         <input type="text" id="base" name="base" value="<?php
@@ -43,4 +51,4 @@ if (isset($_POST["base"])) {
     }
 }
 ?>
-<?php require "pie.php"; ?>
+<?php require "../comun/pie.php"; ?>

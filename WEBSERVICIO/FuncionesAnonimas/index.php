@@ -19,7 +19,7 @@ function ejecutarProceso($callback)
 }
 
 $titulo = "Funciones anónimas";
-require "cabecera.php";
+require "../comun/cabecera.php";
 ?>
     <p class="ok">Pasando una función anónima como parámetro</p>
     <ul class="resultados">
@@ -32,4 +32,4 @@ require "cabecera.php";
           return "Olá, " . $texto;
       }); ?></li>
     </ul>
-<?php require "pie.php"; ?>
+<?php require "../comun/pie.php"; ?>

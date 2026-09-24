@@ -110,7 +110,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["enviar"])) {
 }
 
 $titulo = "Form de números";
-require "cabecera.php";
+require "../comun/cabecera.php";
 ?>
     <form action="index.php" method="post">
       <?php if (isset($_GET["error"])): ?>
@@ -202,4 +202,4 @@ require "cabecera.php";
 
       <button type="submit" name="enviar" value="1" class="enviar">Enviar</button>
     </form>
-<?php require "pie.php"; ?>
+<?php require "../comun/pie.php"; ?>

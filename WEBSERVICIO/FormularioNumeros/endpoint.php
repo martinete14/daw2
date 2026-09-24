@@ -82,7 +82,7 @@ try {
 }
 
 $titulo = "Resultado";
-require "cabecera.php";
+require "../comun/cabecera.php";
 ?>
     <p class="ok">Números recibidos: <?php echo htmlspecialchars(implode(", ", $numeros)); ?></p>
     <ul class="resultados">
@@ -94,4 +94,4 @@ require "cabecera.php";
     </ul>
 
     <a href="index.php">Volver</a>
-<?php require "pie.php"; ?>
+<?php require "../comun/pie.php"; ?>

@@ -9,7 +9,7 @@ if (!isset($titulo)) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title><?php echo htmlspecialchars($titulo); ?></title>
-  <link rel="stylesheet" href="estilos.css">
+  <link rel="stylesheet" href="../comun/estilos.css">
 </head>
 <body>
   <div class="cabecera">
