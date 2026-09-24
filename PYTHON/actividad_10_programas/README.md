@@ -1,6 +1,6 @@
 # Actividad práctica: 10 programas básicos en Python
 
-Martin Villagra - DAW 2
+Martin Villagra Tejerina - DAW 2
 
 ## Contenido
 
@@ -19,12 +19,10 @@ Diez programas sueltos para practicar lo de los temas 1 y 2: variables, tipos de
 
 ## Ejecución
 
-Hace falta tener Python instalado. Abrir una terminal dentro de la carpeta `actividad_10_programas` y escribir:
+Abrir una terminal dentro de la carpeta `actividad_10_programas` y escribir:
 
 ```
 python programa_01_ficha.py
 ```
 
 Para los demás es lo mismo, solo cambia el nombre del archivo. El programa va pidiendo los datos por consola y hay que darle a Enter después de cada uno.
-
-Si no funciona con `python`, usar `python3`.
