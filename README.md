@@ -9,3 +9,4 @@ Una carpeta por asignatura, y va creciendo a medida que avanzo.
 - `WEBSERVICIO`: la otra pata, PHP del lado del servidor con formularios. Sin JavaScript, eso ya está en WEBCLIENTE. Una carpeta por actividad: `ActividadNumeros` (formulario de 5 números), `ActividadDNI` (buscar un DNI en un array), `ActividadFuncionesAnonimas`, `ActividadPotencia` (2.2 del libro) y `ActividadFactorial` (2.3 del libro). En `comun` están la cabecera, el pie y los estilos que usan todas.
 - `INTERFAZ`: diseño de interfaces web. Por ahora el inicio de sesión y recuperar contraseña en HTML crudo, con logo y favicon.
 - `IPE`: Itinerario Personal para la Empleabilidad. No es de programar, pero la pongo para tener todo junto. Por ahora está mi CV.
+- `DESPLIEGUE`: despliegue de aplicaciones web. Por ahora vacía, solo el README.
