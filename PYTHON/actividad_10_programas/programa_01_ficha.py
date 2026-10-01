@@ -1,4 +1,4 @@
-#Martin Villagra DAW 2
+#Martin Villagra Tejerina DAW 2
 '''
 Prog. N°1 - Ficha personal con los datos del usuario
 '''

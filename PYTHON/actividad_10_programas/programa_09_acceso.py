@@ -1,4 +1,4 @@
-#Martin Villagra DAW 2
+#Martin Villagra Tejerina DAW 2
 '''
 Prog. N°9 - Comparador lógico de acceso
 '''
