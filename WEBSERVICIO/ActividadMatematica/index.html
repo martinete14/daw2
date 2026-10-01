@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Función cuadrática para Fran</title>
+  <link rel="stylesheet" href="../comun/estilos.css">
+</head>
+<body>
+  <div class="cabecera">
+    <h1>Función cuadrática para Fran</h1>
+  </div>
+
+  <div class="contenido">
+    <p>Cargá los valores de A, B y C y te calculo las raíces de f(x) = ax² + bx + c</p>
+
+    <!-- los 3 valores viajan a resultado.php, que aplica la resolvente y muestra las raíces -->
+    <form action="resultado.php" method="post">
+
+      <div class="campo">
+        <label for="a">Valor de A</label>
+        <input type="number" id="a" name="a" step="any" required>
+      </div>
+
+      <div class="campo">
+        <label for="b">Valor de B</label>
+        <input type="number" id="b" name="b" step="any" required>
+      </div>
+
+      <div class="campo">
+        <label for="c">Valor de C</label>
+        <input type="number" id="c" name="c" step="any" required>
+      </div>
+
+      <button type="submit" class="enviar">Calcular raíces</button>
+    </form>
+  </div>
+
+  <div class="pie">
+    <p>Martinete daw2 &middot; Desarrollo web en entorno servidor</p>
+  </div>
+</body>
+</html>
