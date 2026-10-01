@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ecuación de segundo grado</title>
+  <link rel="stylesheet" href="../comun/estilos.css">
+</head>
+<body>
+  <div class="cabecera">
+    <h1>Ecuación de segundo grado</h1>
+  </div>
+
+  <div class="contenido">
+    <p>Cargá los coeficientes de ax² + bx + c = 0 y te devuelvo las soluciones</p>
+
+    <!-- igual que en ActividadMatematica, pero ahora la cuenta la hace una función en resultado.php -->
+    <form action="resultado.php" method="post">
+
+      <div class="campo">
+        <label for="a">Coeficiente A</label>
+        <input type="number" id="a" name="a" step="any" required>
+      </div>
+
+      <div class="campo">
+        <label for="b">Coeficiente B</label>
+        <input type="number" id="b" name="b" step="any" required>
+      </div>
+
+      <div class="campo">
+        <label for="c">Coeficiente C</label>
+        <input type="number" id="c" name="c" step="any" required>
+      </div>
+
+      <button type="submit" class="enviar">Resolver</button>
+    </form>
+  </div>
+
+  <div class="pie">
+    <p>Martinete daw2 &middot; Desarrollo web en entorno servidor</p>
+  </div>
+</body>
+</html>
