@@ -64,17 +64,15 @@ Son 3 archivos, uno por fase:
 
 - **FICHERO**: `notas.txt`. Primero eran solo las notas; la mejora es que cada línea tenga `Nombre Apellido;Nota`.
 - **FORM**: `index.php` con un solo campo, el **límite**, que se manda por POST a `calculo.php`.
-- **CÁLCULO**: `calculo.php` es la fachada. Recibe el límite, lo valida (número entre 0 y 10), lee el fichero, lo pasa a un array y muestra los alumnos con nota **menor o igual** al límite.
+- **CÁLCULO**: `calculo.php` es la fachada. Recibe el límite, se fija que sea un número, lee el fichero, lo pasa a un array y muestra primero todos los alumnos con su nota y después los que tienen nota **menor o igual** al límite.
   - `leerNotas` usa `file()`, que devuelve un array con cada línea del fichero. Corta cada línea con `explode(";", ...)` y arma un array asociativo `nombre => nota`.
   - `notasMenoresOIguales` recorre ese array con `foreach` y arma uno nuevo solo con los que cumplen `<= $limite`.
-- Si entrás directo a `calculo.php` sin pasar por el form, te manda a `index.php` (chequeo de `REQUEST_METHOD`).
 
 Si me preguntan:
 - **¿Qué hacen `FILE_IGNORE_NEW_LINES` y `FILE_SKIP_EMPTY_LINES`?** La primera le saca el salto de línea a cada elemento del array, y la segunda se saltea las líneas vacías (por ejemplo, la última del fichero).
-- **¿Por qué un array asociativo?** Para que cada nota quede pegada al nombre del alumno. Con `foreach ($alumnos as $nombre => $nota)` saco las dos cosas juntas.
+- **¿Por qué un array asociativo?** Para que cada nota quede pegada al nombre del alumno. Con `foreach ($notas as $nombre => $nota)` saco las dos cosas juntas.
 - **¿Por qué `htmlspecialchars` en el nombre?** Porque viene de un fichero y no sé qué tiene escrito. Así no se cuela HTML en la página.
-- **¿Por qué `file_exists` antes de leer?** Si el fichero no está, `file()` tira un warning feo. Así muestro un error claro.
 
 En el fichero puse 15 alumnos con nombres de jugadores de fútbol (Robben, Vegetti, Riquelme, Zidane...).
 
-Casos que probé: límite `5` (Germán Denis 4, Teófilo Gutiérrez 3.5, Rodrigo Palacio 5, Mario Balotelli 2 y Lucas Pratto 4.5), `0` (ninguna), `abc` y `11` (error por el límite).
+Casos que probé: límite `5` (Germán Denis 4, Teófilo Gutiérrez 3.5, Rodrigo Palacio 5, Mario Balotelli 2 y Lucas Pratto 4.5), `0` (ninguno) y `abc` (error por el límite).

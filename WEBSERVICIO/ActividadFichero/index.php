@@ -8,7 +8,7 @@ require "../comun/cabecera.php";
     <form action="calculo.php" method="post">
       <div class="campo">
         <label for="limite">Límite</label>
-        <input type="number" id="limite" name="limite" step="any" min="0" max="10" required>
+        <input type="number" id="limite" name="limite" step="any" required>
       </div>
 
       <button type="submit" class="enviar">Calcular</button>
