@@ -48,9 +48,23 @@ Si me preguntan:
 - `menoresQueLimite($numeros, $limite)` recorre el array con `foreach` y arma uno nuevo solo con los menores (`$menores[] = $n;` agrega al final).
 - Si en la lista hay algo que no es número, o el límite no es número → error. Si ninguno es menor → lo aviso.
 
-## Ej. 6 · PENDIENTE
+## Ej. 6 · ActividadCuadro26
 
-"Escribe un script para probar las funciones del cuadro 2.6". Me falta saber qué funciones trae el cuadro 2.6 del libro (Ganzábal, Síntesis): está entre Operadores (pág. 42) y Funciones predefinidas (pág. 48). Sacarle foto y hacerlo con el mismo estilo que los demás.
+"Escribe un script para probar las funciones del cuadro 2.6" (Algunas funciones útiles en PHP).
+
+- Un solo `index.php` con valores fijos, sin formulario, porque el enunciado pide un script para probarlas.
+- Está separado en las 3 partes del cuadro: funciones de **variables**, de **cadenas** y de **arrays**. Cada función se prueba en una línea de la lista con su resultado.
+- Usé los jugadores del ejercicio del fichero (Riquelme, Robben, Vegetti...).
+- La carpeta se llama `ActividadCuadro26`, sin espacios ni puntos, por lo mismo que `matematicas.php` va sin tilde.
+
+Si me preguntan:
+- **¿Para qué el `var_export(..., true)`?** Porque con `echo`, `true` sale como `1` y `false` no sale nada. `var_export` con `true` me lo devuelve como texto y se ve `true` / `false`. Con los strings además muestra las comillas (`'10'`), así se nota que `strval` devolvió texto.
+- **¿Por qué `strlen("Juan Román Riquelme")` da 20 y no 19?** La á ocupa 2 bytes y `strlen` cuenta bytes (lo mismo del palíndromo con `mb_strlen`).
+- **¿Por qué ordeno copias del array?** `sort`, `rsort`, `ksort` y `krsort` cambian el array original. Si no hago una copia, después `array_keys` y los demás ya mostrarían el array ordenado.
+- **Dos cosas del cuadro que están mal en el libro:**
+  - Pone `str($cad1, $cad2)`, pero la función se llama `strstr`.
+  - `array_key_exists` lleva primero la clave y después el array: `array_key_exists($cla, $arr)`.
+- **`strcmp` devuelve -1, 0 o 1** como dice el cuadro desde PHP 8.2 (el de XAMPP). En versiones viejas podía devolver otros números negativos o positivos.
 
 ## Cómo los probé
 
