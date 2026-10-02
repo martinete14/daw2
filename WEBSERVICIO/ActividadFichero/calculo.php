@@ -35,13 +35,6 @@ if (!isset($_POST["limite"]) || !is_numeric($_POST["limite"])) {
     $notas = leerNotas("notas.txt");
     $menores = notasMenoresOIguales($notas, $limite);
 
-    echo "<p>Alumnos del fichero:</p>";
-    echo "<ul class='resultados'>";
-    foreach ($notas as $nombre => $nota) {
-        echo "<li>" . htmlspecialchars($nombre) . ": $nota</li>";
-    }
-    echo "</ul>";
-
     if (count($menores) == 0) {
         echo "<p class='error'>Ningún alumno tiene nota menor o igual que $limite</p>";
     } else {

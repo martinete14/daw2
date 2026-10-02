@@ -64,13 +64,14 @@ Son 3 archivos, uno por fase:
 
 - **FICHERO**: `notas.txt`. Primero eran solo las notas; la mejora es que cada línea tenga `Nombre Apellido;Nota`.
 - **FORM**: `index.php` con un solo campo, el **límite**, que se manda por POST a `calculo.php`.
-- **CÁLCULO**: `calculo.php` es la fachada. Recibe el límite, se fija que sea un número, lee el fichero, lo pasa a un array y muestra primero todos los alumnos con su nota y después los que tienen nota **menor o igual** al límite.
+- **CÁLCULO**: `calculo.php` es la fachada. Recibe el límite, se fija que sea un número, lee el fichero, lo pasa a un array y muestra solo los alumnos que tienen nota **menor o igual** al límite.
   - `leerNotas` usa `file()`, que devuelve un array con cada línea del fichero. Corta cada línea con `explode(";", ...)` y arma un array asociativo `nombre => nota`.
   - `notasMenoresOIguales` recorre ese array con `foreach` y arma uno nuevo solo con los que cumplen `<= $limite`.
 
 Si me preguntan:
 - **¿Qué hacen `FILE_IGNORE_NEW_LINES` y `FILE_SKIP_EMPTY_LINES`?** La primera le saca el salto de línea a cada elemento del array, y la segunda se saltea las líneas vacías (por ejemplo, la última del fichero).
 - **¿Por qué un array asociativo?** Para que cada nota quede pegada al nombre del alumno. Con `foreach ($notas as $nombre => $nota)` saco las dos cosas juntas.
+- **¿Por qué no aparece la lista entera?** Porque el `foreach` que pinta recorre el array filtrado (`$menores`), no el original (`$notas`). El original solo se usa para pasárselo a la función que filtra.
 - **¿Por qué `htmlspecialchars` en el nombre?** Porque viene de un fichero y no sé qué tiene escrito. Así no se cuela HTML en la página.
 
 En el fichero puse 15 alumnos con nombres de jugadores de fútbol (Robben, Vegetti, Riquelme, Zidane...).
