@@ -1,0 +1,15 @@
+Arjen Robben;8.5
+Pablo Vegetti;7
+Juan Román Riquelme;10
+Martín Palermo;6
+Andrea Pirlo;9
+Dimitar Berbatov;5.5
+Ariel Ortega;7.5
+Germán Denis;4
+Zinedine Zidane;9.5
+Teófilo Gutiérrez;3.5
+Pablo Aimar;8
+Rodrigo Palacio;5
+Mario Balotelli;2
+Enzo Francescoli;8
+Lucas Pratto;4.5
