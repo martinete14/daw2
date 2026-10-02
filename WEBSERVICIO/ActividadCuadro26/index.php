@@ -10,22 +10,22 @@ $titulo = "Funciones del cuadro 2.6";
 require "../comun/cabecera.php";
 ?>
     <!-- var_dump para los true/false, porque con echo el false no se ve -->
-    <p>Funciones de variables:</p>
+    <p><strong>Funciones de variables:</strong></p>
     <ul class="resultados">
       <li>isset($jugador): <?php var_dump(isset($jugador)); ?></li>
       <li>empty($vacio): <?php var_dump(empty($vacio)); ?></li>
-      <li>intval("10.5"): <?php echo intval($texto); ?></li>
+      <li>intval($texto): <?php echo intval($texto); ?></li>
     </ul>
 
-    <p>Funciones de cadenas:</p>
+    <p><strong>Funciones de cadenas:</strong></p>
     <ul class="resultados">
-      <li>strlen("Riquelme"): <?php echo strlen($jugador); ?></li>
-      <li>strtoupper("Riquelme"): <?php echo strtoupper($jugador); ?></li>
+      <li>strlen($jugador): <?php echo strlen($jugador); ?></li>
+      <li>strtoupper($jugador): <?php echo strtoupper($jugador); ?></li>
       <!-- en el cuadro dice str() pero la función se llama strstr() -->
       <li>strstr("Juan Román Riquelme", "Román"): <?php echo strstr("Juan Román Riquelme", "Román"); ?></li>
     </ul>
 
-    <p>Funciones de arrays (con <?php echo implode(", ", $numeros); ?>):</p>
+    <p><strong>Funciones de arrays (con <?php echo implode(", ", $numeros); ?>):</strong></p>
     <ul class="resultados">
       <li>count($numeros): <?php echo count($numeros); ?></li>
       <li>sort($numeros): <?php sort($numeros); echo implode(", ", $numeros); ?></li>
