@@ -10,3 +10,4 @@ Una carpeta por asignatura, y va creciendo a medida que avanzo.
 - `INTERFAZ`: diseño de interfaces web. Por ahora el inicio de sesión y recuperar contraseña en HTML crudo, con logo y favicon.
 - `IPE`: Itinerario Personal para la Empleabilidad. No es de programar, pero la pongo para tener todo junto. Por ahora está mi CV.
 - `DESPLIEGUE`: despliegue de aplicaciones web. Por ahora vacía, solo el README.
+- `TFG`: el Trabajo de Fin de Grado. Por ahora vacía, solo el README.
