@@ -10,8 +10,6 @@ $notas = ["Robben" => 8.5, "Vegetti" => 7, "Riquelme" => 10];
 $titulo = "Funciones del cuadro 2.6";
 require "../comun/cabecera.php";
 ?>
-    <!-- todas estas funciones ya vienen con PHP, no hay que hacer ningún require -->
-    <!-- var_dump para los true/false, porque con echo el false no se ve -->
     <p><strong>Funciones de variables:</strong></p>
     <ul class="resultados">
       <!-- isset: true si la variable existe y no es null. $jugador vale "Riquelme" -->

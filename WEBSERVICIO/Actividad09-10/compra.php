@@ -2,7 +2,7 @@
 session_start();
 
 // el login dura un minuto
-$duracion = 60;
+$duracion = 10;
 
 // si no está logeado, o pasó más de un minuto desde el login, lo mando al inicio
 if (!isset($_SESSION["usuario"]) || time() - $_SESSION["hora"] > $duracion) {
