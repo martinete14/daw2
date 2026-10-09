@@ -21,8 +21,17 @@ body {
 }
 
 .cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 1.4rem 0 0.8rem;
   border-bottom: 3px solid #f2b705;
+}
+
+.cabecera .usuario {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #3d6da8;
 }
 
 .cabecera h1 {

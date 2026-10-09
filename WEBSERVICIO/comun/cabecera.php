@@ -14,6 +14,10 @@ if (!isset($titulo)) {
 <body>
   <div class="cabecera">
     <h1><?php echo htmlspecialchars($titulo); ?></h1>
+    <?php if (isset($_SESSION["usuario"])) { ?>
+      <!-- si hay alguien logeado, su nombre sale arriba a la derecha -->
+      <span class="usuario"><?php echo htmlspecialchars($_SESSION["usuario"]); ?></span>
+    <?php } ?>
   </div>
 
   <div class="contenido">
