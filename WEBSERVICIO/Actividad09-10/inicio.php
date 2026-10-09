@@ -14,7 +14,11 @@ require "../comun/cabecera.php";
       <li>Camiseta de Boca 2000 firmada por Riquelme</li>
       <li>Botines de Robben</li>
       <li>Entrada para ver a Vegetti</li>
+      <li>Entrada para ver a Messi en el monumental</li>
     </ul>
+
+    <!-- compra.php solo deja entrar si el login tiene menos de un minuto -->
+    <a href="compra.php">Comprar</a>
 <?php } else { ?>
     <!-- si no está logeado le muestro el formulario -->
     <p>Entrá con tu usuario para ver la zona de usuarios</p>
