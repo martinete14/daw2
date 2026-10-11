@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-label="SuperSearch">
+  <rect width="48" height="48" rx="12" fill="#168847"/>
+  <!-- Basket handle -->
+  <path d="M15 20.5 20.5 11M30 20.5 24.5 11" fill="none" stroke="#FAF9F3" stroke-width="3" stroke-linecap="round"/>
+  <!-- Basket body -->
+  <path d="M8.5 19h28a1.5 1.5 0 0 1 1.46 1.85l-2.9 11.6A4 4 0 0 1 31.18 35.5H13.82a4 4 0 0 1-3.88-3.05l-2.9-11.6A1.5 1.5 0 0 1 8.5 19z" fill="#FAF9F3"/>
+  <path d="M16.5 24v6M22.5 24v6" stroke="#168847" stroke-width="2.4" stroke-linecap="round"/>
+  <!-- Magnifying glass -->
+  <circle cx="32" cy="29" r="6.6" fill="#168847" stroke="#FFF4D8" stroke-width="3"/>
+  <path d="m36.8 33.8 4.4 4.4" stroke="#FFF4D8" stroke-width="3.4" stroke-linecap="round"/>
+</svg>

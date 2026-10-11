@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220">
+  <!-- Rice bowl (behind) -->
+  <ellipse cx="236" cy="150" rx="62" ry="22" fill="#18251F" opacity=".08"/>
+  <circle cx="236" cy="98" r="54" fill="#FFFFFF" stroke="#DDE7DF" stroke-width="3"/>
+  <circle cx="236" cy="98" r="42" fill="#FAF9F3"/>
+  <g fill="#E9E2CF">
+    <rect x="212" y="80" width="9" height="3.5" rx="1.75" transform="rotate(-20 216 82)"/>
+    <rect x="232" y="72" width="9" height="3.5" rx="1.75" transform="rotate(15 236 74)"/>
+    <rect x="248" y="86" width="9" height="3.5" rx="1.75" transform="rotate(-35 252 88)"/>
+    <rect x="222" y="100" width="9" height="3.5" rx="1.75" transform="rotate(30 226 102)"/>
+    <rect x="242" y="108" width="9" height="3.5" rx="1.75" transform="rotate(-10 246 110)"/>
+    <rect x="258" y="100" width="9" height="3.5" rx="1.75" transform="rotate(40 262 102)"/>
+    <rect x="214" y="116" width="9" height="3.5" rx="1.75" transform="rotate(-25 218 118)"/>
+    <rect x="232" y="122" width="9" height="3.5" rx="1.75" transform="rotate(5 236 124)"/>
+    <rect x="236" y="90" width="9" height="3.5" rx="1.75" transform="rotate(60 240 92)"/>
+  </g>
+  <!-- Curry bowl -->
+  <ellipse cx="124" cy="182" rx="92" ry="18" fill="#18251F" opacity=".1"/>
+  <circle cx="124" cy="112" r="82" fill="#FFFFFF" stroke="#DDE7DF" stroke-width="3"/>
+  <circle cx="124" cy="112" r="66" fill="#D5602B"/>
+  <path d="M74 104c18-16 40 8 60-4s34-18 52 0" fill="none" stroke="#F2B48A" stroke-width="7" stroke-linecap="round" opacity=".85"/>
+  <path d="M86 138c16 8 30-6 46 2s26 6 38-6" fill="none" stroke="#F2B48A" stroke-width="5" stroke-linecap="round" opacity=".7"/>
+  <g fill="#F4A261" stroke="#B9481E" stroke-width="2">
+    <rect x="92" y="78" width="26" height="20" rx="7" transform="rotate(-12 105 88)"/>
+    <rect x="134" y="70" width="24" height="20" rx="7" transform="rotate(14 146 80)"/>
+    <rect x="148" y="112" width="26" height="20" rx="7" transform="rotate(-8 161 122)"/>
+    <rect x="98" y="118" width="24" height="20" rx="7" transform="rotate(20 110 128)"/>
+    <rect x="122" y="96" width="22" height="18" rx="6" transform="rotate(-30 133 105)"/>
+  </g>
+  <!-- Coriander leaves -->
+  <g fill="#168847">
+    <ellipse cx="88" cy="104" rx="6" ry="3.5" transform="rotate(-30 88 104)"/>
+    <ellipse cx="94" cy="100" rx="5" ry="3" transform="rotate(40 94 100)"/>
+    <ellipse cx="160" cy="98" rx="6" ry="3.5" transform="rotate(25 160 98)"/>
+    <ellipse cx="140" cy="140" rx="6" ry="3.5" transform="rotate(-50 140 140)"/>
+    <ellipse cx="146" cy="144" rx="5" ry="3" transform="rotate(10 146 144)"/>
+  </g>
+</svg>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220">
+  <!-- Plate -->
+  <ellipse cx="160" cy="186" rx="118" ry="22" fill="#18251F" opacity=".08"/>
+  <ellipse cx="160" cy="176" rx="116" ry="24" fill="#FFFFFF" stroke="#DDE7DF" stroke-width="3"/>
+  <!-- Pancake stack, bottom to top -->
+  <g stroke="#B9732B" stroke-width="2">
+    <rect x="76" y="148" width="168" height="24" rx="12" fill="#E3A257"/>
+    <rect x="80" y="126" width="160" height="24" rx="12" fill="#EDB063"/>
+    <rect x="74" y="104" width="172" height="24" rx="12" fill="#E3A257"/>
+    <rect x="82" y="82" width="156" height="24" rx="12" fill="#EDB063"/>
+  </g>
+  <!-- Butter -->
+  <rect x="140" y="66" width="40" height="20" rx="4" fill="#FFF4D8" stroke="#E9D59E" stroke-width="2"/>
+  <!-- Honey running down -->
+  <path d="M100 86c20-8 100-8 120 0 0 8-8 10-10 16 0 10-8 12-8 2s-12-10-16-2-10 22-14 8-8-14-16-6-12 8-14-2-10-10-20-6-10 10-12 0 0-6-10-10z" fill="#C9772A" opacity=".85"/>
+  <!-- Berries -->
+  <g fill="#A8324A">
+    <circle cx="222" cy="64" r="9"/>
+    <circle cx="238" cy="74" r="8"/>
+    <circle cx="206" cy="74" r="7"/>
+  </g>
+  <g fill="#FCE9EC" opacity=".7">
+    <circle cx="219" cy="61" r="2"/>
+    <circle cx="235" cy="71" r="2"/>
+  </g>
+  <!-- Mint -->
+  <ellipse cx="226" cy="52" rx="8" ry="4" fill="#168847" transform="rotate(-30 226 52)"/>
+  <ellipse cx="236" cy="56" rx="7" ry="3.5" fill="#168847" transform="rotate(20 236 56)"/>
+</svg>
