@@ -1,60 +1,54 @@
 # SuperSearch: pitch script
 
-Guion de ensayo para la exposición (unos 3 minutos, aproximadamente 1 minuto por persona). Está en inglés, como la presentación. No hay que leerlo palabra por palabra: sirve para practicar y luego hablar con naturalidad.
+Guion de ensayo para la exposición (unos 3 minutos: cerca de 115 palabras habladas por persona, aproximadamente 1 minuto cada una). Está en inglés, como la presentación. No hay que leerlo palabra por palabra: sirve para practicar y luego hablar con naturalidad.
 
 **Soporte visual:** la propia web. Las indicaciones entre corchetes dicen qué mostrar en pantalla en cada momento. Las cifras salen de los datos de la demo, así que coinciden con lo que se ve.
 
 ---
 
-## Martín: introduction and problem (≈ 1 min)
+## Martín: the app, the problem and the users (≈ 1 min)
 
 *[Screen: Discover view, with the logo and "Find it. Compare it. Save it."]*
 
-Hello, we are Martín, Jesús and Cristina, and today we want to introduce our app, SuperSearch.
+Hello, we are Martín, Jesús and Cristina, and today we want to present our app idea: SuperSearch.
 
-SuperSearch helps people find products in nearby supermarkets and compare their prices. When we want to cook a meal, we often don't know which supermarket has all the ingredients or where they are cheaper. We may visit different supermarkets to compare prices, and that takes time.
+When we want to cook a meal, we often don't know which supermarket has all the ingredients, or where they are cheaper. Visiting different supermarkets to compare prices takes a lot of time.
 
-For example, you might want to make chicken tikka masala, but you are not sure where to buy the ingredients for the best price. SuperSearch helps you make that decision without visiting several stores.
+For example, imagine you want to make chicken tikka masala tonight. Where should you buy the ingredients? In one supermarket, or in two?
 
-Our target users are people who want to save time and money, especially students, families and busy people. The idea is simple: before leaving home, you can find what you need and plan where to buy it.
+SuperSearch helps you answer that question before you leave home. It compares the cost of your whole shopping basket, not only the price of one product.
+
+Our target users are people who want to save time and money, especially students, families and busy people.
 
 ---
 
-## Jesús: search and comparison (≈ 1 min)
+## Jesús: search and price comparison (≈ 1 min)
 
-*[Screen: type "milk" in the search box, then open "Compare prices"]*
+*[Screen: type "milk" in the search box, then open "Compare prices" and switch between "Price" and "Distance"]*
 
 The main feature of SuperSearch is product search and price comparison.
 
-You can look for a product and see its price in different supermarkets. The app also shows how far away each store is, and you can share your location if you want. That's the GPS idea behind the app, so users can compare price and distance before choosing where to go.
+You can search for a product, for example milk, and see its price in five supermarkets. In our demo, milk costs from eighty-nine cents at Lidl to ninety-nine cents at Carrefour. You can sort the stores by price or by distance. These prices are examples for our prototype.
 
-For example, if you search for milk, the demo shows five supermarkets, from 89 cents at Lidl to 99 cents at Carrefour. These prices are examples for our prototype, not live supermarket data.
+*[Screen: Recipes → Chicken Tikka Masala → cost comparison]*
 
-*[Screen: switch between "Price" and "Distance"]*
-
-You can sort results by price or distance. You can also compare the estimated cost of buying your shopping basket in one supermarket or in several stores.
-
-This helps users choose the option that fits their budget and saves them time.
+But the most important part is the full basket. For chicken tikka masala for four people, the cheapest single supermarket costs nineteen euros thirty-one. If you buy each ingredient where it is cheapest, you pay seventeen ninety-nine in two stores. You save one euro thirty-two, but you need one extra stop. You decide.
 
 ---
 
-## Cristina: recipes and benefits (≈ 1 min)
+## Cristina: recipes, shopping list and benefits (≈ 1 min)
 
-*[Screen: Recipes → Chicken Tikka Masala, with the cost comparison]*
+*[Screen: Chicken Tikka Masala ingredients, change the servings]*
 
-SuperSearch also has a recipe section. You can choose a meal, such as chicken tikka masala or spaghetti bolognese, and the app shows you the ingredients you need.
-
-Then you can compare the price of each ingredient across supermarkets and estimate the total cost of the shopping basket.
-
-The app can suggest the cheapest single supermarket, or a lower total if you are willing to visit more than one store. For chicken tikka masala for four people, the best single store costs about nineteen euros, and splitting the shop between two stores saves about one euro thirty.
+SuperSearch also has a recipe section. You choose a meal, like chicken tikka masala or spaghetti bolognese, and the app shows the ingredients and the quantities. You can change the number of servings, and you can tick the ingredients you already have at home.
 
 *[Screen: press "Add 10 items to list", then open My list and tick off one item]*
 
-You can add the ingredients to a shopping list and mark them off as you shop.
+With one click, the ingredients go to your shopping list. In the supermarket, you mark each item as bought. The list is saved in your browser.
 
-People should use SuperSearch because it helps them save time, plan meals and make informed choices. Our prototype uses example prices, but the idea could be expanded with real price data in the future.
+Why should people use SuperSearch? Because it helps them save time, plan their meals and spend less. Our prototype uses example prices, not live supermarket data, but in the future it could use real prices.
 
-SuperSearch: find it, compare it, save it. Thank you!
+SuperSearch: Find it. Compare it. Save it. Thank you!
 
 ---
 
