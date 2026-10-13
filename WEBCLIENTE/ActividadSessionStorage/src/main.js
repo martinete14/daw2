@@ -1,8 +1,8 @@
 import "./style.css";
 import { login, usuarioLogeado, logout } from "./logic/sesion.js";
 import {
-  MAXIMO_POR_PERSONA, MONTO_MAXIMO, obtenerProductos, obtenerCarrito, vaciarCarrito,
-  totalCarrito, agregarAlCarrito, quitarDelCarrito, comprar,
+  MAXIMO_POR_PERSONA, MONTO_MAXIMO, formatearPrecio, obtenerProductos, obtenerCarrito,
+  vaciarCarrito, totalCarrito, agregarAlCarrito, quitarDelCarrito, comprar,
 } from "./logic/tienda.js";
 
 const formLogin = document.getElementById("form-login");
@@ -18,10 +18,27 @@ const total = document.getElementById("total");
 const mensaje = document.getElementById("mensaje");
 const botonComprar = document.getElementById("comprar");
 const botonSalir = document.getElementById("salir");
+const botonArs = document.getElementById("moneda-ars");
+const botonEur = document.getElementById("moneda-eur");
 
-// 5208 -> "$5.208"
-function pesos(numero) {
-  return "$" + numero.toLocaleString("es-AR");
+let moneda = "ARS";
+
+function precio(pesos) {
+  return formatearPrecio(pesos, moneda);
+}
+
+function mostrarReglas() {
+  reglas.textContent = "Máximo " + MAXIMO_POR_PERSONA + " paquetes de cada yerba por persona · Compras de hasta " + precio(MONTO_MAXIMO);
+}
+
+// cambia la moneda y vuelve a pintar todo lo que tiene precios
+function cambiarMoneda(nueva) {
+  moneda = nueva;
+  botonArs.classList.toggle("activa", moneda === "ARS");
+  botonEur.classList.toggle("activa", moneda === "EUR");
+  mostrarReglas();
+  mostrarProductos();
+  mostrarCarrito();
 }
 
 function mostrar() {
@@ -55,7 +72,7 @@ function mostrarProductos() {
     card.innerHTML = `
       <div class="foto"><img src="${producto.imagen}" alt="${producto.nombre}"></div>
       <h3>${producto.nombre}</h3>
-      <p class="precio">${pesos(producto.precio)}</p>
+      <p class="precio">${precio(producto.precio)}</p>
       <p class="stock">Quedan ${producto.existencia}</p>
       <div class="agregar">
         <input type="number" min="1" value="1">
@@ -95,7 +112,7 @@ function mostrarCarrito() {
     unidades += item.cantidad;
 
     const fila = document.createElement("li");
-    fila.textContent = item.cantidad + " x " + producto.nombre + " = " + pesos(producto.precio * item.cantidad);
+    fila.textContent = item.cantidad + " x " + producto.nombre + " = " + precio(producto.precio * item.cantidad);
 
     const botonQuitar = document.createElement("button");
     botonQuitar.textContent = "Quitar";
@@ -108,7 +125,7 @@ function mostrarCarrito() {
     listaCarrito.appendChild(fila);
   });
 
-  total.textContent = "Total: " + pesos(totalCarrito());
+  total.textContent = "Total: " + precio(totalCarrito());
   cantidadCarrito.textContent = unidades;
 }
 
@@ -143,5 +160,8 @@ botonSalir.addEventListener("click", () => {
   mostrar();
 });
 
-reglas.textContent = "Máximo " + MAXIMO_POR_PERSONA + " paquetes de cada yerba por persona · Compras de hasta " + pesos(MONTO_MAXIMO);
+botonArs.addEventListener("click", () => cambiarMoneda("ARS"));
+botonEur.addEventListener("click", () => cambiarMoneda("EUR"));
+
+mostrarReglas();
 mostrar();

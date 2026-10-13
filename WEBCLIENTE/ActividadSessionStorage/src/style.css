@@ -55,6 +55,21 @@ body {
   font-weight: 500;
 }
 
+/* botones para cambiar entre pesos y euros */
+.monedas button {
+  padding: 4px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #fff;
+  font-size: 13px;
+}
+
+.monedas button.activa {
+  background: #08567a;
+  border-color: #08567a;
+  color: #fff;
+}
+
 /* el numerito negro arriba del carrito */
 .icono-carrito {
   position: relative;

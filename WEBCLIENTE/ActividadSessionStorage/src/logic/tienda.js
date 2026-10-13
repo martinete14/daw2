@@ -5,6 +5,16 @@ import productosIniciales from "../data/productos.json";
 
 export const MAXIMO_POR_PERSONA = 3; // paquetes de cada yerba por persona
 export const MONTO_MAXIMO = 25000; // tope de cada compra en pesos
+export const EURO_EN_PESOS = 1650; // cotización del euro puesta a mano
+
+// los precios se guardan siempre en pesos, esto solo cambia cómo se muestran.
+// 5208 -> "$5.208" en ARS, o "€3,16" en EUR
+export function formatearPrecio(pesos, moneda) {
+  if (moneda === "EUR") {
+    return "€" + (pesos / EURO_EN_PESOS).toLocaleString("es-ES", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  }
+  return "$" + pesos.toLocaleString("es-AR");
+}
 
 // la primera vez cargo el json en el localStorage, después siempre leo de ahí
 export function obtenerProductos() {
@@ -68,7 +78,7 @@ export function agregarAlCarrito(usuario, id, cantidad) {
     return "Solo podés llevar " + MAXIMO_POR_PERSONA + " paquetes de " + producto.nombre + " por persona.";
   }
   if (totalCarrito() + producto.precio * cantidad > MONTO_MAXIMO) {
-    return "La compra no puede pasar de $" + MONTO_MAXIMO.toLocaleString("es-AR") + ".";
+    return "Te pasás del monto máximo de compra.";
   }
 
   if (item) {
