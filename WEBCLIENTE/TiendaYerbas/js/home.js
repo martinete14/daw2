@@ -1,12 +1,4 @@
-// lee un objeto/array guardado como JSON.
-// si todavía no hay nada guardado o el texto está roto, devuelve el valor por defecto
-function leer(storage, clave, porDefecto) {
-  try {
-    return JSON.parse(storage.getItem(clave)) ?? porDefecto;
-  } catch (e) {
-    return porDefecto;
-  }
-}
+// tienda: carrito, compra y pantalla. usa productos.js (productos, leer, buscar...)
 
 // sin sesión no se puede estar acá: vuelta al login
 const sesion = leer(sessionStorage, "sesion", null);
@@ -14,26 +6,8 @@ if (!sesion) {
   location.href = "index.html";
 }
 
-let productos = []; // el inventario, se guarda en el localStorage
+// ---------- lógica del carrito: [{ id, cantidad }], en el sessionStorage ----------
 
-// ---------- lógica ----------
-
-// la primera vez lo traigo del json y lo guardo en el localStorage,
-// después siempre lo leo del localStorage (ahí están las existencias actualizadas)
-async function cargarProductos() {
-  productos = leer(localStorage, "inventario", null);
-  if (!Array.isArray(productos)) {
-    const respuesta = await fetch("data/productos.json");
-    productos = await respuesta.json();
-    localStorage.setItem("inventario", JSON.stringify(productos));
-  }
-}
-
-function buscar(id) {
-  return productos.find((p) => p.id === id);
-}
-
-// carrito: [{ id, cantidad }], en el sessionStorage
 function obtenerCarrito() {
   const carrito = leer(sessionStorage, "carrito", []);
   return Array.isArray(carrito) ? carrito : [];
@@ -86,15 +60,15 @@ function comprar() {
   const carrito = obtenerCarrito();
   if (carrito.length === 0) return "El carrito está vacío.";
 
-  // vuelvo a leer el inventario por si otra pestaña compró mientras tanto
-  productos = leer(localStorage, "inventario", productos);
+  // antes de comprar vuelvo a leer el inventario por si otra pestaña compró mientras tanto
+  releerProductos();
   const problemas = problemasCarrito();
   if (problemas.length > 0) return "No se puede comprar. " + problemas.join(" ");
 
   carrito.forEach((item) => {
     buscar(item.id).existencias -= item.cantidad;
   });
-  localStorage.setItem("inventario", JSON.stringify(productos));
+  guardarProductos();
   sessionStorage.removeItem("carrito");
   return "";
 }
@@ -195,7 +169,7 @@ document.getElementById("salir").addEventListener("click", () => {
 window.addEventListener("storage", (e) => {
   if (e.key !== "inventario") return;
 
-  productos = leer(localStorage, "inventario", productos);
+  releerProductos();
   pintarProductos();
   pintarCarrito();
   const problemas = problemasCarrito();

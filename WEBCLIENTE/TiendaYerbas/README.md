@@ -20,7 +20,7 @@ Todas las rutas son relativas.
 | Robben   | abcd       |
 | Palermo  | boca       |
 
-Están escritos en `js/login.js` solo con fines didácticos: no es un login seguro.
+Están escritos en `js/usuarios.js` solo con fines didácticos: no es un login seguro.
 
 ## Qué se guarda y dónde
 
@@ -38,15 +38,17 @@ Todo se guarda con `JSON.stringify()` y se lee con `JSON.parse()`. Si no hay nad
 
 ```
 index.html          login
-tienda.html         catálogo y carrito (sin sesión redirige al login)
+home.html           catálogo y carrito (sin sesión redirige al login)
 css/estilos.css
 data/productos.json la "base de datos" de yerbas
 img/                fotos de las yerbas
-js/login.js         usuarios de prueba e inicio de sesión
-js/tienda.js        inventario, carrito, compra y evento storage
+js/usuarios.js      usuarios de prueba
+js/login.js         inicio de sesión
+js/productos.js     carga y guarda el inventario (json → localStorage)
+js/home.js          carrito, compra, pantalla y evento storage
 ```
 
-En cada archivo JS primero está la lógica y abajo los listeners.
+En `login.js` y `home.js` primero está la lógica y abajo los listeners.
 
 ## Para probar
 
@@ -54,5 +56,5 @@ En cada archivo JS primero está la lógica y abajo los listeners.
 - **Otra pestaña**: hay que volver a iniciar sesión (cada pestaña tiene su sessionStorage), pero el inventario es el mismo.
 - **Comprar en una pestaña**: en la otra se actualizan solas las existencias (evento `storage`) y, si su carrito ya no alcanza, avisa y no deja comprar.
 - **Cerrar sesión**: se borran la sesión y el carrito y vuelve al login.
-- **Abrir `tienda.html` sin sesión**: redirige a `index.html`.
+- **Abrir `home.html` sin sesión**: redirige a `index.html`.
 - **Volver al stock inicial**: F12 → Aplicación → Local Storage → borrar `inventario`.
