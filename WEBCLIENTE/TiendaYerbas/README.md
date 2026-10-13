@@ -1,14 +1,16 @@
 # Martinete Yerbas
 
-Tienda de yerbas con login y carrito hecha con HTML, CSS y JavaScript, sin servidor ni base de datos.
+Tienda de yerbas con login y carrito hecha con HTML, CSS y JavaScript, sin base de datos ni servidor de autenticación.
 Usa `sessionStorage` y `localStorage` para guardar los datos.
 
 ## Cómo abrirla
 
 1. Descomprimir el ZIP.
-2. Abrir `index.html` con doble clic (Chrome, Edge o Firefox).
+2. Abrir la carpeta `TiendaYerbas` en VS Code.
+3. Clic derecho en `index.html` → **Open with Live Server**.
 
-No hace falta instalar nada. Todas las rutas son relativas.
+Hace falta Live Server (o cualquier servidor local) porque los productos se cargan de `data/productos.json` con `fetch()`, y el navegador no deja hacer `fetch` si se abre el HTML con doble clic (`file://`).
+Todas las rutas son relativas.
 
 ## Usuarios de prueba
 
@@ -18,40 +20,39 @@ No hace falta instalar nada. Todas las rutas son relativas.
 | Robben   | abcd       |
 | Palermo  | boca       |
 
-Los usuarios están escritos en `js/datos.js` solo con fines didácticos: no es un login seguro.
+Están escritos en `js/login.js` solo con fines didácticos: no es un login seguro.
 
 ## Qué se guarda y dónde
 
-| Clave        | Dónde              | Qué tiene                                        | Por qué |
-|--------------|--------------------|--------------------------------------------------|---------|
-| `sesion`     | **sessionStorage** | `{ usuario, nombre }` (sin la contraseña)        | La sesión dura lo que dura la pestaña. Al cerrarla o al cerrar sesión desaparece. |
-| `carrito`    | **sessionStorage** | `[{ id, cantidad }, ...]`                        | Es de esa sesión: se conserva al recargar, pero no se comparte con otras pestañas y se borra al cerrar sesión. |
-| `inventario` | **localStorage**   | Los productos con `id, nombre, precio, existencias, imagen` | Tiene que durar entre visitas y ser el mismo para todas las pestañas, para que una compra descuente el stock para todos. |
+| Clave        | Dónde              | Qué tiene                                   | Por qué |
+|--------------|--------------------|---------------------------------------------|---------|
+| `sesion`     | **sessionStorage** | `{ usuario, nombre }` (sin la contraseña)   | La sesión dura lo que dura la pestaña. Se borra al cerrar sesión o al cerrar la pestaña. |
+| `carrito`    | **sessionStorage** | `[{ id, cantidad }, ...]`                   | Es de esa sesión: se conserva al recargar, no se comparte con otras pestañas y se borra al cerrar sesión. |
+| `inventario` | **localStorage**   | Los productos con sus existencias           | Tiene que durar entre visitas y ser el mismo en todas las pestañas, para que una compra descuente el stock para todos. |
 
-Todo se guarda con `JSON.stringify()` y se lee con `JSON.parse()`. Si no hay nada guardado o el dato está roto, se usa un valor por defecto (el inventario vuelve al inicial y el carrito empieza vacío).
+La primera vez, el inventario se lee de `data/productos.json` y se copia al localStorage. A partir de ahí siempre se lee del localStorage, que es donde están las existencias actualizadas.
+
+Todo se guarda con `JSON.stringify()` y se lee con `JSON.parse()`. Si no hay nada guardado o el dato está roto, se usa un valor por defecto (el inventario se vuelve a cargar del JSON y el carrito empieza vacío).
 
 ## Estructura
 
 ```
-index.html            login
-tienda.html           catálogo y carrito (sin sesión redirige al login)
+index.html          login
+tienda.html         catálogo y carrito (sin sesión redirige al login)
 css/estilos.css
-img/                  fotos de las yerbas
-js/datos.js           usuarios de prueba e inventario inicial
-js/almacenamiento.js  guardarJSON / leerJSON (con try/catch)
-js/sesion.js          iniciar, obtener y cerrar sesión
-js/carrito.js         inventario, carrito, validaciones y compra
-js/login.js           listeners de la pantalla de login
-js/tienda.js          pinta productos y carrito, listeners y evento storage
+data/productos.json la "base de datos" de yerbas
+img/                fotos de las yerbas
+js/login.js         usuarios de prueba e inicio de sesión
+js/tienda.js        inventario, carrito, compra y evento storage
 ```
 
-Los archivos de lógica (`almacenamiento`, `sesion`, `carrito`) no tocan el HTML. Los listeners están solo en `login.js` y `tienda.js`.
+En cada archivo JS primero está la lógica y abajo los listeners.
 
 ## Para probar
 
 - **Recargar**: la sesión y el carrito siguen.
 - **Otra pestaña**: hay que volver a iniciar sesión (cada pestaña tiene su sessionStorage), pero el inventario es el mismo.
-- **Comprar en una pestaña**: en la otra se actualizan solas las existencias (evento `storage`), y si su carrito ya no alcanza, avisa y no deja comprar.
+- **Comprar en una pestaña**: en la otra se actualizan solas las existencias (evento `storage`) y, si su carrito ya no alcanza, avisa y no deja comprar.
 - **Cerrar sesión**: se borran la sesión y el carrito y vuelve al login.
 - **Abrir `tienda.html` sin sesión**: redirige a `index.html`.
 - **Volver al stock inicial**: F12 → Aplicación → Local Storage → borrar `inventario`.
