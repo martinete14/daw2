@@ -1,60 +1,40 @@
 import "./style.css";
-import { USUARIOS, iniciarSesion, obtenerUsuarioLogueado, cerrarSesion } from "./logic/sesion.js";
+import { login, usuarioLogeado, logout } from "./logic/sesion.js";
 
-// elementos del HTML que vamos a leer/modificar
-const vistaLogin = document.getElementById("vista-login");
-const vistaBienvenida = document.getElementById("vista-bienvenida");
-const loginForm = document.getElementById("login-form");
-const usuarioInput = document.getElementById("usuario");
-const contraseñaInput = document.getElementById("contraseña");
-const mensajeError = document.getElementById("mensaje-error");
-const listaUsuarios = document.getElementById("lista-usuarios");
-const nombreUsuario = document.getElementById("nombre-usuario");
-const logoutBtn = document.getElementById("logout-btn");
+const formLogin = document.getElementById("form-login");
+const zonaUsuario = document.getElementById("zona-usuario");
+const saludo = document.getElementById("saludo");
+const error = document.getElementById("error");
+const botonSalir = document.getElementById("salir");
 
-function mostrarLogin() {
-  vistaLogin.hidden = false;
-  vistaBienvenida.hidden = true;
-  loginForm.reset();
-  mensajeError.textContent = "";
-}
-
-function mostrarBienvenida(usuario) {
-  vistaLogin.hidden = true;
-  vistaBienvenida.hidden = false;
-  nombreUsuario.textContent = usuario.nombre;
-}
-
-function mostrarUsuariosDePrueba() {
-  USUARIOS.forEach((u) => {
-    const item = document.createElement("li");
-    item.textContent = `${u.usuario} / ${u.contraseña}`;
-    listaUsuarios.appendChild(item);
-  });
-}
-
-// iniciar sesión
-loginForm.addEventListener("submit", (evento) => {
-  evento.preventDefault();
-  const usuario = iniciarSesion(usuarioInput.value.trim(), contraseñaInput.value);
+function mostrar() {
+  const usuario = usuarioLogeado();
   if (usuario) {
-    mostrarBienvenida(usuario);
+    formLogin.hidden = true;
+    zonaUsuario.hidden = false;
+    saludo.textContent = "Hola " + usuario + ", ya estás logeado.";
   } else {
-    mensajeError.textContent = "Usuario o contraseña incorrectos";
+    formLogin.hidden = false;
+    zonaUsuario.hidden = true;
+  }
+}
+
+formLogin.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const usuario = document.getElementById("usuario").value;
+  const clave = document.getElementById("clave").value;
+
+  if (login(usuario, clave)) {
+    error.textContent = "";
+    mostrar();
+  } else {
+    error.textContent = "Usuario o contraseña incorrectos.";
   }
 });
 
-// cerrar sesión
-logoutBtn.addEventListener("click", () => {
-  cerrarSesion();
-  mostrarLogin();
+botonSalir.addEventListener("click", () => {
+  logout();
+  mostrar();
 });
 
-// al cargar la página, si ya había sesión guardada entra directo
-mostrarUsuariosDePrueba();
-const usuarioGuardado = obtenerUsuarioLogueado();
-if (usuarioGuardado) {
-  mostrarBienvenida(usuarioGuardado);
-} else {
-  mostrarLogin();
-}
+mostrar();

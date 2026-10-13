@@ -1,34 +1,19 @@
-// acá no hay nada de HTML ni listeners, solo los usuarios y la sesión
+// acá solo la lógica, los listeners están en main.js
 
-const CLAVE_SESION = "usuarioLogueado";
+const usuarios = { Riquelme: "1234", Robben: "abcd", Palermo: "boca" };
 
-// usuarios de prueba hardcodeados
-export const USUARIOS = [
-  { usuario: "martin", contraseña: "1234", nombre: "Martín Villagra" },
-  { usuario: "lucia", contraseña: "mate2024", nombre: "Lucía Fernández" },
-  { usuario: "diego", contraseña: "asado10", nombre: "Diego Romero" },
-];
-
-// si el usuario y la contraseña coinciden, guarda la sesión y devuelve el usuario.
-// si no, devuelve null
-export function iniciarSesion(usuario, contraseña) {
-  const encontrado = USUARIOS.find(
-    (u) => u.usuario === usuario && u.contraseña === contraseña
-  );
-  if (!encontrado) return null;
-
-  // la contraseña no la guardamos en el sessionStorage
-  const datosSesion = { usuario: encontrado.usuario, nombre: encontrado.nombre };
-  sessionStorage.setItem(CLAVE_SESION, JSON.stringify(datosSesion));
-  return datosSesion;
+export function login(usuario, clave) {
+  if (usuarios[usuario] == clave) {
+    sessionStorage.setItem("usuario", usuario);
+    return true;
+  }
+  return false;
 }
 
-// devuelve el usuario guardado en la sesión, o null si no hay nadie logueado
-export function obtenerUsuarioLogueado() {
-  const guardado = sessionStorage.getItem(CLAVE_SESION);
-  return guardado ? JSON.parse(guardado) : null;
+export function usuarioLogeado() {
+  return sessionStorage.getItem("usuario");
 }
 
-export function cerrarSesion() {
-  sessionStorage.removeItem(CLAVE_SESION);
+export function logout() {
+  sessionStorage.removeItem("usuario");
 }
