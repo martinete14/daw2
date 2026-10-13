@@ -68,7 +68,7 @@ export function agregarAlCarrito(usuario, id, cantidad) {
     return "Solo podés llevar " + MAXIMO_POR_PERSONA + " paquetes de " + producto.nombre + " por persona.";
   }
   if (totalCarrito() + producto.precio * cantidad > MONTO_MAXIMO) {
-    return "La compra no puede pasar de $" + MONTO_MAXIMO + ".";
+    return "La compra no puede pasar de $" + MONTO_MAXIMO.toLocaleString("es-AR") + ".";
   }
 
   if (item) {

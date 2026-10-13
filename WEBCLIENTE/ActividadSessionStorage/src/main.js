@@ -7,8 +7,9 @@ import {
 
 const formLogin = document.getElementById("form-login");
 const zonaUsuario = document.getElementById("zona-usuario");
-const saludo = document.getElementById("saludo");
+const cabeceraUsuario = document.getElementById("cabecera-usuario");
 const usuarioCabecera = document.getElementById("usuario-cabecera");
+const cantidadCarrito = document.getElementById("cantidad-carrito");
 const error = document.getElementById("error");
 const reglas = document.getElementById("reglas");
 const listaProductos = document.getElementById("productos");
@@ -18,19 +19,24 @@ const mensaje = document.getElementById("mensaje");
 const botonComprar = document.getElementById("comprar");
 const botonSalir = document.getElementById("salir");
 
+// 5208 -> "$5.208"
+function pesos(numero) {
+  return "$" + numero.toLocaleString("es-AR");
+}
+
 function mostrar() {
   const usuario = usuarioLogeado();
   if (usuario) {
     formLogin.hidden = true;
     zonaUsuario.hidden = false;
-    saludo.textContent = "Hola " + usuario + ", ya estás logeado.";
-    usuarioCabecera.textContent = usuario;
+    cabeceraUsuario.hidden = false;
+    usuarioCabecera.textContent = "Hola, " + usuario;
     mostrarProductos();
     mostrarCarrito();
   } else {
     formLogin.hidden = false;
     zonaUsuario.hidden = true;
-    usuarioCabecera.textContent = "";
+    cabeceraUsuario.hidden = true;
   }
 }
 
@@ -45,13 +51,16 @@ function mostrarProductos() {
   listaProductos.innerHTML = "";
   obtenerProductos().forEach((producto) => {
     const card = document.createElement("div");
-    card.className = "card";
+    card.className = "producto";
     card.innerHTML = `
-      <h3>🧉 ${producto.nombre}</h3>
-      <p class="precio">$${producto.precio}</p>
+      <div class="foto"><img src="${producto.imagen}" alt="${producto.nombre}"></div>
+      <h3>${producto.nombre}</h3>
+      <p class="precio">${pesos(producto.precio)}</p>
       <p class="stock">Quedan ${producto.existencia}</p>
-      <input type="number" min="1" value="1">
-      <button>Agregar</button>
+      <div class="agregar">
+        <input type="number" min="1" value="1">
+        <button class="boton">Agregar</button>
+      </div>
     `;
 
     const cantidad = card.querySelector("input");
@@ -78,12 +87,15 @@ function mostrarProductos() {
 
 function mostrarCarrito() {
   const productos = obtenerProductos();
+  let unidades = 0;
   listaCarrito.innerHTML = "";
 
   obtenerCarrito().forEach((item) => {
     const producto = productos.find((p) => p.id === item.id);
+    unidades += item.cantidad;
+
     const fila = document.createElement("li");
-    fila.textContent = item.cantidad + " x " + producto.nombre + " = $" + producto.precio * item.cantidad;
+    fila.textContent = item.cantidad + " x " + producto.nombre + " = " + pesos(producto.precio * item.cantidad);
 
     const botonQuitar = document.createElement("button");
     botonQuitar.textContent = "Quitar";
@@ -96,7 +108,8 @@ function mostrarCarrito() {
     listaCarrito.appendChild(fila);
   });
 
-  total.textContent = "Total: $" + totalCarrito();
+  total.textContent = "Total: " + pesos(totalCarrito());
+  cantidadCarrito.textContent = unidades;
 }
 
 formLogin.addEventListener("submit", (e) => {
@@ -130,5 +143,5 @@ botonSalir.addEventListener("click", () => {
   mostrar();
 });
 
-reglas.textContent = "Máximo " + MAXIMO_POR_PERSONA + " paquetes de cada yerba por persona y compras de hasta $" + MONTO_MAXIMO + ".";
+reglas.textContent = "Máximo " + MAXIMO_POR_PERSONA + " paquetes de cada yerba por persona · Compras de hasta " + pesos(MONTO_MAXIMO);
 mostrar();

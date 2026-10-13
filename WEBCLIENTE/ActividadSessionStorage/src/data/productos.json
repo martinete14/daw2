@@ -1,8 +1,10 @@
 [
-  { "id": 1, "nombre": "Playadito 1kg", "precio": 5200, "existencia": 10 },
-  { "id": 2, "nombre": "Taragüi 1kg", "precio": 4800, "existencia": 8 },
-  { "id": 3, "nombre": "Rosamonte 1kg", "precio": 4600, "existencia": 5 },
-  { "id": 4, "nombre": "Amanda 1kg", "precio": 4300, "existencia": 12 },
-  { "id": 5, "nombre": "Unión 1kg", "precio": 4900, "existencia": 6 },
-  { "id": 6, "nombre": "Canarias 1kg", "precio": 7500, "existencia": 2 }
+  { "id": 1, "nombre": "Playadito Suave 1kg", "precio": 5208, "existencia": 10, "imagen": "/img/playadito.jpg" },
+  { "id": 2, "nombre": "Taragüi 4 Flex 1kg", "precio": 3790, "existencia": 8, "imagen": "/img/taragui.png" },
+  { "id": 3, "nombre": "Rosamonte 1kg", "precio": 4100, "existencia": 5, "imagen": "/img/rosamonte.jpg" },
+  { "id": 4, "nombre": "Amanda Tradicional 1kg", "precio": 4989, "existencia": 12, "imagen": "/img/amanda.jpg" },
+  { "id": 5, "nombre": "Unión Suave 1kg", "precio": 5369, "existencia": 6, "imagen": "/img/union.jpg" },
+  { "id": 6, "nombre": "Canarias 500g", "precio": 7450, "existencia": 2, "imagen": "/img/canarias.jpg" },
+  { "id": 7, "nombre": "CBSé Hierbas Serranas 1kg", "precio": 5040, "existencia": 7, "imagen": "/img/cbse.jpg" },
+  { "id": 8, "nombre": "La Merced Campo Sur 1kg", "precio": 6790, "existencia": 4, "imagen": "/img/la-merced.jpg" }
 ]

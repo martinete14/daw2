@@ -4,53 +4,57 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <title>Martinete Yerbas</title>
   </head>
   <body>
-    <div class="cabecera">
-      <h1>Login SessionStorage</h1>
-      <!-- si hay alguien logeado, su nombre sale arriba a la derecha -->
-      <span class="usuario" id="usuario-cabecera"></span>
-    </div>
+    <div class="barra-top" id="reglas"></div>
 
-    <div class="contenido">
-      <form id="form-login">
-        <p>Entrá con tu usuario (Riquelme / 1234, Robben / abcd, Palermo / boca)</p>
+    <header class="cabecera">
+      <h1 class="logo">Martinete <span>Yerbas</span></h1>
+      <!-- solo se ve si hay alguien logeado -->
+      <div class="cabecera-derecha" id="cabecera-usuario" hidden>
+        <span class="usuario" id="usuario-cabecera"></span>
+        <span class="icono-carrito">🛒<span class="cantidad" id="cantidad-carrito">0</span></span>
+        <button id="salir" class="boton-salir">Cerrar sesión</button>
+      </div>
+    </header>
 
-        <div class="campo">
-          <label for="usuario">Usuario</label>
-          <input type="text" id="usuario" required>
-        </div>
+    <main class="contenido">
+      <form id="form-login" class="caja-login">
+        <h2>Iniciar sesión</h2>
+        <p>Usuarios de prueba: Riquelme / 1234, Robben / abcd, Palermo / boca</p>
 
-        <div class="campo">
-          <label for="clave">Contraseña</label>
-          <input type="password" id="clave" required>
-        </div>
+        <label for="usuario">Usuario</label>
+        <input type="text" id="usuario" required>
 
-        <button type="submit" class="enviar">ENTRAR</button>
+        <label for="clave">Contraseña</label>
+        <input type="password" id="clave" required>
+
+        <button type="submit" class="boton">ENTRAR</button>
         <p class="error" id="error" hidden>Usuario o contraseña incorrectos.</p>
       </form>
 
-      <div id="zona-usuario" hidden>
-        <p class="ok" id="saludo"></p>
+      <div id="zona-usuario" class="tienda" hidden>
+        <section>
+          <h2>Yerbas</h2>
+          <div class="productos" id="productos"></div>
+        </section>
 
-        <h2>Yerbas</h2>
-        <p id="reglas"></p>
-        <div class="productos" id="productos"></div>
-
-        <h2>Carrito</h2>
-        <ul class="resultados" id="carrito"></ul>
-        <p id="total"></p>
-        <p id="mensaje" hidden></p>
-
-        <button id="comprar" class="enviar">Comprar</button>
-        <button id="salir" class="enviar">Cerrar sesión</button>
+        <aside class="carrito">
+          <h2>Tu carrito</h2>
+          <ul id="carrito"></ul>
+          <p class="total" id="total"></p>
+          <p id="mensaje" hidden></p>
+          <button id="comprar" class="boton">Comprar</button>
+        </aside>
       </div>
-    </div>
+    </main>
 
-    <div class="pie">
+    <footer class="pie">
       <p>Martinete daw2 &middot; Desarrollo web en entorno cliente</p>
-    </div>
+      <p>Fotos y precios de referencia: Día Online</p>
+    </footer>
 
     <script type="module" src="/src/main.js"></script>
   </body>

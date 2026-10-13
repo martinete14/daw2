@@ -1,5 +1,12 @@
+/* estilo copiado de creationwatches.com: blanco, Poppins, azul petróleo y footer negro */
+
 * {
   box-sizing: border-box;
+}
+
+/* sin esto, los display: flex / grid de abajo le ganan al atributo hidden */
+[hidden] {
+  display: none !important;
 }
 
 body {
@@ -7,183 +14,271 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  background: #eef5fb;
-  color: #1c2b3a;
-  font-family: Arial, sans-serif;
+  background: #fff;
+  color: #111;
+  font-family: "Poppins", sans-serif;
 }
 
-.cabecera,
-.pie,
-.contenido {
-  width: 90%;
-  max-width: 720px;
+/* franja de arriba con las reglas de compra */
+.barra-top {
+  background: #063e58;
+  color: #fff;
+  text-align: center;
+  font-size: 13px;
+  padding: 8px;
 }
 
 .cabecera {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.4rem 0 0.8rem;
-  border-bottom: 3px solid #f2b705;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #e8e8e8;
 }
 
-.cabecera .usuario {
-  font-size: 0.9rem;
-  font-weight: bold;
-  color: #3d6da8;
-}
-
-.cabecera h1 {
-  font-size: 1.3rem;
+.logo {
   margin: 0;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #08567a;
 }
 
-.pie {
-  margin-top: auto;
-  padding: 1.5rem 0;
-  color: #5c6b7a;
-  font-size: 0.8rem;
-  text-align: center;
+.logo span {
+  color: #111;
+}
+
+.cabecera-derecha {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* el numerito negro arriba del carrito */
+.icono-carrito {
+  position: relative;
+  font-size: 1.4rem;
+}
+
+.cantidad {
+  position: absolute;
+  top: -5px;
+  left: 15px;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  background: #000;
+  color: #fff;
+  font-size: 10px;
 }
 
 .contenido {
-  padding: 1rem 0 2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem 3rem;
 }
 
-.campo {
-  margin-bottom: 0.9rem;
+h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 
-.campo label {
+/* ---- login ---- */
+
+.caja-login {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border: 1px solid #e8e8e8;
+  border-radius: 10px;
+}
+
+.caja-login p {
+  font-size: 13px;
+  color: #4f4e4e;
+}
+
+label {
   display: block;
-  font-size: 0.9rem;
-  color: #5c6b7a;
+  font-size: 14px;
+  font-weight: 500;
   margin-bottom: 0.3rem;
 }
 
 input {
   font: inherit;
   width: 100%;
-  padding: 0.55rem 0.7rem;
-  border: 1px solid #b8d2ea;
-  border-radius: 6px;
-  background: #fff;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
   margin-bottom: 1rem;
-}
-
-input:focus {
-  border-color: #4f86c6;
 }
 
 button {
   font: inherit;
-  padding: 0.55rem 1.3rem;
-  color: #fff;
-  background: #4f86c6;
-  border: none;
-  border-radius: 6px;
   cursor: pointer;
 }
 
-button:hover {
-  background: #3d6da8;
-}
-
-button.enviar {
+.boton {
   width: 100%;
-  margin-top: 0.5rem;
+  padding: 0.7rem;
+  border: none;
+  border-radius: 10px;
+  background: #08567a;
+  color: #fff;
+  font-weight: 500;
 }
 
-p.ok,
-p.error {
-  padding: 0.7rem 0.9rem;
-  border-radius: 6px;
-  font-size: 0.95rem;
+.boton:hover {
+  background: #063e58;
 }
 
-p.ok {
-  background: #fdf3d1;
-  color: #7a5c00;
-}
-
-p.error {
-  background: #f7e6e6;
-  color: #a13a3a;
-}
-
-#form-login {
-  max-width: 420px;
-  margin: 0 auto;
-}
-
-h2 {
-  font-size: 1.1rem;
-  margin: 1.5rem 0 0.5rem;
-}
-
-/* las yerbas en cards */
-.productos {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-  gap: 0.8rem;
-}
-
-.card {
-  background: #fff;
-  border: 1px solid #b8d2ea;
-  border-radius: 6px;
-  padding: 0.8rem;
-  text-align: center;
-}
-
-.card h3 {
-  font-size: 1rem;
-  margin: 0 0 0.4rem;
-}
-
-.card .precio {
-  font-weight: bold;
-  color: #3d6da8;
-  margin: 0;
-}
-
-.card .stock {
-  font-size: 0.85rem;
-  color: #5c6b7a;
-}
-
-.card input {
-  text-align: center;
-  margin-bottom: 0.5rem;
-}
-
-.card button {
-  width: 100%;
-}
-
-button:disabled {
-  background: #b8c4d0;
+.boton:disabled {
+  background: #ccc;
   cursor: not-allowed;
 }
 
-ul.resultados {
+.boton-salir {
+  background: none;
+  border: none;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+/* ---- tienda: productos a la izquierda, carrito a la derecha ---- */
+
+.tienda {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 2rem;
+  align-items: start;
+}
+
+.productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+/* todas las fotos del mismo tamaño, con el fondo gris de creationwatches */
+.foto {
+  height: 260px;
+  padding: 15px 5px;
+  border-radius: 10px;
+  background: #f7f7f7;
+}
+
+.foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  mix-blend-mode: multiply; /* el fondo blanco de la foto se mezcla con el gris */
+}
+
+.producto h3 {
+  font-size: 15px;
+  font-weight: 500;
+  margin: 0.6rem 0 0.2rem;
+}
+
+.precio {
+  margin: 0;
+  font-weight: 600;
+}
+
+.stock {
+  margin: 0.2rem 0 0.6rem;
+  font-size: 12px;
+  color: #4f4e4e;
+}
+
+.agregar {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.agregar input {
+  width: 60px;
+  margin: 0;
+  text-align: center;
+}
+
+/* ---- carrito ---- */
+
+.carrito {
+  position: sticky;
+  top: 1rem;
+  padding: 1.2rem;
+  border-radius: 10px;
+  background: #f7f7f7;
+}
+
+.carrito h2 {
+  margin-top: 0;
+}
+
+.carrito ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-ul.resultados li {
+.carrito li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #fff;
-  border: 1px solid #b8d2ea;
-  border-radius: 6px;
-  padding: 0.5rem 0.8rem;
-  margin-bottom: 0.4rem;
+  gap: 0.5rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid #e8e8e8;
+  font-size: 13px;
 }
 
-ul.resultados button {
-  padding: 0.3rem 0.7rem;
+.carrito li button {
+  border: none;
+  background: none;
+  color: #dc3545;
+  font-size: 12px;
+}
+
+.total {
+  font-weight: 600;
+}
+
+/* mensajes de ok y de error */
+.ok,
+.error {
+  padding: 0.6rem 0.8rem;
+  border-radius: 5px;
+  font-size: 13px;
+}
+
+.ok {
+  background: #40b5ad40;
+  color: #309e96;
+}
+
+.error {
+  background: #f8d7da;
+  color: #dc3545;
+}
+
+.pie {
+  margin-top: auto;
+  padding: 2rem;
+  background: #000;
+  color: #969595;
+  text-align: center;
+  font-size: 13px;
+}
+
+/* en el celular el carrito va abajo */
+@media (max-width: 768px) {
+  .tienda {
+    grid-template-columns: 1fr;
+  }
 }
