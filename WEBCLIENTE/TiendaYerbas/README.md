@@ -44,11 +44,12 @@ data/productos.json la "base de datos" de yerbas
 img/                fotos de las yerbas
 js/usuarios.js      usuarios de prueba
 js/login.js         inicio de sesión
-js/productos.js     carga y guarda el inventario (json → localStorage)
-js/home.js          carrito, compra, pantalla y evento storage
+js/productos.js     inventario: lo carga del json y lo guarda en el localStorage
+js/carrito.js       carrito en el sessionStorage, validaciones y compra
+js/home.js          pinta productos y carrito, listeners y evento storage
 ```
 
-En `login.js` y `home.js` primero está la lógica y abajo los listeners.
+La lógica (`productos.js`, `carrito.js`) no toca el HTML. Los listeners están en `login.js` y `home.js`.
 
 ## Para probar
 
