@@ -8,7 +8,7 @@
   </head>
   <body>
     <div class="cabecera">
-      <h1>Login</h1>
+      <h1>Login SessionStorage</h1>
       <!-- si hay alguien logeado, su nombre sale arriba a la derecha -->
       <span class="usuario" id="usuario-cabecera"></span>
     </div>
@@ -33,6 +33,17 @@
 
       <div id="zona-usuario" hidden>
         <p class="ok" id="saludo"></p>
+
+        <h2>Yerbas</h2>
+        <p id="reglas"></p>
+        <div class="productos" id="productos"></div>
+
+        <h2>Carrito</h2>
+        <ul class="resultados" id="carrito"></ul>
+        <p id="total"></p>
+        <p id="mensaje" hidden></p>
+
+        <button id="comprar" class="enviar">Comprar</button>
         <button id="salir" class="enviar">Cerrar sesión</button>
       </div>
     </div>

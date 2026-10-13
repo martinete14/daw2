@@ -17,7 +17,7 @@ body {
 .pie,
 .contenido {
   width: 90%;
-  max-width: 420px;
+  max-width: 720px;
 }
 
 .cabecera {
@@ -110,4 +110,80 @@ p.ok {
 p.error {
   background: #f7e6e6;
   color: #a13a3a;
+}
+
+#form-login {
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 1.1rem;
+  margin: 1.5rem 0 0.5rem;
+}
+
+/* las yerbas en cards */
+.productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 0.8rem;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #b8d2ea;
+  border-radius: 6px;
+  padding: 0.8rem;
+  text-align: center;
+}
+
+.card h3 {
+  font-size: 1rem;
+  margin: 0 0 0.4rem;
+}
+
+.card .precio {
+  font-weight: bold;
+  color: #3d6da8;
+  margin: 0;
+}
+
+.card .stock {
+  font-size: 0.85rem;
+  color: #5c6b7a;
+}
+
+.card input {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.card button {
+  width: 100%;
+}
+
+button:disabled {
+  background: #b8c4d0;
+  cursor: not-allowed;
+}
+
+ul.resultados {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul.resultados li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #b8d2ea;
+  border-radius: 6px;
+  padding: 0.5rem 0.8rem;
+  margin-bottom: 0.4rem;
+}
+
+ul.resultados button {
+  padding: 0.3rem 0.7rem;
 }

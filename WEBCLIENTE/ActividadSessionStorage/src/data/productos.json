@@ -1,0 +1,8 @@
+[
+  { "id": 1, "nombre": "Playadito 1kg", "precio": 5200, "existencia": 10 },
+  { "id": 2, "nombre": "Taragüi 1kg", "precio": 4800, "existencia": 8 },
+  { "id": 3, "nombre": "Rosamonte 1kg", "precio": 4600, "existencia": 5 },
+  { "id": 4, "nombre": "Amanda 1kg", "precio": 4300, "existencia": 12 },
+  { "id": 5, "nombre": "Unión 1kg", "precio": 4900, "existencia": 6 },
+  { "id": 6, "nombre": "Canarias 1kg", "precio": 7500, "existencia": 2 }
+]
