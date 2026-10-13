@@ -4,26 +4,41 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login con SessionStorage</title>
+    <title>Login</title>
   </head>
   <body>
-    <h1>Login</h1>
+    <div class="cabecera">
+      <h1>Login</h1>
+      <!-- si hay alguien logeado, su nombre sale arriba a la derecha -->
+      <span class="usuario" id="usuario-cabecera"></span>
+    </div>
 
-    <form id="form-login">
-      <p>Entrá con tu usuario (Riquelme / 1234, Robben / abcd, Palermo / boca)</p>
-      <label for="usuario">Usuario</label>
-      <input type="text" id="usuario" required>
+    <div class="contenido">
+      <form id="form-login">
+        <p>Entrá con tu usuario (Riquelme / 1234, Robben / abcd, Palermo / boca)</p>
 
-      <label for="clave">Contraseña</label>
-      <input type="password" id="clave" required>
+        <div class="campo">
+          <label for="usuario">Usuario</label>
+          <input type="text" id="usuario" required>
+        </div>
 
-      <button type="submit">ENTRAR</button>
-      <p id="error"></p>
-    </form>
+        <div class="campo">
+          <label for="clave">Contraseña</label>
+          <input type="password" id="clave" required>
+        </div>
 
-    <div id="zona-usuario" hidden>
-      <p id="saludo"></p>
-      <button id="salir">Cerrar sesión</button>
+        <button type="submit" class="enviar">ENTRAR</button>
+        <p class="error" id="error" hidden>Usuario o contraseña incorrectos.</p>
+      </form>
+
+      <div id="zona-usuario" hidden>
+        <p class="ok" id="saludo"></p>
+        <button id="salir" class="enviar">Cerrar sesión</button>
+      </div>
+    </div>
+
+    <div class="pie">
+      <p>Martinete daw2 &middot; Desarrollo web en entorno cliente</p>
     </div>
 
     <script type="module" src="/src/main.js"></script>
