@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Martinete Yerbas · Tienda</title>
+  </head>
+  <body>
+    <header class="cabecera">
+      <h1 class="logo">Martinete <span>Yerbas</span></h1>
+      <div class="cabecera-derecha">
+        <span id="nombre-usuario"></span>
+        <span class="icono-carrito">🛒<span class="cantidad" id="cantidad-carrito">0</span></span>
+        <button id="salir" class="boton-salir">Cerrar sesión</button>
+      </div>
+    </header>
+
+    <main class="contenido tienda">
+      <section>
+        <h2>Yerbas</h2>
+        <div class="productos" id="productos"></div>
+      </section>
+
+      <aside class="carrito">
+        <h2>Tu carrito</h2>
+        <ul id="carrito"></ul>
+        <p class="total" id="total"></p>
+        <p id="mensaje" hidden></p>
+        <button id="comprar" class="boton">Comprar</button>
+      </aside>
+    </main>
+
+    <footer class="pie">
+      <p>Martinete daw2 &middot; Desarrollo web en entorno cliente</p>
+    </footer>
+
+    <!-- el orden importa: cada archivo usa funciones de los de arriba -->
+    <script src="js/datos.js"></script>
+    <script src="js/almacenamiento.js"></script>
+    <script src="js/sesion.js"></script>
+    <script src="js/carrito.js"></script>
+    <script src="js/tienda.js"></script>
+  </body>
+</html>

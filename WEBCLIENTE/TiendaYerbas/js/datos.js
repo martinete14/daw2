@@ -1,0 +1,22 @@
+// "base de datos" de prueba.
+// va en un .js y no en un .json porque abriendo el index.html con doble clic (file://)
+// el navegador no deja leer un .json con fetch
+
+// usuarios de prueba: solo para practicar, no es un login seguro
+const USUARIOS = [
+  { usuario: "Riquelme", clave: "1234", nombre: "Juan Román Riquelme" },
+  { usuario: "Robben", clave: "abcd", nombre: "Arjen Robben" },
+  { usuario: "Palermo", clave: "boca", nombre: "Martín Palermo" },
+];
+
+// inventario inicial: se copia al localStorage la primera vez que se abre la tienda
+const PRODUCTOS_INICIALES = [
+  { id: 1, nombre: "Playadito Suave 1kg", precio: 5208, existencias: 10, imagen: "img/playadito.jpg" },
+  { id: 2, nombre: "Taragüi 4 Flex 1kg", precio: 3790, existencias: 8, imagen: "img/taragui.png" },
+  { id: 3, nombre: "Rosamonte 1kg", precio: 4100, existencias: 5, imagen: "img/rosamonte.jpg" },
+  { id: 4, nombre: "Amanda Tradicional 1kg", precio: 4989, existencias: 12, imagen: "img/amanda.jpg" },
+  { id: 5, nombre: "Unión Suave 1kg", precio: 5369, existencias: 6, imagen: "img/union.jpg" },
+  { id: 6, nombre: "Canarias 500g", precio: 7450, existencias: 2, imagen: "img/canarias.jpg" },
+  { id: 7, nombre: "CBSé Hierbas Serranas 1kg", precio: 5040, existencias: 7, imagen: "img/cbse.jpg" },
+  { id: 8, nombre: "La Merced Campo Sur 1kg", precio: 6790, existencias: 4, imagen: "img/la-merced.jpg" },
+];

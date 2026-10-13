@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Martinete Yerbas · Login</title>
+  </head>
+  <body>
+    <header class="cabecera">
+      <h1 class="logo">Martinete <span>Yerbas</span></h1>
+    </header>
+
+    <main class="contenido">
+      <form id="form-login" class="caja-login">
+        <h2>Iniciar sesión</h2>
+        <p>Usuarios de prueba: Riquelme / 1234, Robben / abcd, Palermo / boca</p>
+
+        <label for="usuario">Usuario</label>
+        <input type="text" id="usuario" required>
+
+        <label for="clave">Contraseña</label>
+        <input type="password" id="clave" required>
+
+        <button type="submit" class="boton">ENTRAR</button>
+        <p class="error" id="error" hidden>Usuario o contraseña incorrectos.</p>
+      </form>
+    </main>
+
+    <footer class="pie">
+      <p>Martinete daw2 &middot; Desarrollo web en entorno cliente</p>
+    </footer>
+
+    <!-- el orden importa: cada archivo usa funciones de los de arriba -->
+    <script src="js/datos.js"></script>
+    <script src="js/almacenamiento.js"></script>
+    <script src="js/sesion.js"></script>
+    <script src="js/login.js"></script>
+  </body>
+</html>
