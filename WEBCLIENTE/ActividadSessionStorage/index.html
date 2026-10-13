@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login con SessionStorage</title>
+  </head>
+  <body>
+    <div class="page">
+      <main class="card">
+        <section id="vista-login">
+          <h1 class="titulo">Iniciar sesión</h1>
+          <p class="subtitulo">Ingresá con uno de los usuarios de prueba.</p>
+
+          <form id="login-form">
+            <label class="field-label" for="usuario">Usuario</label>
+            <input id="usuario" type="text" class="input" autocomplete="username" required />
+
+            <label class="field-label" for="contraseña">Contraseña</label>
+            <input id="contraseña" type="password" class="input" autocomplete="current-password" required />
+
+            <p class="mensaje-error" id="mensaje-error"></p>
+
+            <button type="submit" class="btn">Entrar</button>
+          </form>
+
+          <div class="usuarios-prueba">
+            <p>Usuarios de prueba (usuario / contraseña):</p>
+            <ul id="lista-usuarios"></ul>
+          </div>
+        </section>
+
+        <section id="vista-bienvenida" hidden>
+          <h1 class="titulo">¡Hola, <span id="nombre-usuario"></span>!</h1>
+          <p class="subtitulo">
+            Tu sesión está guardada en el sessionStorage: si recargás la página seguís logueado,
+            pero si cerrás la pestaña se pierde.
+          </p>
+          <button type="button" id="logout-btn" class="btn btn-salir">Cerrar sesión</button>
+        </section>
+      </main>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
