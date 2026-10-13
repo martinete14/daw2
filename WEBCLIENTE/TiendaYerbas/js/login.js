@@ -1,5 +1,11 @@
 // login: usa USUARIOS de usuarios.js
 
+// si ya hay sesión no se puede volver al login (ni con la URL ni con "atrás"):
+// para entrar con otro usuario hay que cerrar sesión primero
+if (sessionStorage.getItem("sesion") !== null) {
+  window.location.replace("home.html");
+}
+
 // ---------- lógica ----------
 
 function iniciarSesion(usuario, clave) {
@@ -22,7 +28,8 @@ formLogin.addEventListener("submit", (e) => {
   const clave = document.getElementById("clave").value;
 
   if (iniciarSesion(usuario, clave)) {
-    location.href = "home.html";
+    // replace en vez de href: el login no queda en el historial, así "atrás" no vuelve a él
+    window.location.replace("home.html");
   } else {
     error.hidden = false;
   }

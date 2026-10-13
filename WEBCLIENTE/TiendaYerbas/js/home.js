@@ -3,7 +3,7 @@
 // sin sesión no se puede estar acá: vuelta al login
 const sesion = leer(sessionStorage, "sesion", null);
 if (!sesion) {
-  location.href = "index.html";
+  window.location.replace("index.html");
 }
 
 // ---------- pintar en pantalla ----------
@@ -95,7 +95,7 @@ document.getElementById("comprar").addEventListener("click", () => {
 document.getElementById("salir").addEventListener("click", () => {
   sessionStorage.removeItem("sesion");
   sessionStorage.removeItem("carrito");
-  location.href = "index.html";
+  window.location.replace("index.html");
 });
 
 // el evento "storage" salta cuando OTRA pestaña cambia el localStorage

@@ -58,4 +58,5 @@ La lógica (`productos.js`, `carrito.js`) no toca el HTML. Los listeners están 
 - **Comprar en una pestaña**: en la otra se actualizan solas las existencias (evento `storage`) y, si su carrito ya no alcanza, avisa y no deja comprar.
 - **Cerrar sesión**: se borran la sesión y el carrito y vuelve al login.
 - **Abrir `home.html` sin sesión**: redirige a `index.html`.
+- **Volver al login con sesión abierta** (botón atrás o escribiendo `index.html`): redirige a `home.html`. Para entrar con otro usuario hay que cerrar sesión.
 - **Volver al stock inicial**: F12 → Aplicación → Local Storage → borrar `inventario`.
