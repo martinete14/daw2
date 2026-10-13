@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Inscripción Gimnasio — Formulario HTML + CSS</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <meta name="description" content="Formulario accesible y responsivo de inscripción a gimnasio hecho con HTML y CSS puros, listo para agregar validación en JavaScript." />
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <div class="brand">
+          <div class="logo" aria-hidden="true"></div>
+          <div>
+            <h1>Inscripción al Gimnasio</h1>
+            <p class="sub">HTML + CSS puros · listo para añadir validación con JavaScript</p>
+          </div>
+        </div>
+        <p class="note">Este formulario usa validación nativa (atributos <code>required</code>, <code>pattern</code>, <code>min</code>, <code>max</code>, etc.). podrán reforzarla con escuchas <code>input</code>, <code>blur</code> y <code>submit</code> para mensajes personalizados.</p>
+      </header>
+
+      <form id="form-inscripcion" action="#" method="post" novalidate>
+        <!-- DATOS PERSONALES -->
+        <fieldset>
+          <legend>1) Datos personales</legend>
+          <div class="grid cols-3">
+            <div class="control">
+              <label for="nombre">Nombre <span class="req" aria-hidden="true">*</span></label>
+              <input id="nombre" name="nombre" type="text" autocomplete="given-name" placeholder="Juan" required minlength="2" maxlength="40" />
+            </div>
+            <div class="control">
+              <label for="apellidos">Apellidos <span class="req" aria-hidden="true">*</span></label>
+              <input id="apellidos" name="apellidos" type="text" autocomplete="family-name" placeholder="Pérez Gómez" required minlength="2" maxlength="80" />
+            </div>
+            <div class="control">
+              <label for="dni">Documento (DNI/NIE/Pasaporte) <span class="req" aria-hidden="true">*</span></label>
+              <input id="dni" name="dni" type="text" placeholder="12345678Z" required pattern="^[A-Za-z0-9]{5,15}$" title="Entre 5 y 15 caracteres alfanuméricos" />
+              <!-- <div class="hint">Solo letras y números (5–15).</div> -->
+            </div>
+          </div>
+
+          <div class="grid cols-3">
+            <div class="control">
+              <label for="fecha-nac">Fecha de nacimiento <span class="req" aria-hidden="true">*</span></label>
+              <input id="fecha-nac" name="fecha_nacimiento" type="date" required />
+            </div>
+            <div class="control">
+              <label for="sexo">Sexo</label>
+              <select id="sexo" name="sexo">
+                <option value="" selected>— Selecciona —</option>
+                <option value="f">Femenino</option>
+                <option value="m">Masculino</option>
+                <option value="x">Prefiero no decirlo</option>
+              </select>
+            </div>
+            <div class="control">
+              <label for="estado-civil">Estado civil</label>
+              <select id="estado-civil" name="estado_civil">
+                <option value="" selected>— Selecciona —</option>
+                <option>Soltero/a</option>
+                <option>Casado/a</option>
+                <option>Pareja de hecho</option>
+                <option>Divorciado/a</option>
+                <option>Viudo/a</option>
+              </select>
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- CONTACTO Y DIRECCIÓN -->
+        <fieldset>
+          <legend>2) Contacto y dirección</legend>
+          <div class="grid cols-3">
+            <div class="control">
+              <label for="email">Correo electrónico <span class="req" aria-hidden="true">*</span></label>
+              <input id="email" name="email" type="email" autocomplete="email" placeholder="nombre@correo.com" required />
+            </div>
+            <div class="control">
+              <label for="telefono">Teléfono móvil <span class="req" aria-hidden="true">*</span></label>
+              <input id="telefono" name="telefono" type="tel" autocomplete="tel" placeholder="600123123" required pattern="^[0-9\s+()-]{9,20}$" title="Solo números y + (9–20 caracteres)" />
+            </div>
+            <div class="control">
+              <label for="contacto_pref">Preferencia de contacto</label>
+              <div class="chips">
+                <label class="chip"><input type="radio" name="contacto_pref" value="email" checked> Email</label>
+                <label class="chip"><input type="radio" name="contacto_pref" value="tel"> Teléfono</label>
+                <label class="chip"><input type="radio" name="contacto_pref" value="whatsapp"> WhatsApp</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid cols-3">
+            <div class="control">
+              <label for="direccion">Dirección <span class="req" aria-hidden="true">*</span></label>
+              <input id="direccion" name="direccion" type="text" autocomplete="address-line1" placeholder="Calle y número" required maxlength="120" />
+            </div>
+            <div class="control">
+              <label for="ciudad">Ciudad <span class="req" aria-hidden="true">*</span></label>
+              <input id="ciudad" name="ciudad" type="text" autocomplete="address-level2" placeholder="Madrid" required />
+            </div>
+            <div class="control">
+              <label for="cp">Código postal <span class="req" aria-hidden="true">*</span></label>
+              <input id="cp" name="cp" type="text" inputmode="numeric" pattern="^[0-9]{5}$" placeholder="28001" required title="5 dígitos" />
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- DATOS MÉDICOS Y OBJETIVOS -->
+        <fieldset>
+          <legend>3) Salud y objetivos</legend>
+          <div class="grid cols-3">
+            <div class="control">
+              <label for="altura">Altura (cm) <span class="req" aria-hidden="true">*</span></label>
+              <input id="altura" name="altura" type="number" min="120" max="230" step="1" placeholder="175" required />
+            </div>
+            <div class="control">
+              <label for="peso">Peso (kg) <span class="req" aria-hidden="true">*</span></label>
+              <input id="peso" name="peso" type="number" min="35" max="250" step="0.1" placeholder="72.5" required />
+            </div>
+            <div class="control">
+              <label for="nivel">Nivel de actividad actual</label>
+              <select id="nivel" name="nivel">
+                <option value="" selected>— Selecciona —</option>
+                <option>Sedentario</option>
+                <option>Ligero (1–2 días/sem)</option>
+                <option>Moderado (3–4 días/sem)</option>
+                <option>Intenso (5–6 días/sem)</option>
+                <option>Atleta</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="grid cols-2">
+            <div class="control">
+            <label for="objetivos">Objetivos principales <span class="req" aria-hidden="true">*</span></label>
+            <textarea id="objetivos"
+                      name="objetivos"
+                      placeholder="Pérdida de peso, ganar masa muscular, rehabilitación..."
+                      maxlength="500"
+                      required></textarea>
+
+              <div class="hint">Máximo 500 caracteres.</div>
+            </div>
+            <div class="control">
+              <label>Condiciones médicas conocidas</label>
+              <div class="chips" role="group" aria-label="Condiciones médicas">
+                <label class="chip"><input type="checkbox" name="condiciones[]" value="cardiaco"> Cardíacas</label>
+                <label class="chip"><input type="checkbox" name="condiciones[]" value="respiratorio"> Respiratorias</label>
+                <label class="chip"><input type="checkbox" name="condiciones[]" value="metabolico"> Metabólicas</label>
+                <label class="chip"><input type="checkbox" name="condiciones[]" value="lesion"> Lesiones recientes</label>
+                <label class="chip"><input type="checkbox" name="condiciones[]" value="ninguna"> Ninguna</label>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- PLAN Y HORARIOS -->
+        <fieldset>
+          <legend>4) Plan y horarios</legend>
+          <div class="grid cols-3">
+            <div class="control">
+              <label for="plan">Plan de membresía <span class="req" aria-hidden="true">*</span></label>
+              <select id="plan" name="plan" required>
+                <option value="" selected>— Selecciona —</option>
+                <option value="mensual">Mensual</option>
+                <option value="trimestral">Trimestral (−5%)</option>
+                <option value="anual">Anual (−12%)</option>
+                <option value="premium">Premium + Clases</option>
+              </select>
+            </div>
+            <div class="control plan-card">
+              <h4>Resumen de precios (orientativo)</h4>
+              <div class="grid cols-2">
+                <div><strong>Básico</strong><br><span class="price">29€</span>/mes</div>
+                <div><strong>Premium</strong><br><span class="price">49€</span>/mes</div>
+              </div>
+              <p class="hint">Perfecto para ejercicios de JavaScript que calculen cuotas según plan y duración.</p>
+            </div>
+            <div class="control">
+              <label>Días preferidos</label>
+              <div class="chips">
+                <label class="chip"><input type="checkbox" name="dias[]" value="lu"> Lu</label>
+                <label class="chip"><input type="checkbox" name="dias[]" value="ma"> Ma</label>
+                <label class="chip"><input type="checkbox" name="dias[]" value="mi"> Mi</label>
+                <label class="chip"><input type="checkbox" name="dias[]" value="ju"> Ju</label>
+                <label class="chip"><input type="checkbox" name="dias[]" value="vi"> Vi</label>
+                <label class="chip"><input type="checkbox" name="dias[]" value="sa"> Sá</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid cols-3">
+            <div class="control">
+              <label for="hora">Franja horaria preferida</label>
+              <select id="hora" name="hora">
+                <option>6:00–9:00</option>
+                <option>9:00–12:00</option>
+                <option>12:00–16:00</option>
+                <option>16:00–19:00</option>
+                <option>19:00–22:00</option>
+              </select>
+            </div>
+            <div class="control">
+              <label for="clases">Clases grupales</label>
+              <select id="clases" name="clases" multiple size="4" aria-describedby="clases-help">
+                <option>Spinning</option>
+                <option>CrossFit</option>
+                <option>Yoga</option>
+                <option>Pilates</option>
+                <option>Boxeo</option>
+              </select>
+              <div id="clases-help" class="hint">Mantén Ctrl/⌘ para seleccionar varias.</div>
+            </div>
+            <div class="control">
+              <label for="referido">¿Quién te refirió?</label>
+              <input id="referido" name="referido" type="text" placeholder="Nombre de amigo o código" maxlength="30" />
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- FACTURACIÓN (datos no sensibles) -->
+        <fieldset>
+          <legend>5) Facturación</legend>
+          <div class="grid cols-3">
+            <div class="control">
+              <label for="nif-fac">NIF/NIE para factura</label>
+              <input id="nif-fac" name="nif_factura" type="text" pattern="^[A-Za-z0-9]{8,15}$" placeholder="A1234567Z" title="Entre 8 y 15 caracteres alfanuméricos" />
+            </div>
+            <div class="control">
+              <label for="dir-fac">Dirección de facturación</label>
+              <input id="dir-fac" name="dir_factura" type="text" placeholder="(si diferente a la postal)" maxlength="120" />
+            </div>
+            <div class="control">
+              <label for="iban">IBAN (4 últimos) <span class="req" aria-hidden="true">*</span></label>
+              <input id="iban" name="iban_ultimos" type="text" inputmode="numeric" pattern="^[0-9]{4}$" placeholder="1234" required title="Solo 4 dígitos" />
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- CONSENTIMIENTOS -->
+        <fieldset>
+          <legend>6) Consentimientos</legend>
+          <div class="grid">
+            <label class="inline"><input type="checkbox" name="tos" required> Acepto los <a href="#" target="_blank" rel="noopener">términos y condiciones</a> <span class="req" aria-hidden="true">*</span></label>
+            <label class="inline"><input type="checkbox" name="rgpd" required> Autorizo el tratamiento de mis datos conforme a la <a href="#" target="_blank" rel="noopener">política de privacidad</a> <span class="req" aria-hidden="true">*</span></label>
+            <label class="inline"><input type="checkbox" name="promo"> Deseo recibir comunicaciones promocionales</label>
+          </div>
+        </fieldset>
+        <div class="actions">
+          <button type="reset" class="btn-secondary">Limpiar</button>
+          <button type="submit" class="btn-primary" disabled aria-disabled="true">
+            Enviar solicitud
+          </button>
+        </div>
+        <p class="foot">Los campos marcados con <span class="req">*</span> son obligatorios. Este formulario no guarda datos: úsalo con un endpoint ficticio para prácticas de JS (eventos <code>submit</code>, validaciones personalizadas, manejo del DOM).</p>
+      </form>
+    </div>
+    <script type="module" src="./js/formValidation.js"></script>
+  </body>
+</html>

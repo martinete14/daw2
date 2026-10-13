@@ -1,0 +1,268 @@
+/* ============================= */
+/* Reset básico de estilos       */
+/* ============================= */
+* {
+  margin: 0;              /* Elimina los márgenes por defecto de todos los elementos */
+  padding: 0;             /* Elimina los rellenos (espaciado interno) por defecto */
+  box-sizing: border-box; /* Hace que el ancho/alto incluyan el padding y el borde */
+}
+/* ============================= */
+/* Estilos generales del body    */
+/* ============================= */
+body {
+  font-family: Arial, sans-serif; /* Define la tipografía principal de la página */
+  line-height: 1.6;               /* Espaciado entre líneas para mejorar la legibilidad */
+  background-color: #f4f4f4;      /* Color de fondo gris claro */
+  color: #333;                    /* Color del texto en gris oscuro */
+  padding: 10px;                  /* Espacio interior alrededor de todo el contenido */
+}
+
+
+/* ============================= */
+/* Encabezado principal (header) */
+/* ============================= */
+header {
+  background: #333;   /* Fondo gris oscuro */
+  color: #fff;        /* Texto en color blanco */
+  padding: 1rem 0;    /* Espaciado vertical superior e inferior */
+}
+
+/* Estilos de la barra de navegación dentro del header */
+header  {
+  display: flex;                  /* Utiliza flexbox para organizar los elementos */
+  justify-content: space-between; /* Distribuye los elementos: uno a la izquierda y otro a la derecha */
+  align-items: center;            /* Centra verticalmente los elementos */
+  max-width: 1100px;              /* Limita el ancho máximo del contenedor */
+  margin: auto;                   /* Centra el contenedor horizontalmente */
+  padding: 0 20px;                /* Añade espacio lateral interno */
+}
+
+/* Lista de enlaces de navegación */
+header nav ul {
+  list-style: none; /* Elimina los puntos o viñetas de la lista */
+  display: flex;    /* Coloca los elementos de la lista en línea (horizontal) */
+  gap: 1rem;        /* Espaciado uniforme entre cada enlace */
+}
+
+/* Estilos para los enlaces dentro del nav */
+header nav a {
+  color: #fff;            /* Texto de los enlaces en blanco */
+  text-decoration: none;  /* Elimina el subrayado por defecto */
+}
+
+/* ============================= */
+/* Título principal              */
+/* ============================= */
+.titulo-principal {
+  text-align: center;   /* Centra el texto horizontalmente */
+  margin-top: 20px;     /* Añade espacio superior */
+  font-size: 2.2em;     /* Aumenta el tamaño de fuente (2.2 veces el tamaño base) */
+  color: #333;          /* Color del texto en gris oscuro */
+}
+
+/* ============================= */
+/* Contenido principal (main)    */
+/* ============================= */
+main {
+  max-width: 1100px;   /* Define un ancho máximo para no ocupar toda la pantalla */
+  margin: 20px auto;   /* Margen superior e inferior de 20px y centrado horizontal */
+  background: #fff;    /* Fondo blanco */
+  padding: 20px;       /* Espaciado interno de 20px en todo el contenido */
+  border-radius: 8px;  /* Bordes redondeados para un efecto más moderno */
+}
+/* ============================= */
+/* Estilos para botones          */
+/* ============================= */
+button {
+  padding: 10px 15px;   /* Espaciado interno: 10px arriba/abajo y 15px a los lados */
+  border: none;         /* Elimina los bordes por defecto */
+  background: #0077cc;  /* Fondo azul */
+  color: white;         /* Texto blanco */
+  cursor: pointer;      /* Cambia el cursor a "mano" al pasar sobre el botón */
+  border-radius: 5px;   /* Bordes redondeados del botón */
+}
+/* Estilo del botón al pasar el ratón por encima */
+button:hover {
+  background: #005fa3; /* Cambia el color de fondo a un azul más oscuro */
+}
+footer {
+  text-align: center;   /* Centra el texto dentro del pie */
+  margin-top: 20px;     /* Separa el pie del contenido anterior */
+  padding: 10px;        /* Espaciado interno de 10px */
+  background: #333;     /* Fondo gris oscuro */
+  color: #fff;          /* Texto blanco */
+  border-radius: 8px;   /* Bordes redondeados */
+}
+      :root{
+        --bg: #0e0f13;
+        --panel: #151821;
+        --panel-2: #1a1f2b;
+        --text: #e6e8ef;
+        --muted: #b3b9c6;
+        --accent: #5b8def;
+        --danger: #ef5b5b;
+        --ok: #4caf50;
+        --radius: 16px;
+        --gap: 14px;
+        --shadow: 0 10px 30px rgba(0,0,0,.35);
+      }
+      *{box-sizing: border-box}
+      html,body{height:100%}
+      body{
+        margin:0; font: 16px/1.4 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+        background: radial-gradient(1000px 600px at 80% -10%, #1b2333 0%, #0e0f13 60%);
+        color: var(--text);
+      }
+      .wrap{
+        max-width: 1100px; margin: 40px auto; padding: 0 16px;
+      }
+      header{
+        display:flex; align-items:center; justify-content:space-between; gap: 12px; margin-bottom: 22px;
+      }
+      .brand{ display:flex; align-items:center; gap:10px }
+      .logo{ width:40px; height:40px; border-radius:12px; background: linear-gradient(135deg, var(--accent), #9aaeff); box-shadow: var(--shadow); }
+      h1{ font-size: clamp(1.4rem, 2vw + .6rem, 2rem); margin:0 }
+      .sub{ color: var(--muted); margin: 2px 0 0; font-size:.95rem }
+
+      form{
+        background: linear-gradient(180deg, var(--panel) 0%, var(--panel-2) 100%);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        padding: 22px;
+        border: 1px solid rgba(255,255,255,.06);
+      }
+
+      fieldset{ border: 1px solid rgba(255,255,255,.12); padding: 18px; border-radius: 14px; margin: 0 0 18px }
+      legend{ padding: 0 8px; color: var(--muted); font-weight: 600; letter-spacing:.2px }
+
+      .grid{ display:grid; gap: var(--gap) }
+      /* 2 columnas desde 720px */
+      @media (min-width: 720px){
+        .grid.cols-2{ grid-template-columns: repeat(2, minmax(0,1fr)) }
+      }
+      @media (min-width: 980px){
+        .grid.cols-3{ grid-template-columns: repeat(3, minmax(0,1fr)) }
+      }
+
+      label{ display:block; font-weight:600; font-size:.92rem; color: var(--muted); margin: 2px 0 6px }
+      .control{ position: relative }
+      input[type="text"], input[type="email"], input[type="tel"], input[type="date"], input[type="number"], input[type="password"],
+      select, textarea{
+        width: 100%;
+        background: #0f1320;
+        border: 1px solid rgba(255,255,255,.12);
+        color: var(--text);
+        border-radius: 12px;
+        padding: 12px 14px;
+        outline: none;
+        transition: border-color .2s, box-shadow .2s, background .2s;
+      }
+      textarea{ min-height: 96px; resize: vertical }
+      input::placeholder, textarea::placeholder{ color: #8390a6 }
+      input:focus, select:focus, textarea:focus{
+        border-color: var(--accent);
+        box-shadow: 0 0 0 4px rgba(91,141,239,.18);
+        background: #0c111c;
+      }
+      /* Validación nativa */
+      input:required:invalid, select:required:invalid, textarea:required:invalid{ border-color: rgba(239,91,91,.6) }
+      input:required:valid, select:required:valid, textarea:required:valid{ border-color: rgba(76,175,80,.6) }
+
+      .hint{ font-size:.85rem; color:#93a0b7; margin-top:6px }
+      .inline{ display:flex; align-items:center; gap:10px; flex-wrap: wrap }
+      .inline > label{ margin:0; font-weight:500 }
+      .chips{ display:flex; gap:8px; flex-wrap:wrap }
+      .chip{ display:inline-flex; align-items:center; gap:8px; background: #0f1320; border:1px solid rgba(255,255,255,.12); padding:10px 12px; border-radius: 999px }
+      .chip input{ margin:0 }
+
+      .actions{ display:flex; gap: 12px; justify-content:flex-end; margin-top: 6px; flex-wrap: wrap }
+      button{
+        appearance: none; border:0; padding: 12px 18px; border-radius: 12px; cursor:pointer; font-weight:700; letter-spacing:.2px
+      }
+      .btn-primary{ background: var(--accent); color: #0b0e16; box-shadow: var(--shadow) }
+      .btn-secondary{ background: transparent; color: var(--text); border:1px solid rgba(255,255,255,.22) }
+      .req{ color: #ef9a9a; font-weight:700 }
+
+      .note{
+        background: #0c111c; border: 1px dashed rgba(255,255,255,.18); padding: 12px 14px; border-radius: 12px; color: #aeb7c7; font-size:.92rem
+      }
+      .foot{ color: var(--muted); font-size:.85rem; margin-top: 10px }
+
+      /* Accesibilidad visual */
+      .sr-only{ position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); border:0 }
+
+      /* Tabla de precios simple */
+      .plan-card{
+        background: #0f1320; border:1px solid rgba(255,255,255,.12); border-radius: 14px; padding: 12px 14px
+      }
+      .plan-card h4{ margin:.2rem 0 .6rem; font-size:1rem }
+      .price{ font-weight:800 }
+
+input[aria-invalid="true"], select[aria-invalid="true"], textarea[aria-invalid="true"]{
+  border-color: #e74c3c;
+  box-shadow: 0 0 0 3px rgba(231,76,60,.2);
+}
+.error-msg{ font-size:.9rem; margin-top:6px }
+
+/* Hace que el chip "apagado" se note */
+.chip.is-disabled { opacity: .55; }
+      
+/* Estado de error más notorio en el control completo */
+.control.has-error label {
+  color: #ffb3b3; /* resalta la etiqueta en error */
+}
+
+/* Input/textarea/select con error: ya tienes border+shadow vía aria-invalid */
+input[aria-invalid="true"],
+select[aria-invalid="true"],
+textarea[aria-invalid="true"]{
+  border-color: var(--danger);
+  box-shadow: 0 0 0 3px rgba(239,91,91,.25);
+}
+
+/* Mensaje de error destacado, con icono + fondo */
+.error-msg{
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: 8px;
+  padding: 10px 12px;
+  font-size: .95rem;
+  font-weight: 600;
+  color: #ffd7d7;                         /* texto claro sobre fondo oscuro */
+  background: rgba(239,91,91,.12);        /* tinte rojo suave */
+  border: 1px solid rgba(239,91,91,.35);  /* define el contorno */
+  border-left: 4px solid var(--danger);   /* “barra” de alerta */
+  border-radius: 10px;
+
+  /* Aparición suave (una sola vez) */
+  animation: error-in .18s ease-out;
+}
+
+.error-msg::before{
+  content: "⚠";               /* icono simple; opcional sustituir por SVG */
+  line-height: 1;
+  margin-top: 2px;
+  font-size: 1.05em;
+}
+
+/* Desactiva animación si el usuario prefiere menos movimiento */
+@media (prefers-reduced-motion: reduce) {
+  .error-msg { animation: none; }
+}
+
+/* Micro-animación de entrada (sin “titilar”) */
+@keyframes error-in {
+  from { transform: translateY(-2px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+/* Chip deshabilitado ya lo tienes */
+.chip.is-disabled { opacity: .55; }
+
+button[disabled] {
+  opacity: .6;
+  cursor: not-allowed;
+  filter: grayscale(0.2);
+}
+

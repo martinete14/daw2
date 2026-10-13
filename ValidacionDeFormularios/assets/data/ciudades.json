@@ -1,0 +1,79 @@
+{
+  "ciudades": [
+    {
+      "nombre": "Madrid",
+      "comunidad_autonoma": "Comunidad de Madrid",
+      "poblacion": 3340000
+    },
+    {
+      "nombre": "Barcelona",
+      "comunidad_autonoma": "Cataluña",
+      "poblacion": 1650000
+    },
+    {
+      "nombre": "Valencia",
+      "comunidad_autonoma": "Comunidad Valenciana",
+      "poblacion": 800000
+    },
+    {
+      "nombre": "Sevilla",
+      "comunidad_autonoma": "Andalucía",
+      "poblacion": 680000
+    },
+    {
+      "nombre": "Zaragoza",
+      "comunidad_autonoma": "Aragón",
+      "poblacion": 675000
+    },
+    {
+      "nombre": "Málaga",
+      "comunidad_autonoma": "Andalucía",
+      "poblacion": 580000
+    },
+    {
+      "nombre": "Murcia",
+      "comunidad_autonoma": "Región de Murcia",
+      "poblacion": 460000
+    },
+    {
+      "nombre": "Palma",
+      "comunidad_autonoma": "Islas Baleares",
+      "poblacion": 420000
+    },
+    {
+      "nombre": "Las Palmas de Gran Canaria",
+      "comunidad_autonoma": "Canarias",
+      "poblacion": 380000
+    },
+    {
+      "nombre": "Bilbao",
+      "comunidad_autonoma": "País Vasco",
+      "poblacion": 345000
+    },
+    {
+      "nombre": "Alicante",
+      "comunidad_autonoma": "Comunidad Valenciana",
+      "poblacion": 340000
+    },
+    {
+      "nombre": "Córdoba",
+      "comunidad_autonoma": "Andalucía",
+      "poblacion": 320000
+    },
+    {
+      "nombre": "Valladolid",
+      "comunidad_autonoma": "Castilla y León",
+      "poblacion": 300000
+    },
+    {
+      "nombre": "Vigo",
+      "comunidad_autonoma": "Galicia",
+      "poblacion": 295000
+    },
+    {
+      "nombre": "Gijón",
+      "comunidad_autonoma": "Asturias",
+      "poblacion": 270000
+    }
+  ]
+}
