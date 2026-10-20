@@ -1,0 +1,164 @@
+{
+  "clientes": [
+    {
+      "id_cliente": 1,
+      "nombre": "Lucía",
+      "apellido": "García",
+      "correo": "lucia.garcia@example.com",
+      "telefono": "612345678",
+      "direccion": "Calle Mayor 12, Madrid"
+    },
+    {
+      "id_cliente": 2,
+      "nombre": "Javier",
+      "apellido": "Martínez",
+      "correo": "javier.martinez@example.com",
+      "telefono": "623456789",
+      "direccion": "Avenida de la Constitución 45, Sevilla"
+    },
+    {
+      "id_cliente": 3,
+      "nombre": "María",
+      "apellido": "López",
+      "correo": "maria.lopez@example.com",
+      "telefono": "634567890",
+      "direccion": "Calle Colón 8, Valencia"
+    },
+    {
+      "id_cliente": 4,
+      "nombre": "Carlos",
+      "apellido": "Sánchez",
+      "correo": "carlos.sanchez@example.com",
+      "telefono": "645678901",
+      "direccion": "Paseo de Gracia 101, Barcelona"
+    },
+    {
+      "id_cliente": 5,
+      "nombre": "Ana",
+      "apellido": "Fernández",
+      "correo": "ana.fernandez@example.com",
+      "telefono": "656789012",
+      "direccion": "Calle Larios 3, Málaga"
+    },
+    {
+      "id_cliente": 6,
+      "nombre": "David",
+      "apellido": "Romero",
+      "correo": "david.romero@example.com",
+      "telefono": "667890123",
+      "direccion": "Gran Vía 27, Bilbao"
+    },
+    {
+      "id_cliente": 7,
+      "nombre": "Elena",
+      "apellido": "Torres",
+      "correo": "elena.torres@example.com",
+      "telefono": "678901234",
+      "direccion": "Calle Real 56, A Coruña"
+    },
+    {
+      "id_cliente": 8,
+      "nombre": "Pablo",
+      "apellido": "Ruiz",
+      "correo": "pablo.ruiz@example.com",
+      "telefono": "689012345",
+      "direccion": "Plaza del Pilar 2, Zaragoza"
+    },
+    {
+      "id_cliente": 9,
+      "nombre": "Laura",
+      "apellido": "Navarro",
+      "correo": "laura.navarro@example.com",
+      "telefono": "690123456",
+      "direccion": "Calle San Fernando 14, Cádiz"
+    },
+    {
+      "id_cliente": 10,
+      "nombre": "Sergio",
+      "apellido": "Jiménez",
+      "correo": "sergio.jimenez@example.com",
+      "telefono": "691234567",
+      "direccion": "Avenida de Portugal 33, Salamanca"
+    },
+    {
+      "id_cliente": 11,
+      "nombre": "Marta",
+      "apellido": "Díaz",
+      "correo": "marta.diaz@example.com",
+      "telefono": "692345678",
+      "direccion": "Calle Uría 9, Oviedo"
+    },
+    {
+      "id_cliente": 12,
+      "nombre": "Alberto",
+      "apellido": "Moreno",
+      "correo": "alberto.moreno@example.com",
+      "telefono": "693456789",
+      "direccion": "Calle Mayor 70, Palma"
+    },
+    {
+      "id_cliente": 13,
+      "nombre": "Cristina",
+      "apellido": "Muñoz",
+      "correo": "cristina.munoz@example.com",
+      "telefono": "694567900",
+      "direccion": "Calle Reyes Católicos 21, Granada"
+    },
+    {
+      "id_cliente": 14,
+      "nombre": "Raúl",
+      "apellido": "Álvarez",
+      "correo": "raul.alvarez@example.com",
+      "telefono": "695679011",
+      "direccion": "Calle Santiago 5, Valladolid"
+    },
+    {
+      "id_cliente": 15,
+      "nombre": "Sara",
+      "apellido": "Gómez",
+      "correo": "sara.gomez@example.com",
+      "telefono": "696790122",
+      "direccion": "Avenida Alfonso X 18, Murcia"
+    },
+    {
+      "id_cliente": 16,
+      "nombre": "Iván",
+      "apellido": "Herrera",
+      "correo": "ivan.herrera@example.com",
+      "telefono": "697901233",
+      "direccion": "Calle Princesa 40, Santander"
+    },
+    {
+      "id_cliente": 17,
+      "nombre": "Paula",
+      "apellido": "Castro",
+      "correo": "paula.castro@example.com",
+      "telefono": "699012344",
+      "direccion": "Calle Estafeta 11, Pamplona"
+    },
+    {
+      "id_cliente": 18,
+      "nombre": "Diego",
+      "apellido": "Ortega",
+      "correo": "diego.ortega@example.com",
+      "telefono": "700123455",
+      "direccion": "Rambla de Méndez Núñez 6, Alicante"
+    },
+    {
+      "id_cliente": 19,
+      "nombre": "Nerea",
+      "apellido": "Vázquez",
+      "correo": "nerea.vazquez@example.com",
+      "telefono": "701234566",
+      "direccion": "Calle del Príncipe 25, Vigo"
+    },
+    {
+      "id_cliente": 20,
+      "nombre": "Hugo",
+      "apellido": "Ramos",
+      "correo": "hugo.ramos@example.com",
+      "telefono": "702345677",
+      "direccion": "Calle Triana 60, Las Palmas de Gran Canaria"
+    }
+  ]
+}
