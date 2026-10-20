@@ -10,19 +10,18 @@
   <body>
     <header class="cabecera">
       <h1 class="logo">Martinete <span>Fútbol</span></h1>
-
-      <!-- Switch para pasar de LISTA a CARDS -->
-      <button id="btnVista" class="switch" type="button">
-        <span>LISTA</span>
-        <span>CARDS</span>
-      </button>
+      <!-- botones para cambiar entre la tabla y las cards -->
+      <div class="vistas">
+        <button id="vista-lista" class="activa">LISTA</button>
+        <button id="vista-cards">CARDS</button>
+      </div>
     </header>
 
     <main class="contenido">
       <h2>Jugadores de la Liga Profesional</h2>
       <p id="mensaje" class="ok">Cargando jugadores...</p>
 
-      <table id="tablaJugadores">
+      <table id="tabla-jugadores">
         <thead>
           <tr>
             <th>#</th>
@@ -33,10 +32,10 @@
             <th>Nacionalidad</th>
           </tr>
         </thead>
-        <tbody id="cuerpoTabla"></tbody>
+        <tbody id="cuerpo-tabla"></tbody>
       </table>
 
-      <div id="contenedorCards" class="cards" hidden></div>
+      <div id="cards" class="cards" hidden></div>
     </main>
 
     <footer class="pie">

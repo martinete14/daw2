@@ -1,71 +1,73 @@
-import './style.css'
+import "./style.css";
 
-// Elementos del HTML
-const tabla = document.querySelector('#tablaJugadores')
-const cuerpoTabla = document.querySelector('#cuerpoTabla')
-const contenedorCards = document.querySelector('#contenedorCards')
-const btnVista = document.querySelector('#btnVista')
-const mensaje = document.querySelector('#mensaje')
+const tabla = document.getElementById("tabla-jugadores");
+const cuerpoTabla = document.getElementById("cuerpo-tabla");
+const cards = document.getElementById("cards");
+const mensaje = document.getElementById("mensaje");
+const botonLista = document.getElementById("vista-lista");
+const botonCards = document.getElementById("vista-cards");
 
-// Pide el JSON (está en public/data) y devuelve el array de jugadores
+// trae los jugadores del json que está en public/data
 async function obtenerJugadores() {
-  const respuesta = await fetch('/data/data.json')
-
-  if (!respuesta.ok) {
-    throw new Error(`Error ${respuesta.status} al cargar los datos`)
-  }
-
-  const data = await respuesta.json()
-  return data.jugadores
+  const respuesta = await fetch("/data/data.json");
+  const datos = await respuesta.json();
+  return datos.jugadores;
 }
 
-// Arma las filas de la tabla (vista LISTA)
-function pintarLista(jugadores) {
-  cuerpoTabla.innerHTML = jugadores.map(jugador => `
-    <tr>
+// una fila de la tabla por cada jugador
+function mostrarLista(jugadores) {
+  cuerpoTabla.innerHTML = "";
+  jugadores.forEach((jugador) => {
+    const fila = document.createElement("tr");
+    fila.innerHTML = `
       <td>${jugador.id_jugador}</td>
       <td>${jugador.nombre}</td>
       <td>${jugador.apellido}</td>
       <td>${jugador.club}</td>
       <td>${jugador.posicion}</td>
       <td>${jugador.nacionalidad}</td>
-    </tr>
-  `).join('')
+    `;
+    cuerpoTabla.appendChild(fila);
+  });
 }
 
-// Arma una card por jugador (vista CARDS)
-function pintarCards(jugadores) {
-  contenedorCards.innerHTML = jugadores.map(jugador => `
-    <article class="card">
-      <span class="card-numero">${jugador.id_jugador}</span>
-      <h2>${jugador.nombre} ${jugador.apellido}</h2>
-      <p class="card-club">${jugador.club}</p>
+// una card por cada jugador
+function mostrarCards(jugadores) {
+  cards.innerHTML = "";
+  jugadores.forEach((jugador) => {
+    const card = document.createElement("div");
+    card.className = "card";
+    card.innerHTML = `
+      <span class="numero">${jugador.id_jugador}</span>
+      <h3>${jugador.nombre} ${jugador.apellido}</h3>
+      <p class="club">${jugador.club}</p>
       <p>${jugador.posicion} · ${jugador.nacionalidad}</p>
-    </article>
-  `).join('')
+    `;
+    cards.appendChild(card);
+  });
 }
 
-// Carga los jugadores y pinta las dos vistas
+// muestra la tabla o las cards según el botón que se tocó
+function cambiarVista(vista) {
+  botonLista.classList.toggle("activa", vista === "lista");
+  botonCards.classList.toggle("activa", vista === "cards");
+  tabla.hidden = vista !== "lista";
+  cards.hidden = vista !== "cards";
+}
+
 async function mostrarJugadores() {
   try {
-    const jugadores = await obtenerJugadores()
-
-    pintarLista(jugadores)
-    pintarCards(jugadores)
-
-    mensaje.textContent = `${jugadores.length} jugadores cargados`
-  } catch (error) {
-    mensaje.textContent = error.message
-    mensaje.classList.replace('ok', 'error')
-    console.error(error)
+    const jugadores = await obtenerJugadores();
+    mostrarLista(jugadores);
+    mostrarCards(jugadores);
+    mensaje.textContent = jugadores.length + " jugadores cargados";
+  } catch (e) {
+    mensaje.textContent = "No se pudieron cargar los jugadores.";
+    mensaje.className = "error";
   }
 }
 
-// El switch alterna entre la tabla y las cards
-btnVista.addEventListener('click', () => {
-  const enCards = btnVista.classList.toggle('activo')
-  tabla.hidden = enCards
-  contenedorCards.hidden = !enCards
-})
+botonLista.addEventListener("click", () => cambiarVista("lista"));
+botonCards.addEventListener("click", () => cambiarVista("cards"));
 
-mostrarJugadores()
+mostrarJugadores();

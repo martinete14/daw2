@@ -1,4 +1,4 @@
-/* mismo estilo que ActividadSessionStorage y TiendaYerbas: blanco, Poppins, azul petróleo y footer negro */
+/* mismo estilo que la tienda de yerbas: blanco, Poppins, azul petróleo y footer negro */
 
 * {
   box-sizing: border-box;
@@ -44,45 +44,26 @@ button {
   cursor: pointer;
 }
 
-/* switch LISTA / CARDS: la bolita azul se desliza al lado activo */
-.switch {
-  position: relative;
-  display: inline-flex;
+/* botones para cambiar entre lista y cards, el activo se pinta de azul */
+.vistas {
+  display: flex;
   padding: 3px;
   border: 1px solid #ccc;
-  border-radius: 999px;
+  border-radius: 20px;
   background: #f7f7f7;
 }
 
-.switch::before {
-  content: '';
-  position: absolute;
-  top: 3px;
-  left: 3px;
-  width: calc(50% - 3px);
-  height: calc(100% - 6px);
-  border-radius: 999px;
-  background: #08567a;
-  transition: transform 0.3s;
-}
-
-.switch.activo::before {
-  transform: translateX(100%);
-}
-
-.switch span {
-  position: relative;
-  width: 70px;
-  padding: 4px 0;
-  font-size: 13px;
-  font-weight: 500;
+.vistas button {
+  padding: 4px 14px;
+  border: none;
+  border-radius: 20px;
+  background: none;
   color: #4f4e4e;
-  transition: color 0.3s;
+  font-size: 13px;
 }
 
-/* el texto que queda arriba de la bolita va en blanco */
-.switch:not(.activo) span:first-child,
-.switch.activo span:last-child {
+.vistas button.activa {
+  background: #08567a;
   color: #fff;
 }
 
@@ -98,7 +79,7 @@ h2 {
   font-weight: 600;
 }
 
-/* ---- vista LISTA ---- */
+/* ---- tabla ---- */
 
 table {
   width: 100%;
@@ -123,7 +104,7 @@ tbody tr:hover {
   background: #f7f7f7;
 }
 
-/* ---- vista CARDS ---- */
+/* ---- cards ---- */
 
 .cards {
   display: grid;
@@ -138,10 +119,10 @@ tbody tr:hover {
   background: #f7f7f7;
 }
 
-.card h2 {
-  margin: 0 2rem 0.4rem 0;
+.card h3 {
   font-size: 15px;
   font-weight: 500;
+  margin: 0 0 0.4rem;
 }
 
 .card p {
@@ -150,13 +131,14 @@ tbody tr:hover {
   color: #4f4e4e;
 }
 
-.card .card-club {
+.card .club {
   font-size: 14px;
   font-weight: 600;
   color: #08567a;
 }
 
-.card-numero {
+/* el número arriba a la derecha de la card */
+.numero {
   position: absolute;
   top: 1rem;
   right: 1rem;
