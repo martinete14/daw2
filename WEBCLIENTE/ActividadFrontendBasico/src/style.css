@@ -132,7 +132,7 @@ th {
   color: #08567a;
 }
 
-/* ---- spinner: la pelota en el medio de la pantalla girando ---- */
+/* ---- spinner: la pelota picando en el medio de la pantalla ---- */
 
 .cargando {
   position: fixed;
@@ -147,13 +147,23 @@ th {
 }
 
 .cargando img {
-  width: 150px;
-  animation: girar 1s linear infinite;
+  width: 130px;
+  filter: drop-shadow(0 15px 10px rgba(0, 0, 0, 0.3));
+  animation: picar 0.9s infinite;
 }
 
-@keyframes girar {
-  to {
-    transform: rotate(360deg);
+/* sube frenando, baja acelerando y se aplasta un poquito al tocar el piso */
+@keyframes picar {
+  0% {
+    transform: translateY(0) scale(1.15, 0.85);
+    animation-timing-function: ease-out;
+  }
+  50% {
+    transform: translateY(-140px) rotate(180deg);
+    animation-timing-function: ease-in;
+  }
+  100% {
+    transform: translateY(0) rotate(360deg) scale(1.15, 0.85);
   }
 }
 

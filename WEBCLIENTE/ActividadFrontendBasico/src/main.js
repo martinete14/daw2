@@ -70,15 +70,20 @@ function mostrarVista(vista) {
   cards.hidden = vista !== "cards";
 }
 
-// al tocar un botón: guarda la cookie y la pelota gira un ratito antes de cambiar
-function cambiarVista(vista) {
-  guardarVista(vista);
+// la pelota pica un ratito y después aparece la vista
+function mostrarCargando(vista) {
   cargando.hidden = false;
 
   setTimeout(() => {
     cargando.hidden = true;
     mostrarVista(vista);
   }, 1200);
+}
+
+// al tocar un botón: guarda la cookie y cambia con la pelota en el medio
+function cambiarVista(vista) {
+  guardarVista(vista);
+  mostrarCargando(vista);
 }
 
 async function mostrarJugadores() {
@@ -94,6 +99,6 @@ async function mostrarJugadores() {
 botonLista.addEventListener("click", () => cambiarVista("lista"));
 botonCards.addEventListener("click", () => cambiarVista("cards"));
 
-// al entrar arranca en la vista que quedó guardada en la cookie
-mostrarVista(leerVista());
+// al entrar (o refrescar) también sale la pelota y después la vista guardada en la cookie
 mostrarJugadores();
+mostrarCargando(leerVista());
