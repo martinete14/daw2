@@ -70,7 +70,7 @@ function mostrarVista(vista) {
   cards.hidden = vista !== "cards";
 }
 
-// al tocar un botón: guarda la cookie y la pelota pica un ratito antes de cambiar
+// al tocar un botón: guarda la cookie y la pelota gira un ratito antes de cambiar
 function cambiarVista(vista) {
   guardarVista(vista);
   cargando.hidden = false;
