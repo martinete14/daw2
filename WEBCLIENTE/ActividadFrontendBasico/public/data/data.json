@@ -295,6 +295,7710 @@
       "club": "Independiente",
       "posicion": "Delantero",
       "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 38,
+      "nombre": "Benjamín",
+      "apellido": "Navarro",
+      "club": "Newell's Old Boys",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 39,
+      "nombre": "Juan Cruz",
+      "apellido": "Acosta",
+      "club": "Vélez Sarsfield",
+      "posicion": "Arquero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 40,
+      "nombre": "Juan Manuel",
+      "apellido": "Maidana",
+      "club": "Newell's Old Boys",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 41,
+      "nombre": "Agustín",
+      "apellido": "Farías",
+      "club": "Estudiantes de La Plata",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 42,
+      "nombre": "Lucas",
+      "apellido": "Toledo",
+      "club": "Atlético Tucumán",
+      "posicion": "Defensor",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 43,
+      "nombre": "Fernando",
+      "apellido": "Escobar",
+      "club": "Banfield",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 44,
+      "nombre": "Mateo",
+      "apellido": "Ortiz",
+      "club": "Huracán",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 45,
+      "nombre": "Cristian",
+      "apellido": "Castro",
+      "club": "Vélez Sarsfield",
+      "posicion": "Defensor",
+      "nacionalidad": "Colombia"
+    },
+    {
+      "id_jugador": 46,
+      "nombre": "Nicolás",
+      "apellido": "López",
+      "club": "Huracán",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 47,
+      "nombre": "Leonardo",
+      "apellido": "Suárez",
+      "club": "San Lorenzo",
+      "posicion": "Defensor",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 48,
+      "nombre": "Fernando",
+      "apellido": "Romero",
+      "club": "Independiente Rivadavia",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 49,
+      "nombre": "Matías",
+      "apellido": "Morales",
+      "club": "Estudiantes de Río Cuarto",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 50,
+      "nombre": "Rodrigo",
+      "apellido": "Flores",
+      "club": "Gimnasia de Mendoza",
+      "posicion": "Arquero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 51,
+      "nombre": "Daniel",
+      "apellido": "Sosa",
+      "club": "Belgrano",
+      "posicion": "Arquero",
+      "nacionalidad": "Ecuador"
+    },
+    {
+      "id_jugador": 52,
+      "nombre": "Alejandro",
+      "apellido": "Gutiérrez",
+      "club": "Tigre",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 53,
+      "nombre": "Sebastián",
+      "apellido": "Rodríguez",
+      "club": "Instituto",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 54,
+      "nombre": "Mauro",
+      "apellido": "Luna",
+      "club": "Boca Juniors",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 55,
+      "nombre": "Daniel",
+      "apellido": "Peralta",
+      "club": "Gimnasia de Mendoza",
+      "posicion": "Arquero",
+      "nacionalidad": "Bolivia"
+    },
+    {
+      "id_jugador": 56,
+      "nombre": "Walter",
+      "apellido": "Giménez",
+      "club": "Gimnasia de Mendoza",
+      "posicion": "Delantero",
+      "nacionalidad": "Chile"
+    },
+    {
+      "id_jugador": 57,
+      "nombre": "Diego",
+      "apellido": "Molina",
+      "club": "Lanús",
+      "posicion": "Delantero",
+      "nacionalidad": "Ecuador"
+    },
+    {
+      "id_jugador": 58,
+      "nombre": "Luciano",
+      "apellido": "Ojeda",
+      "club": "Vélez Sarsfield",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 59,
+      "nombre": "Axel",
+      "apellido": "Paz",
+      "club": "Independiente Rivadavia",
+      "posicion": "Delantero",
+      "nacionalidad": "Chile"
+    },
+    {
+      "id_jugador": 60,
+      "nombre": "Facundo",
+      "apellido": "Pereyra",
+      "club": "Racing Club",
+      "posicion": "Arquero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 61,
+      "nombre": "Benjamín",
+      "apellido": "Farías",
+      "club": "Estudiantes de La Plata",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 62,
+      "nombre": "Maximiliano",
+      "apellido": "Alvarez",
+      "club": "Rosario Central",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 63,
+      "nombre": "Kevin",
+      "apellido": "Domínguez",
+      "club": "Lanús",
+      "posicion": "Defensor",
+      "nacionalidad": "Chile"
+    },
+    {
+      "id_jugador": 64,
+      "nombre": "Jonathan",
+      "apellido": "Juárez",
+      "club": "River Plate",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 65,
+      "nombre": "Nahuel",
+      "apellido": "Castro",
+      "club": "Independiente",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 66,
+      "nombre": "Benjamín",
+      "apellido": "Luna",
+      "club": "Estudiantes de Río Cuarto",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 67,
+      "nombre": "Manuel",
+      "apellido": "Benítez",
+      "club": "Gimnasia de La Plata",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Paraguay"
+    },
+    {
+      "id_jugador": 68,
+      "nombre": "Franco",
+      "apellido": "Luna",
+      "club": "Barracas Central",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 69,
+      "nombre": "Jeremías",
+      "apellido": "Flores",
+      "club": "Estudiantes de Río Cuarto",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 70,
+      "nombre": "Hernán",
+      "apellido": "Herrera",
+      "club": "Rosario Central",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 71,
+      "nombre": "Bruno",
+      "apellido": "Suárez",
+      "club": "Argentinos Juniors",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 72,
+      "nombre": "Luciano",
+      "apellido": "Gutiérrez",
+      "club": "San Lorenzo",
+      "posicion": "Delantero",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 73,
+      "nombre": "Marcelo",
+      "apellido": "Pereyra",
+      "club": "Vélez Sarsfield",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Chile"
+    },
+    {
+      "id_jugador": 74,
+      "nombre": "Emiliano",
+      "apellido": "Flores",
+      "club": "Newell's Old Boys",
+      "posicion": "Defensor",
+      "nacionalidad": "Perú"
+    },
+    {
+      "id_jugador": 75,
+      "nombre": "Gonzalo",
+      "apellido": "Giménez",
+      "club": "Platense",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 76,
+      "nombre": "Iván",
+      "apellido": "Aguirre",
+      "club": "Central Córdoba",
+      "posicion": "Defensor",
+      "nacionalidad": "Paraguay"
+    },
+    {
+      "id_jugador": 77,
+      "nombre": "Alexis",
+      "apellido": "Ferreyra",
+      "club": "Defensa y Justicia",
+      "posicion": "Defensor",
+      "nacionalidad": "Perú"
+    },
+    {
+      "id_jugador": 78,
+      "nombre": "Luciano",
+      "apellido": "Franco",
+      "club": "Central Córdoba",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Paraguay"
+    },
+    {
+      "id_jugador": 79,
+      "nombre": "Sergio",
+      "apellido": "García",
+      "club": "San Lorenzo",
+      "posicion": "Defensor",
+      "nacionalidad": "Paraguay"
+    },
+    {
+      "id_jugador": 80,
+      "nombre": "Leandro",
+      "apellido": "Juárez",
+      "club": "Barracas Central",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 81,
+      "nombre": "Enzo",
+      "apellido": "Domínguez",
+      "club": "Lanús",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 82,
+      "nombre": "Alejandro",
+      "apellido": "Benítez",
+      "club": "Deportivo Riestra",
+      "posicion": "Arquero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 83,
+      "nombre": "Gabriel",
+      "apellido": "Zárate",
+      "club": "Rosario Central",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Paraguay"
+    },
+    {
+      "id_jugador": 84,
+      "nombre": "Matías",
+      "apellido": "Montenegro",
+      "club": "Independiente",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 85,
+      "nombre": "Valentín",
+      "apellido": "García",
+      "club": "Racing Club",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Venezuela"
+    },
+    {
+      "id_jugador": 86,
+      "nombre": "Federico",
+      "apellido": "Cáceres",
+      "club": "Platense",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 87,
+      "nombre": "Guido",
+      "apellido": "Medina",
+      "club": "Estudiantes de Río Cuarto",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 88,
+      "nombre": "Sergio",
+      "apellido": "Díaz",
+      "club": "Atlético Tucumán",
+      "posicion": "Defensor",
+      "nacionalidad": "Perú"
+    },
+    {
+      "id_jugador": 89,
+      "nombre": "Joaquín",
+      "apellido": "Giménez",
+      "club": "Lanús",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 90,
+      "nombre": "Juan Manuel",
+      "apellido": "Sánchez",
+      "club": "Unión",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 91,
+      "nombre": "Nahuel",
+      "apellido": "Acosta",
+      "club": "Argentinos Juniors",
+      "posicion": "Defensor",
+      "nacionalidad": "Colombia"
+    },
+    {
+      "id_jugador": 92,
+      "nombre": "Jonathan",
+      "apellido": "Correa",
+      "club": "Platense",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 93,
+      "nombre": "Benjamín",
+      "apellido": "Ortiz",
+      "club": "Banfield",
+      "posicion": "Defensor",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 94,
+      "nombre": "Nahuel",
+      "apellido": "Núñez",
+      "club": "Vélez Sarsfield",
+      "posicion": "Defensor",
+      "nacionalidad": "Ecuador"
+    },
+    {
+      "id_jugador": 95,
+      "nombre": "Rodrigo",
+      "apellido": "Luna",
+      "club": "Argentinos Juniors",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Paraguay"
+    },
+    {
+      "id_jugador": 96,
+      "nombre": "Lautaro",
+      "apellido": "Romero",
+      "club": "San Lorenzo",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 97,
+      "nombre": "Diego",
+      "apellido": "Herrera",
+      "club": "Tigre",
+      "posicion": "Delantero",
+      "nacionalidad": "Colombia"
+    },
+    {
+      "id_jugador": 98,
+      "nombre": "Tomás",
+      "apellido": "Ríos",
+      "club": "Talleres",
+      "posicion": "Arquero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 99,
+      "nombre": "Daniel",
+      "apellido": "Juárez",
+      "club": "Estudiantes de La Plata",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 100,
+      "nombre": "Agustín",
+      "apellido": "Gutiérrez",
+      "club": "Deportivo Riestra",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 101,
+      "nombre": "Gonzalo",
+      "apellido": "Moreno",
+      "club": "Talleres",
+      "posicion": "Delantero",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 102,
+      "nombre": "Maximiliano",
+      "apellido": "Rodríguez",
+      "club": "Deportivo Riestra",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 103,
+      "nombre": "Santino",
+      "apellido": "Alvarez",
+      "club": "San Lorenzo",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 104,
+      "nombre": "Julián",
+      "apellido": "Gallardo",
+      "club": "Barracas Central",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 105,
+      "nombre": "Kevin",
+      "apellido": "Rojas",
+      "club": "Estudiantes de La Plata",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 106,
+      "nombre": "Marcos",
+      "apellido": "Molina",
+      "club": "Defensa y Justicia",
+      "posicion": "Defensor",
+      "nacionalidad": "Ecuador"
+    },
+    {
+      "id_jugador": 107,
+      "nombre": "Agustín",
+      "apellido": "Cabrera",
+      "club": "Huracán",
+      "posicion": "Arquero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 108,
+      "nombre": "Fernando",
+      "apellido": "Quiroga",
+      "club": "Unión",
+      "posicion": "Arquero",
+      "nacionalidad": "Bolivia"
+    },
+    {
+      "id_jugador": 109,
+      "nombre": "Pablo",
+      "apellido": "Giménez",
+      "club": "Talleres",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 110,
+      "nombre": "Jeremías",
+      "apellido": "Godoy",
+      "club": "Belgrano",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 111,
+      "nombre": "Sergio",
+      "apellido": "Molina",
+      "club": "Independiente",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 112,
+      "nombre": "Rodrigo",
+      "apellido": "Alvarez",
+      "club": "Gimnasia de Mendoza",
+      "posicion": "Defensor",
+      "nacionalidad": "Perú"
+    },
+    {
+      "id_jugador": 113,
+      "nombre": "Nahuel",
+      "apellido": "Montenegro",
+      "club": "Unión",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 114,
+      "nombre": "Hernán",
+      "apellido": "Rivero",
+      "club": "Racing Club",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 115,
+      "nombre": "Nicolás",
+      "apellido": "Luna",
+      "club": "Tigre",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 116,
+      "nombre": "Federico",
+      "apellido": "Escobar",
+      "club": "Huracán",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Chile"
+    },
+    {
+      "id_jugador": 117,
+      "nombre": "Leonardo",
+      "apellido": "Castro",
+      "club": "Aldosivi",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 118,
+      "nombre": "Thiago",
+      "apellido": "Quiroga",
+      "club": "Tigre",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 119,
+      "nombre": "Luciano",
+      "apellido": "López",
+      "club": "Aldosivi",
+      "posicion": "Defensor",
+      "nacionalidad": "Venezuela"
+    },
+    {
+      "id_jugador": 120,
+      "nombre": "Thiago",
+      "apellido": "Ledesma",
+      "club": "Lanús",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Paraguay"
+    },
+    {
+      "id_jugador": 121,
+      "nombre": "Joaquín",
+      "apellido": "Rodríguez",
+      "club": "Independiente Rivadavia",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Bolivia"
+    },
+    {
+      "id_jugador": 122,
+      "nombre": "Marcelo",
+      "apellido": "Morales",
+      "club": "River Plate",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 123,
+      "nombre": "Tomás",
+      "apellido": "Gómez",
+      "club": "Aldosivi",
+      "posicion": "Arquero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 124,
+      "nombre": "Nahuel",
+      "apellido": "Juárez",
+      "club": "Atlético Tucumán",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 125,
+      "nombre": "Guido",
+      "apellido": "Navarro",
+      "club": "Estudiantes de Río Cuarto",
+      "posicion": "Defensor",
+      "nacionalidad": "Chile"
+    },
+    {
+      "id_jugador": 126,
+      "nombre": "Fernando",
+      "apellido": "Núñez",
+      "club": "Belgrano",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 127,
+      "nombre": "Federico",
+      "apellido": "Ledesma",
+      "club": "Unión",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 128,
+      "nombre": "Lucas",
+      "apellido": "Herrera",
+      "club": "Boca Juniors",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 129,
+      "nombre": "Jeremías",
+      "apellido": "Cáceres",
+      "club": "Independiente",
+      "posicion": "Arquero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 130,
+      "nombre": "Gabriel",
+      "apellido": "Muñoz",
+      "club": "Instituto",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 131,
+      "nombre": "Lucas",
+      "apellido": "Núñez",
+      "club": "Belgrano",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 132,
+      "nombre": "Alexis",
+      "apellido": "Ponce",
+      "club": "Newell's Old Boys",
+      "posicion": "Delantero",
+      "nacionalidad": "Colombia"
+    },
+    {
+      "id_jugador": 133,
+      "nombre": "Joaquín",
+      "apellido": "González",
+      "club": "Central Córdoba",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 134,
+      "nombre": "Iván",
+      "apellido": "Ruiz",
+      "club": "Aldosivi",
+      "posicion": "Delantero",
+      "nacionalidad": "Paraguay"
+    },
+    {
+      "id_jugador": 135,
+      "nombre": "Ignacio",
+      "apellido": "Morales",
+      "club": "Platense",
+      "posicion": "Delantero",
+      "nacionalidad": "Ecuador"
+    },
+    {
+      "id_jugador": 136,
+      "nombre": "Daniel",
+      "apellido": "Luna",
+      "club": "Platense",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 137,
+      "nombre": "Lautaro",
+      "apellido": "Vega",
+      "club": "Estudiantes de La Plata",
+      "posicion": "Defensor",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 138,
+      "nombre": "Maximiliano",
+      "apellido": "Navarro",
+      "club": "Tigre",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 139,
+      "nombre": "Alejandro",
+      "apellido": "Torres",
+      "club": "Gimnasia de Mendoza",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 140,
+      "nombre": "Brian",
+      "apellido": "Domínguez",
+      "club": "Independiente Rivadavia",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 141,
+      "nombre": "Nicolás",
+      "apellido": "Benítez",
+      "club": "Lanús",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 142,
+      "nombre": "Gastón",
+      "apellido": "Navarro",
+      "club": "Independiente",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 143,
+      "nombre": "Thiago",
+      "apellido": "Bustos",
+      "club": "Gimnasia de Mendoza",
+      "posicion": "Arquero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 144,
+      "nombre": "Luciano",
+      "apellido": "Cabrera",
+      "club": "Tigre",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Paraguay"
+    },
+    {
+      "id_jugador": 145,
+      "nombre": "Hernán",
+      "apellido": "Núñez",
+      "club": "Independiente Rivadavia",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 146,
+      "nombre": "Alexis",
+      "apellido": "Rivero",
+      "club": "Independiente",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 147,
+      "nombre": "Marcelo",
+      "apellido": "Maidana",
+      "club": "Boca Juniors",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 148,
+      "nombre": "Ignacio",
+      "apellido": "Molina",
+      "club": "Huracán",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Venezuela"
+    },
+    {
+      "id_jugador": 149,
+      "nombre": "Marcelo",
+      "apellido": "Castro",
+      "club": "Central Córdoba",
+      "posicion": "Arquero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 150,
+      "nombre": "Sergio",
+      "apellido": "Núñez",
+      "club": "Huracán",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 151,
+      "nombre": "Valentín",
+      "apellido": "Núñez",
+      "club": "Gimnasia de La Plata",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 152,
+      "nombre": "Thiago",
+      "apellido": "Navarro",
+      "club": "Atlético Tucumán",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 153,
+      "nombre": "Santiago",
+      "apellido": "Domínguez",
+      "club": "Newell's Old Boys",
+      "posicion": "Defensor",
+      "nacionalidad": "Bolivia"
+    },
+    {
+      "id_jugador": 154,
+      "nombre": "Sergio",
+      "apellido": "Ibáñez",
+      "club": "Instituto",
+      "posicion": "Delantero",
+      "nacionalidad": "Perú"
+    },
+    {
+      "id_jugador": 155,
+      "nombre": "Iván",
+      "apellido": "Bustos",
+      "club": "Deportivo Riestra",
+      "posicion": "Delantero",
+      "nacionalidad": "Chile"
+    },
+    {
+      "id_jugador": 156,
+      "nombre": "Alexis",
+      "apellido": "Ramírez",
+      "club": "Barracas Central",
+      "posicion": "Delantero",
+      "nacionalidad": "Bolivia"
+    },
+    {
+      "id_jugador": 157,
+      "nombre": "Facundo",
+      "apellido": "Peralta",
+      "club": "Platense",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 158,
+      "nombre": "Joaquín",
+      "apellido": "Alvarez",
+      "club": "Talleres",
+      "posicion": "Defensor",
+      "nacionalidad": "Ecuador"
+    },
+    {
+      "id_jugador": 159,
+      "nombre": "Rodrigo",
+      "apellido": "Muñoz",
+      "club": "Sarmiento",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 160,
+      "nombre": "Enzo",
+      "apellido": "Cáceres",
+      "club": "Vélez Sarsfield",
+      "posicion": "Defensor",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 161,
+      "nombre": "Martín",
+      "apellido": "García",
+      "club": "Estudiantes de Río Cuarto",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 162,
+      "nombre": "Leonardo",
+      "apellido": "Núñez",
+      "club": "Banfield",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 163,
+      "nombre": "Hernán",
+      "apellido": "Correa",
+      "club": "Estudiantes de Río Cuarto",
+      "posicion": "Defensor",
+      "nacionalidad": "Paraguay"
+    },
+    {
+      "id_jugador": 164,
+      "nombre": "Santino",
+      "apellido": "Sosa",
+      "club": "Vélez Sarsfield",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 165,
+      "nombre": "Alan",
+      "apellido": "Muñoz",
+      "club": "Central Córdoba",
+      "posicion": "Arquero",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 166,
+      "nombre": "Santiago",
+      "apellido": "Morales",
+      "club": "Barracas Central",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 167,
+      "nombre": "Gabriel",
+      "apellido": "Medina",
+      "club": "Independiente",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 168,
+      "nombre": "Kevin",
+      "apellido": "Peralta",
+      "club": "Tigre",
+      "posicion": "Defensor",
+      "nacionalidad": "Paraguay"
+    },
+    {
+      "id_jugador": 169,
+      "nombre": "Enzo",
+      "apellido": "Ferreyra",
+      "club": "San Lorenzo",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 170,
+      "nombre": "Jonathan",
+      "apellido": "Ledesma",
+      "club": "Vélez Sarsfield",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 171,
+      "nombre": "Jonathan",
+      "apellido": "Rivero",
+      "club": "Gimnasia de La Plata",
+      "posicion": "Delantero",
+      "nacionalidad": "Ecuador"
+    },
+    {
+      "id_jugador": 172,
+      "nombre": "Martín",
+      "apellido": "Moreno",
+      "club": "Sarmiento",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 173,
+      "nombre": "Thiago",
+      "apellido": "Suárez",
+      "club": "Deportivo Riestra",
+      "posicion": "Defensor",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 174,
+      "nombre": "Nahuel",
+      "apellido": "Torres",
+      "club": "Atlético Tucumán",
+      "posicion": "Arquero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 175,
+      "nombre": "Lautaro",
+      "apellido": "Gómez",
+      "club": "Barracas Central",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Paraguay"
+    },
+    {
+      "id_jugador": 176,
+      "nombre": "Fernando",
+      "apellido": "Godoy",
+      "club": "Deportivo Riestra",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 177,
+      "nombre": "Brian",
+      "apellido": "Correa",
+      "club": "Unión",
+      "posicion": "Defensor",
+      "nacionalidad": "Paraguay"
+    },
+    {
+      "id_jugador": 178,
+      "nombre": "Brian",
+      "apellido": "Benítez",
+      "club": "Huracán",
+      "posicion": "Defensor",
+      "nacionalidad": "Paraguay"
+    },
+    {
+      "id_jugador": 179,
+      "nombre": "Alejandro",
+      "apellido": "Luna",
+      "club": "Instituto",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 180,
+      "nombre": "Santino",
+      "apellido": "Ortiz",
+      "club": "Gimnasia de Mendoza",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Bolivia"
+    },
+    {
+      "id_jugador": 181,
+      "nombre": "Diego",
+      "apellido": "Morales",
+      "club": "Racing Club",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 182,
+      "nombre": "Ezequiel",
+      "apellido": "Torres",
+      "club": "Deportivo Riestra",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 183,
+      "nombre": "Lautaro",
+      "apellido": "Sosa",
+      "club": "Huracán",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 184,
+      "nombre": "Tomás",
+      "apellido": "Molina",
+      "club": "Belgrano",
+      "posicion": "Defensor",
+      "nacionalidad": "Bolivia"
+    },
+    {
+      "id_jugador": 185,
+      "nombre": "Alejandro",
+      "apellido": "Vera",
+      "club": "Barracas Central",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 186,
+      "nombre": "Guido",
+      "apellido": "Herrera",
+      "club": "Central Córdoba",
+      "posicion": "Defensor",
+      "nacionalidad": "Bolivia"
+    },
+    {
+      "id_jugador": 187,
+      "nombre": "Cristian",
+      "apellido": "Vega",
+      "club": "Huracán",
+      "posicion": "Delantero",
+      "nacionalidad": "Venezuela"
+    },
+    {
+      "id_jugador": 188,
+      "nombre": "Federico",
+      "apellido": "Ojeda",
+      "club": "Lanús",
+      "posicion": "Defensor",
+      "nacionalidad": "Colombia"
+    },
+    {
+      "id_jugador": 189,
+      "nombre": "Sergio",
+      "apellido": "Morales",
+      "club": "Barracas Central",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 190,
+      "nombre": "Juan Cruz",
+      "apellido": "Ledesma",
+      "club": "San Lorenzo",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 191,
+      "nombre": "Joaquín",
+      "apellido": "Farías",
+      "club": "Aldosivi",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 192,
+      "nombre": "Mauro",
+      "apellido": "Ojeda",
+      "club": "Banfield",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 193,
+      "nombre": "Brian",
+      "apellido": "Torres",
+      "club": "San Lorenzo",
+      "posicion": "Delantero",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 194,
+      "nombre": "Franco",
+      "apellido": "Ledesma",
+      "club": "Racing Club",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 195,
+      "nombre": "Manuel",
+      "apellido": "Paz",
+      "club": "Vélez Sarsfield",
+      "posicion": "Defensor",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 196,
+      "nombre": "Joaquín",
+      "apellido": "Gallardo",
+      "club": "Instituto",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 197,
+      "nombre": "Sebastián",
+      "apellido": "García",
+      "club": "Platense",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 198,
+      "nombre": "Ignacio",
+      "apellido": "Benítez",
+      "club": "Aldosivi",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 199,
+      "nombre": "Rodrigo",
+      "apellido": "Ledesma",
+      "club": "Vélez Sarsfield",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 200,
+      "nombre": "Benjamín",
+      "apellido": "Herrera",
+      "club": "Atlético Tucumán",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 201,
+      "nombre": "Walter",
+      "apellido": "Zárate",
+      "club": "Unión",
+      "posicion": "Arquero",
+      "nacionalidad": "Ecuador"
+    },
+    {
+      "id_jugador": 202,
+      "nombre": "Bruno",
+      "apellido": "Escobar",
+      "club": "Gimnasia de La Plata",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Bolivia"
+    },
+    {
+      "id_jugador": 203,
+      "nombre": "Luciano",
+      "apellido": "Farías",
+      "club": "Barracas Central",
+      "posicion": "Delantero",
+      "nacionalidad": "Paraguay"
+    },
+    {
+      "id_jugador": 204,
+      "nombre": "Jeremías",
+      "apellido": "Ibáñez",
+      "club": "Vélez Sarsfield",
+      "posicion": "Delantero",
+      "nacionalidad": "Chile"
+    },
+    {
+      "id_jugador": 205,
+      "nombre": "Guido",
+      "apellido": "Godoy",
+      "club": "Belgrano",
+      "posicion": "Defensor",
+      "nacionalidad": "Venezuela"
+    },
+    {
+      "id_jugador": 206,
+      "nombre": "Ramiro",
+      "apellido": "Ramírez",
+      "club": "Belgrano",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 207,
+      "nombre": "Emiliano",
+      "apellido": "Gómez",
+      "club": "Huracán",
+      "posicion": "Delantero",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 208,
+      "nombre": "Julián",
+      "apellido": "Ferreyra",
+      "club": "Talleres",
+      "posicion": "Arquero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 209,
+      "nombre": "Alejandro",
+      "apellido": "Giménez",
+      "club": "Banfield",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 210,
+      "nombre": "Emiliano",
+      "apellido": "Vega",
+      "club": "Belgrano",
+      "posicion": "Defensor",
+      "nacionalidad": "Chile"
+    },
+    {
+      "id_jugador": 211,
+      "nombre": "Damián",
+      "apellido": "Ledesma",
+      "club": "River Plate",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 212,
+      "nombre": "Hernán",
+      "apellido": "Aguirre",
+      "club": "Central Córdoba",
+      "posicion": "Defensor",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 213,
+      "nombre": "Mauro",
+      "apellido": "Quiroga",
+      "club": "Independiente",
+      "posicion": "Arquero",
+      "nacionalidad": "Ecuador"
+    },
+    {
+      "id_jugador": 214,
+      "nombre": "Joaquín",
+      "apellido": "Ramírez",
+      "club": "Newell's Old Boys",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 215,
+      "nombre": "Matías",
+      "apellido": "Rivero",
+      "club": "Lanús",
+      "posicion": "Arquero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 216,
+      "nombre": "Fernando",
+      "apellido": "Luna",
+      "club": "Tigre",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 217,
+      "nombre": "Daniel",
+      "apellido": "Maidana",
+      "club": "Belgrano",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 218,
+      "nombre": "Ezequiel",
+      "apellido": "Sosa",
+      "club": "Newell's Old Boys",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Colombia"
+    },
+    {
+      "id_jugador": 219,
+      "nombre": "Joaquín",
+      "apellido": "Ortiz",
+      "club": "Tigre",
+      "posicion": "Delantero",
+      "nacionalidad": "Venezuela"
+    },
+    {
+      "id_jugador": 220,
+      "nombre": "Pablo",
+      "apellido": "Domínguez",
+      "club": "Barracas Central",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 221,
+      "nombre": "Benjamín",
+      "apellido": "Godoy",
+      "club": "San Lorenzo",
+      "posicion": "Delantero",
+      "nacionalidad": "Chile"
+    },
+    {
+      "id_jugador": 222,
+      "nombre": "Alan",
+      "apellido": "Sosa",
+      "club": "Unión",
+      "posicion": "Defensor",
+      "nacionalidad": "Perú"
+    },
+    {
+      "id_jugador": 223,
+      "nombre": "Mauro",
+      "apellido": "Acosta",
+      "club": "Huracán",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 224,
+      "nombre": "Gonzalo",
+      "apellido": "Franco",
+      "club": "Independiente Rivadavia",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Ecuador"
+    },
+    {
+      "id_jugador": 225,
+      "nombre": "Ignacio",
+      "apellido": "Núñez",
+      "club": "Aldosivi",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Paraguay"
+    },
+    {
+      "id_jugador": 226,
+      "nombre": "Damián",
+      "apellido": "Rodríguez",
+      "club": "Racing Club",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 227,
+      "nombre": "Mateo",
+      "apellido": "Coronel",
+      "club": "Newell's Old Boys",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 228,
+      "nombre": "Valentín",
+      "apellido": "Vega",
+      "club": "Barracas Central",
+      "posicion": "Delantero",
+      "nacionalidad": "Colombia"
+    },
+    {
+      "id_jugador": 229,
+      "nombre": "Julián",
+      "apellido": "Acosta",
+      "club": "Huracán",
+      "posicion": "Defensor",
+      "nacionalidad": "Ecuador"
+    },
+    {
+      "id_jugador": 230,
+      "nombre": "Nicolás",
+      "apellido": "Juárez",
+      "club": "Huracán",
+      "posicion": "Delantero",
+      "nacionalidad": "Venezuela"
+    },
+    {
+      "id_jugador": 231,
+      "nombre": "Gastón",
+      "apellido": "Rivero",
+      "club": "Deportivo Riestra",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 232,
+      "nombre": "Bautista",
+      "apellido": "Coronel",
+      "club": "Estudiantes de La Plata",
+      "posicion": "Delantero",
+      "nacionalidad": "Ecuador"
+    },
+    {
+      "id_jugador": 233,
+      "nombre": "Hernán",
+      "apellido": "Godoy",
+      "club": "Argentinos Juniors",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 234,
+      "nombre": "Marcos",
+      "apellido": "Ríos",
+      "club": "Barracas Central",
+      "posicion": "Arquero",
+      "nacionalidad": "Colombia"
+    },
+    {
+      "id_jugador": 235,
+      "nombre": "Alejandro",
+      "apellido": "Moreno",
+      "club": "Talleres",
+      "posicion": "Delantero",
+      "nacionalidad": "Paraguay"
+    },
+    {
+      "id_jugador": 236,
+      "nombre": "Emanuel",
+      "apellido": "Peralta",
+      "club": "Lanús",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 237,
+      "nombre": "Matías",
+      "apellido": "López",
+      "club": "Independiente",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 238,
+      "nombre": "Diego",
+      "apellido": "Rojas",
+      "club": "Instituto",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 239,
+      "nombre": "Juan Cruz",
+      "apellido": "Montenegro",
+      "club": "Platense",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 240,
+      "nombre": "Lisandro",
+      "apellido": "Rivero",
+      "club": "Sarmiento",
+      "posicion": "Arquero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 241,
+      "nombre": "Valentín",
+      "apellido": "Acosta",
+      "club": "Deportivo Riestra",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 242,
+      "nombre": "Emanuel",
+      "apellido": "Franco",
+      "club": "Argentinos Juniors",
+      "posicion": "Defensor",
+      "nacionalidad": "Paraguay"
+    },
+    {
+      "id_jugador": 243,
+      "nombre": "Leonardo",
+      "apellido": "López",
+      "club": "Unión",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Venezuela"
+    },
+    {
+      "id_jugador": 244,
+      "nombre": "Lautaro",
+      "apellido": "Navarro",
+      "club": "Banfield",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 245,
+      "nombre": "Enzo",
+      "apellido": "Ledesma",
+      "club": "Belgrano",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Colombia"
+    },
+    {
+      "id_jugador": 246,
+      "nombre": "Gastón",
+      "apellido": "Romero",
+      "club": "Tigre",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Perú"
+    },
+    {
+      "id_jugador": 247,
+      "nombre": "Daniel",
+      "apellido": "Méndez",
+      "club": "Defensa y Justicia",
+      "posicion": "Delantero",
+      "nacionalidad": "Ecuador"
+    },
+    {
+      "id_jugador": 248,
+      "nombre": "Axel",
+      "apellido": "Giménez",
+      "club": "Instituto",
+      "posicion": "Arquero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 249,
+      "nombre": "Mateo",
+      "apellido": "Giménez",
+      "club": "Talleres",
+      "posicion": "Arquero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 250,
+      "nombre": "Cristian",
+      "apellido": "Medina",
+      "club": "Lanús",
+      "posicion": "Defensor",
+      "nacionalidad": "Bolivia"
+    },
+    {
+      "id_jugador": 251,
+      "nombre": "Hernán",
+      "apellido": "Acosta",
+      "club": "Estudiantes de La Plata",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 252,
+      "nombre": "Maximiliano",
+      "apellido": "Sosa",
+      "club": "Aldosivi",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 253,
+      "nombre": "Leonardo",
+      "apellido": "Rodríguez",
+      "club": "Banfield",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Chile"
+    },
+    {
+      "id_jugador": 254,
+      "nombre": "Gabriel",
+      "apellido": "Domínguez",
+      "club": "Defensa y Justicia",
+      "posicion": "Defensor",
+      "nacionalidad": "Colombia"
+    },
+    {
+      "id_jugador": 255,
+      "nombre": "Alan",
+      "apellido": "Luna",
+      "club": "Gimnasia de Mendoza",
+      "posicion": "Delantero",
+      "nacionalidad": "Chile"
+    },
+    {
+      "id_jugador": 256,
+      "nombre": "Fernando",
+      "apellido": "Ojeda",
+      "club": "Racing Club",
+      "posicion": "Delantero",
+      "nacionalidad": "Ecuador"
+    },
+    {
+      "id_jugador": 257,
+      "nombre": "Agustín",
+      "apellido": "Ibáñez",
+      "club": "Instituto",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 258,
+      "nombre": "Santiago",
+      "apellido": "Toledo",
+      "club": "Boca Juniors",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 259,
+      "nombre": "Leonardo",
+      "apellido": "Ledesma",
+      "club": "Aldosivi",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 260,
+      "nombre": "Lucas",
+      "apellido": "Domínguez",
+      "club": "Huracán",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 261,
+      "nombre": "Alexis",
+      "apellido": "Flores",
+      "club": "Racing Club",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Colombia"
+    },
+    {
+      "id_jugador": 262,
+      "nombre": "Manuel",
+      "apellido": "Gómez",
+      "club": "Banfield",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 263,
+      "nombre": "Matías",
+      "apellido": "Ledesma",
+      "club": "Independiente Rivadavia",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 264,
+      "nombre": "Martín",
+      "apellido": "Ríos",
+      "club": "Tigre",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 265,
+      "nombre": "Franco",
+      "apellido": "Flores",
+      "club": "River Plate",
+      "posicion": "Defensor",
+      "nacionalidad": "Ecuador"
+    },
+    {
+      "id_jugador": 266,
+      "nombre": "Alejandro",
+      "apellido": "Toledo",
+      "club": "Newell's Old Boys",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 267,
+      "nombre": "Matías",
+      "apellido": "Ojeda",
+      "club": "Independiente Rivadavia",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Chile"
+    },
+    {
+      "id_jugador": 268,
+      "nombre": "Gabriel",
+      "apellido": "Sosa",
+      "club": "Platense",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 269,
+      "nombre": "Nahuel",
+      "apellido": "Correa",
+      "club": "Vélez Sarsfield",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 270,
+      "nombre": "Alan",
+      "apellido": "Rojas",
+      "club": "San Lorenzo",
+      "posicion": "Defensor",
+      "nacionalidad": "Bolivia"
+    },
+    {
+      "id_jugador": 271,
+      "nombre": "Lautaro",
+      "apellido": "Ortiz",
+      "club": "Lanús",
+      "posicion": "Defensor",
+      "nacionalidad": "Chile"
+    },
+    {
+      "id_jugador": 272,
+      "nombre": "Facundo",
+      "apellido": "Zárate",
+      "club": "Sarmiento",
+      "posicion": "Delantero",
+      "nacionalidad": "Colombia"
+    },
+    {
+      "id_jugador": 273,
+      "nombre": "Gabriel",
+      "apellido": "Cabrera",
+      "club": "Estudiantes de Río Cuarto",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 274,
+      "nombre": "Guido",
+      "apellido": "Torres",
+      "club": "Estudiantes de Río Cuarto",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 275,
+      "nombre": "Juan Cruz",
+      "apellido": "Ruiz",
+      "club": "Huracán",
+      "posicion": "Arquero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 276,
+      "nombre": "Santino",
+      "apellido": "Flores",
+      "club": "Unión",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 277,
+      "nombre": "Mateo",
+      "apellido": "Juárez",
+      "club": "Deportivo Riestra",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 278,
+      "nombre": "Marcos",
+      "apellido": "Giménez",
+      "club": "Defensa y Justicia",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 279,
+      "nombre": "Leandro",
+      "apellido": "Alvarez",
+      "club": "San Lorenzo",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 280,
+      "nombre": "Mateo",
+      "apellido": "Romero",
+      "club": "Racing Club",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 281,
+      "nombre": "Bautista",
+      "apellido": "Medina",
+      "club": "Gimnasia de La Plata",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Colombia"
+    },
+    {
+      "id_jugador": 282,
+      "nombre": "Valentín",
+      "apellido": "Arias",
+      "club": "River Plate",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 283,
+      "nombre": "Maximiliano",
+      "apellido": "Vega",
+      "club": "Rosario Central",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 284,
+      "nombre": "Bruno",
+      "apellido": "Godoy",
+      "club": "Deportivo Riestra",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 285,
+      "nombre": "Bautista",
+      "apellido": "Quiroga",
+      "club": "Independiente Rivadavia",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Paraguay"
+    },
+    {
+      "id_jugador": 286,
+      "nombre": "Nahuel",
+      "apellido": "González",
+      "club": "Huracán",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 287,
+      "nombre": "Agustín",
+      "apellido": "Sosa",
+      "club": "San Lorenzo",
+      "posicion": "Delantero",
+      "nacionalidad": "Paraguay"
+    },
+    {
+      "id_jugador": 288,
+      "nombre": "Nicolás",
+      "apellido": "Godoy",
+      "club": "Central Córdoba",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 289,
+      "nombre": "Lisandro",
+      "apellido": "Peralta",
+      "club": "Racing Club",
+      "posicion": "Defensor",
+      "nacionalidad": "Ecuador"
+    },
+    {
+      "id_jugador": 290,
+      "nombre": "Joaquín",
+      "apellido": "Ibáñez",
+      "club": "Aldosivi",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Chile"
+    },
+    {
+      "id_jugador": 291,
+      "nombre": "Ramiro",
+      "apellido": "Cabrera",
+      "club": "Gimnasia de Mendoza",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 292,
+      "nombre": "Ignacio",
+      "apellido": "Moreno",
+      "club": "Central Córdoba",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 293,
+      "nombre": "Daniel",
+      "apellido": "Moreno",
+      "club": "Atlético Tucumán",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 294,
+      "nombre": "Martín",
+      "apellido": "Villalba",
+      "club": "Argentinos Juniors",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 295,
+      "nombre": "Pablo",
+      "apellido": "Vega",
+      "club": "Argentinos Juniors",
+      "posicion": "Defensor",
+      "nacionalidad": "Paraguay"
+    },
+    {
+      "id_jugador": 296,
+      "nombre": "Luciano",
+      "apellido": "Domínguez",
+      "club": "River Plate",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Paraguay"
+    },
+    {
+      "id_jugador": 297,
+      "nombre": "Brian",
+      "apellido": "Ramírez",
+      "club": "Boca Juniors",
+      "posicion": "Arquero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 298,
+      "nombre": "Brian",
+      "apellido": "Vega",
+      "club": "Central Córdoba",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 299,
+      "nombre": "Matías",
+      "apellido": "Suárez",
+      "club": "Gimnasia de Mendoza",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 300,
+      "nombre": "Alejandro",
+      "apellido": "Arias",
+      "club": "Barracas Central",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 301,
+      "nombre": "Mauro",
+      "apellido": "Sosa",
+      "club": "Vélez Sarsfield",
+      "posicion": "Delantero",
+      "nacionalidad": "Colombia"
+    },
+    {
+      "id_jugador": 302,
+      "nombre": "Daniel",
+      "apellido": "Herrera",
+      "club": "Belgrano",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 303,
+      "nombre": "Walter",
+      "apellido": "Acosta",
+      "club": "Racing Club",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 304,
+      "nombre": "Emiliano",
+      "apellido": "Acosta",
+      "club": "Independiente",
+      "posicion": "Defensor",
+      "nacionalidad": "Paraguay"
+    },
+    {
+      "id_jugador": 305,
+      "nombre": "Manuel",
+      "apellido": "González",
+      "club": "Defensa y Justicia",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 306,
+      "nombre": "Pablo",
+      "apellido": "Juárez",
+      "club": "Racing Club",
+      "posicion": "Defensor",
+      "nacionalidad": "Chile"
+    },
+    {
+      "id_jugador": 307,
+      "nombre": "Martín",
+      "apellido": "Rojas",
+      "club": "Estudiantes de Río Cuarto",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 308,
+      "nombre": "Walter",
+      "apellido": "Sánchez",
+      "club": "Independiente Rivadavia",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 309,
+      "nombre": "Juan Cruz",
+      "apellido": "Méndez",
+      "club": "Gimnasia de Mendoza",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Venezuela"
+    },
+    {
+      "id_jugador": 310,
+      "nombre": "Marcelo",
+      "apellido": "Villalba",
+      "club": "Huracán",
+      "posicion": "Delantero",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 311,
+      "nombre": "Alexis",
+      "apellido": "Godoy",
+      "club": "Lanús",
+      "posicion": "Delantero",
+      "nacionalidad": "Paraguay"
+    },
+    {
+      "id_jugador": 312,
+      "nombre": "Marcos",
+      "apellido": "Pereyra",
+      "club": "Deportivo Riestra",
+      "posicion": "Delantero",
+      "nacionalidad": "Paraguay"
+    },
+    {
+      "id_jugador": 313,
+      "nombre": "Marcos",
+      "apellido": "Vega",
+      "club": "Talleres",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 314,
+      "nombre": "Bruno",
+      "apellido": "Leiva",
+      "club": "Argentinos Juniors",
+      "posicion": "Defensor",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 315,
+      "nombre": "Gonzalo",
+      "apellido": "Cabrera",
+      "club": "Aldosivi",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 316,
+      "nombre": "Martín",
+      "apellido": "Maidana",
+      "club": "Atlético Tucumán",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 317,
+      "nombre": "Lucas",
+      "apellido": "Aguirre",
+      "club": "Vélez Sarsfield",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 318,
+      "nombre": "Gonzalo",
+      "apellido": "Farías",
+      "club": "Vélez Sarsfield",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 319,
+      "nombre": "Nicolás",
+      "apellido": "Gallardo",
+      "club": "Boca Juniors",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 320,
+      "nombre": "Gastón",
+      "apellido": "Sánchez",
+      "club": "Lanús",
+      "posicion": "Arquero",
+      "nacionalidad": "Ecuador"
+    },
+    {
+      "id_jugador": 321,
+      "nombre": "Mateo",
+      "apellido": "Gallardo",
+      "club": "Huracán",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 322,
+      "nombre": "Santino",
+      "apellido": "Suárez",
+      "club": "Vélez Sarsfield",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 323,
+      "nombre": "Bruno",
+      "apellido": "Toledo",
+      "club": "Talleres",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 324,
+      "nombre": "Ramiro",
+      "apellido": "Villalba",
+      "club": "Talleres",
+      "posicion": "Defensor",
+      "nacionalidad": "Paraguay"
+    },
+    {
+      "id_jugador": 325,
+      "nombre": "Alejandro",
+      "apellido": "Godoy",
+      "club": "River Plate",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Colombia"
+    },
+    {
+      "id_jugador": 326,
+      "nombre": "Ezequiel",
+      "apellido": "Zárate",
+      "club": "Tigre",
+      "posicion": "Defensor",
+      "nacionalidad": "Venezuela"
+    },
+    {
+      "id_jugador": 327,
+      "nombre": "Bruno",
+      "apellido": "Castro",
+      "club": "River Plate",
+      "posicion": "Arquero",
+      "nacionalidad": "Paraguay"
+    },
+    {
+      "id_jugador": 328,
+      "nombre": "Alan",
+      "apellido": "Zárate",
+      "club": "Instituto",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 329,
+      "nombre": "Cristian",
+      "apellido": "Quiroga",
+      "club": "Instituto",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 330,
+      "nombre": "Benjamín",
+      "apellido": "Benítez",
+      "club": "Unión",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 331,
+      "nombre": "Facundo",
+      "apellido": "Rivero",
+      "club": "Deportivo Riestra",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 332,
+      "nombre": "Hernán",
+      "apellido": "Ferreyra",
+      "club": "Lanús",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 333,
+      "nombre": "Tomás",
+      "apellido": "Ramírez",
+      "club": "Barracas Central",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 334,
+      "nombre": "Sebastián",
+      "apellido": "Luna",
+      "club": "Estudiantes de La Plata",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 335,
+      "nombre": "Cristian",
+      "apellido": "Aguirre",
+      "club": "Boca Juniors",
+      "posicion": "Delantero",
+      "nacionalidad": "Paraguay"
+    },
+    {
+      "id_jugador": 336,
+      "nombre": "Matías",
+      "apellido": "Godoy",
+      "club": "Rosario Central",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 337,
+      "nombre": "Fernando",
+      "apellido": "López",
+      "club": "Unión",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 338,
+      "nombre": "Ramiro",
+      "apellido": "Aguirre",
+      "club": "Defensa y Justicia",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 339,
+      "nombre": "Ezequiel",
+      "apellido": "Romero",
+      "club": "Rosario Central",
+      "posicion": "Defensor",
+      "nacionalidad": "Colombia"
+    },
+    {
+      "id_jugador": 340,
+      "nombre": "Leonardo",
+      "apellido": "Cabrera",
+      "club": "Independiente Rivadavia",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 341,
+      "nombre": "Nicolás",
+      "apellido": "Cabrera",
+      "club": "Atlético Tucumán",
+      "posicion": "Arquero",
+      "nacionalidad": "Venezuela"
+    },
+    {
+      "id_jugador": 342,
+      "nombre": "Santino",
+      "apellido": "Molina",
+      "club": "Independiente Rivadavia",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 343,
+      "nombre": "Lucas",
+      "apellido": "Acosta",
+      "club": "Independiente",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Chile"
+    },
+    {
+      "id_jugador": 344,
+      "nombre": "Thiago",
+      "apellido": "Pereyra",
+      "club": "Deportivo Riestra",
+      "posicion": "Defensor",
+      "nacionalidad": "Perú"
+    },
+    {
+      "id_jugador": 345,
+      "nombre": "Walter",
+      "apellido": "Flores",
+      "club": "Central Córdoba",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 346,
+      "nombre": "Leandro",
+      "apellido": "Gutiérrez",
+      "club": "Banfield",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 347,
+      "nombre": "Kevin",
+      "apellido": "Leiva",
+      "club": "Independiente",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 348,
+      "nombre": "Lautaro",
+      "apellido": "Sánchez",
+      "club": "River Plate",
+      "posicion": "Arquero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 349,
+      "nombre": "Gastón",
+      "apellido": "Maidana",
+      "club": "Unión",
+      "posicion": "Defensor",
+      "nacionalidad": "Bolivia"
+    },
+    {
+      "id_jugador": 350,
+      "nombre": "Iván",
+      "apellido": "Ferreyra",
+      "club": "San Lorenzo",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 351,
+      "nombre": "Sebastián",
+      "apellido": "Medina",
+      "club": "Belgrano",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 352,
+      "nombre": "Axel",
+      "apellido": "Farías",
+      "club": "Boca Juniors",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 353,
+      "nombre": "Alan",
+      "apellido": "Acosta",
+      "club": "Huracán",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Paraguay"
+    },
+    {
+      "id_jugador": 354,
+      "nombre": "Juan Manuel",
+      "apellido": "Arias",
+      "club": "Deportivo Riestra",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Paraguay"
+    },
+    {
+      "id_jugador": 355,
+      "nombre": "Lucas",
+      "apellido": "Rivero",
+      "club": "Independiente Rivadavia",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 356,
+      "nombre": "Diego",
+      "apellido": "Castro",
+      "club": "Defensa y Justicia",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 357,
+      "nombre": "Ezequiel",
+      "apellido": "Díaz",
+      "club": "Huracán",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 358,
+      "nombre": "Damián",
+      "apellido": "Farías",
+      "club": "Belgrano",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 359,
+      "nombre": "Damián",
+      "apellido": "Villalba",
+      "club": "Estudiantes de La Plata",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 360,
+      "nombre": "Nicolás",
+      "apellido": "Sánchez",
+      "club": "Deportivo Riestra",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 361,
+      "nombre": "Enzo",
+      "apellido": "Gómez",
+      "club": "Argentinos Juniors",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Chile"
+    },
+    {
+      "id_jugador": 362,
+      "nombre": "Tomás",
+      "apellido": "Ponce",
+      "club": "San Lorenzo",
+      "posicion": "Defensor",
+      "nacionalidad": "Venezuela"
+    },
+    {
+      "id_jugador": 363,
+      "nombre": "Benjamín",
+      "apellido": "Arias",
+      "club": "Instituto",
+      "posicion": "Defensor",
+      "nacionalidad": "Ecuador"
+    },
+    {
+      "id_jugador": 364,
+      "nombre": "Bruno",
+      "apellido": "Sánchez",
+      "club": "Independiente",
+      "posicion": "Defensor",
+      "nacionalidad": "Chile"
+    },
+    {
+      "id_jugador": 365,
+      "nombre": "Julián",
+      "apellido": "Ruiz",
+      "club": "Newell's Old Boys",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Perú"
+    },
+    {
+      "id_jugador": 366,
+      "nombre": "Santiago",
+      "apellido": "Ramírez",
+      "club": "Sarmiento",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 367,
+      "nombre": "Kevin",
+      "apellido": "Benítez",
+      "club": "Estudiantes de La Plata",
+      "posicion": "Defensor",
+      "nacionalidad": "Paraguay"
+    },
+    {
+      "id_jugador": 368,
+      "nombre": "Marcelo",
+      "apellido": "Cabrera",
+      "club": "San Lorenzo",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Venezuela"
+    },
+    {
+      "id_jugador": 369,
+      "nombre": "Ramiro",
+      "apellido": "Escobar",
+      "club": "Estudiantes de Río Cuarto",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Chile"
+    },
+    {
+      "id_jugador": 370,
+      "nombre": "Joaquín",
+      "apellido": "Coronel",
+      "club": "Atlético Tucumán",
+      "posicion": "Delantero",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 371,
+      "nombre": "Maximiliano",
+      "apellido": "Gallardo",
+      "club": "Talleres",
+      "posicion": "Defensor",
+      "nacionalidad": "Bolivia"
+    },
+    {
+      "id_jugador": 372,
+      "nombre": "Iván",
+      "apellido": "Maidana",
+      "club": "Estudiantes de Río Cuarto",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Bolivia"
+    },
+    {
+      "id_jugador": 373,
+      "nombre": "Marcelo",
+      "apellido": "Luna",
+      "club": "Newell's Old Boys",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 374,
+      "nombre": "Sebastián",
+      "apellido": "Benítez",
+      "club": "Lanús",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 375,
+      "nombre": "Leandro",
+      "apellido": "Rojas",
+      "club": "Newell's Old Boys",
+      "posicion": "Defensor",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 376,
+      "nombre": "Marcelo",
+      "apellido": "Ponce",
+      "club": "Gimnasia de La Plata",
+      "posicion": "Delantero",
+      "nacionalidad": "Chile"
+    },
+    {
+      "id_jugador": 377,
+      "nombre": "Alan",
+      "apellido": "Villalba",
+      "club": "Tigre",
+      "posicion": "Arquero",
+      "nacionalidad": "Chile"
+    },
+    {
+      "id_jugador": 378,
+      "nombre": "Guido",
+      "apellido": "Arias",
+      "club": "Belgrano",
+      "posicion": "Defensor",
+      "nacionalidad": "Ecuador"
+    },
+    {
+      "id_jugador": 379,
+      "nombre": "Brian",
+      "apellido": "Rivero",
+      "club": "Sarmiento",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 380,
+      "nombre": "Agustín",
+      "apellido": "Maidana",
+      "club": "Belgrano",
+      "posicion": "Defensor",
+      "nacionalidad": "Chile"
+    },
+    {
+      "id_jugador": 381,
+      "nombre": "Sebastián",
+      "apellido": "Alvarez",
+      "club": "Belgrano",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 382,
+      "nombre": "Santino",
+      "apellido": "Zárate",
+      "club": "Newell's Old Boys",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 383,
+      "nombre": "Bruno",
+      "apellido": "García",
+      "club": "Boca Juniors",
+      "posicion": "Defensor",
+      "nacionalidad": "Bolivia"
+    },
+    {
+      "id_jugador": 384,
+      "nombre": "Emiliano",
+      "apellido": "Gutiérrez",
+      "club": "Deportivo Riestra",
+      "posicion": "Defensor",
+      "nacionalidad": "Ecuador"
+    },
+    {
+      "id_jugador": 385,
+      "nombre": "Sebastián",
+      "apellido": "Ledesma",
+      "club": "Deportivo Riestra",
+      "posicion": "Delantero",
+      "nacionalidad": "Venezuela"
+    },
+    {
+      "id_jugador": 386,
+      "nombre": "Maximiliano",
+      "apellido": "Ramírez",
+      "club": "Boca Juniors",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Chile"
+    },
+    {
+      "id_jugador": 387,
+      "nombre": "Emanuel",
+      "apellido": "Rivero",
+      "club": "Gimnasia de La Plata",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 388,
+      "nombre": "Alexis",
+      "apellido": "Ríos",
+      "club": "Argentinos Juniors",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 389,
+      "nombre": "Daniel",
+      "apellido": "García",
+      "club": "Atlético Tucumán",
+      "posicion": "Defensor",
+      "nacionalidad": "Colombia"
+    },
+    {
+      "id_jugador": 390,
+      "nombre": "Nahuel",
+      "apellido": "Escobar",
+      "club": "Deportivo Riestra",
+      "posicion": "Defensor",
+      "nacionalidad": "Ecuador"
+    },
+    {
+      "id_jugador": 391,
+      "nombre": "Gastón",
+      "apellido": "Alvarez",
+      "club": "Platense",
+      "posicion": "Arquero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 392,
+      "nombre": "Daniel",
+      "apellido": "Ferreyra",
+      "club": "Deportivo Riestra",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 393,
+      "nombre": "Enzo",
+      "apellido": "Ojeda",
+      "club": "Gimnasia de La Plata",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 394,
+      "nombre": "Pablo",
+      "apellido": "Paz",
+      "club": "Vélez Sarsfield",
+      "posicion": "Delantero",
+      "nacionalidad": "Paraguay"
+    },
+    {
+      "id_jugador": 395,
+      "nombre": "Fernando",
+      "apellido": "Farías",
+      "club": "River Plate",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 396,
+      "nombre": "Valentín",
+      "apellido": "Peralta",
+      "club": "Platense",
+      "posicion": "Defensor",
+      "nacionalidad": "Paraguay"
+    },
+    {
+      "id_jugador": 397,
+      "nombre": "Bautista",
+      "apellido": "Castro",
+      "club": "Gimnasia de La Plata",
+      "posicion": "Delantero",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 398,
+      "nombre": "Benjamín",
+      "apellido": "Aguirre",
+      "club": "Belgrano",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 399,
+      "nombre": "Diego",
+      "apellido": "Quiroga",
+      "club": "Unión",
+      "posicion": "Delantero",
+      "nacionalidad": "Perú"
+    },
+    {
+      "id_jugador": 400,
+      "nombre": "Rodrigo",
+      "apellido": "Domínguez",
+      "club": "River Plate",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 401,
+      "nombre": "Pablo",
+      "apellido": "Pereyra",
+      "club": "Barracas Central",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 402,
+      "nombre": "Damián",
+      "apellido": "Toledo",
+      "club": "Newell's Old Boys",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 403,
+      "nombre": "Federico",
+      "apellido": "Vega",
+      "club": "Central Córdoba",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 404,
+      "nombre": "Santiago",
+      "apellido": "Peralta",
+      "club": "Boca Juniors",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 405,
+      "nombre": "Jonathan",
+      "apellido": "Núñez",
+      "club": "Rosario Central",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 406,
+      "nombre": "Luciano",
+      "apellido": "Cáceres",
+      "club": "Tigre",
+      "posicion": "Arquero",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 407,
+      "nombre": "Ramiro",
+      "apellido": "Ojeda",
+      "club": "Instituto",
+      "posicion": "Delantero",
+      "nacionalidad": "Bolivia"
+    },
+    {
+      "id_jugador": 408,
+      "nombre": "Nicolás",
+      "apellido": "Navarro",
+      "club": "Sarmiento",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 409,
+      "nombre": "Kevin",
+      "apellido": "Méndez",
+      "club": "Rosario Central",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 410,
+      "nombre": "Sebastián",
+      "apellido": "Rivero",
+      "club": "Tigre",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 411,
+      "nombre": "Bruno",
+      "apellido": "Luna",
+      "club": "Tigre",
+      "posicion": "Defensor",
+      "nacionalidad": "Paraguay"
+    },
+    {
+      "id_jugador": 412,
+      "nombre": "Marcos",
+      "apellido": "Alvarez",
+      "club": "Talleres",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 413,
+      "nombre": "Joaquín",
+      "apellido": "Rojas",
+      "club": "Newell's Old Boys",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Paraguay"
+    },
+    {
+      "id_jugador": 414,
+      "nombre": "Maximiliano",
+      "apellido": "Vera",
+      "club": "San Lorenzo",
+      "posicion": "Defensor",
+      "nacionalidad": "Paraguay"
+    },
+    {
+      "id_jugador": 415,
+      "nombre": "Rodrigo",
+      "apellido": "García",
+      "club": "Defensa y Justicia",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 416,
+      "nombre": "Emiliano",
+      "apellido": "Ortiz",
+      "club": "Central Córdoba",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 417,
+      "nombre": "Marcelo",
+      "apellido": "Cáceres",
+      "club": "Instituto",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 418,
+      "nombre": "Benjamín",
+      "apellido": "Moreno",
+      "club": "San Lorenzo",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Paraguay"
+    },
+    {
+      "id_jugador": 419,
+      "nombre": "Kevin",
+      "apellido": "Díaz",
+      "club": "Tigre",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 420,
+      "nombre": "Gastón",
+      "apellido": "Morales",
+      "club": "Platense",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Bolivia"
+    },
+    {
+      "id_jugador": 421,
+      "nombre": "Bruno",
+      "apellido": "Alvarez",
+      "club": "Talleres",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 422,
+      "nombre": "Valentín",
+      "apellido": "Giménez",
+      "club": "Defensa y Justicia",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 423,
+      "nombre": "Ignacio",
+      "apellido": "Correa",
+      "club": "Estudiantes de La Plata",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Colombia"
+    },
+    {
+      "id_jugador": 424,
+      "nombre": "Axel",
+      "apellido": "Herrera",
+      "club": "Boca Juniors",
+      "posicion": "Delantero",
+      "nacionalidad": "Perú"
+    },
+    {
+      "id_jugador": 425,
+      "nombre": "Ramiro",
+      "apellido": "Acosta",
+      "club": "San Lorenzo",
+      "posicion": "Arquero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 426,
+      "nombre": "Emiliano",
+      "apellido": "Pereyra",
+      "club": "Instituto",
+      "posicion": "Defensor",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 427,
+      "nombre": "Diego",
+      "apellido": "Franco",
+      "club": "Estudiantes de La Plata",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 428,
+      "nombre": "Bruno",
+      "apellido": "Cabrera",
+      "club": "Barracas Central",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 429,
+      "nombre": "Juan Manuel",
+      "apellido": "Vera",
+      "club": "Vélez Sarsfield",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Bolivia"
+    },
+    {
+      "id_jugador": 430,
+      "nombre": "Hernán",
+      "apellido": "Ramírez",
+      "club": "Atlético Tucumán",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 431,
+      "nombre": "Santino",
+      "apellido": "Ferreyra",
+      "club": "Talleres",
+      "posicion": "Delantero",
+      "nacionalidad": "Ecuador"
+    },
+    {
+      "id_jugador": 432,
+      "nombre": "Alexis",
+      "apellido": "Gutiérrez",
+      "club": "Newell's Old Boys",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 433,
+      "nombre": "Juan Cruz",
+      "apellido": "Gómez",
+      "club": "Rosario Central",
+      "posicion": "Defensor",
+      "nacionalidad": "Venezuela"
+    },
+    {
+      "id_jugador": 434,
+      "nombre": "Damián",
+      "apellido": "Domínguez",
+      "club": "Atlético Tucumán",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 435,
+      "nombre": "Ezequiel",
+      "apellido": "Benítez",
+      "club": "Platense",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 436,
+      "nombre": "Guido",
+      "apellido": "Rivero",
+      "club": "Vélez Sarsfield",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Bolivia"
+    },
+    {
+      "id_jugador": 437,
+      "nombre": "Marcos",
+      "apellido": "Sánchez",
+      "club": "Deportivo Riestra",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 438,
+      "nombre": "Ramiro",
+      "apellido": "Castro",
+      "club": "Independiente Rivadavia",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 439,
+      "nombre": "Emanuel",
+      "apellido": "Moreno",
+      "club": "Central Córdoba",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 440,
+      "nombre": "Sergio",
+      "apellido": "Montenegro",
+      "club": "Independiente Rivadavia",
+      "posicion": "Delantero",
+      "nacionalidad": "Paraguay"
+    },
+    {
+      "id_jugador": 441,
+      "nombre": "Alejandro",
+      "apellido": "Pereyra",
+      "club": "Unión",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 442,
+      "nombre": "Lisandro",
+      "apellido": "Farías",
+      "club": "Belgrano",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 443,
+      "nombre": "Benjamín",
+      "apellido": "Correa",
+      "club": "Vélez Sarsfield",
+      "posicion": "Defensor",
+      "nacionalidad": "Perú"
+    },
+    {
+      "id_jugador": 444,
+      "nombre": "Joaquín",
+      "apellido": "Domínguez",
+      "club": "Belgrano",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Paraguay"
+    },
+    {
+      "id_jugador": 445,
+      "nombre": "Gabriel",
+      "apellido": "López",
+      "club": "Deportivo Riestra",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 446,
+      "nombre": "Cristian",
+      "apellido": "Moreno",
+      "club": "Gimnasia de La Plata",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Bolivia"
+    },
+    {
+      "id_jugador": 447,
+      "nombre": "Sebastián",
+      "apellido": "González",
+      "club": "Talleres",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 448,
+      "nombre": "Fernando",
+      "apellido": "Pereyra",
+      "club": "Independiente",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 449,
+      "nombre": "Mauro",
+      "apellido": "Torres",
+      "club": "Sarmiento",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 450,
+      "nombre": "Gabriel",
+      "apellido": "García",
+      "club": "Gimnasia de Mendoza",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Perú"
+    },
+    {
+      "id_jugador": 451,
+      "nombre": "Juan Cruz",
+      "apellido": "Suárez",
+      "club": "Racing Club",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 452,
+      "nombre": "Bruno",
+      "apellido": "Gómez",
+      "club": "Argentinos Juniors",
+      "posicion": "Defensor",
+      "nacionalidad": "Perú"
+    },
+    {
+      "id_jugador": 453,
+      "nombre": "Ignacio",
+      "apellido": "Gallardo",
+      "club": "Huracán",
+      "posicion": "Delantero",
+      "nacionalidad": "Chile"
+    },
+    {
+      "id_jugador": 454,
+      "nombre": "Emiliano",
+      "apellido": "Navarro",
+      "club": "Independiente",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 455,
+      "nombre": "Guido",
+      "apellido": "Alvarez",
+      "club": "Talleres",
+      "posicion": "Arquero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 456,
+      "nombre": "Cristian",
+      "apellido": "Ojeda",
+      "club": "Talleres",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 457,
+      "nombre": "Ignacio",
+      "apellido": "Farías",
+      "club": "Boca Juniors",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Paraguay"
+    },
+    {
+      "id_jugador": 458,
+      "nombre": "Ezequiel",
+      "apellido": "García",
+      "club": "Atlético Tucumán",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 459,
+      "nombre": "Benjamín",
+      "apellido": "Villalba",
+      "club": "Gimnasia de Mendoza",
+      "posicion": "Defensor",
+      "nacionalidad": "Chile"
+    },
+    {
+      "id_jugador": 460,
+      "nombre": "Jonathan",
+      "apellido": "Maidana",
+      "club": "Vélez Sarsfield",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 461,
+      "nombre": "Ezequiel",
+      "apellido": "Acosta",
+      "club": "Lanús",
+      "posicion": "Defensor",
+      "nacionalidad": "Paraguay"
+    },
+    {
+      "id_jugador": 462,
+      "nombre": "Facundo",
+      "apellido": "García",
+      "club": "Defensa y Justicia",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 463,
+      "nombre": "Emanuel",
+      "apellido": "Zárate",
+      "club": "Defensa y Justicia",
+      "posicion": "Defensor",
+      "nacionalidad": "Bolivia"
+    },
+    {
+      "id_jugador": 464,
+      "nombre": "Axel",
+      "apellido": "Acosta",
+      "club": "Newell's Old Boys",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 465,
+      "nombre": "Luciano",
+      "apellido": "Arias",
+      "club": "Instituto",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 466,
+      "nombre": "Thiago",
+      "apellido": "Ferreyra",
+      "club": "Boca Juniors",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 467,
+      "nombre": "Alejandro",
+      "apellido": "Leiva",
+      "club": "Unión",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Paraguay"
+    },
+    {
+      "id_jugador": 468,
+      "nombre": "Luciano",
+      "apellido": "Quiroga",
+      "club": "River Plate",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 469,
+      "nombre": "Juan Manuel",
+      "apellido": "Núñez",
+      "club": "Rosario Central",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 470,
+      "nombre": "Santiago",
+      "apellido": "Correa",
+      "club": "Lanús",
+      "posicion": "Defensor",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 471,
+      "nombre": "Maximiliano",
+      "apellido": "Juárez",
+      "club": "Lanús",
+      "posicion": "Arquero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 472,
+      "nombre": "Gonzalo",
+      "apellido": "Sánchez",
+      "club": "Estudiantes de Río Cuarto",
+      "posicion": "Delantero",
+      "nacionalidad": "Colombia"
+    },
+    {
+      "id_jugador": 473,
+      "nombre": "Luciano",
+      "apellido": "Flores",
+      "club": "Instituto",
+      "posicion": "Arquero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 474,
+      "nombre": "Federico",
+      "apellido": "Aguirre",
+      "club": "Huracán",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 475,
+      "nombre": "Damián",
+      "apellido": "Ruiz",
+      "club": "Defensa y Justicia",
+      "posicion": "Defensor",
+      "nacionalidad": "Perú"
+    },
+    {
+      "id_jugador": 476,
+      "nombre": "Brian",
+      "apellido": "Maidana",
+      "club": "Belgrano",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 477,
+      "nombre": "Tomás",
+      "apellido": "Juárez",
+      "club": "Banfield",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 478,
+      "nombre": "Santino",
+      "apellido": "Benítez",
+      "club": "Lanús",
+      "posicion": "Delantero",
+      "nacionalidad": "Paraguay"
+    },
+    {
+      "id_jugador": 479,
+      "nombre": "Lucas",
+      "apellido": "Franco",
+      "club": "Talleres",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Paraguay"
+    },
+    {
+      "id_jugador": 480,
+      "nombre": "Damián",
+      "apellido": "García",
+      "club": "Defensa y Justicia",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Paraguay"
+    },
+    {
+      "id_jugador": 481,
+      "nombre": "Damián",
+      "apellido": "Rojas",
+      "club": "Gimnasia de Mendoza",
+      "posicion": "Defensor",
+      "nacionalidad": "Perú"
+    },
+    {
+      "id_jugador": 482,
+      "nombre": "Lucas",
+      "apellido": "Flores",
+      "club": "Rosario Central",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Paraguay"
+    },
+    {
+      "id_jugador": 483,
+      "nombre": "Tomás",
+      "apellido": "Vega",
+      "club": "Defensa y Justicia",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Ecuador"
+    },
+    {
+      "id_jugador": 484,
+      "nombre": "Sebastián",
+      "apellido": "Juárez",
+      "club": "Huracán",
+      "posicion": "Defensor",
+      "nacionalidad": "Ecuador"
+    },
+    {
+      "id_jugador": 485,
+      "nombre": "Sebastián",
+      "apellido": "Giménez",
+      "club": "Defensa y Justicia",
+      "posicion": "Delantero",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 486,
+      "nombre": "Guido",
+      "apellido": "Ríos",
+      "club": "Deportivo Riestra",
+      "posicion": "Defensor",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 487,
+      "nombre": "Guido",
+      "apellido": "Gómez",
+      "club": "Gimnasia de La Plata",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 488,
+      "nombre": "Guido",
+      "apellido": "Maidana",
+      "club": "Estudiantes de La Plata",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 489,
+      "nombre": "Jonathan",
+      "apellido": "Toledo",
+      "club": "Atlético Tucumán",
+      "posicion": "Defensor",
+      "nacionalidad": "Colombia"
+    },
+    {
+      "id_jugador": 490,
+      "nombre": "Facundo",
+      "apellido": "Sánchez",
+      "club": "Barracas Central",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Paraguay"
+    },
+    {
+      "id_jugador": 491,
+      "nombre": "Mauro",
+      "apellido": "Zárate",
+      "club": "Aldosivi",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 492,
+      "nombre": "Leonardo",
+      "apellido": "Gallardo",
+      "club": "Huracán",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Chile"
+    },
+    {
+      "id_jugador": 493,
+      "nombre": "Sebastián",
+      "apellido": "Gutiérrez",
+      "club": "Independiente Rivadavia",
+      "posicion": "Delantero",
+      "nacionalidad": "Bolivia"
+    },
+    {
+      "id_jugador": 494,
+      "nombre": "Alan",
+      "apellido": "Ortiz",
+      "club": "Newell's Old Boys",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 495,
+      "nombre": "Jeremías",
+      "apellido": "Escobar",
+      "club": "Newell's Old Boys",
+      "posicion": "Defensor",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 496,
+      "nombre": "Julián",
+      "apellido": "Sánchez",
+      "club": "Tigre",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 497,
+      "nombre": "Ramiro",
+      "apellido": "Correa",
+      "club": "Talleres",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 498,
+      "nombre": "Alexis",
+      "apellido": "Castro",
+      "club": "Independiente Rivadavia",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 499,
+      "nombre": "Kevin",
+      "apellido": "García",
+      "club": "Argentinos Juniors",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 500,
+      "nombre": "Walter",
+      "apellido": "Rojas",
+      "club": "Vélez Sarsfield",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 501,
+      "nombre": "Brian",
+      "apellido": "Medina",
+      "club": "Gimnasia de La Plata",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 502,
+      "nombre": "Marcos",
+      "apellido": "Coronel",
+      "club": "Gimnasia de La Plata",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 503,
+      "nombre": "Sebastián",
+      "apellido": "Domínguez",
+      "club": "Independiente Rivadavia",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 504,
+      "nombre": "Martín",
+      "apellido": "Cabrera",
+      "club": "Estudiantes de La Plata",
+      "posicion": "Delantero",
+      "nacionalidad": "Venezuela"
+    },
+    {
+      "id_jugador": 505,
+      "nombre": "Santiago",
+      "apellido": "Maidana",
+      "club": "Aldosivi",
+      "posicion": "Arquero",
+      "nacionalidad": "Ecuador"
+    },
+    {
+      "id_jugador": 506,
+      "nombre": "Ramiro",
+      "apellido": "Rivero",
+      "club": "Independiente Rivadavia",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Perú"
+    },
+    {
+      "id_jugador": 507,
+      "nombre": "Alan",
+      "apellido": "Alvarez",
+      "club": "Gimnasia de La Plata",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 508,
+      "nombre": "Bautista",
+      "apellido": "Vega",
+      "club": "Belgrano",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 509,
+      "nombre": "Jonathan",
+      "apellido": "Molina",
+      "club": "Banfield",
+      "posicion": "Arquero",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 510,
+      "nombre": "Luciano",
+      "apellido": "Maidana",
+      "club": "Atlético Tucumán",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Colombia"
+    },
+    {
+      "id_jugador": 511,
+      "nombre": "Jeremías",
+      "apellido": "Peralta",
+      "club": "Banfield",
+      "posicion": "Delantero",
+      "nacionalidad": "Perú"
+    },
+    {
+      "id_jugador": 512,
+      "nombre": "Julián",
+      "apellido": "Cabrera",
+      "club": "Gimnasia de Mendoza",
+      "posicion": "Delantero",
+      "nacionalidad": "Colombia"
+    },
+    {
+      "id_jugador": 513,
+      "nombre": "Bautista",
+      "apellido": "Ortiz",
+      "club": "Instituto",
+      "posicion": "Arquero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 514,
+      "nombre": "Martín",
+      "apellido": "Torres",
+      "club": "Central Córdoba",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 515,
+      "nombre": "Marcelo",
+      "apellido": "Escobar",
+      "club": "San Lorenzo",
+      "posicion": "Defensor",
+      "nacionalidad": "Ecuador"
+    },
+    {
+      "id_jugador": 516,
+      "nombre": "Sergio",
+      "apellido": "Rojas",
+      "club": "Defensa y Justicia",
+      "posicion": "Delantero",
+      "nacionalidad": "Chile"
+    },
+    {
+      "id_jugador": 517,
+      "nombre": "Iván",
+      "apellido": "Leiva",
+      "club": "Estudiantes de La Plata",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 518,
+      "nombre": "Juan Cruz",
+      "apellido": "Giménez",
+      "club": "Independiente",
+      "posicion": "Arquero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 519,
+      "nombre": "Agustín",
+      "apellido": "Villalba",
+      "club": "Boca Juniors",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 520,
+      "nombre": "Maximiliano",
+      "apellido": "Castro",
+      "club": "Vélez Sarsfield",
+      "posicion": "Defensor",
+      "nacionalidad": "Perú"
+    },
+    {
+      "id_jugador": 521,
+      "nombre": "Enzo",
+      "apellido": "Acosta",
+      "club": "River Plate",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 522,
+      "nombre": "Cristian",
+      "apellido": "González",
+      "club": "Instituto",
+      "posicion": "Defensor",
+      "nacionalidad": "Bolivia"
+    },
+    {
+      "id_jugador": 523,
+      "nombre": "Ignacio",
+      "apellido": "Díaz",
+      "club": "Estudiantes de Río Cuarto",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 524,
+      "nombre": "Kevin",
+      "apellido": "Maidana",
+      "club": "Instituto",
+      "posicion": "Defensor",
+      "nacionalidad": "Paraguay"
+    },
+    {
+      "id_jugador": 525,
+      "nombre": "Sergio",
+      "apellido": "Rodríguez",
+      "club": "Rosario Central",
+      "posicion": "Delantero",
+      "nacionalidad": "Chile"
+    },
+    {
+      "id_jugador": 526,
+      "nombre": "Lucas",
+      "apellido": "Zárate",
+      "club": "Boca Juniors",
+      "posicion": "Defensor",
+      "nacionalidad": "Perú"
+    },
+    {
+      "id_jugador": 527,
+      "nombre": "Juan Manuel",
+      "apellido": "Alvarez",
+      "club": "Vélez Sarsfield",
+      "posicion": "Delantero",
+      "nacionalidad": "Bolivia"
+    },
+    {
+      "id_jugador": 528,
+      "nombre": "Gastón",
+      "apellido": "Castro",
+      "club": "Atlético Tucumán",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 529,
+      "nombre": "Lisandro",
+      "apellido": "Ferreyra",
+      "club": "Estudiantes de Río Cuarto",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Ecuador"
+    },
+    {
+      "id_jugador": 530,
+      "nombre": "Lautaro",
+      "apellido": "Vera",
+      "club": "Unión",
+      "posicion": "Arquero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 531,
+      "nombre": "Axel",
+      "apellido": "Benítez",
+      "club": "Gimnasia de La Plata",
+      "posicion": "Delantero",
+      "nacionalidad": "Chile"
+    },
+    {
+      "id_jugador": 532,
+      "nombre": "Manuel",
+      "apellido": "Franco",
+      "club": "Newell's Old Boys",
+      "posicion": "Arquero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 533,
+      "nombre": "Emiliano",
+      "apellido": "Gallardo",
+      "club": "Argentinos Juniors",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 534,
+      "nombre": "Guido",
+      "apellido": "Méndez",
+      "club": "Newell's Old Boys",
+      "posicion": "Delantero",
+      "nacionalidad": "Bolivia"
+    },
+    {
+      "id_jugador": 535,
+      "nombre": "Marcos",
+      "apellido": "Maidana",
+      "club": "Newell's Old Boys",
+      "posicion": "Arquero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 536,
+      "nombre": "Joaquín",
+      "apellido": "Ledesma",
+      "club": "Instituto",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 537,
+      "nombre": "Ramiro",
+      "apellido": "Moreno",
+      "club": "Independiente",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 538,
+      "nombre": "Bruno",
+      "apellido": "Giménez",
+      "club": "Vélez Sarsfield",
+      "posicion": "Arquero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 539,
+      "nombre": "Tomás",
+      "apellido": "Ojeda",
+      "club": "Unión",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 540,
+      "nombre": "Walter",
+      "apellido": "Suárez",
+      "club": "Unión",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 541,
+      "nombre": "Damián",
+      "apellido": "Molina",
+      "club": "Tigre",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 542,
+      "nombre": "Facundo",
+      "apellido": "Escobar",
+      "club": "Banfield",
+      "posicion": "Defensor",
+      "nacionalidad": "Bolivia"
+    },
+    {
+      "id_jugador": 543,
+      "nombre": "Brian",
+      "apellido": "Arias",
+      "club": "Boca Juniors",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 544,
+      "nombre": "Marcelo",
+      "apellido": "Toledo",
+      "club": "Racing Club",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 545,
+      "nombre": "Lisandro",
+      "apellido": "Muñoz",
+      "club": "San Lorenzo",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 546,
+      "nombre": "Marcelo",
+      "apellido": "Molina",
+      "club": "Central Córdoba",
+      "posicion": "Defensor",
+      "nacionalidad": "Bolivia"
+    },
+    {
+      "id_jugador": 547,
+      "nombre": "Mauro",
+      "apellido": "Herrera",
+      "club": "Vélez Sarsfield",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 548,
+      "nombre": "Axel",
+      "apellido": "Pereyra",
+      "club": "Central Córdoba",
+      "posicion": "Arquero",
+      "nacionalidad": "Perú"
+    },
+    {
+      "id_jugador": 549,
+      "nombre": "Tomás",
+      "apellido": "González",
+      "club": "Sarmiento",
+      "posicion": "Arquero",
+      "nacionalidad": "Colombia"
+    },
+    {
+      "id_jugador": 550,
+      "nombre": "Juan Manuel",
+      "apellido": "Morales",
+      "club": "Argentinos Juniors",
+      "posicion": "Defensor",
+      "nacionalidad": "Chile"
+    },
+    {
+      "id_jugador": 551,
+      "nombre": "Maximiliano",
+      "apellido": "Herrera",
+      "club": "Vélez Sarsfield",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 552,
+      "nombre": "Leonardo",
+      "apellido": "Gutiérrez",
+      "club": "Deportivo Riestra",
+      "posicion": "Delantero",
+      "nacionalidad": "Paraguay"
+    },
+    {
+      "id_jugador": 553,
+      "nombre": "Jonathan",
+      "apellido": "Paz",
+      "club": "Gimnasia de La Plata",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 554,
+      "nombre": "Emanuel",
+      "apellido": "Rodríguez",
+      "club": "Lanús",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 555,
+      "nombre": "Mauro",
+      "apellido": "Sánchez",
+      "club": "Platense",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 556,
+      "nombre": "Fernando",
+      "apellido": "Cáceres",
+      "club": "Huracán",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 557,
+      "nombre": "Gonzalo",
+      "apellido": "Pereyra",
+      "club": "Atlético Tucumán",
+      "posicion": "Arquero",
+      "nacionalidad": "Chile"
+    },
+    {
+      "id_jugador": 558,
+      "nombre": "Lucas",
+      "apellido": "Ruiz",
+      "club": "Central Córdoba",
+      "posicion": "Delantero",
+      "nacionalidad": "Bolivia"
+    },
+    {
+      "id_jugador": 559,
+      "nombre": "Axel",
+      "apellido": "Correa",
+      "club": "Deportivo Riestra",
+      "posicion": "Defensor",
+      "nacionalidad": "Ecuador"
+    },
+    {
+      "id_jugador": 560,
+      "nombre": "Facundo",
+      "apellido": "González",
+      "club": "Defensa y Justicia",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 561,
+      "nombre": "Lucas",
+      "apellido": "Peralta",
+      "club": "Gimnasia de La Plata",
+      "posicion": "Arquero",
+      "nacionalidad": "Bolivia"
+    },
+    {
+      "id_jugador": 562,
+      "nombre": "Santiago",
+      "apellido": "Paz",
+      "club": "Tigre",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Colombia"
+    },
+    {
+      "id_jugador": 563,
+      "nombre": "Nicolás",
+      "apellido": "Rivero",
+      "club": "Gimnasia de Mendoza",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 564,
+      "nombre": "Julián",
+      "apellido": "Coronel",
+      "club": "Vélez Sarsfield",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 565,
+      "nombre": "Ezequiel",
+      "apellido": "Morales",
+      "club": "Huracán",
+      "posicion": "Defensor",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 566,
+      "nombre": "Luciano",
+      "apellido": "González",
+      "club": "Rosario Central",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 567,
+      "nombre": "Federico",
+      "apellido": "Díaz",
+      "club": "Huracán",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 568,
+      "nombre": "Marcelo",
+      "apellido": "Godoy",
+      "club": "Vélez Sarsfield",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 569,
+      "nombre": "Guido",
+      "apellido": "Franco",
+      "club": "Defensa y Justicia",
+      "posicion": "Defensor",
+      "nacionalidad": "Paraguay"
+    },
+    {
+      "id_jugador": 570,
+      "nombre": "Emiliano",
+      "apellido": "Domínguez",
+      "club": "Central Córdoba",
+      "posicion": "Defensor",
+      "nacionalidad": "Ecuador"
+    },
+    {
+      "id_jugador": 571,
+      "nombre": "Marcelo",
+      "apellido": "Benítez",
+      "club": "Estudiantes de Río Cuarto",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 572,
+      "nombre": "Nicolás",
+      "apellido": "Rojas",
+      "club": "Newell's Old Boys",
+      "posicion": "Defensor",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 573,
+      "nombre": "Leonardo",
+      "apellido": "Leiva",
+      "club": "Belgrano",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 574,
+      "nombre": "Ezequiel",
+      "apellido": "Franco",
+      "club": "Lanús",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 575,
+      "nombre": "Marcos",
+      "apellido": "Rodríguez",
+      "club": "Banfield",
+      "posicion": "Defensor",
+      "nacionalidad": "Ecuador"
+    },
+    {
+      "id_jugador": 576,
+      "nombre": "Juan Cruz",
+      "apellido": "Zárate",
+      "club": "Tigre",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 577,
+      "nombre": "Enzo",
+      "apellido": "Rivero",
+      "club": "Argentinos Juniors",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 578,
+      "nombre": "Tomás",
+      "apellido": "Castro",
+      "club": "Atlético Tucumán",
+      "posicion": "Delantero",
+      "nacionalidad": "Chile"
+    },
+    {
+      "id_jugador": 579,
+      "nombre": "Kevin",
+      "apellido": "Ruiz",
+      "club": "San Lorenzo",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 580,
+      "nombre": "Hernán",
+      "apellido": "Castro",
+      "club": "Boca Juniors",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 581,
+      "nombre": "Emanuel",
+      "apellido": "Ponce",
+      "club": "Newell's Old Boys",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 582,
+      "nombre": "Joaquín",
+      "apellido": "Escobar",
+      "club": "Estudiantes de Río Cuarto",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 583,
+      "nombre": "Santiago",
+      "apellido": "Coronel",
+      "club": "Gimnasia de La Plata",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Ecuador"
+    },
+    {
+      "id_jugador": 584,
+      "nombre": "Pablo",
+      "apellido": "Peralta",
+      "club": "Tigre",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 585,
+      "nombre": "Agustín",
+      "apellido": "Herrera",
+      "club": "Rosario Central",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 586,
+      "nombre": "Benjamín",
+      "apellido": "Vera",
+      "club": "Banfield",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 587,
+      "nombre": "Tomás",
+      "apellido": "Pereyra",
+      "club": "Racing Club",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 588,
+      "nombre": "Pablo",
+      "apellido": "Montenegro",
+      "club": "Tigre",
+      "posicion": "Defensor",
+      "nacionalidad": "Perú"
+    },
+    {
+      "id_jugador": 589,
+      "nombre": "Lucas",
+      "apellido": "Romero",
+      "club": "Argentinos Juniors",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 590,
+      "nombre": "Iván",
+      "apellido": "Paz",
+      "club": "Argentinos Juniors",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 591,
+      "nombre": "Ezequiel",
+      "apellido": "Domínguez",
+      "club": "San Lorenzo",
+      "posicion": "Delantero",
+      "nacionalidad": "Perú"
+    },
+    {
+      "id_jugador": 592,
+      "nombre": "Nahuel",
+      "apellido": "Suárez",
+      "club": "Gimnasia de La Plata",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 593,
+      "nombre": "Gabriel",
+      "apellido": "Ruiz",
+      "club": "Vélez Sarsfield",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 594,
+      "nombre": "Emanuel",
+      "apellido": "Benítez",
+      "club": "Independiente Rivadavia",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 595,
+      "nombre": "Martín",
+      "apellido": "Núñez",
+      "club": "Newell's Old Boys",
+      "posicion": "Arquero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 596,
+      "nombre": "Ignacio",
+      "apellido": "Alvarez",
+      "club": "Estudiantes de Río Cuarto",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Colombia"
+    },
+    {
+      "id_jugador": 597,
+      "nombre": "Lautaro",
+      "apellido": "Correa",
+      "club": "Unión",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 598,
+      "nombre": "Emanuel",
+      "apellido": "Toledo",
+      "club": "Barracas Central",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 599,
+      "nombre": "Nicolás",
+      "apellido": "Toledo",
+      "club": "Independiente",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 600,
+      "nombre": "Marcelo",
+      "apellido": "Aguirre",
+      "club": "Sarmiento",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 601,
+      "nombre": "Pablo",
+      "apellido": "López",
+      "club": "Tigre",
+      "posicion": "Arquero",
+      "nacionalidad": "Ecuador"
+    },
+    {
+      "id_jugador": 602,
+      "nombre": "Nahuel",
+      "apellido": "Quiroga",
+      "club": "Deportivo Riestra",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 603,
+      "nombre": "Lucas",
+      "apellido": "Arias",
+      "club": "San Lorenzo",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Paraguay"
+    },
+    {
+      "id_jugador": 604,
+      "nombre": "Gabriel",
+      "apellido": "Giménez",
+      "club": "Aldosivi",
+      "posicion": "Arquero",
+      "nacionalidad": "Ecuador"
+    },
+    {
+      "id_jugador": 605,
+      "nombre": "Leonardo",
+      "apellido": "Muñoz",
+      "club": "Boca Juniors",
+      "posicion": "Arquero",
+      "nacionalidad": "Chile"
+    },
+    {
+      "id_jugador": 606,
+      "nombre": "Thiago",
+      "apellido": "Sánchez",
+      "club": "Aldosivi",
+      "posicion": "Arquero",
+      "nacionalidad": "Venezuela"
+    },
+    {
+      "id_jugador": 607,
+      "nombre": "Facundo",
+      "apellido": "Toledo",
+      "club": "Tigre",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 608,
+      "nombre": "Facundo",
+      "apellido": "Ruiz",
+      "club": "Gimnasia de Mendoza",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 609,
+      "nombre": "Martín",
+      "apellido": "Ortiz",
+      "club": "Barracas Central",
+      "posicion": "Delantero",
+      "nacionalidad": "Paraguay"
+    },
+    {
+      "id_jugador": 610,
+      "nombre": "Mateo",
+      "apellido": "Herrera",
+      "club": "Deportivo Riestra",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Colombia"
+    },
+    {
+      "id_jugador": 611,
+      "nombre": "Rodrigo",
+      "apellido": "Franco",
+      "club": "Deportivo Riestra",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 612,
+      "nombre": "Luciano",
+      "apellido": "Gallardo",
+      "club": "Gimnasia de Mendoza",
+      "posicion": "Arquero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 613,
+      "nombre": "Nahuel",
+      "apellido": "Alvarez",
+      "club": "Unión",
+      "posicion": "Delantero",
+      "nacionalidad": "Paraguay"
+    },
+    {
+      "id_jugador": 614,
+      "nombre": "Rodrigo",
+      "apellido": "Giménez",
+      "club": "Defensa y Justicia",
+      "posicion": "Defensor",
+      "nacionalidad": "Chile"
+    },
+    {
+      "id_jugador": 615,
+      "nombre": "Leandro",
+      "apellido": "Benítez",
+      "club": "Lanús",
+      "posicion": "Defensor",
+      "nacionalidad": "Bolivia"
+    },
+    {
+      "id_jugador": 616,
+      "nombre": "Joaquín",
+      "apellido": "Arias",
+      "club": "Huracán",
+      "posicion": "Delantero",
+      "nacionalidad": "Chile"
+    },
+    {
+      "id_jugador": 617,
+      "nombre": "Leandro",
+      "apellido": "Molina",
+      "club": "Unión",
+      "posicion": "Delantero",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 618,
+      "nombre": "Mauro",
+      "apellido": "Montenegro",
+      "club": "Gimnasia de La Plata",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Paraguay"
+    },
+    {
+      "id_jugador": 619,
+      "nombre": "Manuel",
+      "apellido": "Arias",
+      "club": "Racing Club",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 620,
+      "nombre": "Cristian",
+      "apellido": "Leiva",
+      "club": "Gimnasia de Mendoza",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 621,
+      "nombre": "Ignacio",
+      "apellido": "Vera",
+      "club": "Rosario Central",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 622,
+      "nombre": "Rodrigo",
+      "apellido": "Morales",
+      "club": "Estudiantes de Río Cuarto",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 623,
+      "nombre": "Ramiro",
+      "apellido": "Ortiz",
+      "club": "Central Córdoba",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 624,
+      "nombre": "Leandro",
+      "apellido": "Ledesma",
+      "club": "Rosario Central",
+      "posicion": "Delantero",
+      "nacionalidad": "Perú"
+    },
+    {
+      "id_jugador": 625,
+      "nombre": "Iván",
+      "apellido": "Vera",
+      "club": "Rosario Central",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 626,
+      "nombre": "Agustín",
+      "apellido": "Molina",
+      "club": "San Lorenzo",
+      "posicion": "Defensor",
+      "nacionalidad": "Perú"
+    },
+    {
+      "id_jugador": 627,
+      "nombre": "Franco",
+      "apellido": "Morales",
+      "club": "Racing Club",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 628,
+      "nombre": "Gabriel",
+      "apellido": "Méndez",
+      "club": "Platense",
+      "posicion": "Delantero",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 629,
+      "nombre": "Mauro",
+      "apellido": "Molina",
+      "club": "Lanús",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 630,
+      "nombre": "Ezequiel",
+      "apellido": "Peralta",
+      "club": "Aldosivi",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 631,
+      "nombre": "Diego",
+      "apellido": "Villalba",
+      "club": "Argentinos Juniors",
+      "posicion": "Defensor",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 632,
+      "nombre": "Joaquín",
+      "apellido": "Medina",
+      "club": "Instituto",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 633,
+      "nombre": "Santino",
+      "apellido": "Ruiz",
+      "club": "Racing Club",
+      "posicion": "Arquero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 634,
+      "nombre": "Alexis",
+      "apellido": "Suárez",
+      "club": "San Lorenzo",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 635,
+      "nombre": "Fernando",
+      "apellido": "Bustos",
+      "club": "Gimnasia de Mendoza",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Ecuador"
+    },
+    {
+      "id_jugador": 636,
+      "nombre": "Emiliano",
+      "apellido": "Bustos",
+      "club": "Instituto",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 637,
+      "nombre": "Damián",
+      "apellido": "Moreno",
+      "club": "Aldosivi",
+      "posicion": "Defensor",
+      "nacionalidad": "Bolivia"
+    },
+    {
+      "id_jugador": 638,
+      "nombre": "Santino",
+      "apellido": "Maidana",
+      "club": "Lanús",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 639,
+      "nombre": "Agustín",
+      "apellido": "Ruiz",
+      "club": "Defensa y Justicia",
+      "posicion": "Delantero",
+      "nacionalidad": "Colombia"
+    },
+    {
+      "id_jugador": 640,
+      "nombre": "Jonathan",
+      "apellido": "Franco",
+      "club": "Boca Juniors",
+      "posicion": "Arquero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 641,
+      "nombre": "Jeremías",
+      "apellido": "Gallardo",
+      "club": "Argentinos Juniors",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 642,
+      "nombre": "Matías",
+      "apellido": "Pereyra",
+      "club": "Independiente Rivadavia",
+      "posicion": "Delantero",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 643,
+      "nombre": "Ramiro",
+      "apellido": "Gutiérrez",
+      "club": "Gimnasia de La Plata",
+      "posicion": "Delantero",
+      "nacionalidad": "Chile"
+    },
+    {
+      "id_jugador": 644,
+      "nombre": "Damián",
+      "apellido": "Quiroga",
+      "club": "Rosario Central",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 645,
+      "nombre": "Santiago",
+      "apellido": "Ríos",
+      "club": "Atlético Tucumán",
+      "posicion": "Arquero",
+      "nacionalidad": "Paraguay"
+    },
+    {
+      "id_jugador": 646,
+      "nombre": "Alexis",
+      "apellido": "Aguirre",
+      "club": "Instituto",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Chile"
+    },
+    {
+      "id_jugador": 647,
+      "nombre": "Franco",
+      "apellido": "Cabrera",
+      "club": "Gimnasia de Mendoza",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 648,
+      "nombre": "Jeremías",
+      "apellido": "Ojeda",
+      "club": "Boca Juniors",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 649,
+      "nombre": "Walter",
+      "apellido": "Cabrera",
+      "club": "Rosario Central",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 650,
+      "nombre": "Sebastián",
+      "apellido": "Franco",
+      "club": "Estudiantes de La Plata",
+      "posicion": "Delantero",
+      "nacionalidad": "Chile"
+    },
+    {
+      "id_jugador": 651,
+      "nombre": "Axel",
+      "apellido": "Villalba",
+      "club": "Racing Club",
+      "posicion": "Defensor",
+      "nacionalidad": "Bolivia"
+    },
+    {
+      "id_jugador": 652,
+      "nombre": "Franco",
+      "apellido": "Juárez",
+      "club": "Newell's Old Boys",
+      "posicion": "Arquero",
+      "nacionalidad": "Venezuela"
+    },
+    {
+      "id_jugador": 653,
+      "nombre": "Matías",
+      "apellido": "Toledo",
+      "club": "Lanús",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 654,
+      "nombre": "Matías",
+      "apellido": "Acosta",
+      "club": "Rosario Central",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Chile"
+    },
+    {
+      "id_jugador": 655,
+      "nombre": "Ramiro",
+      "apellido": "García",
+      "club": "Talleres",
+      "posicion": "Defensor",
+      "nacionalidad": "Colombia"
+    },
+    {
+      "id_jugador": 656,
+      "nombre": "Diego",
+      "apellido": "González",
+      "club": "Lanús",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 657,
+      "nombre": "Emiliano",
+      "apellido": "Medina",
+      "club": "Racing Club",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 658,
+      "nombre": "Manuel",
+      "apellido": "Núñez",
+      "club": "Platense",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Colombia"
+    },
+    {
+      "id_jugador": 659,
+      "nombre": "Emiliano",
+      "apellido": "Zárate",
+      "club": "Unión",
+      "posicion": "Arquero",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 660,
+      "nombre": "Agustín",
+      "apellido": "Alvarez",
+      "club": "San Lorenzo",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 661,
+      "nombre": "Agustín",
+      "apellido": "Ferreyra",
+      "club": "Independiente",
+      "posicion": "Defensor",
+      "nacionalidad": "Venezuela"
+    },
+    {
+      "id_jugador": 662,
+      "nombre": "Ignacio",
+      "apellido": "Franco",
+      "club": "Platense",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 663,
+      "nombre": "Mateo",
+      "apellido": "Ledesma",
+      "club": "San Lorenzo",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 664,
+      "nombre": "Lautaro",
+      "apellido": "Acosta",
+      "club": "San Lorenzo",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 665,
+      "nombre": "Agustín",
+      "apellido": "Muñoz",
+      "club": "Banfield",
+      "posicion": "Delantero",
+      "nacionalidad": "Ecuador"
+    },
+    {
+      "id_jugador": 666,
+      "nombre": "Nahuel",
+      "apellido": "Rojas",
+      "club": "Sarmiento",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 667,
+      "nombre": "Thiago",
+      "apellido": "Morales",
+      "club": "Banfield",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 668,
+      "nombre": "Brian",
+      "apellido": "Farías",
+      "club": "Gimnasia de Mendoza",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 669,
+      "nombre": "Pablo",
+      "apellido": "Maidana",
+      "club": "San Lorenzo",
+      "posicion": "Delantero",
+      "nacionalidad": "Bolivia"
+    },
+    {
+      "id_jugador": 670,
+      "nombre": "Santino",
+      "apellido": "Vera",
+      "club": "Aldosivi",
+      "posicion": "Defensor",
+      "nacionalidad": "Perú"
+    },
+    {
+      "id_jugador": 671,
+      "nombre": "Franco",
+      "apellido": "Ponce",
+      "club": "Atlético Tucumán",
+      "posicion": "Defensor",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 672,
+      "nombre": "Guido",
+      "apellido": "Ojeda",
+      "club": "Talleres",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Perú"
+    },
+    {
+      "id_jugador": 673,
+      "nombre": "Martín",
+      "apellido": "Luna",
+      "club": "Vélez Sarsfield",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 674,
+      "nombre": "Alejandro",
+      "apellido": "Juárez",
+      "club": "Tigre",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 675,
+      "nombre": "Emiliano",
+      "apellido": "Ferreyra",
+      "club": "Talleres",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 676,
+      "nombre": "Lucas",
+      "apellido": "Torres",
+      "club": "Defensa y Justicia",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 677,
+      "nombre": "Matías",
+      "apellido": "Domínguez",
+      "club": "San Lorenzo",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 678,
+      "nombre": "Juan Manuel",
+      "apellido": "Díaz",
+      "club": "Gimnasia de La Plata",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 679,
+      "nombre": "Lautaro",
+      "apellido": "Aguirre",
+      "club": "Argentinos Juniors",
+      "posicion": "Arquero",
+      "nacionalidad": "Ecuador"
+    },
+    {
+      "id_jugador": 680,
+      "nombre": "Alejandro",
+      "apellido": "Méndez",
+      "club": "Boca Juniors",
+      "posicion": "Delantero",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 681,
+      "nombre": "Santino",
+      "apellido": "Torres",
+      "club": "Rosario Central",
+      "posicion": "Arquero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 682,
+      "nombre": "Rodrigo",
+      "apellido": "Cabrera",
+      "club": "Belgrano",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 683,
+      "nombre": "Diego",
+      "apellido": "Pereyra",
+      "club": "Platense",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Chile"
+    },
+    {
+      "id_jugador": 684,
+      "nombre": "Mateo",
+      "apellido": "Navarro",
+      "club": "San Lorenzo",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 685,
+      "nombre": "Marcelo",
+      "apellido": "Zárate",
+      "club": "Belgrano",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 686,
+      "nombre": "Sebastián",
+      "apellido": "Fernández",
+      "club": "Unión",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 687,
+      "nombre": "Gabriel",
+      "apellido": "Alvarez",
+      "club": "Vélez Sarsfield",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 688,
+      "nombre": "Nahuel",
+      "apellido": "Cáceres",
+      "club": "Tigre",
+      "posicion": "Arquero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 689,
+      "nombre": "Bruno",
+      "apellido": "Ojeda",
+      "club": "Instituto",
+      "posicion": "Delantero",
+      "nacionalidad": "Venezuela"
+    },
+    {
+      "id_jugador": 690,
+      "nombre": "Gastón",
+      "apellido": "Toledo",
+      "club": "Vélez Sarsfield",
+      "posicion": "Delantero",
+      "nacionalidad": "Bolivia"
+    },
+    {
+      "id_jugador": 691,
+      "nombre": "Ezequiel",
+      "apellido": "Flores",
+      "club": "Atlético Tucumán",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Ecuador"
+    },
+    {
+      "id_jugador": 692,
+      "nombre": "Iván",
+      "apellido": "Méndez",
+      "club": "San Lorenzo",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 693,
+      "nombre": "Nicolás",
+      "apellido": "Acosta",
+      "club": "Boca Juniors",
+      "posicion": "Defensor",
+      "nacionalidad": "Paraguay"
+    },
+    {
+      "id_jugador": 694,
+      "nombre": "Leandro",
+      "apellido": "Gómez",
+      "club": "Atlético Tucumán",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 695,
+      "nombre": "Benjamín",
+      "apellido": "González",
+      "club": "Tigre",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 696,
+      "nombre": "Thiago",
+      "apellido": "Juárez",
+      "club": "Instituto",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 697,
+      "nombre": "Sebastián",
+      "apellido": "Flores",
+      "club": "San Lorenzo",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 698,
+      "nombre": "Axel",
+      "apellido": "Díaz",
+      "club": "Independiente",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 699,
+      "nombre": "Hernán",
+      "apellido": "Cáceres",
+      "club": "Unión",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 700,
+      "nombre": "Iván",
+      "apellido": "González",
+      "club": "Lanús",
+      "posicion": "Delantero",
+      "nacionalidad": "Paraguay"
+    },
+    {
+      "id_jugador": 701,
+      "nombre": "Ramiro",
+      "apellido": "Ledesma",
+      "club": "Banfield",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 702,
+      "nombre": "Santino",
+      "apellido": "Acosta",
+      "club": "Aldosivi",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 703,
+      "nombre": "Nahuel",
+      "apellido": "Flores",
+      "club": "Platense",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 704,
+      "nombre": "Mateo",
+      "apellido": "Rojas",
+      "club": "Gimnasia de Mendoza",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 705,
+      "nombre": "Walter",
+      "apellido": "Escobar",
+      "club": "Banfield",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Bolivia"
+    },
+    {
+      "id_jugador": 706,
+      "nombre": "Fernando",
+      "apellido": "Suárez",
+      "club": "Central Córdoba",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 707,
+      "nombre": "Mateo",
+      "apellido": "López",
+      "club": "Platense",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Perú"
+    },
+    {
+      "id_jugador": 708,
+      "nombre": "Federico",
+      "apellido": "Vera",
+      "club": "Defensa y Justicia",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 709,
+      "nombre": "Matías",
+      "apellido": "Leiva",
+      "club": "Lanús",
+      "posicion": "Delantero",
+      "nacionalidad": "Colombia"
+    },
+    {
+      "id_jugador": 710,
+      "nombre": "Ramiro",
+      "apellido": "Núñez",
+      "club": "Gimnasia de Mendoza",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 711,
+      "nombre": "Nicolás",
+      "apellido": "González",
+      "club": "Racing Club",
+      "posicion": "Arquero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 712,
+      "nombre": "Alan",
+      "apellido": "Núñez",
+      "club": "Newell's Old Boys",
+      "posicion": "Delantero",
+      "nacionalidad": "Chile"
+    },
+    {
+      "id_jugador": 713,
+      "nombre": "Valentín",
+      "apellido": "Ledesma",
+      "club": "Instituto",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 714,
+      "nombre": "Ezequiel",
+      "apellido": "Ledesma",
+      "club": "Estudiantes de Río Cuarto",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 715,
+      "nombre": "Axel",
+      "apellido": "Méndez",
+      "club": "Aldosivi",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 716,
+      "nombre": "Gabriel",
+      "apellido": "Torres",
+      "club": "Atlético Tucumán",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Chile"
+    },
+    {
+      "id_jugador": 717,
+      "nombre": "Ramiro",
+      "apellido": "López",
+      "club": "Estudiantes de La Plata",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Perú"
+    },
+    {
+      "id_jugador": 718,
+      "nombre": "Alejandro",
+      "apellido": "Escobar",
+      "club": "Deportivo Riestra",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 719,
+      "nombre": "Alexis",
+      "apellido": "Acosta",
+      "club": "Boca Juniors",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 720,
+      "nombre": "Facundo",
+      "apellido": "Coronel",
+      "club": "Tigre",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 721,
+      "nombre": "Emiliano",
+      "apellido": "Ojeda",
+      "club": "Gimnasia de Mendoza",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 722,
+      "nombre": "Bruno",
+      "apellido": "González",
+      "club": "Rosario Central",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 723,
+      "nombre": "Leonardo",
+      "apellido": "Godoy",
+      "club": "Tigre",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 724,
+      "nombre": "Sergio",
+      "apellido": "Ríos",
+      "club": "Independiente Rivadavia",
+      "posicion": "Arquero",
+      "nacionalidad": "Venezuela"
+    },
+    {
+      "id_jugador": 725,
+      "nombre": "Nicolás",
+      "apellido": "Cáceres",
+      "club": "Estudiantes de Río Cuarto",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 726,
+      "nombre": "Leandro",
+      "apellido": "Zárate",
+      "club": "Estudiantes de Río Cuarto",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 727,
+      "nombre": "Franco",
+      "apellido": "Zárate",
+      "club": "Argentinos Juniors",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 728,
+      "nombre": "Nicolás",
+      "apellido": "Pereyra",
+      "club": "Gimnasia de La Plata",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 729,
+      "nombre": "Lucas",
+      "apellido": "Ledesma",
+      "club": "Deportivo Riestra",
+      "posicion": "Delantero",
+      "nacionalidad": "Venezuela"
+    },
+    {
+      "id_jugador": 730,
+      "nombre": "Tomás",
+      "apellido": "Paz",
+      "club": "Huracán",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 731,
+      "nombre": "Mauro",
+      "apellido": "Ledesma",
+      "club": "Argentinos Juniors",
+      "posicion": "Arquero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 732,
+      "nombre": "Julián",
+      "apellido": "Franco",
+      "club": "Vélez Sarsfield",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 733,
+      "nombre": "Daniel",
+      "apellido": "Medina",
+      "club": "Independiente",
+      "posicion": "Delantero",
+      "nacionalidad": "Perú"
+    },
+    {
+      "id_jugador": 734,
+      "nombre": "Fernando",
+      "apellido": "Cabrera",
+      "club": "Barracas Central",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 735,
+      "nombre": "Gonzalo",
+      "apellido": "Núñez",
+      "club": "River Plate",
+      "posicion": "Delantero",
+      "nacionalidad": "Colombia"
+    },
+    {
+      "id_jugador": 736,
+      "nombre": "Lautaro",
+      "apellido": "Morales",
+      "club": "Independiente Rivadavia",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 737,
+      "nombre": "Ramiro",
+      "apellido": "Ponce",
+      "club": "San Lorenzo",
+      "posicion": "Delantero",
+      "nacionalidad": "Venezuela"
+    },
+    {
+      "id_jugador": 738,
+      "nombre": "Cristian",
+      "apellido": "Morales",
+      "club": "Aldosivi",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 739,
+      "nombre": "Ezequiel",
+      "apellido": "Navarro",
+      "club": "Gimnasia de La Plata",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 740,
+      "nombre": "Joaquín",
+      "apellido": "Gómez",
+      "club": "Estudiantes de La Plata",
+      "posicion": "Delantero",
+      "nacionalidad": "Perú"
+    },
+    {
+      "id_jugador": 741,
+      "nombre": "Thiago",
+      "apellido": "López",
+      "club": "Atlético Tucumán",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 742,
+      "nombre": "Maximiliano",
+      "apellido": "Ojeda",
+      "club": "Lanús",
+      "posicion": "Arquero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 743,
+      "nombre": "Nicolás",
+      "apellido": "Aguirre",
+      "club": "Vélez Sarsfield",
+      "posicion": "Arquero",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 744,
+      "nombre": "Thiago",
+      "apellido": "Villalba",
+      "club": "Newell's Old Boys",
+      "posicion": "Arquero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 745,
+      "nombre": "Axel",
+      "apellido": "Godoy",
+      "club": "Argentinos Juniors",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 746,
+      "nombre": "Fernando",
+      "apellido": "Domínguez",
+      "club": "Boca Juniors",
+      "posicion": "Delantero",
+      "nacionalidad": "Paraguay"
+    },
+    {
+      "id_jugador": 747,
+      "nombre": "Fernando",
+      "apellido": "Sánchez",
+      "club": "Talleres",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 748,
+      "nombre": "Benjamín",
+      "apellido": "Ledesma",
+      "club": "Sarmiento",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 749,
+      "nombre": "Julián",
+      "apellido": "Ledesma",
+      "club": "Tigre",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 750,
+      "nombre": "Brian",
+      "apellido": "Peralta",
+      "club": "Independiente Rivadavia",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Chile"
+    },
+    {
+      "id_jugador": 751,
+      "nombre": "Lautaro",
+      "apellido": "Núñez",
+      "club": "Sarmiento",
+      "posicion": "Delantero",
+      "nacionalidad": "Paraguay"
+    },
+    {
+      "id_jugador": 752,
+      "nombre": "Rodrigo",
+      "apellido": "Rodríguez",
+      "club": "Banfield",
+      "posicion": "Arquero",
+      "nacionalidad": "Chile"
+    },
+    {
+      "id_jugador": 753,
+      "nombre": "Bautista",
+      "apellido": "Franco",
+      "club": "Barracas Central",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Chile"
+    },
+    {
+      "id_jugador": 754,
+      "nombre": "Lautaro",
+      "apellido": "Zárate",
+      "club": "Deportivo Riestra",
+      "posicion": "Defensor",
+      "nacionalidad": "Colombia"
+    },
+    {
+      "id_jugador": 755,
+      "nombre": "Alan",
+      "apellido": "Fernández",
+      "club": "Estudiantes de Río Cuarto",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 756,
+      "nombre": "Rodrigo",
+      "apellido": "Montenegro",
+      "club": "Platense",
+      "posicion": "Arquero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 757,
+      "nombre": "Ezequiel",
+      "apellido": "Ortiz",
+      "club": "Gimnasia de Mendoza",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 758,
+      "nombre": "Ezequiel",
+      "apellido": "Ríos",
+      "club": "Gimnasia de Mendoza",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 759,
+      "nombre": "Gastón",
+      "apellido": "Quiroga",
+      "club": "Gimnasia de La Plata",
+      "posicion": "Arquero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 760,
+      "nombre": "Ezequiel",
+      "apellido": "Vega",
+      "club": "Instituto",
+      "posicion": "Delantero",
+      "nacionalidad": "Perú"
+    },
+    {
+      "id_jugador": 761,
+      "nombre": "Maximiliano",
+      "apellido": "Paz",
+      "club": "Sarmiento",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 762,
+      "nombre": "Santino",
+      "apellido": "Medina",
+      "club": "Barracas Central",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Chile"
+    },
+    {
+      "id_jugador": 763,
+      "nombre": "Marcos",
+      "apellido": "Toledo",
+      "club": "Aldosivi",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 764,
+      "nombre": "Walter",
+      "apellido": "Domínguez",
+      "club": "Racing Club",
+      "posicion": "Defensor",
+      "nacionalidad": "Colombia"
+    },
+    {
+      "id_jugador": 765,
+      "nombre": "Leandro",
+      "apellido": "Moreno",
+      "club": "Deportivo Riestra",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 766,
+      "nombre": "Martín",
+      "apellido": "Godoy",
+      "club": "Instituto",
+      "posicion": "Delantero",
+      "nacionalidad": "Paraguay"
+    },
+    {
+      "id_jugador": 767,
+      "nombre": "Alan",
+      "apellido": "López",
+      "club": "Independiente",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Paraguay"
+    },
+    {
+      "id_jugador": 768,
+      "nombre": "Pablo",
+      "apellido": "Suárez",
+      "club": "Boca Juniors",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Venezuela"
+    },
+    {
+      "id_jugador": 769,
+      "nombre": "Leandro",
+      "apellido": "Castro",
+      "club": "Newell's Old Boys",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 770,
+      "nombre": "Enzo",
+      "apellido": "Méndez",
+      "club": "Sarmiento",
+      "posicion": "Defensor",
+      "nacionalidad": "Bolivia"
+    },
+    {
+      "id_jugador": 771,
+      "nombre": "Cristian",
+      "apellido": "Rodríguez",
+      "club": "Central Córdoba",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 772,
+      "nombre": "Tomás",
+      "apellido": "Rodríguez",
+      "club": "Gimnasia de Mendoza",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 773,
+      "nombre": "Enzo",
+      "apellido": "Ramírez",
+      "club": "Aldosivi",
+      "posicion": "Delantero",
+      "nacionalidad": "Perú"
+    },
+    {
+      "id_jugador": 774,
+      "nombre": "Lucas",
+      "apellido": "Vega",
+      "club": "Defensa y Justicia",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 775,
+      "nombre": "Kevin",
+      "apellido": "Castro",
+      "club": "Unión",
+      "posicion": "Arquero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 776,
+      "nombre": "Rodrigo",
+      "apellido": "Vera",
+      "club": "Racing Club",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 777,
+      "nombre": "Sebastián",
+      "apellido": "Herrera",
+      "club": "Deportivo Riestra",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 778,
+      "nombre": "Franco",
+      "apellido": "Ríos",
+      "club": "Atlético Tucumán",
+      "posicion": "Delantero",
+      "nacionalidad": "Bolivia"
+    },
+    {
+      "id_jugador": 779,
+      "nombre": "Emiliano",
+      "apellido": "Maidana",
+      "club": "River Plate",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 780,
+      "nombre": "Juan Cruz",
+      "apellido": "Díaz",
+      "club": "Platense",
+      "posicion": "Defensor",
+      "nacionalidad": "Ecuador"
+    },
+    {
+      "id_jugador": 781,
+      "nombre": "Maximiliano",
+      "apellido": "Gutiérrez",
+      "club": "Boca Juniors",
+      "posicion": "Defensor",
+      "nacionalidad": "Bolivia"
+    },
+    {
+      "id_jugador": 782,
+      "nombre": "Iván",
+      "apellido": "Suárez",
+      "club": "Platense",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 783,
+      "nombre": "Enzo",
+      "apellido": "Quiroga",
+      "club": "Central Córdoba",
+      "posicion": "Arquero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 784,
+      "nombre": "Benjamín",
+      "apellido": "Cabrera",
+      "club": "Gimnasia de La Plata",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Colombia"
+    },
+    {
+      "id_jugador": 785,
+      "nombre": "Hernán",
+      "apellido": "Escobar",
+      "club": "Barracas Central",
+      "posicion": "Delantero",
+      "nacionalidad": "Paraguay"
+    },
+    {
+      "id_jugador": 786,
+      "nombre": "Santino",
+      "apellido": "Cáceres",
+      "club": "Belgrano",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Colombia"
+    },
+    {
+      "id_jugador": 787,
+      "nombre": "Nahuel",
+      "apellido": "Romero",
+      "club": "Newell's Old Boys",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 788,
+      "nombre": "Gastón",
+      "apellido": "Villalba",
+      "club": "Tigre",
+      "posicion": "Arquero",
+      "nacionalidad": "Colombia"
+    },
+    {
+      "id_jugador": 789,
+      "nombre": "Emiliano",
+      "apellido": "Coronel",
+      "club": "Independiente Rivadavia",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 790,
+      "nombre": "Marcelo",
+      "apellido": "Fernández",
+      "club": "Lanús",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 791,
+      "nombre": "Alexis",
+      "apellido": "Morales",
+      "club": "Belgrano",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 792,
+      "nombre": "Axel",
+      "apellido": "Ponce",
+      "club": "Deportivo Riestra",
+      "posicion": "Delantero",
+      "nacionalidad": "Ecuador"
+    },
+    {
+      "id_jugador": 793,
+      "nombre": "Matías",
+      "apellido": "Luna",
+      "club": "Argentinos Juniors",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 794,
+      "nombre": "Ezequiel",
+      "apellido": "Muñoz",
+      "club": "Banfield",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 795,
+      "nombre": "Alan",
+      "apellido": "González",
+      "club": "River Plate",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 796,
+      "nombre": "Diego",
+      "apellido": "Gallardo",
+      "club": "Talleres",
+      "posicion": "Delantero",
+      "nacionalidad": "Chile"
+    },
+    {
+      "id_jugador": 797,
+      "nombre": "Alan",
+      "apellido": "Rivero",
+      "club": "Gimnasia de Mendoza",
+      "posicion": "Arquero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 798,
+      "nombre": "Walter",
+      "apellido": "Juárez",
+      "club": "Platense",
+      "posicion": "Defensor",
+      "nacionalidad": "Chile"
+    },
+    {
+      "id_jugador": 799,
+      "nombre": "Leandro",
+      "apellido": "Leiva",
+      "club": "Gimnasia de Mendoza",
+      "posicion": "Delantero",
+      "nacionalidad": "Paraguay"
+    },
+    {
+      "id_jugador": 800,
+      "nombre": "Alexis",
+      "apellido": "Rojas",
+      "club": "Platense",
+      "posicion": "Arquero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 801,
+      "nombre": "Walter",
+      "apellido": "Vega",
+      "club": "Barracas Central",
+      "posicion": "Arquero",
+      "nacionalidad": "Ecuador"
+    },
+    {
+      "id_jugador": 802,
+      "nombre": "Walter",
+      "apellido": "Cáceres",
+      "club": "Estudiantes de Río Cuarto",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 803,
+      "nombre": "Lucas",
+      "apellido": "Rojas",
+      "club": "Aldosivi",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 804,
+      "nombre": "Luciano",
+      "apellido": "Medina",
+      "club": "Aldosivi",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 805,
+      "nombre": "Kevin",
+      "apellido": "López",
+      "club": "Rosario Central",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 806,
+      "nombre": "Emiliano",
+      "apellido": "Escobar",
+      "club": "Atlético Tucumán",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 807,
+      "nombre": "Leandro",
+      "apellido": "Luna",
+      "club": "Banfield",
+      "posicion": "Arquero",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 808,
+      "nombre": "Alejandro",
+      "apellido": "Romero",
+      "club": "Instituto",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 809,
+      "nombre": "Emanuel",
+      "apellido": "Coronel",
+      "club": "Huracán",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 810,
+      "nombre": "Alexis",
+      "apellido": "Vega",
+      "club": "Tigre",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 811,
+      "nombre": "Santiago",
+      "apellido": "Herrera",
+      "club": "Talleres",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 812,
+      "nombre": "Marcelo",
+      "apellido": "Romero",
+      "club": "Vélez Sarsfield",
+      "posicion": "Defensor",
+      "nacionalidad": "Ecuador"
+    },
+    {
+      "id_jugador": 813,
+      "nombre": "Axel",
+      "apellido": "Gutiérrez",
+      "club": "Tigre",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 814,
+      "nombre": "Luciano",
+      "apellido": "Ruiz",
+      "club": "Argentinos Juniors",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 815,
+      "nombre": "Brian",
+      "apellido": "Ortiz",
+      "club": "Argentinos Juniors",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 816,
+      "nombre": "Guido",
+      "apellido": "Gutiérrez",
+      "club": "Atlético Tucumán",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 817,
+      "nombre": "Federico",
+      "apellido": "Pereyra",
+      "club": "Estudiantes de Río Cuarto",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 818,
+      "nombre": "Marcos",
+      "apellido": "Cabrera",
+      "club": "Defensa y Justicia",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 819,
+      "nombre": "Bruno",
+      "apellido": "Ponce",
+      "club": "Lanús",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 820,
+      "nombre": "Jonathan",
+      "apellido": "López",
+      "club": "Defensa y Justicia",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 821,
+      "nombre": "Guido",
+      "apellido": "Vega",
+      "club": "Racing Club",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 822,
+      "nombre": "Manuel",
+      "apellido": "Montenegro",
+      "club": "Estudiantes de Río Cuarto",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 823,
+      "nombre": "Lisandro",
+      "apellido": "Rojas",
+      "club": "Instituto",
+      "posicion": "Delantero",
+      "nacionalidad": "Ecuador"
+    },
+    {
+      "id_jugador": 824,
+      "nombre": "Nicolás",
+      "apellido": "Rodríguez",
+      "club": "Huracán",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 825,
+      "nombre": "Lisandro",
+      "apellido": "Fernández",
+      "club": "Boca Juniors",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 826,
+      "nombre": "Gonzalo",
+      "apellido": "Paz",
+      "club": "Argentinos Juniors",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 827,
+      "nombre": "Julián",
+      "apellido": "Correa",
+      "club": "Atlético Tucumán",
+      "posicion": "Delantero",
+      "nacionalidad": "Bolivia"
+    },
+    {
+      "id_jugador": 828,
+      "nombre": "Thiago",
+      "apellido": "Ruiz",
+      "club": "Instituto",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 829,
+      "nombre": "Gabriel",
+      "apellido": "Benítez",
+      "club": "Independiente Rivadavia",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 830,
+      "nombre": "Mateo",
+      "apellido": "Méndez",
+      "club": "Deportivo Riestra",
+      "posicion": "Defensor",
+      "nacionalidad": "Perú"
+    },
+    {
+      "id_jugador": 831,
+      "nombre": "Juan Manuel",
+      "apellido": "Coronel",
+      "club": "Barracas Central",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 832,
+      "nombre": "Sebastián",
+      "apellido": "Romero",
+      "club": "Huracán",
+      "posicion": "Delantero",
+      "nacionalidad": "Chile"
+    },
+    {
+      "id_jugador": 833,
+      "nombre": "Franco",
+      "apellido": "Sánchez",
+      "club": "Atlético Tucumán",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 834,
+      "nombre": "Alan",
+      "apellido": "Gómez",
+      "club": "Aldosivi",
+      "posicion": "Delantero",
+      "nacionalidad": "Paraguay"
+    },
+    {
+      "id_jugador": 835,
+      "nombre": "Pablo",
+      "apellido": "Ramírez",
+      "club": "Barracas Central",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 836,
+      "nombre": "Santiago",
+      "apellido": "Alvarez",
+      "club": "Instituto",
+      "posicion": "Arquero",
+      "nacionalidad": "Bolivia"
+    },
+    {
+      "id_jugador": 837,
+      "nombre": "Jonathan",
+      "apellido": "Medina",
+      "club": "Sarmiento",
+      "posicion": "Delantero",
+      "nacionalidad": "Perú"
+    },
+    {
+      "id_jugador": 838,
+      "nombre": "Rodrigo",
+      "apellido": "Ponce",
+      "club": "Defensa y Justicia",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 839,
+      "nombre": "Leandro",
+      "apellido": "Aguirre",
+      "club": "Barracas Central",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 840,
+      "nombre": "Tomás",
+      "apellido": "Bustos",
+      "club": "Talleres",
+      "posicion": "Delantero",
+      "nacionalidad": "Paraguay"
+    },
+    {
+      "id_jugador": 841,
+      "nombre": "Walter",
+      "apellido": "Gallardo",
+      "club": "San Lorenzo",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Colombia"
+    },
+    {
+      "id_jugador": 842,
+      "nombre": "Rodrigo",
+      "apellido": "Villalba",
+      "club": "Deportivo Riestra",
+      "posicion": "Delantero",
+      "nacionalidad": "Bolivia"
+    },
+    {
+      "id_jugador": 843,
+      "nombre": "Matías",
+      "apellido": "Ruiz",
+      "club": "Estudiantes de La Plata",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 844,
+      "nombre": "Gastón",
+      "apellido": "Godoy",
+      "club": "Tigre",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 845,
+      "nombre": "Hernán",
+      "apellido": "Leiva",
+      "club": "Defensa y Justicia",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 846,
+      "nombre": "Luciano",
+      "apellido": "Torres",
+      "club": "Talleres",
+      "posicion": "Arquero",
+      "nacionalidad": "Paraguay"
+    },
+    {
+      "id_jugador": 847,
+      "nombre": "Jeremías",
+      "apellido": "Vega",
+      "club": "Boca Juniors",
+      "posicion": "Arquero",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 848,
+      "nombre": "Bruno",
+      "apellido": "Villalba",
+      "club": "San Lorenzo",
+      "posicion": "Defensor",
+      "nacionalidad": "Paraguay"
+    },
+    {
+      "id_jugador": 849,
+      "nombre": "Fernando",
+      "apellido": "Zárate",
+      "club": "Aldosivi",
+      "posicion": "Defensor",
+      "nacionalidad": "Venezuela"
+    },
+    {
+      "id_jugador": 850,
+      "nombre": "Valentín",
+      "apellido": "Rodríguez",
+      "club": "Tigre",
+      "posicion": "Defensor",
+      "nacionalidad": "Bolivia"
+    },
+    {
+      "id_jugador": 851,
+      "nombre": "Pablo",
+      "apellido": "Ponce",
+      "club": "Defensa y Justicia",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 852,
+      "nombre": "Damián",
+      "apellido": "Sánchez",
+      "club": "Racing Club",
+      "posicion": "Arquero",
+      "nacionalidad": "Paraguay"
+    },
+    {
+      "id_jugador": 853,
+      "nombre": "Pablo",
+      "apellido": "Farías",
+      "club": "Aldosivi",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 854,
+      "nombre": "Jeremías",
+      "apellido": "Arias",
+      "club": "Racing Club",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 855,
+      "nombre": "Diego",
+      "apellido": "Rivero",
+      "club": "Gimnasia de La Plata",
+      "posicion": "Delantero",
+      "nacionalidad": "Ecuador"
+    },
+    {
+      "id_jugador": 856,
+      "nombre": "Marcos",
+      "apellido": "Franco",
+      "club": "Gimnasia de La Plata",
+      "posicion": "Delantero",
+      "nacionalidad": "Venezuela"
+    },
+    {
+      "id_jugador": 857,
+      "nombre": "Benjamín",
+      "apellido": "Ibáñez",
+      "club": "Gimnasia de La Plata",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 858,
+      "nombre": "Iván",
+      "apellido": "Cáceres",
+      "club": "Talleres",
+      "posicion": "Delantero",
+      "nacionalidad": "Colombia"
+    },
+    {
+      "id_jugador": 859,
+      "nombre": "Nahuel",
+      "apellido": "Franco",
+      "club": "Gimnasia de Mendoza",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 860,
+      "nombre": "Nicolás",
+      "apellido": "Ledesma",
+      "club": "Banfield",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 861,
+      "nombre": "Diego",
+      "apellido": "Sosa",
+      "club": "Rosario Central",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 862,
+      "nombre": "Daniel",
+      "apellido": "Farías",
+      "club": "Lanús",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 863,
+      "nombre": "Juan Cruz",
+      "apellido": "Herrera",
+      "club": "Platense",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 864,
+      "nombre": "Emanuel",
+      "apellido": "Sosa",
+      "club": "Belgrano",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 865,
+      "nombre": "Tomás",
+      "apellido": "Flores",
+      "club": "Racing Club",
+      "posicion": "Defensor",
+      "nacionalidad": "Colombia"
+    },
+    {
+      "id_jugador": 866,
+      "nombre": "Manuel",
+      "apellido": "Ríos",
+      "club": "Talleres",
+      "posicion": "Arquero",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 867,
+      "nombre": "Juan Manuel",
+      "apellido": "Villalba",
+      "club": "Atlético Tucumán",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 868,
+      "nombre": "Lisandro",
+      "apellido": "Núñez",
+      "club": "Deportivo Riestra",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 869,
+      "nombre": "Bruno",
+      "apellido": "Quiroga",
+      "club": "Atlético Tucumán",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Ecuador"
+    },
+    {
+      "id_jugador": 870,
+      "nombre": "Kevin",
+      "apellido": "Ríos",
+      "club": "Defensa y Justicia",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 871,
+      "nombre": "Manuel",
+      "apellido": "Maidana",
+      "club": "Banfield",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 872,
+      "nombre": "Franco",
+      "apellido": "Navarro",
+      "club": "Central Córdoba",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 873,
+      "nombre": "Rodrigo",
+      "apellido": "Romero",
+      "club": "Central Córdoba",
+      "posicion": "Arquero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 874,
+      "nombre": "Agustín",
+      "apellido": "Ríos",
+      "club": "Boca Juniors",
+      "posicion": "Arquero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 875,
+      "nombre": "Alan",
+      "apellido": "Castro",
+      "club": "Atlético Tucumán",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Venezuela"
+    },
+    {
+      "id_jugador": 876,
+      "nombre": "Sergio",
+      "apellido": "Godoy",
+      "club": "Instituto",
+      "posicion": "Arquero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 877,
+      "nombre": "Fernando",
+      "apellido": "Morales",
+      "club": "Sarmiento",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Colombia"
+    },
+    {
+      "id_jugador": 878,
+      "nombre": "Jonathan",
+      "apellido": "Romero",
+      "club": "Aldosivi",
+      "posicion": "Defensor",
+      "nacionalidad": "Chile"
+    },
+    {
+      "id_jugador": 879,
+      "nombre": "Thiago",
+      "apellido": "Correa",
+      "club": "Talleres",
+      "posicion": "Delantero",
+      "nacionalidad": "Venezuela"
+    },
+    {
+      "id_jugador": 880,
+      "nombre": "Walter",
+      "apellido": "Ojeda",
+      "club": "Defensa y Justicia",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 881,
+      "nombre": "Rodrigo",
+      "apellido": "González",
+      "club": "Argentinos Juniors",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 882,
+      "nombre": "Emiliano",
+      "apellido": "Aguirre",
+      "club": "Racing Club",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 883,
+      "nombre": "Jeremías",
+      "apellido": "Juárez",
+      "club": "Independiente",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 884,
+      "nombre": "Valentín",
+      "apellido": "Luna",
+      "club": "Central Córdoba",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 885,
+      "nombre": "Brian",
+      "apellido": "Ojeda",
+      "club": "Gimnasia de La Plata",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 886,
+      "nombre": "Bautista",
+      "apellido": "Navarro",
+      "club": "Unión",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 887,
+      "nombre": "Mauro",
+      "apellido": "Toledo",
+      "club": "Atlético Tucumán",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Chile"
+    },
+    {
+      "id_jugador": 888,
+      "nombre": "Fernando",
+      "apellido": "Ledesma",
+      "club": "Deportivo Riestra",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Perú"
+    },
+    {
+      "id_jugador": 889,
+      "nombre": "Sergio",
+      "apellido": "Ledesma",
+      "club": "Rosario Central",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 890,
+      "nombre": "Damián",
+      "apellido": "Gutiérrez",
+      "club": "Boca Juniors",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 891,
+      "nombre": "Damián",
+      "apellido": "Pereyra",
+      "club": "Sarmiento",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 892,
+      "nombre": "Bautista",
+      "apellido": "Gallardo",
+      "club": "Boca Juniors",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 893,
+      "nombre": "Sebastián",
+      "apellido": "Montenegro",
+      "club": "Gimnasia de Mendoza",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 894,
+      "nombre": "Lucas",
+      "apellido": "Muñoz",
+      "club": "San Lorenzo",
+      "posicion": "Delantero",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 895,
+      "nombre": "Gabriel",
+      "apellido": "Fernández",
+      "club": "Vélez Sarsfield",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 896,
+      "nombre": "Mateo",
+      "apellido": "Alvarez",
+      "club": "Vélez Sarsfield",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 897,
+      "nombre": "Damián",
+      "apellido": "Giménez",
+      "club": "Atlético Tucumán",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 898,
+      "nombre": "Guido",
+      "apellido": "Luna",
+      "club": "Gimnasia de La Plata",
+      "posicion": "Arquero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 899,
+      "nombre": "Damián",
+      "apellido": "Vega",
+      "club": "Independiente Rivadavia",
+      "posicion": "Delantero",
+      "nacionalidad": "Venezuela"
+    },
+    {
+      "id_jugador": 900,
+      "nombre": "Manuel",
+      "apellido": "Zárate",
+      "club": "Defensa y Justicia",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 901,
+      "nombre": "Juan Manuel",
+      "apellido": "Rivero",
+      "club": "Estudiantes de Río Cuarto",
+      "posicion": "Delantero",
+      "nacionalidad": "Paraguay"
+    },
+    {
+      "id_jugador": 902,
+      "nombre": "Damián",
+      "apellido": "Godoy",
+      "club": "Tigre",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 903,
+      "nombre": "Damián",
+      "apellido": "Escobar",
+      "club": "Defensa y Justicia",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 904,
+      "nombre": "Leonardo",
+      "apellido": "Arias",
+      "club": "Atlético Tucumán",
+      "posicion": "Arquero",
+      "nacionalidad": "Bolivia"
+    },
+    {
+      "id_jugador": 905,
+      "nombre": "Iván",
+      "apellido": "Arias",
+      "club": "Sarmiento",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 906,
+      "nombre": "Lisandro",
+      "apellido": "Gutiérrez",
+      "club": "Belgrano",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 907,
+      "nombre": "Bautista",
+      "apellido": "Morales",
+      "club": "Boca Juniors",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 908,
+      "nombre": "Agustín",
+      "apellido": "Castro",
+      "club": "Sarmiento",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 909,
+      "nombre": "Kevin",
+      "apellido": "Franco",
+      "club": "Huracán",
+      "posicion": "Delantero",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 910,
+      "nombre": "Fernando",
+      "apellido": "Alvarez",
+      "club": "Instituto",
+      "posicion": "Defensor",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 911,
+      "nombre": "Manuel",
+      "apellido": "Cabrera",
+      "club": "Atlético Tucumán",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 912,
+      "nombre": "Marcelo",
+      "apellido": "Sánchez",
+      "club": "Estudiantes de La Plata",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 913,
+      "nombre": "Luciano",
+      "apellido": "Alvarez",
+      "club": "Estudiantes de Río Cuarto",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Venezuela"
+    },
+    {
+      "id_jugador": 914,
+      "nombre": "Ignacio",
+      "apellido": "Toledo",
+      "club": "Independiente Rivadavia",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 915,
+      "nombre": "Maximiliano",
+      "apellido": "Núñez",
+      "club": "Banfield",
+      "posicion": "Defensor",
+      "nacionalidad": "Chile"
+    },
+    {
+      "id_jugador": 916,
+      "nombre": "Alan",
+      "apellido": "Bustos",
+      "club": "Vélez Sarsfield",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 917,
+      "nombre": "Marcos",
+      "apellido": "Ferreyra",
+      "club": "San Lorenzo",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 918,
+      "nombre": "Tomás",
+      "apellido": "Peralta",
+      "club": "Racing Club",
+      "posicion": "Defensor",
+      "nacionalidad": "Ecuador"
+    },
+    {
+      "id_jugador": 919,
+      "nombre": "Santiago",
+      "apellido": "Rivero",
+      "club": "Vélez Sarsfield",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 920,
+      "nombre": "Lautaro",
+      "apellido": "Muñoz",
+      "club": "Unión",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 921,
+      "nombre": "Walter",
+      "apellido": "Díaz",
+      "club": "Independiente",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 922,
+      "nombre": "Marcelo",
+      "apellido": "Farías",
+      "club": "Independiente Rivadavia",
+      "posicion": "Delantero",
+      "nacionalidad": "Perú"
+    },
+    {
+      "id_jugador": 923,
+      "nombre": "Damián",
+      "apellido": "Benítez",
+      "club": "Huracán",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 924,
+      "nombre": "Valentín",
+      "apellido": "Ríos",
+      "club": "Boca Juniors",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 925,
+      "nombre": "Diego",
+      "apellido": "Vega",
+      "club": "Central Córdoba",
+      "posicion": "Defensor",
+      "nacionalidad": "Colombia"
+    },
+    {
+      "id_jugador": 926,
+      "nombre": "Santiago",
+      "apellido": "Aguirre",
+      "club": "Gimnasia de La Plata",
+      "posicion": "Arquero",
+      "nacionalidad": "Paraguay"
+    },
+    {
+      "id_jugador": 927,
+      "nombre": "Axel",
+      "apellido": "Ledesma",
+      "club": "Sarmiento",
+      "posicion": "Delantero",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 928,
+      "nombre": "Alejandro",
+      "apellido": "Quiroga",
+      "club": "Huracán",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Ecuador"
+    },
+    {
+      "id_jugador": 929,
+      "nombre": "Federico",
+      "apellido": "Navarro",
+      "club": "Defensa y Justicia",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 930,
+      "nombre": "Emiliano",
+      "apellido": "Luna",
+      "club": "Instituto",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 931,
+      "nombre": "Lautaro",
+      "apellido": "Suárez",
+      "club": "Instituto",
+      "posicion": "Delantero",
+      "nacionalidad": "Paraguay"
+    },
+    {
+      "id_jugador": 932,
+      "nombre": "Facundo",
+      "apellido": "Herrera",
+      "club": "Aldosivi",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 933,
+      "nombre": "Gonzalo",
+      "apellido": "Juárez",
+      "club": "Defensa y Justicia",
+      "posicion": "Defensor",
+      "nacionalidad": "Colombia"
+    },
+    {
+      "id_jugador": 934,
+      "nombre": "Diego",
+      "apellido": "Vera",
+      "club": "San Lorenzo",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 935,
+      "nombre": "Iván",
+      "apellido": "Núñez",
+      "club": "Independiente",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 936,
+      "nombre": "Gabriel",
+      "apellido": "Ponce",
+      "club": "Vélez Sarsfield",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 937,
+      "nombre": "Emanuel",
+      "apellido": "Maidana",
+      "club": "Banfield",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 938,
+      "nombre": "Jeremías",
+      "apellido": "Luna",
+      "club": "Independiente",
+      "posicion": "Delantero",
+      "nacionalidad": "Chile"
+    },
+    {
+      "id_jugador": 939,
+      "nombre": "Axel",
+      "apellido": "Ruiz",
+      "club": "Gimnasia de La Plata",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 940,
+      "nombre": "Benjamín",
+      "apellido": "Cáceres",
+      "club": "Unión",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 941,
+      "nombre": "Facundo",
+      "apellido": "Rojas",
+      "club": "Sarmiento",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 942,
+      "nombre": "Santiago",
+      "apellido": "García",
+      "club": "Barracas Central",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 943,
+      "nombre": "Valentín",
+      "apellido": "Navarro",
+      "club": "Huracán",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 944,
+      "nombre": "Ramiro",
+      "apellido": "Juárez",
+      "club": "Gimnasia de La Plata",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 945,
+      "nombre": "Iván",
+      "apellido": "Coronel",
+      "club": "Gimnasia de La Plata",
+      "posicion": "Delantero",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 946,
+      "nombre": "Manuel",
+      "apellido": "Muñoz",
+      "club": "Argentinos Juniors",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 947,
+      "nombre": "Cristian",
+      "apellido": "Rojas",
+      "club": "Estudiantes de La Plata",
+      "posicion": "Defensor",
+      "nacionalidad": "Perú"
+    },
+    {
+      "id_jugador": 948,
+      "nombre": "Leonardo",
+      "apellido": "Farías",
+      "club": "Belgrano",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 949,
+      "nombre": "Alexis",
+      "apellido": "Peralta",
+      "club": "Huracán",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 950,
+      "nombre": "Hernán",
+      "apellido": "Suárez",
+      "club": "Gimnasia de Mendoza",
+      "posicion": "Delantero",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 951,
+      "nombre": "Gabriel",
+      "apellido": "Gallardo",
+      "club": "Instituto",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 952,
+      "nombre": "Emanuel",
+      "apellido": "Luna",
+      "club": "Platense",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 953,
+      "nombre": "Damián",
+      "apellido": "Leiva",
+      "club": "Boca Juniors",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 954,
+      "nombre": "Alexis",
+      "apellido": "Benítez",
+      "club": "Independiente",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Colombia"
+    },
+    {
+      "id_jugador": 955,
+      "nombre": "Valentín",
+      "apellido": "Cáceres",
+      "club": "Boca Juniors",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 956,
+      "nombre": "Iván",
+      "apellido": "Ponce",
+      "club": "Sarmiento",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 957,
+      "nombre": "Juan Manuel",
+      "apellido": "Gómez",
+      "club": "Belgrano",
+      "posicion": "Arquero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 958,
+      "nombre": "Joaquín",
+      "apellido": "Cabrera",
+      "club": "Deportivo Riestra",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Perú"
+    },
+    {
+      "id_jugador": 959,
+      "nombre": "Iván",
+      "apellido": "Torres",
+      "club": "Estudiantes de Río Cuarto",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Perú"
+    },
+    {
+      "id_jugador": 960,
+      "nombre": "Julián",
+      "apellido": "Romero",
+      "club": "Rosario Central",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 961,
+      "nombre": "Nahuel",
+      "apellido": "López",
+      "club": "Defensa y Justicia",
+      "posicion": "Defensor",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 962,
+      "nombre": "Marcos",
+      "apellido": "Ledesma",
+      "club": "Sarmiento",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 963,
+      "nombre": "Maximiliano",
+      "apellido": "Pereyra",
+      "club": "Barracas Central",
+      "posicion": "Arquero",
+      "nacionalidad": "Bolivia"
+    },
+    {
+      "id_jugador": 964,
+      "nombre": "Nahuel",
+      "apellido": "Herrera",
+      "club": "Platense",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 965,
+      "nombre": "Lautaro",
+      "apellido": "Ibáñez",
+      "club": "Boca Juniors",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 966,
+      "nombre": "Gabriel",
+      "apellido": "Gutiérrez",
+      "club": "Platense",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 967,
+      "nombre": "Maximiliano",
+      "apellido": "González",
+      "club": "Newell's Old Boys",
+      "posicion": "Arquero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 968,
+      "nombre": "Ezequiel",
+      "apellido": "Molina",
+      "club": "Argentinos Juniors",
+      "posicion": "Defensor",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 969,
+      "nombre": "Alexis",
+      "apellido": "Arias",
+      "club": "Banfield",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 970,
+      "nombre": "Alexis",
+      "apellido": "Rodríguez",
+      "club": "Deportivo Riestra",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 971,
+      "nombre": "Franco",
+      "apellido": "Ibáñez",
+      "club": "Gimnasia de Mendoza",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Colombia"
+    },
+    {
+      "id_jugador": 972,
+      "nombre": "Kevin",
+      "apellido": "Gómez",
+      "club": "Newell's Old Boys",
+      "posicion": "Arquero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 973,
+      "nombre": "Juan Manuel",
+      "apellido": "Méndez",
+      "club": "River Plate",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 974,
+      "nombre": "Bruno",
+      "apellido": "Maidana",
+      "club": "Defensa y Justicia",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 975,
+      "nombre": "Lisandro",
+      "apellido": "Ojeda",
+      "club": "Belgrano",
+      "posicion": "Arquero",
+      "nacionalidad": "Perú"
+    },
+    {
+      "id_jugador": 976,
+      "nombre": "Leandro",
+      "apellido": "Correa",
+      "club": "Gimnasia de La Plata",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Perú"
+    },
+    {
+      "id_jugador": 977,
+      "nombre": "Franco",
+      "apellido": "Moreno",
+      "club": "Sarmiento",
+      "posicion": "Delantero",
+      "nacionalidad": "Bolivia"
+    },
+    {
+      "id_jugador": 978,
+      "nombre": "Lautaro",
+      "apellido": "González",
+      "club": "Gimnasia de La Plata",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Colombia"
+    },
+    {
+      "id_jugador": 979,
+      "nombre": "Walter",
+      "apellido": "Torres",
+      "club": "Talleres",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 980,
+      "nombre": "Emiliano",
+      "apellido": "Fernández",
+      "club": "Gimnasia de Mendoza",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 981,
+      "nombre": "Hernán",
+      "apellido": "Farías",
+      "club": "Huracán",
+      "posicion": "Arquero",
+      "nacionalidad": "Chile"
+    },
+    {
+      "id_jugador": 982,
+      "nombre": "Mateo",
+      "apellido": "Maidana",
+      "club": "Independiente Rivadavia",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 983,
+      "nombre": "Sebastián",
+      "apellido": "Díaz",
+      "club": "San Lorenzo",
+      "posicion": "Arquero",
+      "nacionalidad": "Chile"
+    },
+    {
+      "id_jugador": 984,
+      "nombre": "Thiago",
+      "apellido": "Ponce",
+      "club": "Belgrano",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Venezuela"
+    },
+    {
+      "id_jugador": 985,
+      "nombre": "Diego",
+      "apellido": "Ferreyra",
+      "club": "Newell's Old Boys",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Venezuela"
+    },
+    {
+      "id_jugador": 986,
+      "nombre": "Ezequiel",
+      "apellido": "Aguirre",
+      "club": "Talleres",
+      "posicion": "Arquero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 987,
+      "nombre": "Leandro",
+      "apellido": "Rodríguez",
+      "club": "Platense",
+      "posicion": "Delantero",
+      "nacionalidad": "Ecuador"
+    },
+    {
+      "id_jugador": 988,
+      "nombre": "Lucas",
+      "apellido": "Moreno",
+      "club": "Instituto",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 989,
+      "nombre": "Nahuel",
+      "apellido": "Morales",
+      "club": "Gimnasia de La Plata",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 990,
+      "nombre": "Federico",
+      "apellido": "Suárez",
+      "club": "Unión",
+      "posicion": "Defensor",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 991,
+      "nombre": "Tomás",
+      "apellido": "Quiroga",
+      "club": "Estudiantes de La Plata",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 992,
+      "nombre": "Santiago",
+      "apellido": "Méndez",
+      "club": "Lanús",
+      "posicion": "Defensor",
+      "nacionalidad": "Bolivia"
+    },
+    {
+      "id_jugador": 993,
+      "nombre": "Gonzalo",
+      "apellido": "Coronel",
+      "club": "Unión",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 994,
+      "nombre": "Lautaro",
+      "apellido": "López",
+      "club": "Vélez Sarsfield",
+      "posicion": "Arquero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 995,
+      "nombre": "Sergio",
+      "apellido": "Benítez",
+      "club": "Rosario Central",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 996,
+      "nombre": "Bautista",
+      "apellido": "Paz",
+      "club": "Barracas Central",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Venezuela"
+    },
+    {
+      "id_jugador": 997,
+      "nombre": "Sergio",
+      "apellido": "Zárate",
+      "club": "Boca Juniors",
+      "posicion": "Delantero",
+      "nacionalidad": "Ecuador"
+    },
+    {
+      "id_jugador": 998,
+      "nombre": "Juan Manuel",
+      "apellido": "Bustos",
+      "club": "Estudiantes de La Plata",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 999,
+      "nombre": "Alejandro",
+      "apellido": "Ponce",
+      "club": "Central Córdoba",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 1000,
+      "nombre": "Franco",
+      "apellido": "Cáceres",
+      "club": "Sarmiento",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Paraguay"
     }
   ]
 }
