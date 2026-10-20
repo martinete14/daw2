@@ -1,47 +1,68 @@
-body {
-  font-family: system-ui, sans-serif;
-  margin: 0;
-  padding: 2rem;
-  background: #f5f5f5;
-  color: #222;
+/* mismo estilo que ActividadSessionStorage y TiendaYerbas: blanco, Poppins, azul petróleo y footer negro */
+
+* {
+  box-sizing: border-box;
 }
 
+/* sin esto, los display: flex / grid de abajo le ganan al atributo hidden */
 [hidden] {
   display: none !important;
 }
 
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  color: #111;
+  font-family: "Poppins", sans-serif;
+}
+
 .cabecera {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
   justify-content: space-between;
-  gap: 1rem;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-top: 6px solid #063e58;
+  border-bottom: 1px solid #e8e8e8;
 }
 
-h1 {
+.logo {
   margin: 0;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #08567a;
 }
 
-/* Switch LISTA / CARDS: la "bolita" blanca se desliza al lado activo */
+.logo span {
+  color: #111;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+/* switch LISTA / CARDS: la bolita azul se desliza al lado activo */
 .switch {
   position: relative;
   display: inline-flex;
-  padding: 4px;
-  border: none;
+  padding: 3px;
+  border: 1px solid #ccc;
   border-radius: 999px;
-  background: #333;
-  cursor: pointer;
+  background: #f7f7f7;
 }
 
 .switch::before {
   content: '';
   position: absolute;
-  top: 4px;
-  left: 4px;
-  width: calc(50% - 4px);
-  height: calc(100% - 8px);
+  top: 3px;
+  left: 3px;
+  width: calc(50% - 3px);
+  height: calc(100% - 6px);
   border-radius: 999px;
-  background: #fff;
+  background: #08567a;
   transition: transform 0.3s;
 }
 
@@ -51,80 +72,122 @@ h1 {
 
 .switch span {
   position: relative;
-  width: 4.5rem;
-  padding: 0.4rem 0;
-  font-weight: bold;
-  color: #fff;
+  width: 70px;
+  padding: 4px 0;
+  font-size: 13px;
+  font-weight: 500;
+  color: #4f4e4e;
   transition: color 0.3s;
 }
 
-/* El texto que queda arriba de la bolita va oscuro */
+/* el texto que queda arriba de la bolita va en blanco */
 .switch:not(.activo) span:first-child,
 .switch.activo span:last-child {
-  color: #333;
+  color: #fff;
 }
+
+.contenido {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem 3rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* ---- vista LISTA ---- */
 
 table {
   width: 100%;
   border-collapse: collapse;
-  background: #fff;
+  font-size: 14px;
 }
 
 th,
 td {
-  padding: 0.6rem 0.8rem;
-  border: 1px solid #ddd;
+  padding: 0.7rem 0.8rem;
+  border-bottom: 1px solid #e8e8e8;
   text-align: left;
 }
 
 th {
-  background: #333;
+  background: #08567a;
   color: #fff;
+  font-weight: 500;
 }
 
-tbody tr:nth-child(even) {
-  background: #f0f0f0;
+tbody tr:hover {
+  background: #f7f7f7;
 }
+
+/* ---- vista CARDS ---- */
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
 }
 
 .card {
   position: relative;
-  padding: 1rem;
-  border-top: 4px solid #333;
-  border-radius: 8px;
-  background: #fff;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 1.2rem;
+  border-radius: 10px;
+  background: #f7f7f7;
 }
 
 .card h2 {
-  margin: 0 2rem 0.5rem 0;
-  font-size: 1.1rem;
+  margin: 0 2rem 0.4rem 0;
+  font-size: 15px;
+  font-weight: 500;
 }
 
 .card p {
-  margin: 0.25rem 0;
-  color: #555;
+  margin: 0.2rem 0;
+  font-size: 12px;
+  color: #4f4e4e;
 }
 
 .card .card-club {
-  font-weight: bold;
-  color: #222;
+  font-size: 14px;
+  font-weight: 600;
+  color: #08567a;
 }
 
 .card-numero {
   position: absolute;
-  top: 0.8rem;
-  right: 0.8rem;
-  font-weight: bold;
-  color: #999;
+  top: 1rem;
+  right: 1rem;
+  font-size: 12px;
+  font-weight: 600;
+  color: #969595;
+}
+
+/* mensajes de ok y de error */
+.ok,
+.error {
+  padding: 0.6rem 0.8rem;
+  border-radius: 5px;
+  font-size: 13px;
+}
+
+.ok {
+  background: #40b5ad40;
+  color: #309e96;
 }
 
 .error {
-  color: #c00;
-  font-weight: bold;
+  background: #f8d7da;
+  color: #dc3545;
+}
+
+.pie {
+  margin-top: auto;
+  padding: 2rem;
+  background: #000;
+  color: #969595;
+  text-align: center;
+  font-size: 13px;
 }

@@ -56,7 +56,7 @@ async function mostrarJugadores() {
     mensaje.textContent = `${jugadores.length} jugadores cargados`
   } catch (error) {
     mensaje.textContent = error.message
-    mensaje.classList.add('error')
+    mensaje.classList.replace('ok', 'error')
     console.error(error)
   }
 }

@@ -2,6 +2,78 @@
   "jugadores": [
     {
       "id_jugador": 1,
+      "nombre": "Thiago",
+      "apellido": "Cardozo",
+      "club": "Belgrano",
+      "posicion": "Arquero",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 2,
+      "nombre": "Lisandro",
+      "apellido": "López",
+      "club": "Belgrano",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 3,
+      "nombre": "Alexis",
+      "apellido": "Maldonado",
+      "club": "Belgrano",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 4,
+      "nombre": "Santiago",
+      "apellido": "Longo",
+      "club": "Belgrano",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 5,
+      "nombre": "Franco",
+      "apellido": "Vázquez",
+      "club": "Belgrano",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 6,
+      "nombre": "Lucas",
+      "apellido": "Zelarayán",
+      "club": "Belgrano",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 7,
+      "nombre": "Emiliano",
+      "apellido": "Rigoni",
+      "club": "Belgrano",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 8,
+      "nombre": "Bryan",
+      "apellido": "Reyna",
+      "club": "Belgrano",
+      "posicion": "Delantero",
+      "nacionalidad": "Perú"
+    },
+    {
+      "id_jugador": 9,
+      "nombre": "Lucas",
+      "apellido": "Passerini",
+      "club": "Belgrano",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 10,
       "nombre": "Ángel",
       "apellido": "Di María",
       "club": "Rosario Central",
@@ -9,7 +81,7 @@
       "nacionalidad": "Argentina"
     },
     {
-      "id_jugador": 2,
+      "id_jugador": 11,
       "nombre": "Edinson",
       "apellido": "Cavani",
       "club": "Boca Juniors",
@@ -17,7 +89,7 @@
       "nacionalidad": "Uruguay"
     },
     {
-      "id_jugador": 3,
+      "id_jugador": 12,
       "nombre": "Leandro",
       "apellido": "Paredes",
       "club": "Boca Juniors",
@@ -25,7 +97,7 @@
       "nacionalidad": "Argentina"
     },
     {
-      "id_jugador": 4,
+      "id_jugador": 13,
       "nombre": "Sergio",
       "apellido": "Romero",
       "club": "Boca Juniors",
@@ -33,7 +105,7 @@
       "nacionalidad": "Argentina"
     },
     {
-      "id_jugador": 5,
+      "id_jugador": 14,
       "nombre": "Franco",
       "apellido": "Armani",
       "club": "River Plate",
@@ -41,7 +113,7 @@
       "nacionalidad": "Argentina"
     },
     {
-      "id_jugador": 6,
+      "id_jugador": 15,
       "nombre": "Gonzalo",
       "apellido": "Montiel",
       "club": "River Plate",
@@ -49,7 +121,7 @@
       "nacionalidad": "Argentina"
     },
     {
-      "id_jugador": 7,
+      "id_jugador": 16,
       "nombre": "Marcos",
       "apellido": "Acuña",
       "club": "River Plate",
@@ -57,7 +129,7 @@
       "nacionalidad": "Argentina"
     },
     {
-      "id_jugador": 8,
+      "id_jugador": 17,
       "nombre": "Juan Fernando",
       "apellido": "Quintero",
       "club": "River Plate",
@@ -65,7 +137,7 @@
       "nacionalidad": "Colombia"
     },
     {
-      "id_jugador": 9,
+      "id_jugador": 18,
       "nombre": "Sebastián",
       "apellido": "Driussi",
       "club": "River Plate",
@@ -73,7 +145,7 @@
       "nacionalidad": "Argentina"
     },
     {
-      "id_jugador": 10,
+      "id_jugador": 19,
       "nombre": "Miguel",
       "apellido": "Borja",
       "club": "River Plate",
@@ -81,7 +153,7 @@
       "nacionalidad": "Colombia"
     },
     {
-      "id_jugador": 11,
+      "id_jugador": 20,
       "nombre": "Adrián",
       "apellido": "Martínez",
       "club": "Racing Club",
@@ -89,7 +161,7 @@
       "nacionalidad": "Argentina"
     },
     {
-      "id_jugador": 12,
+      "id_jugador": 21,
       "nombre": "Marcos",
       "apellido": "Rojo",
       "club": "Racing Club",
@@ -97,7 +169,7 @@
       "nacionalidad": "Argentina"
     },
     {
-      "id_jugador": 13,
+      "id_jugador": 22,
       "nombre": "Santiago",
       "apellido": "Sosa",
       "club": "Racing Club",
@@ -105,7 +177,7 @@
       "nacionalidad": "Argentina"
     },
     {
-      "id_jugador": 14,
+      "id_jugador": 23,
       "nombre": "Fernando",
       "apellido": "Muslera",
       "club": "Estudiantes de La Plata",
@@ -113,7 +185,7 @@
       "nacionalidad": "Uruguay"
     },
     {
-      "id_jugador": 15,
+      "id_jugador": 24,
       "nombre": "José",
       "apellido": "Sosa",
       "club": "Estudiantes de La Plata",
@@ -121,7 +193,7 @@
       "nacionalidad": "Argentina"
     },
     {
-      "id_jugador": 16,
+      "id_jugador": 25,
       "nombre": "Guido",
       "apellido": "Carrillo",
       "club": "Estudiantes de La Plata",
@@ -129,7 +201,7 @@
       "nacionalidad": "Argentina"
     },
     {
-      "id_jugador": 17,
+      "id_jugador": 26,
       "nombre": "Ignacio",
       "apellido": "Malcorra",
       "club": "Rosario Central",
@@ -137,7 +209,7 @@
       "nacionalidad": "Argentina"
     },
     {
-      "id_jugador": 18,
+      "id_jugador": 27,
       "nombre": "Rodrigo",
       "apellido": "Rey",
       "club": "Independiente",
@@ -145,7 +217,7 @@
       "nacionalidad": "Argentina"
     },
     {
-      "id_jugador": 19,
+      "id_jugador": 28,
       "nombre": "Gabriel",
       "apellido": "Ávalos",
       "club": "Independiente",
@@ -153,7 +225,7 @@
       "nacionalidad": "Paraguay"
     },
     {
-      "id_jugador": 20,
+      "id_jugador": 29,
       "nombre": "Walter",
       "apellido": "Bou",
       "club": "Lanús",

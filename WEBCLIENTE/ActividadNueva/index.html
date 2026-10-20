@@ -4,11 +4,12 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jugadores</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <title>Martinete Fútbol</title>
   </head>
   <body>
     <header class="cabecera">
-      <h1>Jugadores de la Liga Profesional</h1>
+      <h1 class="logo">Martinete <span>Fútbol</span></h1>
 
       <!-- Switch para pasar de LISTA a CARDS -->
       <button id="btnVista" class="switch" type="button">
@@ -17,23 +18,30 @@
       </button>
     </header>
 
-    <p id="mensaje">Cargando jugadores...</p>
+    <main class="contenido">
+      <h2>Jugadores de la Liga Profesional</h2>
+      <p id="mensaje" class="ok">Cargando jugadores...</p>
 
-    <table id="tablaJugadores">
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>Nombre</th>
-          <th>Apellido</th>
-          <th>Club</th>
-          <th>Posición</th>
-          <th>Nacionalidad</th>
-        </tr>
-      </thead>
-      <tbody id="cuerpoTabla"></tbody>
-    </table>
+      <table id="tablaJugadores">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Club</th>
+            <th>Posición</th>
+            <th>Nacionalidad</th>
+          </tr>
+        </thead>
+        <tbody id="cuerpoTabla"></tbody>
+      </table>
 
-    <div id="contenedorCards" class="cards" hidden></div>
+      <div id="contenedorCards" class="cards" hidden></div>
+    </main>
+
+    <footer class="pie">
+      <p>Martinete daw2 &middot; Desarrollo web en entorno cliente</p>
+    </footer>
 
     <script type="module" src="/src/main.js"></script>
   </body>
