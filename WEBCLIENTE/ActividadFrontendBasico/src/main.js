@@ -47,17 +47,37 @@ function mostrarCards(jugadores) {
   });
 }
 
-// muestra la tabla o las cards según el botón que se tocó,
-// con la pelota picando un ratito en el medio
-function cambiarVista(vista) {
+// guarda la vista en una cookie por 30 días para que no se pierda al refrescar
+function guardarVista(vista) {
+  document.cookie = "vista=" + vista + "; max-age=" + 60 * 60 * 24 * 30 + "; path=/";
+}
+
+// busca la cookie de la vista, si no hay arranca en lista
+function leerVista() {
+  const cookies = document.cookie.split("; ");
+  const cookieVista = cookies.find((cookie) => cookie.startsWith("vista="));
+  if (cookieVista) {
+    return cookieVista.split("=")[1];
+  }
+  return "lista";
+}
+
+// muestra la tabla o las cards y marca el botón activo
+function mostrarVista(vista) {
   botonLista.classList.toggle("activa", vista === "lista");
   botonCards.classList.toggle("activa", vista === "cards");
+  tabla.hidden = vista !== "lista";
+  cards.hidden = vista !== "cards";
+}
+
+// al tocar un botón: guarda la cookie y la pelota pica un ratito antes de cambiar
+function cambiarVista(vista) {
+  guardarVista(vista);
   cargando.hidden = false;
 
   setTimeout(() => {
     cargando.hidden = true;
-    tabla.hidden = vista !== "lista";
-    cards.hidden = vista !== "cards";
+    mostrarVista(vista);
   }, 1200);
 }
 
@@ -76,4 +96,6 @@ async function mostrarJugadores() {
 botonLista.addEventListener("click", () => cambiarVista("lista"));
 botonCards.addEventListener("click", () => cambiarVista("cards"));
 
+// al entrar arranca en la vista que quedó guardada en la cookie
+mostrarVista(leerVista());
 mostrarJugadores();
