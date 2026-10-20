@@ -100,10 +100,6 @@ th {
   font-weight: 500;
 }
 
-tbody tr:hover {
-  background: #f7f7f7;
-}
-
 /* ---- cards ---- */
 
 .cards {
@@ -113,7 +109,6 @@ tbody tr:hover {
 }
 
 .card {
-  position: relative;
   padding: 1.2rem;
   border-radius: 10px;
   background: #f7f7f7;
@@ -135,16 +130,6 @@ tbody tr:hover {
   font-size: 14px;
   font-weight: 600;
   color: #08567a;
-}
-
-/* el número arriba a la derecha de la card */
-.numero {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  font-size: 12px;
-  font-weight: 600;
-  color: #969595;
 }
 
 /* ---- spinner: pelota que pica ---- */
@@ -183,13 +168,13 @@ tbody tr:hover {
   color: #08567a;
 }
 
-/* la pelota sube girando y vuelve a bajar */
+/* la pelota sube y vuelve a bajar */
 @keyframes picar {
   from {
-    transform: translateY(0) rotate(0deg);
+    transform: translateY(0);
   }
   to {
-    transform: translateY(-150px) rotate(180deg);
+    transform: translateY(-150px);
   }
 }
 

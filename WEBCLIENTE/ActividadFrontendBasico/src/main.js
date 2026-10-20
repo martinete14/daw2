@@ -39,7 +39,6 @@ function mostrarCards(jugadores) {
     const card = document.createElement("div");
     card.className = "card";
     card.innerHTML = `
-      <span class="numero">${jugador.id_jugador}</span>
       <h3>${jugador.nombre} ${jugador.apellido}</h3>
       <p class="club">${jugador.club}</p>
       <p>${jugador.posicion} · ${jugador.nacionalidad}</p>
@@ -53,8 +52,6 @@ function mostrarCards(jugadores) {
 function cambiarVista(vista) {
   botonLista.classList.toggle("activa", vista === "lista");
   botonCards.classList.toggle("activa", vista === "cards");
-  tabla.hidden = true;
-  cards.hidden = true;
   cargando.hidden = false;
 
   setTimeout(() => {
