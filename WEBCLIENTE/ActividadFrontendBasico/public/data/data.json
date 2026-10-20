@@ -1,0 +1,300 @@
+{
+  "jugadores": [
+    {
+      "id_jugador": 1,
+      "nombre": "Thiago",
+      "apellido": "Cardozo",
+      "club": "Belgrano",
+      "posicion": "Arquero",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 2,
+      "nombre": "Agustín",
+      "apellido": "Falcón",
+      "club": "Belgrano",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 3,
+      "nombre": "Leonardo",
+      "apellido": "Morales",
+      "club": "Belgrano",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 4,
+      "nombre": "Alexis",
+      "apellido": "Maldonado",
+      "club": "Belgrano",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 5,
+      "nombre": "Adrián",
+      "apellido": "Spörle",
+      "club": "Belgrano",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 6,
+      "nombre": "Lisandro",
+      "apellido": "López",
+      "club": "Belgrano",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 7,
+      "nombre": "Federico",
+      "apellido": "Ricca",
+      "club": "Belgrano",
+      "posicion": "Defensor",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 8,
+      "nombre": "Santiago",
+      "apellido": "Longo",
+      "club": "Belgrano",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 9,
+      "nombre": "Adrián",
+      "apellido": "Sánchez",
+      "club": "Belgrano",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 10,
+      "nombre": "Lucas",
+      "apellido": "Zelarayán",
+      "club": "Belgrano",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Armenia"
+    },
+    {
+      "id_jugador": 11,
+      "nombre": "Emiliano",
+      "apellido": "Rigoni",
+      "club": "Belgrano",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 12,
+      "nombre": "Francisco",
+      "apellido": "González Metilli",
+      "club": "Belgrano",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 13,
+      "nombre": "Juan",
+      "apellido": "Velázquez",
+      "club": "Belgrano",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 14,
+      "nombre": "Lucas",
+      "apellido": "Passerini",
+      "club": "Belgrano",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 15,
+      "nombre": "Nicolás",
+      "apellido": "Fernández",
+      "club": "Belgrano",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 16,
+      "nombre": "Agustín",
+      "apellido": "Marchesín",
+      "club": "Boca Juniors",
+      "posicion": "Arquero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 17,
+      "nombre": "Ayrton",
+      "apellido": "Costa",
+      "club": "Boca Juniors",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 18,
+      "nombre": "Leandro",
+      "apellido": "Paredes",
+      "club": "Boca Juniors",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 19,
+      "nombre": "Miguel",
+      "apellido": "Merentiel",
+      "club": "Boca Juniors",
+      "posicion": "Delantero",
+      "nacionalidad": "Uruguay"
+    },
+    {
+      "id_jugador": 20,
+      "nombre": "Enner",
+      "apellido": "Valencia",
+      "club": "Boca Juniors",
+      "posicion": "Delantero",
+      "nacionalidad": "Ecuador"
+    },
+    {
+      "id_jugador": 21,
+      "nombre": "Santiago",
+      "apellido": "Beltrán",
+      "club": "River Plate",
+      "posicion": "Arquero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 22,
+      "nombre": "Nicolás",
+      "apellido": "Otamendi",
+      "club": "River Plate",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 23,
+      "nombre": "Gonzalo",
+      "apellido": "Montiel",
+      "club": "River Plate",
+      "posicion": "Defensor",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 24,
+      "nombre": "Thiago",
+      "apellido": "Almada",
+      "club": "River Plate",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 25,
+      "nombre": "Sebastián",
+      "apellido": "Driussi",
+      "club": "River Plate",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 26,
+      "nombre": "Ángel",
+      "apellido": "Correa",
+      "club": "River Plate",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 27,
+      "nombre": "Facundo",
+      "apellido": "Cambeses",
+      "club": "Racing Club",
+      "posicion": "Arquero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 28,
+      "nombre": "Matías",
+      "apellido": "Zaracho",
+      "club": "Racing Club",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 29,
+      "nombre": "Valentín",
+      "apellido": "Carboni",
+      "club": "Racing Club",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 30,
+      "nombre": "Adrián",
+      "apellido": "Martínez",
+      "club": "Racing Club",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 31,
+      "nombre": "Jeremías",
+      "apellido": "Ledesma",
+      "club": "Rosario Central",
+      "posicion": "Arquero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 32,
+      "nombre": "Ángel",
+      "apellido": "Di María",
+      "club": "Rosario Central",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 33,
+      "nombre": "Franco",
+      "apellido": "Cervi",
+      "club": "Rosario Central",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 34,
+      "nombre": "Enzo",
+      "apellido": "Copetti",
+      "club": "Rosario Central",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 35,
+      "nombre": "Rodrigo",
+      "apellido": "Rey",
+      "club": "Independiente",
+      "posicion": "Arquero",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 36,
+      "nombre": "Iván",
+      "apellido": "Marcone",
+      "club": "Independiente",
+      "posicion": "Mediocampista",
+      "nacionalidad": "Argentina"
+    },
+    {
+      "id_jugador": 37,
+      "nombre": "Ezequiel",
+      "apellido": "Ávila",
+      "club": "Independiente",
+      "posicion": "Delantero",
+      "nacionalidad": "Argentina"
+    }
+  ]
+}
