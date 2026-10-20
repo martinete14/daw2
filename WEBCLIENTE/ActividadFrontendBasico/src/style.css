@@ -147,6 +147,53 @@ tbody tr:hover {
   color: #969595;
 }
 
+/* ---- spinner: pelota que pica ---- */
+
+.cargando {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 0;
+}
+
+.pelota {
+  font-size: 3rem;
+  animation: picar 0.6s infinite alternate;
+}
+
+.sombra {
+  width: 50px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ccc;
+  animation: sombra 0.6s infinite alternate;
+}
+
+.cargando p {
+  font-size: 13px;
+  color: #4f4e4e;
+}
+
+/* la pelota sube girando y vuelve a bajar */
+@keyframes picar {
+  from {
+    transform: translateY(0) rotate(0deg);
+  }
+  to {
+    transform: translateY(-60px) rotate(180deg);
+  }
+}
+
+/* cuando la pelota está arriba la sombra se achica */
+@keyframes sombra {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.4);
+  }
+}
+
 /* mensajes de ok y de error */
 .ok,
 .error {

@@ -6,6 +6,7 @@ const cards = document.getElementById("cards");
 const mensaje = document.getElementById("mensaje");
 const botonLista = document.getElementById("vista-lista");
 const botonCards = document.getElementById("vista-cards");
+const cargando = document.getElementById("cargando");
 
 // trae los jugadores del json que está en public/data
 async function obtenerJugadores() {
@@ -47,12 +48,20 @@ function mostrarCards(jugadores) {
   });
 }
 
-// muestra la tabla o las cards según el botón que se tocó
+// muestra la tabla o las cards según el botón que se tocó,
+// con la pelota picando un ratito en el medio
 function cambiarVista(vista) {
   botonLista.classList.toggle("activa", vista === "lista");
   botonCards.classList.toggle("activa", vista === "cards");
-  tabla.hidden = vista !== "lista";
-  cards.hidden = vista !== "cards";
+  tabla.hidden = true;
+  cards.hidden = true;
+  cargando.hidden = false;
+
+  setTimeout(() => {
+    cargando.hidden = true;
+    tabla.hidden = vista !== "lista";
+    cards.hidden = vista !== "cards";
+  }, 1200);
 }
 
 async function mostrarJugadores() {
