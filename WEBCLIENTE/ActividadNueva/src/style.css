@@ -6,8 +6,62 @@ body {
   color: #222;
 }
 
+[hidden] {
+  display: none !important;
+}
+
+.cabecera {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
 h1 {
-  margin-top: 0;
+  margin: 0;
+}
+
+/* Switch LISTA / CARDS: la "bolita" blanca se desliza al lado activo */
+.switch {
+  position: relative;
+  display: inline-flex;
+  padding: 4px;
+  border: none;
+  border-radius: 999px;
+  background: #333;
+  cursor: pointer;
+}
+
+.switch::before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: calc(50% - 4px);
+  height: calc(100% - 8px);
+  border-radius: 999px;
+  background: #fff;
+  transition: transform 0.3s;
+}
+
+.switch.activo::before {
+  transform: translateX(100%);
+}
+
+.switch span {
+  position: relative;
+  width: 4.5rem;
+  padding: 0.4rem 0;
+  font-weight: bold;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+/* El texto que queda arriba de la bolita va oscuro */
+.switch:not(.activo) span:first-child,
+.switch.activo span:last-child {
+  color: #333;
 }
 
 table {
@@ -30,6 +84,44 @@ th {
 
 tbody tr:nth-child(even) {
   background: #f0f0f0;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  position: relative;
+  padding: 1rem;
+  border-top: 4px solid #333;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+  margin: 0 2rem 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.card p {
+  margin: 0.25rem 0;
+  color: #555;
+}
+
+.card .card-club {
+  font-weight: bold;
+  color: #222;
+}
+
+.card-numero {
+  position: absolute;
+  top: 0.8rem;
+  right: 0.8rem;
+  font-weight: bold;
+  color: #999;
 }
 
 .error {

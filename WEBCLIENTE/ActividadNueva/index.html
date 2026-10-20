@@ -4,26 +4,36 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Clientes</title>
+    <title>Jugadores</title>
   </head>
   <body>
-    <h1>Clientes</h1>
+    <header class="cabecera">
+      <h1>Jugadores de la Liga Profesional</h1>
 
-    <p id="mensaje">Cargando clientes...</p>
+      <!-- Switch para pasar de LISTA a CARDS -->
+      <button id="btnVista" class="switch" type="button">
+        <span>LISTA</span>
+        <span>CARDS</span>
+      </button>
+    </header>
 
-    <table id="tablaClientes">
+    <p id="mensaje">Cargando jugadores...</p>
+
+    <table id="tablaJugadores">
       <thead>
         <tr>
-          <th>ID</th>
+          <th>#</th>
           <th>Nombre</th>
           <th>Apellido</th>
-          <th>Correo</th>
-          <th>Teléfono</th>
-          <th>Dirección</th>
+          <th>Club</th>
+          <th>Posición</th>
+          <th>Nacionalidad</th>
         </tr>
       </thead>
       <tbody id="cuerpoTabla"></tbody>
     </table>
+
+    <div id="contenedorCards" class="cards" hidden></div>
 
     <script type="module" src="/src/main.js"></script>
   </body>
