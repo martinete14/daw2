@@ -3,7 +3,7 @@ import "./style.css";
 const tabla = document.getElementById("tabla-jugadores");
 const cuerpoTabla = document.getElementById("cuerpo-tabla");
 const cards = document.getElementById("cards");
-const mensaje = document.getElementById("mensaje");
+const error = document.getElementById("error");
 const botonLista = document.getElementById("vista-lista");
 const botonCards = document.getElementById("vista-cards");
 const cargando = document.getElementById("cargando");
@@ -86,10 +86,8 @@ async function mostrarJugadores() {
     const jugadores = await obtenerJugadores();
     mostrarLista(jugadores);
     mostrarCards(jugadores);
-    mensaje.textContent = jugadores.length + " jugadores cargados";
   } catch (e) {
-    mensaje.textContent = "No se pudieron cargar los jugadores.";
-    mensaje.className = "error";
+    error.hidden = false;
   }
 }
 

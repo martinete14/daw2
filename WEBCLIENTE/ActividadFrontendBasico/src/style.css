@@ -157,20 +157,11 @@ th {
   }
 }
 
-/* mensajes de ok y de error */
-.ok,
+/* aviso si no se pudo leer el json */
 .error {
   padding: 0.6rem 0.8rem;
   border-radius: 5px;
   font-size: 13px;
-}
-
-.ok {
-  background: #40b5ad40;
-  color: #309e96;
-}
-
-.error {
   background: #f8d7da;
   color: #dc3545;
 }
