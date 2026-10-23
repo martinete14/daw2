@@ -38,7 +38,7 @@
     <title>Iniciar sesión</title>
     <link rel="stylesheet" href="estilo.css">
 </head>
-<body>
+<body class="acceso">
     <div class="card">
         <h1>Iniciar sesión</h1>
         <?php if ($error !== ''): ?>

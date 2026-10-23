@@ -12,7 +12,7 @@
     <title>Calculadora</title>
     <link rel="stylesheet" href="estilo.css">
 </head>
-<body>
+<body class="autenticada">
     <div class="card">
         <h1>Calculadora</h1>
         <p class="sesion">Sesión: <?php echo htmlspecialchars($_SESSION['usuario']); ?></p>

@@ -1,7 +1,7 @@
 <?php
-    $cadena_conexion = 'mysql:dbname=microservicios;host=127.0.0.1;port=3307';
+    $cadena_conexion = 'mysql:dbname=microservicios;host=127.0.0.1;port=3306';
     $usuario = 'root';
-    $clave = 'root';
+    $clave = '';
     try {
         $bd = new PDO($cadena_conexion, $usuario, $clave);
     }

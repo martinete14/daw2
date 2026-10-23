@@ -49,7 +49,7 @@
     <title>Confirmar contraseña</title>
     <link rel="stylesheet" href="estilo.css">
 </head>
-<body>
+<body class="acceso">
     <div class="card">
         <h1>Confirmar contraseña</h1>
         <?php if ($error !== ''): ?>

@@ -5,7 +5,7 @@
     <title>Alta de usuario</title>
     <link rel="stylesheet" href="estilo.css">
 </head>
-<body>
+<body class="acceso">
     <div class="card">
         <h1>Crear cuenta</h1>
         <form action="confirmar.php" method="post">

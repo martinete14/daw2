@@ -22,7 +22,7 @@
     <title>Historial</title>
     <link rel="stylesheet" href="estilo.css">
 </head>
-<body>
+<body class="autenticada">
     <div class="card">
         <h1>Historial</h1>
         <p class="sesion">Sesión: <?php echo htmlspecialchars($_SESSION['usuario']); ?></p>

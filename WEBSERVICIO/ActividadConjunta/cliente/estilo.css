@@ -11,6 +11,20 @@ body {
     display: flex;
     justify-content: center;
 }
+body.autenticada,
+body.acceso {
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+body.autenticada {
+    background-image: url('img/fondo_actividad_conjunta_daw.jpg');
+}
+body.acceso {
+    background-image: url('img/fondo_acceso.png');
+}
 .card {
     width: 100%;
     max-width: 400px;

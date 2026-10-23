@@ -60,7 +60,7 @@
     <title>Resultado</title>
     <link rel="stylesheet" href="estilo.css">
 </head>
-<body>
+<body class="autenticada">
     <div class="card">
         <h1>Resultado de <?php echo htmlspecialchars($accion); ?></h1>
         <p class="resultado"><?php echo htmlspecialchars($respuestaCalculo['resultado']); ?></p>
