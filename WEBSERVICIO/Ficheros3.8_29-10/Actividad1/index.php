@@ -1,4 +1,8 @@
 <?php
+// ActividadColorFondo
+// Ejercicio propuesto 1 del tema 3: formulario para elegir el color de fondo,
+// la elección se guarda en una cookie y la próxima vez la página sale con ese color
+
 // setcookie() tiene que ir antes de cualquier echo o HTML,
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // el color elegido se guarda en cookie por 30 días

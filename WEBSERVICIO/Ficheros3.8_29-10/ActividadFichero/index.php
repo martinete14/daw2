@@ -1,3 +1,7 @@
+<?php
+// ActividadFichero
+// Primera actividad de la 3.8 Ficheros: un link a cada ejemplo del libro para probar las funciones
+?>
 <!DOCTYPE html>
 <html>
 <head>

@@ -1,4 +1,7 @@
 <?php
+// ActividadFichero
+// Ejemplo de la 3.8: leer matriz.txt con fscanf() de las dos maneras, con rewind() en el medio
+
 $fich = fopen("matriz.txt", "r");
 if ($fich === FALSE) {
     echo "No se encuentra el fichero o no se pudo leer<br>";

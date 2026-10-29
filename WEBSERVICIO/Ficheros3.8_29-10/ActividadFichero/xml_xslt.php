@@ -1,4 +1,7 @@
 <?php
+// ActividadFichero
+// Ejemplo de la 3.8.1: mostrar empleados.xml como tabla HTML con la transformación departamento.xslt
+
 // cargar el fichero a transformar
 $dept = new DOMDocument();
 $dept->load("empleados.xml");

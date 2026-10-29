@@ -1,4 +1,7 @@
 <?php
+// ActividadFichero
+// Ejemplo de la 3.8: fopen() con un fichero que existe y otro que no
+
 // fopen() devuelve FALSE si no puede abrir el fichero,
 // si no, devuelve el puntero para manejarlo
 $fich = fopen("fichero_ejemplo.txt", "r");
