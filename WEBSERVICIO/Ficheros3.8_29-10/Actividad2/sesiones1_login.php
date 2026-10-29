@@ -8,13 +8,13 @@ si va bien abre sesión, guarda el nombre de usuario y el rol y redirige a princ
 si va mal, mensaje de error */
 function comprobar_usuario($nombre, $clave){
     if($nombre === "usuario" and $clave === "1234"){
-        $usu['nombre'] = "usuario";
-        $usu['rol'] = 0;
-        return $usu;
+        $usuario['nombre'] = "usuario";
+        $usuario['rol'] = 0;
+        return $usuario;
     }elseif($nombre === "admin" and $clave === "1234"){
-        $usu['nombre'] = "admin";
-        $usu['rol'] = 1;
-        return $usu;
+        $usuario['nombre'] = "admin";
+        $usuario['rol'] = 1;
+        return $usuario;
     }else return FALSE;
 }
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
