@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<departamento nombre="Marketing" jefeDep="e101">
+    <empleado codEmple="e101">
+        <nombre>Ana</nombre>
+        <apellidos>Frutos Jarama</apellidos>
+        <edad>28</edad>
+        <carnetConducir/>
+    </empleado>
+    <empleado codEmple="e102">
+        <nombre>Antonio</nombre>
+        <apellidos>Miguel Bustos</apellidos>
+        <edad>23</edad>
+    </empleado>
+</departamento>

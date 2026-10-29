@@ -83,10 +83,50 @@ Si me preguntan:
 - **¿Qué es `time() + 3600 * 24 * 30`?** La fecha en la que caduca. `time()` es ahora en segundos, y le sumo 30 días (3600 segundos por hora, por 24 horas, por 30 días).
 - **¿Cómo la borro?** Con `setcookie("color", "", time() - 3600 * 24)`: una fecha que ya pasó. También se puede borrar desde el navegador.
 
+## ActividadFichero · Probar las funciones de la sección 3.8 Ficheros
+
+Páginas 86 a 92 del libro (la 43 a la 46 del PDF). Para arrancar con ficheros: un script por cada ejemplo del libro, con los mismos ficheros de prueba. `index.php` tiene un link a cada uno.
+
+Ficheros de prueba:
+- `fichero_ejemplo.txt`: dos líneas de texto.
+- `matriz.txt`: la matriz de 4 filas y 4 columnas del libro, 4 números por línea separados por espacios.
+- `empleados.xml`: un departamento (Marketing) con dos empleados, Ana y Antonio.
+- `departamento.xsd`: el esquema para validar `empleados.xml`.
+- `departamento.xslt`: la transformación que convierte el XML en una tabla HTML.
+
+### Ficheros de texto
+
+- `ficheros_fopen.php`: `fopen($ruta, "r")` abre un fichero que existe y uno que no. Si no puede abrirlo devuelve `FALSE`, y por eso se compara con `=== FALSE`. Con el que no existe, PHP además muestra un Warning; según el libro, en producción no se mostraría.
+- `ficheros_fgetc.php`: lee carácter a carácter con `fgetc()` dentro de `while (!feof($fich))`. `feof()` da TRUE al llegar al final. Al terminar, `fclose()`. En el navegador las dos líneas salen juntas, porque el salto de línea del fichero no es un `<br>`.
+- `ficheros_fscanf.php`: lee `matriz.txt` con el formato `"%d %d %d %d"` de las dos maneras del libro:
+  1. `$num = fscanf($fich, "%d %d %d %d")` devuelve un array con los 4 números.
+  2. `fscanf($fich, "%d %d %d %d", $num1, $num2, $num3, $num4)` guarda los números en las variables.
+  
+  Entre las dos vueltas, `rewind($fich)` vuelve el indicador de posición al principio.
+- `ficheros_contents.php`: `file_get_contents()` devuelve todo el fichero en una cadena y `file_put_contents()` escribe en `fichero_salida.txt`, que lo crea si no existe. No hace falta `fopen()` ni `fclose()`.
+
+Modos de apertura (cuadro 3.1): `r` solo lectura; `r+` lectura y escritura (los dos devuelven FALSE si el fichero no existe); `w` y `w+` lo crean si no existe y, si existe, lo vacían; `a` y `a+` escriben siempre al final.
+
+Otras funciones del cuadro 3.2: `fgets`, `fputs`, `fwrite`, `fread`, `fseek`, `ftell`, `copy`, `unlink` (borrar), `rename`, `filesize`, `is_file`, `is_dir`.
+
+### 3.8.1 Ficheros XML
+
+- `xml_leer.php`: `simplexml_load_file()` devuelve un objeto `SimpleXMLElement`. Recorrido con `foreach`, da los hijos del raíz (cada `<empleado>`), y `print_r` los muestra.
+- `xml_xpath.php`: `$datos->xpath("//edad")` se queda solo con los elementos `<edad>`.
+- `xml_validar.php`: `DOMDocument` + `schemaValidate("departamento.xsd")` dice si el XML cumple el esquema.
+- `xml_xslt.php`: carga el XML y la transformación con `DOMDocument`, crea un `XSLTProcessor`, lo asocia con `importStylesheet()` y transforma con `transformToXml()`. Sale la tabla con nombre, apellidos y edad.
+
+Si me preguntan:
+- **¿Por qué `=== FALSE` y no `== FALSE`?** `===` compara también el tipo. Así es seguro que `fopen()` falló y no que devolvió algo que PHP considera falso.
+- **¿Para qué el `fclose()`?** Para cerrar el fichero cuando termino de usarlo y liberarlo.
+- **¿Qué diferencia hay entre `w` y `a`?** `w` borra lo que había y escribe desde el principio; `a` mantiene lo que había y escribe al final.
+- **¿Qué hace `rewind()`?** Vuelve el indicador de posición al principio del fichero, para leerlo de nuevo sin cerrarlo y abrirlo otra vez.
+
 ## Cómo los probé
 
 Con XAMPP prendido (Apache y MySQL), entrando por `http://localhost/daw2/WEBSERVICIO/...`.
 
 - Actividad09-10: sin logearme, `compra.php` me manda al inicio. Logeado, me muestra los segundos que quedan. Pasado el tiempo, me manda al inicio y me sale el formulario de nuevo.
 - Actividad 3.4: código `1` (Riquelme), `5` (Messi), `50` (no existe) y `abc` (error, no es un número).
+- ActividadFichero: cada link del `index.php`. `ficheros_fopen.php` tiene que mostrar el Warning del fichero que no existe, y `xml_validar.php` tiene que decir "El fichero es válido".
 - ActividadColorFondo: la primera vez sale blanco. Elijo celeste, cierro la pestaña y vuelvo a entrar: sigue celeste. La cookie `color` se ve en las herramientas del navegador (F12 → Aplicación → Cookies).

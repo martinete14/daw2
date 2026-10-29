@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:element name="departamento">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="empleado" maxOccurs="unbounded"/>
+            </xs:sequence>
+            <xs:attribute name="jefeDep" type="xs:string" use="required"/>
+            <xs:attribute name="nombre" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="empleado">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nombre" type="xs:string"/>
+                <xs:element name="apellidos" type="xs:string"/>
+                <xs:element name="edad" type="xs:string"/>
+                <xs:element name="carnetConducir" minOccurs="0" type="xs:string"/>
+            </xs:sequence>
+            <xs:attribute name="codEmple" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
