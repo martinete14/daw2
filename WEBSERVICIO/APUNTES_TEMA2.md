@@ -68,7 +68,7 @@ Si me preguntan:
 
 Con XAMPP prendido: `http://localhost/...` apuntando a la carpeta de cada actividad. Casos que probé en el 2 y el 3: `1, -5, 6` (dos raíces: 3 y 2), `1, 2, 1` (raíz doble: -1), `1, 0, 1` (sin soluciones reales), `0, 2, 3` (error por A = 0).
 
-## Ejercicio EXTRA · FicheroEjercicioEXTRA (carpeta `ActividadFichero`)
+## Ejercicio EXTRA · FicheroEjercicioEXTRA (carpeta `ActividadFicheroOld`)
 
 El que puso Fran en 3 fases: **FICHERO / FORM / CÁLCULO**.
 
