@@ -157,15 +157,38 @@ Hecho como el ejemplo de la 3.6.2 Recuperación y presentación de datos (págin
 
 1. Arriba, los datos de conexión como en el libro: `$cadena_conexion`, `$usuario` y `$clave`.
 2. Dentro de un `try`, se conecta con `new PDO(...)` y hace `SELECT codigo, nombre, clave, rol FROM usuarios` con `$bd->query()`.
-3. Muestra cuántos usuarios hay con `rowCount()`, igual que el libro.
-4. Arma una `<table>` con la cabecera (Código, Nombre, Clave, Rol) y recorre el resultado con `foreach`: cada vuelta es una fila `<tr>` con un `<td>` por columna.
-5. En el `catch (PDOException $e)` muestra "Error con la base de datos" y el mensaje. Por ejemplo, si MySQL está apagado.
+3. Arma una `<table border="3">` con la cabecera (Código y Nombre) y recorre el resultado con `foreach`: cada vuelta es una fila `<tr>` con un `<td>` por columna.
+4. En el `catch (PDOException $e)` muestra "Error con la base de datos" y el mensaje. Por ejemplo, si MySQL está apagado.
 
 Si me preguntan:
 - **¿Qué devuelve `query()`?** Un objeto `PDOStatement` con el resultado, o `FALSE` si hubo un error. Se puede recorrer con `foreach` como si fuera un array.
 - **¿Qué es `$row` en el `foreach`?** Una fila de la tabla, como un array cuyas claves son las columnas del `SELECT` (`$row['nombre']`, `$row['rol']`...).
 - **¿Por qué pongo las columnas en el `SELECT` y no `*`?** Como el libro, así se ve en el código qué columnas trae y con qué claves se leen después. Con `*` funcionaría igual.
 - **¿Por qué el `try` / `catch`?** Si no se puede conectar, `new PDO` lanza una `PDOException`. Con el `catch` se muestra el error en vez de que la página se rompa.
+
+Lo simplifiqué: en la tabla quedan solo el código y el nombre (la clave y el rol no hace falta mostrarlos) y saqué el "Usuarios: 10" del `rowCount()`.
+
+### Actividad4 · ActividadInsertarUsuario
+
+Ejercicio propuesto 4 del tema 3 (página 96 del libro, la 48 del PDF): "Confecciona un formulario para insertar usuarios en la tabla Usuarios."
+
+Hecho con el insert de la 3.6.3 Inserción, borrado y actualización (página 80) y la sentencia preparada de la 3.6.2 (página 80). Es un solo archivo, `index.php`, con el formulario arriba y la tabla de la Actividad3 abajo:
+
+1. El formulario tiene nombre, clave y rol (un `<select>` con 0 = Usuario y 1 = Administrador) y se manda a sí mismo por POST. El código no se pide porque es autonumérico.
+2. Se conecta con `new PDO(...)` dentro de un `try`.
+3. Si viene del formulario, inserta con una sentencia preparada:
+   ```php
+   $ins = $bd->prepare("insert into usuarios(nombre, clave, rol) values(?, ?, ?)");
+   $ins->execute(array($_POST['nombre'], $_POST['clave'], $_POST['rol']));
+   ```
+   Después muestra "insert correcto", las filas insertadas con `rowCount()` y el código que le dio MySQL con `$bd->lastInsertId()`, como el libro.
+4. Abajo, la misma tabla que la Actividad3 (código y nombre, `border="3"`), así se ve al toque el usuario nuevo.
+
+Si me preguntan:
+- **¿Por qué `prepare()` y no `query()` como en el ejemplo del insert?** En el libro los valores del insert están escritos a mano. Acá vienen de un formulario, y si los meto directo en el SQL alguien podría escribir SQL en el campo (inyección SQL). El libro dice en la página 80 que las sentencias preparadas "previenen la inyección de código". Cada `?` se cambia, en orden, por un valor del array de `execute()`.
+- **¿Qué hace `lastInsertId()`?** Devuelve el código autonumérico que MySQL le dio a la fila recién insertada.
+- **¿Qué pasa si pongo un nombre que ya existe?** `nombre` es `UNIQUE`, así que el insert falla. En PHP 8, PDO lanza una `PDOException` en vez de devolver `FALSE`, y la agarra el `catch`: "Error con la base de datos: ... Duplicate entry 'Riquelme' for key 'nombre'". Por eso el `else print_r($bd->errorInfo())` del libro no hace falta: el libro es de antes de PHP 8, cuando el error no tiraba excepción.
+- **¿Por qué ahí no sale la tabla?** Porque la excepción salta en el insert y va directo al `catch`, sin pasar por la consulta de la tabla.
 
 ## Cómo los probé
 
@@ -176,4 +199,5 @@ Con XAMPP prendido (Apache y MySQL), entrando por `http://localhost/daw2/WEBSERV
 - Ficheros3.8_29-10/ActividadFichero: cada link del `index.php`. `ficheros_fopen.php` tiene que mostrar el Warning del fichero que no existe, y `xml_validar.php` tiene que decir "El fichero es válido".
 - Ficheros3.8_29-10/Actividad1 (ActividadColorFondo): la primera vez sale blanco. Elijo celeste, cierro la pestaña y vuelvo a entrar: sigue celeste. La cookie `color` se ve en las herramientas del navegador (F12 → Aplicación → Cookies).
 - Ficheros3.8_29-10/Actividad2 (ActividadZonaAdmin): sin login, la principal me manda al login con "Haga login para continuar". Con `usuario` / `1234` sale Bienvenido y Salir, sin Zona Admin. Con `admin` / `1234` sale también Zona Admin. Con la clave mal sale "revise usuario y contraseña". Después de Salir, la principal me vuelve a mandar al login.
-- Ficheros3.8_29-10/Actividad3 (ActividadTablaUsuarios): con MySQL prendido sale "Usuarios: 10" y la tabla con los 10 jugadores. Con MySQL apagado sale "Error con la base de datos" y el motivo.
+- Ficheros3.8_29-10/Actividad3 (ActividadTablaUsuarios): con MySQL prendido sale la tabla con el código y el nombre de los 10 jugadores. Con MySQL apagado sale "Error con la base de datos" y el motivo.
+- Ficheros3.8_29-10/Actividad4 (ActividadInsertarUsuario): inserto Tevez / apache10 / Usuario y sale "insert correcto", "Filas insertadas: 1", "Código de la fila insertada: 11", y Tevez aparece abajo en la tabla (y en la Actividad3). Con un nombre repetido (Riquelme) sale el error de `Duplicate entry`.

@@ -21,14 +21,11 @@ try {
     $bd = new PDO($cadena_conexion, $usuario, $clave);
     $sql = 'SELECT codigo, nombre, clave, rol FROM usuarios';
     $usuarios = $bd->query($sql);
-    echo "Usuarios: " . $usuarios->rowCount() . "<br>";
 ?>
-    <table border="1">
+    <table border="3">
         <tr>
             <th>Código</th>
             <th>Nombre</th>
-            <th>Clave</th>
-            <th>Rol</th>
         </tr>
 <?php
     // cada vuelta del foreach es una fila, con las columnas del select como claves
@@ -36,9 +33,6 @@ try {
         echo "<tr>";
         echo "<td>" . $row['codigo'] . "</td>";
         echo "<td>" . $row['nombre'] . "</td>";
-        echo "<td>" . $row['clave'] . "</td>";
-        echo "<td>" . $row['rol'] . "</td>";
-        echo "</tr>";
     }
 ?>
     </table>
