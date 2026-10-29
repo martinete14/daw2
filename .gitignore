@@ -13,3 +13,6 @@ venv/
 .env
 *.env
 *.key
+
+# Libro de Fran (WEBSERVICIO): solo en local, pesa 150 MB
+WEBSERVICIO/Libro fran.pdf
