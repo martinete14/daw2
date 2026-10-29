@@ -83,7 +83,9 @@ Si me preguntan:
 - **¿Qué es `time() + 3600 * 24 * 30`?** La fecha en la que caduca. `time()` es ahora en segundos, y le sumo 30 días (3600 segundos por hora, por 24 horas, por 30 días).
 - **¿Cómo la borro?** Con `setcookie("color", "", time() - 3600 * 24)`: una fecha que ya pasó. También se puede borrar desde el navegador.
 
-## ActividadFichero · Probar las funciones de la sección 3.8 Ficheros
+## Ficheros3.8_29-10 · ActividadFichero: probar las funciones de la sección 3.8 Ficheros
+
+En la carpeta `Ficheros3.8_29-10` van todas las actividades de la sección 3.8 Ficheros, que arrancamos en clase el 29/10.
 
 Páginas 86 a 92 del libro (la 43 a la 46 del PDF). Para arrancar con ficheros: un script por cada ejemplo del libro, con los mismos ficheros de prueba. `index.php` tiene un link a cada uno.
 
@@ -128,5 +130,5 @@ Con XAMPP prendido (Apache y MySQL), entrando por `http://localhost/daw2/WEBSERV
 
 - Actividad09-10: sin logearme, `compra.php` me manda al inicio. Logeado, me muestra los segundos que quedan. Pasado el tiempo, me manda al inicio y me sale el formulario de nuevo.
 - Actividad 3.4: código `1` (Riquelme), `5` (Messi), `50` (no existe) y `abc` (error, no es un número).
-- ActividadFichero: cada link del `index.php`. `ficheros_fopen.php` tiene que mostrar el Warning del fichero que no existe, y `xml_validar.php` tiene que decir "El fichero es válido".
+- Ficheros3.8_29-10/ActividadFichero: cada link del `index.php`. `ficheros_fopen.php` tiene que mostrar el Warning del fichero que no existe, y `xml_validar.php` tiene que decir "El fichero es válido".
 - ActividadColorFondo: la primera vez sale blanco. Elijo celeste, cierro la pestaña y vuelvo a entrar: sigue celeste. La cookie `color` se ve en las herramientas del navegador (F12 → Aplicación → Cookies).
