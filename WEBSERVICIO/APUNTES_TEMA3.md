@@ -75,7 +75,7 @@ Hecho como el ejemplo `contador_visitas.php` del apartado 3.3 Cookies (páginas 
    - Si no, pero existe `$_COOKIE["color"]`, usa ese color. Es el caso de "la siguiente vez que se conecte".
    - Si no hay ninguna de las dos, es la primera vez y el fondo va blanco.
 2. El color se pone en el `<body style="background-color: ...">`.
-3. El formulario tiene un `<select>` con 5 colores (blanco, celeste, verde, amarillo y rosa).
+3. El formulario tiene un `<select>` con 11 colores (blanco, celeste, verde, amarillo, rosa, gris, naranja, morado, rojo, marrón y negro).
 
 Si me preguntan:
 - **¿Por qué `setcookie()` va antes del HTML?** Porque la cookie se manda en las cabeceras de la respuesta, y las cabeceras salen antes que la página. Si ya hice un `echo`, da error (el "Recuerda" de la página 71).

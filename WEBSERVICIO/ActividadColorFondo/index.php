@@ -1,15 +1,14 @@
 <?php
 // setcookie() tiene que ir antes de cualquier echo o HTML,
-// porque la cookie viaja en las cabeceras de la respuesta
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // eligió un color en el formulario: lo guardo en la cookie por 30 días
+    // el color elegido se guarda en cookie por 30 días
     $color = $_POST["color"];
     setcookie("color", $color, time() + 3600 * 24 * 30);
 } else if (isset($_COOKIE["color"])) {
     // ya había elegido antes: uso el color que quedó en la cookie
     $color = $_COOKIE["color"];
 } else {
-    // primera vez que entra: fondo blanco
+    // fondo base color blanco
     $color = "white";
 }
 ?>
@@ -28,6 +27,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <option value="lightgreen">Verde</option>
             <option value="lightyellow">Amarillo</option>
             <option value="pink">Rosa</option>
+            <option value="lightgray">Gris</option>
+            <option value="orange">Naranja</option>
+            <option value="purple">Morado</option>
+            <option value="red">Rojo</option>
+            <option value="brown">Marrón</option>
+            <option value="black">Negro</option>
         </select>
         <input type="submit" value="Guardar">
     </form>
