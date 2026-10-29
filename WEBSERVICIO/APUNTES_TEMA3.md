@@ -147,6 +147,26 @@ Si me preguntan:
 - **¿Esconder el link alcanza para proteger la zona admin?** No. Si alguien escribe `zona_admin.php` a mano, entra igual. Para protegerla, esa página tendría que controlar también `$_SESSION['rol']`. El ejercicio solo pide el vínculo, así que `zona_admin.php` no existe y el link da 404.
 - **¿El logout borra el rol?** Sí: `$_SESSION = array()` vacía todas las variables de sesión, el rol incluido.
 
+### Actividad3 · ActividadTablaUsuarios
+
+Ejercicio propuesto 3 del tema 3 (página 96 del libro, la 48 del PDF): "Escribe un programa que muestre una tabla con los datos de la tabla Usuarios."
+
+Usa la base `empresa` de `ActividadBD09-10` (la tabla `usuarios` con los 10 jugadores). Si no está creada, hay que importar `ActividadBD09-10/empresa.sql` en phpMyAdmin.
+
+Hecho como el ejemplo de la 3.6.2 Recuperación y presentación de datos (página 79). Es un solo archivo, `index.php`:
+
+1. Arriba, los datos de conexión como en el libro: `$cadena_conexion`, `$usuario` y `$clave`.
+2. Dentro de un `try`, se conecta con `new PDO(...)` y hace `SELECT codigo, nombre, clave, rol FROM usuarios` con `$bd->query()`.
+3. Muestra cuántos usuarios hay con `rowCount()`, igual que el libro.
+4. Arma una `<table>` con la cabecera (Código, Nombre, Clave, Rol) y recorre el resultado con `foreach`: cada vuelta es una fila `<tr>` con un `<td>` por columna.
+5. En el `catch (PDOException $e)` muestra "Error con la base de datos" y el mensaje. Por ejemplo, si MySQL está apagado.
+
+Si me preguntan:
+- **¿Qué devuelve `query()`?** Un objeto `PDOStatement` con el resultado, o `FALSE` si hubo un error. Se puede recorrer con `foreach` como si fuera un array.
+- **¿Qué es `$row` en el `foreach`?** Una fila de la tabla, como un array cuyas claves son las columnas del `SELECT` (`$row['nombre']`, `$row['rol']`...).
+- **¿Por qué pongo las columnas en el `SELECT` y no `*`?** Como el libro, así se ve en el código qué columnas trae y con qué claves se leen después. Con `*` funcionaría igual.
+- **¿Por qué el `try` / `catch`?** Si no se puede conectar, `new PDO` lanza una `PDOException`. Con el `catch` se muestra el error en vez de que la página se rompa.
+
 ## Cómo los probé
 
 Con XAMPP prendido (Apache y MySQL), entrando por `http://localhost/daw2/WEBSERVICIO/...`.
@@ -156,3 +176,4 @@ Con XAMPP prendido (Apache y MySQL), entrando por `http://localhost/daw2/WEBSERV
 - Ficheros3.8_29-10/ActividadFichero: cada link del `index.php`. `ficheros_fopen.php` tiene que mostrar el Warning del fichero que no existe, y `xml_validar.php` tiene que decir "El fichero es válido".
 - Ficheros3.8_29-10/Actividad1 (ActividadColorFondo): la primera vez sale blanco. Elijo celeste, cierro la pestaña y vuelvo a entrar: sigue celeste. La cookie `color` se ve en las herramientas del navegador (F12 → Aplicación → Cookies).
 - Ficheros3.8_29-10/Actividad2 (ActividadZonaAdmin): sin login, la principal me manda al login con "Haga login para continuar". Con `usuario` / `1234` sale Bienvenido y Salir, sin Zona Admin. Con `admin` / `1234` sale también Zona Admin. Con la clave mal sale "revise usuario y contraseña". Después de Salir, la principal me vuelve a mandar al login.
+- Ficheros3.8_29-10/Actividad3 (ActividadTablaUsuarios): con MySQL prendido sale "Usuarios: 10" y la tabla con los 10 jugadores. Con MySQL apagado sale "Error con la base de datos" y el motivo.
