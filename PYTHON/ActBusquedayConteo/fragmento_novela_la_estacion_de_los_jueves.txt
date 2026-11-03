@@ -1,0 +1,172 @@
+LA ESTACIÓN DE LOS JUEVES
+Fragmento de novela original para prácticas de lectura de archivos
+
+Capítulo 4. El inventario
+
+Madrid, jueves 14 de noviembre de 2024, 07:18
+
+Cuando Irene abrió la persiana del local, la calle de Embajadores todavía parecía una fotografía sin revelar. Había una furgoneta de reparto detenida junto al bordillo, dos bicicletas atadas al mismo árbol y una cafetería que olía a pan tostado desde la esquina. En el cristal de la puerta quedaba pegado el horario de siempre:
+
+Archivo Vecinal La Estación
+Lunes a viernes: 09:00–14:00 / 16:00–19:00
+Teléfono: 91 555 18 42
+Correo: contacto@laestacion-ejemplo.es
+
+Irene no era la dueña del archivo ni la persona con más antigüedad; de hecho, llevaba allí apenas seis meses. Pero conocía el sonido del edificio. Sabía que el radiador del pasillo golpeaba tres veces antes de calentarse, que el ascensor se detenía medio segundo entre la primera planta y el sótano, y que el ordenador de recepción tardaba exactamente ochenta y siete segundos en encenderse si nadie intentaba ayudarlo a golpes.
+
+Dejó su mochila debajo del mostrador, encendió la luz amarilla de la entrada y abrió el cuaderno de incidencias. La última anotación era de Álvaro, escrita con tinta azul:
+
+13/11/2024 — 18:42. Caja B-17 trasladada a depósito 2. Falta confirmar contenido con el inventario digital. Revisar humedad de la pared norte. A.
+
+Irene leyó la frase dos veces. El depósito 2 estaba al fondo del sótano, detrás de una puerta metálica que nunca cerraba bien. Allí guardaban cartas, fotografías, programas de fiestas, actas de asociaciones y papeles que nadie había considerado importantes hasta que alguien preguntó por ellos. La caja B-17 pertenecía a la familia Ferrer, según la etiqueta. No decía mucho más.
+
+A las ocho menos diez llegó Mateo con una bolsa de churros y una expresión de derrota.
+
+—No preguntes —dijo antes de saludar.
+
+—No iba a hacerlo.
+
+—El autobús se ha averiado en Atocha. He caminado veinte minutos.
+
+—Entonces los churros son una indemnización razonable.
+
+Mateo dejó la bolsa sobre el mostrador y miró el cuaderno.
+
+—¿Has visto lo de B-17?
+
+—Sí. ¿Sabes qué hay dentro?
+
+—En teoría, documentos de una imprenta que cerró en 1998. En la práctica, papeles con polvo y una sorpresa desagradable cada tres cajas.
+
+—Qué optimista eres a primera hora.
+
+—Es que ya son casi las ocho.
+
+Bajaron al sótano después de revisar el correo. Había siete mensajes nuevos: tres solicitudes de copias digitales, una factura de electricidad, dos avisos automáticos y un correo sin asunto enviado a las 03:12. El remitente era una dirección desconocida: r.ortega.1976@correo-ejemplo.net.
+
+El mensaje solo decía: “No olviden revisar el sobre rojo de la caja B-17. Es importante que lo lea alguien que no conozca a los Ferrer.”
+
+Mateo lo leyó por encima del hombro de Irene.
+
+—Eso entra en la categoría de sorpresa desagradable —dijo.
+
+—¿Contestamos?
+
+—Primero miramos la caja. Luego decidimos si existe alguien llamado R. Ortega o si un jubilado con demasiado tiempo libre nos está gastando una broma.
+
+El depósito 2 olía a cartón húmedo y a metal. Las estanterías, numeradas del 01 al 12, estaban llenas de cajas grises con etiquetas blancas. B-17 se encontraba en el estante 6, a la altura de los ojos. Irene anotó la hora en el cuaderno de préstamo interno: 08:16. Mateo escribió sus iniciales junto a las de ella.
+
+La caja pesaba menos de lo esperado. Dentro había un libro de cuentas, cuatro sobres amarillentos, una carpeta azul y un calendario de pared de 1987 con una fotografía de la estación de Delicias antes de su reforma. Irene separó el material sobre la mesa de revisión.
+
+El libro de cuentas pertenecía a “Imprenta Ferrer y Hermanos, S. L.”. Cada página tenía columnas impresas: fecha, cliente, concepto, importe, forma de pago y observaciones. Algunas líneas estaban escritas con letra firme; otras, con lápiz apenas visible.
+
+03/02/1987 | Asociación de Vecinos Arganzuela | 500 carteles | 18.750 ptas. | Efectivo | Entregado por M. Ferrer.
+17/03/1987 | Librería Norte | 200 marcapáginas | 6.200 ptas. | Talón | Pendiente de cobro.
+29/04/1987 | Particular | Invitaciones de boda | 9.800 ptas. | Efectivo | Sin factura.
+
+—Mira esto —dijo Irene—. No son solo encargos. Hay una columna de observaciones bastante detallada.
+
+Mateo se inclinó sobre la página.
+
+—En una imprenta pequeña, las observaciones eran media memoria del barrio.
+
+La carpeta azul contenía recortes de prensa y una lista mecanografiada titulada “Trabajos urgentes, mayo de 1987”. Casi al final había una entrada rodeada con bolígrafo rojo:
+
+Jueves 21, 22:30. Preparar 1.000 hojas tamaño A4. Texto entregado por mujer, abrigo verde. No registrar nombre. Pago al recoger.
+
+Irene sintió que Mateo dejaba de bromear.
+
+—¿Qué texto? —preguntó.
+
+—No lo sé. Pero esa fecha fue el día antes del incendio del mercado viejo.
+
+El incendio del mercado aparecía en todos los relatos del distrito: una madrugada de mayo, tres puestos destruidos, ningún herido y una investigación cerrada por falta de pruebas. Irene lo sabía porque su abuela se lo había contado muchas veces. “No fue un accidente”, decía siempre, pero nunca explicaba por qué.
+
+Los sobres amarillentos estaban vacíos salvo uno. En su interior había fotografías pequeñas, reveladas en mate. Una mostraba una mesa de imprenta cubierta de papeles; otra, a cuatro personas delante de una persiana bajada; la tercera, un primer plano borroso de un cartel. Irene acercó la fotografía a la lámpara.
+
+Se distinguían seis palabras: “El barrio no se vende en silencio”.
+
+—Eso parece una consigna vecinal —dijo Mateo.
+
+—O una amenaza.
+
+—Las dos cosas pueden usar la misma tipografía.
+
+El sobre rojo estaba debajo del calendario, doblado por una esquina. No tenía sello ni destinatario. Irene lo sostuvo durante unos segundos sin abrirlo.
+
+—¿Qué dice el protocolo? —preguntó.
+
+—Que registramos la apertura, digitalizamos el contenido y no interpretamos documentos privados sin autorización.
+
+—¿Y si alguien nos ha pedido expresamente que lo leamos?
+
+—Entonces el protocolo se pone interesante.
+
+Irene abrió el sobre con una espátula de archivo. Dentro había una carta de dos páginas, fechada el 2 de junio de 1987. La firma era de Julián Ferrer. No estaba dirigida a una persona, sino a “quien encuentre esto cuando ya no sirva de nada callar”.
+
+La carta empezaba con una explicación sobre la imprenta, los encargos urgentes y una reunión celebrada en un bar llamado El Andén. Después mencionaba nombres completos, cantidades de dinero y una lista de locales que iban a cerrar tras la reforma prevista para el barrio. Algunas frases estaban tachadas con rotulador negro, pero otras se leían con claridad:
+
+“Nos dijeron que el incendio serviría para acelerar las licencias. No creímos que fueran a hacerlo. Cuando comprendimos lo que ocurría, ya era tarde para retirar los carteles.”
+
+Mateo dio un paso atrás.
+
+—Esto no es material para una exposición de fotografías antiguas.
+
+—No —respondió Irene—. Es una denuncia.
+
+—De hace treinta y siete años.
+
+—Las fechas no vuelven inocente a nadie.
+
+Durante varios minutos solo se oyó el zumbido del fluorescente. Irene fotografió cada hoja con la cámara del archivo y guardó los archivos con nombres provisionales: B17_carta_01.jpg y B17_carta_02.jpg. Luego creó una entrada en la hoja de control:
+
+ID: B-17-RED-01
+Tipo: carta manuscrita
+Autor atribuido: Julián Ferrer
+Fecha del documento: 02/06/1987
+Estado: frágil, legible
+Acceso: restringido hasta revisión de dirección
+
+A las nueve y cinco llamó Clara, la directora, desde Valencia. Estaba en un congreso y atendió al segundo tono.
+
+—Dime que no se ha inundado el sótano —saludó.
+
+—No se ha inundado —dijo Mateo—, pero hemos encontrado algo que deberías ver.
+
+Irene le explicó el correo de madrugada, la caja, la carta y las fotografías. Clara no interrumpió. Al terminar, pidió que le enviaran copias cifradas al servidor interno y que no respondieran al remitente todavía.
+
+—Y no comentéis esto fuera del archivo —añadió—. Ni siquiera con gente de confianza. Sobre todo con gente de confianza.
+
+Antes de colgar, Clara preguntó una cosa más:
+
+—¿El correo decía “alguien que no conozca a los Ferrer”?
+
+—Sí.
+
+—Entonces quien lo mandó conoce el contenido. Y quizá también sepa que la caja llegó ayer.
+
+A las nueve y treinta y ocho, alguien llamó a la puerta del archivo. Irene levantó la vista desde el ordenador. Había una mujer de unos sesenta años, con abrigo verde oscuro y un paraguas cerrado bajo el brazo. No parecía tener prisa, pero tampoco parecía dispuesta a irse.
+
+—Buenos días —dijo Irene al abrir—. ¿En qué puedo ayudarla?
+
+La mujer miró el rótulo del local, luego el interior y por último el cuaderno abierto sobre el mostrador.
+
+—Busco a la persona que ha abierto la caja B-17.
+
+Mateo, desde la sala de consulta, dejó de mover papeles.
+
+—¿Tiene una cita? —preguntó Irene.
+
+—No. Pero tengo una respuesta para la carta de Julián Ferrer.
+
+La mujer sacó de su bolso una llave pequeña, atada a una etiqueta de cartón. En la etiqueta solo había una dirección escrita a mano:
+
+Calle del Bronce, 14. Local 3.
+
+Y debajo, una fecha: jueves 21 de mayo de 1987.
+
+Irene anotó la visita en el cuaderno. No porque confiara en aquella mujer, sino porque el archivo enseñaba una lección sencilla: todo lo importante parece desordenado hasta que alguien registra la hora, el lugar y el nombre de quien llama a la puerta.
+
+Fin del fragmento.
+
+Nota didáctica: texto original creado para un taller de Python. Puede utilizarse para practicar lectura de archivos, conteos, búsquedas, expresiones regulares, extracción de fechas, correos, teléfonos, importes, diálogos y estructuras de texto.
