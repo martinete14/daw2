@@ -1,0 +1,122 @@
+EXAMEN TIENDA - Análisis y pendientes (05/11/2026)
+
+Para retomar en la PC de Ilerna. Las notas de Fran están en notas_fran.txt.
+
+==================================================
+1. QUÉ PLANTEA EL LIBRO (capítulo 4)
+==================================================
+Libro: LibroFRAN.pdf, hojas 49 a 63 del PDF (dos páginas del libro por hoja).
+Es una app de pedidos para una cadena de restaurantes, en tres fases:
+análisis, diseño e implementación.
+
+4.1 Definición del proyecto: qué se quiere hacer y con qué método (modelo en espiral).
+
+4.2 Análisis de requisitos (= la ERS que pide Fran):
+- Funcionalidades: ver categorías, ver productos, añadir unidades al carrito,
+  ver el carrito y quitar productos, hacer el pedido (va a la BD y manda un correo).
+- Acceso: hace falta login. El usuario es el correo.
+- Datos:
+    Categoría (código, nombre, descripción)
+    Producto (código, nombre, descripción, peso, stock, categoría)
+    Pedido (restaurante, productos con unidades, enviado sí/no, fecha)
+    Restaurante (código, correo, clave, país, dirección, CP)
+- Esquema E-R: Pedido-Producto es N:M y se resuelve con la tabla PedidosProductos.
+- 4.2.2 Limitaciones: no hay panel de administración, no hay autorregistro,
+  no se controla el stock.
+
+4.3 Diseño: tablas, flujo de pantallas
+(login -> categorías -> productos -> carrito -> confirmación / logout), carrito y ficheros.
+- El carrito es $_SESSION['carrito'], un array codProducto => unidades.
+- Al hacer login se crea $_SESSION['usuario'] con el correo y el código.
+
+4.4 Implementación: funciones sueltas en bd.php con PDO, el pedido se guarda
+en una transacción y se mandan correos con PHPMailer.
+
+==================================================
+2. LO QUE PIDE FRAN Y EL LIBRO NO TRAE
+==================================================
+- POO: el libro son funciones sueltas. Hay que pasarlo a clases:
+  BaseDatos, Producto, Categoria, Usuario, Carrito, Pedido.
+- Cookies: el libro solo usa la de sesión (implícita). Hace falta una cookie
+  propia y a la vista. La más fácil de defender: "recordar mi correo" en el login.
+  NUNCA guardar la contraseña en una cookie.
+- Variables de sesión: usuario y carrito. Ya cubierto.
+- Sesión que caduca si estás AFK: no existe en el libro. Guardar
+  $_SESSION['ultima_actividad'] y comprobarla en cada página. Es lo de time()
+  de Actividad09-10/compra.php, pero contando inactividad y no tiempo desde el login.
+- Ver tu perfil: no existe. Una página perfil.php con tus datos (y tus pedidos si queremos).
+- Tienda libre 3 categorías / 8 productos: propuesta yerbas, mates y bombillas
+  (aprovecha TiendaYerbas de WEBCLIENTE).
+- Todo contra la BD: MySQL en XAMPP (ya anda).
+
+==================================================
+3. DEL LIBRO, QUÉ NO COPIAR
+==================================================
+- Consultas armadas pegando texto ("...where codProd in($texto_in)") -> inyección SQL.
+  Usar prepare() / execute() (libro pág. 80).
+- Claves en texto plano -> password_hash / password_verify (ejercicio propuesto 2 del cap. 4).
+- comprobar_sesion() sin exit después del header -> poner exit.
+- Envío de correos: Fran no lo pidió y obliga a meter credenciales de Gmail.
+  Va como limitación.
+- Copiar el código del libro tal cual: Fran compara las apps de todos.
+
+==================================================
+4. LA MEMORIA (entrega 12/11 en el campus Ilerna)
+==================================================
+1. Índice.
+2. Definición del proyecto: qué tienda es y para qué sirve.
+3. ERS:
+   - Requisitos funcionales numerados (RF-01, RF-02...) repartidos en las 3 partes.
+   - Requisitos no funcionales: POO, PHP + MySQL, cookie, sesión, caducidad por inactividad.
+   - Datos y esquema E-R.
+4. Limitaciones.
+5. Prototipo en Figma, una pantalla por paso del flujo, más el perfil.
+6. Opcional: diseño lógico de la BD y diagrama de flujo de pantallas (4.3).
+
+Ojo: Fran pasa la memoria por una IA buscando contradicciones. Cada RF tiene
+que poder señalarse en el código. Lo que no se haga va a Limitaciones, nunca a requisitos.
+
+==================================================
+5. DUDAS PARA FRAN (06/11)
+==================================================
+1. "Gestor de productos": ¿alcanza con mostrar el catálogo desde la BD,
+   o quiere un panel para dar de alta, modificar y borrar productos?
+   Es lo que más cambia el trabajo de la parte 1.
+   Respuesta:
+2. "3 categorías / 8 productos": ¿8 en total o 8 por categoría?
+   Respuesta:
+3. "Token vivo": ¿alcanza con la sesión de PHP + caducidad por inactividad,
+   o quiere un token de verdad como el de ActividadConjunta?
+   Respuesta:
+4. Carrito: ¿puede vivir en la sesión (como el libro) o tiene que guardarse en la BD?
+   El pedido va a la BD sí o sí.
+   Respuesta:
+
+==================================================
+6. PRÓXIMOS PASOS (no dependen de las dudas)
+==================================================
+[ ] 1. Elegir tema y armar el catálogo: 3 categorías con 8 productos cada una
+       (si es 8 en total, se recorta).
+[ ] 2. Script de la BD (tienda.sql): usuarios, categorias, productos, pedidos,
+       pedidos_productos. Claves con password_hash. Si el carrito va a la BD,
+       se suma una tabla.
+[ ] 3. Esqueleto de la memoria: índice, definición, requisitos seguros (partes 2 y 3),
+       E-R y limitaciones. Parte 1 queda pendiente de la duda 1.
+       FALTA DECIDIR: formato de entrega (Word, PDF o Google Docs).
+[ ] 4. Lista de pantallas para Figma: login, categorías, productos, carrito,
+       confirmación, perfil y "sesión caducada", con qué tiene cada una.
+
+Empezar por 1 y 2 juntos: la memoria necesita saber qué datos hay.
+
+Piezas ya hechas para reaprovechar:
+- Ficheros3.8_29-10/Actividad1: color de fondo guardado en una cookie.
+- Ficheros3.8_29-10/Actividad2: login con sesión del libro.
+- Actividad09-10/compra.php: sesión con tiempo límite usando time().
+- ActividadBD09-10: conexión PDO con try/catch.
+
+==================================================
+7. FECHAS
+==================================================
+12/11  Memoria
+19/11  Partes 1 y 2 (productos y usuario)
+02/12  Entrega final (carrito y pedidos)
