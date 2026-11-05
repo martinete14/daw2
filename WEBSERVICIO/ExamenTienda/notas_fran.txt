@@ -1,0 +1,24 @@
+EXAMEN TIENDA - Notas que tomé cuando Fran dio la actividad
+
+Fuente: libro_servidor.pdf (LibroFRAN.pdf), página 50 del pdf y página 100 del libro.
+Capítulo 4, apartados 4.1 y 4.2.
+
+Limitaciones: Paradigma orientado a objetos
+BBDD - Relacional o No relacional
+Usar Cookies
+Usar variables de sesión
+Tienda: libre (Categorías 3 / Productos 8)
+Memoria -> ERS (Especificación Requisito Software) / Prototipo de pantallas con figma. Si hay limitaciones, las ponemos. La memoria tiene que tener un índice.
+FECHA DE ENTREGA DE LA MEMORIA: Jueves 12/11 en el campus Ilerna
+Fran hará uso de la IA para auditar que la memoria esté bien y que no haya cosas que dice en un lado y no en otro.
+Hay que entender el código, se va a sentar, apuntarme algo y preguntarme que hace una variable por ejemplo: Tener control del código. ¿Dónde esta la variable de sesión, donde esta la cookie?
+
+1-Gestor de productos
+2-Control del usuario (poder logearte, que tu token este vivo y que si estoy afk deje de estar, poder ver tu perfil)
+3- Carrito junto con los pedidos (Carrito queda libre a lo que yo quiera, puede ser desde un simple Array o más... "Todo tiene que ir contra la base de datos que elijamos")
+
+Fecha tope MEMORIA 12/11
+Fecha tope para tener las dos primeras partes listas 19/11
+Fecha tope para entrega final 02/12
+
+Fran va a comparar softwares.
