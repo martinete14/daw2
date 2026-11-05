@@ -1,0 +1,261 @@
+:root {
+  color-scheme: dark;
+  --night: #0b1020;
+  --blue: #1d2d44;
+  --panel: #131b2e;
+  --cream: #f2ead3;
+  --muted: #a9b1c6;
+  --gold: #d4a84b;
+  --red: #9e2b3a;
+  --green: #7a9e7e;
+  --serif: "Playfair Display", Georgia, serif;
+  --sans: "DM Sans", Arial, sans-serif;
+  font-family: var(--sans);
+  scroll-behavior: smooth;
+  scroll-padding-top: 86px;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; background: var(--night); color: var(--cream); }
+a { color: inherit; }
+.topbar { position: absolute; z-index: 5; top: 0; left: 0; display: flex; align-items: center; justify-content: space-between; width: 100%; padding: 25px clamp(22px, 5vw, 80px); border-bottom: 1px solid #f2ead31a; }
+.brand, .topbar nav a, .topbar-number, .footer { font-size: .68rem; letter-spacing: .12em; text-decoration: none; }
+.brand { display: flex; align-items: center; gap: 11px; font-weight: 700; }
+.brand-mark { color: var(--gold); font-size: 1.2rem; }
+.topbar nav { display: flex; gap: clamp(20px, 3vw, 48px); color: var(--muted); }
+.topbar nav a:hover, .footer a:hover { color: var(--gold); }
+.topbar-number { color: var(--muted); }.topbar-number span { color: var(--gold); }
+.hero { position: relative; display: grid; min-height: min(880px, 100svh); min-height: min(880px, 100vh); align-items: center; overflow: hidden; background: radial-gradient(ellipse at 76% 35%, #26355a 0%, #141c33 23%, var(--night) 65%); }
+.hero-copy { position: relative; z-index: 2; width: min(900px, 78vw); margin: 105px 0 130px clamp(26px, 11vw, 170px); }
+.eyebrow { margin: 0 0 18px; color: var(--gold); font-size: .67rem; font-weight: 700; letter-spacing: .19em; line-height: 1.5; text-transform: uppercase; }
+.hero .eyebrow span { display: inline-block; width: 25px; height: 1px; margin: 0 9px 3px 0; background: var(--gold); }
+h1, h2, h3, p { margin-top: 0; }
+h1, h2, h3 { font-family: var(--serif); font-weight: 500; }
+h1 { max-width: 940px; margin-bottom: 24px; font-size: clamp(3.15rem, 7.2vw, 6.75rem); letter-spacing: -.055em; line-height: .99; }
+h1 em, h2 em { color: var(--gold); font-weight: 500; }
+.hero-lede { max-width: 475px; margin-bottom: 34px; color: var(--muted); font-size: 1.03rem; line-height: 1.8; }
+.button { display: inline-flex; min-height: 52px; align-items: center; gap: 31px; padding: 0 20px; border: 1px solid var(--gold); color: var(--cream); font-size: .8rem; letter-spacing: .05em; text-decoration: none; transition: background .2s, color .2s; }
+.button:hover { background: var(--gold); color: var(--night); }.button span { color: var(--gold); font-size: 1.15rem; }.button:hover span { color: var(--night); }
+.hero-sky { position: absolute; inset: 0; overflow: hidden; }
+.moon { position: absolute; top: 18%; right: 19%; width: clamp(90px, 13vw, 180px); aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle at 38% 38%, #f5eacb, #d3b46c 67%, #9a7641); box-shadow: 0 0 90px #d4a84b3d; }
+.hero-orbit { position: absolute; top: 7%; right: 6%; width: 46vw; max-width: 650px; aspect-ratio: 1; border: 1px solid #d4a84b30; border-radius: 50%; }
+.star { position: absolute; color: var(--gold); }.star-one { top: 22%; right: 43%; }.star-two { top: 43%; right: 12%; font-size: 1.2rem; }.star-three { top: 18%; right: 11%; font-size: 2rem; }
+.castle { position: absolute; right: 0; bottom: 0; z-index: 1; width: min(82%, 1200px); height: auto; opacity: .84; }
+.hero-caption { position: absolute; right: clamp(22px, 5vw, 80px); bottom: 35px; left: clamp(22px, 5vw, 80px); display: flex; justify-content: space-between; color: #a9b1c688; font-size: .58rem; letter-spacing: .18em; }
+.section-wrap { width: min(1190px, calc(100% - 48px)); margin-inline: auto; }
+.intro { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(40px, 9vw, 130px); padding-top: 140px; padding-bottom: 145px; }
+h2 { margin-bottom: 0; font-size: clamp(2.6rem, 5vw, 4.5rem); letter-spacing: -.045em; line-height: 1.08; }
+.intro-copy { max-width: 500px; padding-top: 8px; color: var(--muted); font-size: .94rem; line-height: 1.85; }.intro-copy p { margin-bottom: 17px; }
+.stat-row { display: flex; align-items: center; gap: 17px; margin-top: 32px; padding-top: 22px; border-top: 1px solid #f2ead328; }.stat-row div { display: flex; flex-direction: column; }.stat-row strong { color: var(--cream); font-family: var(--serif); font-size: 1.9rem; font-weight: 500; line-height: 1; }.stat-row div span { margin-top: 5px; color: var(--gold); font-size: .61rem; letter-spacing: .1em; text-transform: uppercase; }.stat-row > b { align-self: flex-start; color: #66718c; font-size: .85rem; font-weight: 400; }.stat-note { max-width: 150px; margin-left: auto; color: #7f8aa2; font-size: .7rem; line-height: 1.5; }
+.secrets { padding-top: 18px; padding-bottom: 110px; }
+.section-title { display: flex; align-items: end; justify-content: space-between; gap: 35px; margin-bottom: 80px; }.section-title h2 { font-size: clamp(2.8rem, 5vw, 4.7rem); }.section-note { margin: 0 0 7px; color: var(--muted); font-size: .78rem; line-height: 1.8; text-align: right; }
+.story { display: grid; grid-template-columns: minmax(260px, .83fr) minmax(0, 1.17fr); gap: clamp(35px, 7vw, 95px); align-items: center; margin: 0 0 76px; padding-bottom: 76px; border-bottom: 1px solid #f2ead321; }.story:last-child { margin-bottom: 0; border: 0; }.story-reverse .story-art { order: 2; }.story-reverse .story-copy { order: 1; }
+.story-art { position: relative; display: flex; min-height: 435px; align-items: center; justify-content: center; overflow: hidden; background: radial-gradient(ellipse at 50% 44%, #29385a 0%, #17223b 45%, #11192b 100%); }
+.story-art::after { position: absolute; inset: 15px; border: 1px solid #d4a84b42; content: ""; pointer-events: none; }
+.art-kicker, .art-caption { position: absolute; z-index: 1; color: var(--gold); font-size: .56rem; letter-spacing: .16em; text-align: center; }.art-kicker { top: 31px; left: 25px; }.art-caption { right: 18px; bottom: 28px; left: 18px; color: #e2d9c4; font-size: .55rem; }
+.story-art img { position: relative; z-index: 1; max-width: 84%; max-height: 320px; object-fit: contain; }.art-dobby img { width: 78%; max-height: 355px; align-self: end; margin-bottom: 0; }.art-snape img { max-height: 315px; align-self: end; }.art-wand img { width: 82%; max-height: 120px; transform: rotate(-25deg); }.feather-halo { position: absolute; width: 235px; aspect-ratio: 1; border: 1px solid #d4a84b77; border-radius: 50%; box-shadow: 0 0 65px #d4a84b20; }.feather-halo span { position: absolute; top: 6px; right: 25px; color: var(--gold); }.art-feather img { width: 49%; max-height: 235px; transform: rotate(-22deg); }.story-copy { position: relative; padding: 23px 0; }.story-number { position: absolute; top: -20px; right: 0; color: #d4a84b23; font-family: var(--serif); font-size: 7rem; line-height: 1; }.story-copy .eyebrow, .story-copy h3, .story-copy > p, .comparison { position: relative; z-index: 1; }.story-copy h3 { max-width: 590px; margin: 0 0 20px; font-size: clamp(2rem, 3.25vw, 3.25rem); letter-spacing: -.035em; line-height: 1.12; }.story-copy > p:not(.eyebrow) { max-width: 580px; margin-bottom: 13px; color: var(--muted); font-size: .88rem; line-height: 1.82; }.story-copy strong { color: var(--cream); font-weight: 600; }.story-copy em { color: var(--cream); }
+.comparison { display: grid; grid-template-columns: 115px 1fr; column-gap: 14px; margin-top: 25px; padding-top: 19px; border-top: 1px solid #d4a84b45; }.comparison span { padding-top: 3px; color: var(--gold); font-size: .56rem; font-weight: 700; letter-spacing: .11em; }.comparison p { margin-bottom: 11px; color: #b5bdcf; font-size: .73rem; line-height: 1.65; }.comparison p:last-child { margin-bottom: 0; }
+.art-prophecy .prophecy-orb { position: absolute; top: 85px; left: 12%; width: 44%; max-height: 220px; }.art-prophecy .neville { position: absolute; right: 5%; bottom: 40px; width: 57%; max-height: 290px; object-position: bottom; }.black-sigil { position: absolute; top: 90px; left: 20px; z-index: 2; color: var(--cream); font-family: var(--serif); font-size: 3rem; line-height: .75; text-align: center; text-shadow: 0 3px 22px var(--night); }.black-sigil small { font-family: var(--sans); font-size: .65rem; letter-spacing: .2em; }.art-regulus img { width: 66%; max-height: 230px; opacity: .95; }.art-map { min-height: 435px; padding: 72px 25px 55px; background: radial-gradient(ellipse, #1b2945, #101729); }.map-stars { position: absolute; top: 48px; color: var(--gold); font-size: 1.4rem; }.map-stars span { margin-inline: 12px; font-size: .85rem; }.map-figures { display: grid; width: 100%; grid-template-columns: 1fr 1fr; gap: 18px 8px; }.map-figures div { display: flex; flex-direction: column; align-items: center; text-align: center; }.map-figures div > span { color: var(--gold); font-family: var(--serif); font-size: 2.3rem; }.map-figures b { margin: 4px 0; font-family: var(--serif); font-size: .94rem; font-weight: 500; }.map-figures small { color: var(--muted); font-size: .64rem; }.art-dumbledore .sword-mark { position: absolute; color: #d4a84b33; font-size: 12rem; }.art-dumbledore img { width: 53%; max-height: 270px; }.art-voldemort img { width: 46%; max-height: 230px; margin-top: 25px; }.name-equation { position: absolute; right: 18px; bottom: 59px; left: 18px; display: flex; align-items: center; justify-content: center; gap: 9px; color: var(--muted); font-size: .66rem; }.name-equation b { color: var(--gold); }.name-equation strong { color: var(--cream); font-size: .78rem; }
+.closing { position: relative; overflow: hidden; padding: 110px 24px 112px; background: linear-gradient(145deg, #1a2943, #10182a 65%); text-align: center; }.closing::before, .closing::after { position: absolute; top: 50%; width: 280px; height: 1px; background: linear-gradient(90deg, transparent, #d4a84b50); content: ""; }.closing::before { left: -50px; transform: rotate(-35deg); }.closing::after { right: -50px; transform: rotate(35deg); }.closing-spark { margin-bottom: 20px; color: var(--gold); font-size: 1.5rem; }.closing h2 { margin: 0 auto 22px; font-size: clamp(2.6rem, 5.2vw, 4.6rem); }.closing > p:not(.eyebrow) { max-width: 620px; margin: 0 auto 29px; color: var(--muted); font-size: .88rem; line-height: 1.8; }.button-light { color: var(--cream); }.footer { display: flex; min-height: 78px; align-items: center; justify-content: space-between; gap: 22px; padding: 20px clamp(22px, 5vw, 80px); color: #8993a8; font-size: .56rem; }.footer a { text-decoration: none; }
+
+@media (max-width: 760px) {
+  :root { scroll-padding-top: 30px; }
+  .topbar { padding: 17px 20px; }.topbar nav { gap: 17px; }.topbar nav a, .topbar-number { font-size: .57rem; }.brand { gap: 6px; font-size: .55rem; }.brand-mark { font-size: 1rem; }.topbar-number { display: none; }
+  .hero { min-height: 760px; min-height: 92svh; align-items: start; }.hero-copy { width: auto; margin: 175px 25px 150px; }.hero h1 { font-size: clamp(3rem, 12vw, 5.3rem); }.hero-lede { max-width: 390px; font-size: .92rem; }.moon { top: 21%; right: 12%; width: 92px; }.hero-orbit { top: 13%; right: -25%; width: 82vw; }.castle { width: 120%; max-width: none; right: -20%; }.hero-caption { bottom: 21px; font-size: .48rem; }
+  .intro { grid-template-columns: 1fr; gap: 27px; padding-top: 95px; padding-bottom: 95px; }.intro-copy { max-width: 600px; }.section-title { display: block; margin-bottom: 54px; }.section-note { margin-top: 22px; text-align: left; }.story { grid-template-columns: 1fr; gap: 25px; margin-bottom: 55px; padding-bottom: 55px; }.story-reverse .story-art, .story-reverse .story-copy { order: initial; }.story-art { min-height: 360px; }.story-art img { max-height: 290px; }.art-dobby img { max-height: 320px; }.art-map { min-height: 360px; }.story-copy { padding-top: 12px; }.story-number { top: -14px; font-size: 5.5rem; }.story-copy h3 { max-width: 95%; font-size: clamp(2rem, 8vw, 3rem); }.comparison { grid-template-columns: 95px 1fr; }.closing { padding: 83px 24px; }.closing::before, .closing::after { width: 110px; }.footer { flex-wrap: wrap; justify-content: center; text-align: center; }.footer span:nth-child(2) { order: 3; flex-basis: 100%; }
+}
+@media (max-width: 420px) { .topbar nav a { font-size: .52rem; }.brand { font-size: .48rem; }.hero-copy { margin-top: 156px; }.story-art { min-height: 320px; }.art-map { min-height: 340px; }.comparison { grid-template-columns: 1fr; row-gap: 3px; }.comparison span { margin-top: 8px; }.comparison p { margin-bottom: 7px; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; } }
+
+/* One consistent frame keeps every story illustration crisp and aligned. */
+.story-art { isolation: isolate; border: 1px solid #d4a84b24; border-radius: 3px; }
+.story-art::before { position: absolute; z-index: -1; inset: 0; background: radial-gradient(ellipse at 50% 45%, #d4a84b16 0, transparent 56%), linear-gradient(145deg, #ffffff06, transparent 44%); content: ""; }
+.story-art::after { inset: 14px; border-color: #d4a84b52; }
+.story-art img { width: min(90%, 440px); max-width: 90%; max-height: min(82%, 355px); height: auto; align-self: center; margin: 0; object-fit: contain; transform: none; opacity: 1; filter: drop-shadow(0 18px 26px #05091472); }
+.art-feather img { width: min(90%, 440px); max-height: min(82%, 355px); }
+.name-equation { right: auto; left: 50%; z-index: 2; width: max-content; max-width: calc(100% - 48px); transform: translateX(-50%); gap: 10px; padding: 9px 15px; border: 1px solid #d4a84b55; border-radius: 99px; background: #0b1020d9; box-shadow: 0 8px 24px #05091470; backdrop-filter: blur(8px); }
+.story-art .art-caption { text-shadow: 0 1px 8px #0b1020; }
+@media (max-width: 760px) { .story-art img { width: min(88%, 430px); max-height: min(82%, 300px); } }
+@media (max-width: 420px) { .story-art img { width: min(88%, 390px); max-height: min(80%, 265px); } }
+
+/* The navigation, scenes and motion now read as one magical field guide. */
+:root { scroll-padding-top: 84px; }
+.reading-progress { position: fixed; z-index: 20; top: 0; right: 0; left: 0; height: 2px; background: #f2ead31a; pointer-events: none; }
+.reading-progress span { display: block; width: 100%; height: 100%; transform: scaleX(0); transform-origin: left center; background: linear-gradient(90deg, #9e2b3a, #d4a84b 62%, #f2ead3); box-shadow: 0 0 11px #d4a84b90; }
+.topbar { position: fixed; background: linear-gradient(180deg, #0b1020bf, #0b10207a); backdrop-filter: blur(14px); transition: background .25s, border-color .25s; }
+.topbar.topbar-scrolled { background: #0b1020ed; border-color: #d4a84b40; }
+.brand { letter-spacing: .14em; }.brand > span:last-child { display: grid; gap: 3px; }.brand small { color: #a9b1c6; font-size: .49rem; font-weight: 500; letter-spacing: .2em; }
+.story-index { display: grid; grid-template-columns: repeat(9, minmax(0, 1fr)); gap: 8px; margin: 0 0 64px; }
+.story-index a { display: grid; min-height: 64px; align-content: center; gap: 5px; padding: 10px 12px; border: 1px solid #f2ead31a; background: #121a2c80; text-decoration: none; transition: border-color .2s, background .2s, transform .2s; }
+.story-index a:hover, .story-index a.is-current { border-color: #d4a84b8c; background: #d4a84b12; transform: translateY(-2px); }
+.story-index span { color: var(--gold); font-family: var(--serif); font-size: 1.05rem; }
+.story-index small { overflow: hidden; color: #a9b1c6; font-size: .57rem; text-overflow: ellipsis; white-space: nowrap; }
+.story-index a.is-current small { color: var(--cream); }
+.story-art::before { background: radial-gradient(circle at var(--light-x, 50%) var(--light-y, 45%), #d4a84b24 0, transparent 43%), radial-gradient(ellipse at 50% 45%, #d4a84b10 0, transparent 60%), linear-gradient(145deg, #ffffff06, transparent 44%); transition: background .2s; }
+.art-dobby img { width: auto; height: min(77%, 330px); max-width: 75%; max-height: none; align-self: flex-end; }
+.scene-halo { position: absolute; top: 50%; left: 50%; width: 280px; aspect-ratio: 1; transform: translate(-50%, -50%); border: 1px solid #d4a84b50; border-radius: 50%; background: radial-gradient(circle, #d4a84b24, transparent 67%); box-shadow: 0 0 70px #d4a84b1c; }
+.art-snape img { width: auto; height: min(76%, 285px); max-width: 60%; max-height: none; align-self: flex-end; }
+.book-runes { position: absolute; top: 95px; left: 50%; color: #d4a84b48; font-family: var(--serif); font-size: clamp(2rem, 5vw, 4rem); letter-spacing: .1em; transform: translateX(-50%); }
+.prophecy-scene { position: absolute; inset: 0; }
+.prophecy-orb { position: absolute; top: 90px; left: 12%; display: grid; width: 142px; aspect-ratio: 1; place-items: center; border: 1px solid #f2ead3b0; border-radius: 50%; background: radial-gradient(circle at 34% 30%, #fff8dc, #d4a84b 18%, #7d6032 52%, #1d2d44 74%); box-shadow: 0 0 40px #d4a84b70, inset 0 0 18px #fff1bd; }
+.prophecy-orb::before, .prophecy-orb::after { position: absolute; inset: -13px; border: 1px solid #d4a84b55; border-radius: 50%; content: ""; }
+.prophecy-orb::after { inset: -26px; border-style: dashed; opacity: .48; }
+.prophecy-orb span { width: 80px; color: #1b2030; font-size: .49rem; font-weight: 700; letter-spacing: .12em; text-align: center; transform: rotate(-19deg); }
+.prophecy-scene .neville-portrait { position: absolute; right: 18%; bottom: 45px; z-index: 2; width: auto; height: 230px; max-width: 40%; max-height: none; object-fit: contain; filter: drop-shadow(0 10px 18px #05091490); }
+.prophecy-date { position: absolute; z-index: 3; display: grid; gap: 2px; padding: 8px 11px; border: 1px solid #d4a84b70; background: #0b1020df; box-shadow: 0 5px 15px #05091460; }
+.prophecy-date b { color: var(--gold); font-family: var(--serif); font-size: .8rem; font-weight: 500; }.prophecy-date span { color: var(--muted); font-size: .48rem; letter-spacing: .14em; }
+.date-neville { top: 173px; left: 9%; }.date-harry { top: 221px; right: 8%; }
+.art-prophecy .art-caption { bottom: 24px; }
+.art-voldemort .art-caption { letter-spacing: .2em; }
+.name-equation { bottom: 58px; }
+.motion-ready .story, .motion-ready .intro-heading, .motion-ready .intro-copy, .motion-ready .closing { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1); }
+.motion-ready .story.is-visible, .motion-ready .intro-heading.is-visible, .motion-ready .intro-copy.is-visible, .motion-ready .closing.is-visible { opacity: 1; transform: translateY(0); }
+.spark-field { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+.mote { position: absolute; top: var(--y); left: var(--x); width: 3px; height: 3px; border-radius: 50%; background: #f2d37b; box-shadow: 0 0 11px 2px #d4a84b99; opacity: 0; animation: mote-drift var(--duration) var(--delay) ease-in-out infinite; }
+@keyframes mote-drift { 0% { opacity: 0; transform: translate3d(0, 20px, 0) scale(.5); } 22% { opacity: .75; } 70% { opacity: .5; } 100% { opacity: 0; transform: translate3d(var(--drift), -100px, 0) scale(1.3); } }
+.button { position: relative; overflow: hidden; }.click-spark { position: absolute; z-index: 2; top: var(--y); left: var(--x); width: 5px; height: 5px; border-radius: 50%; background: #f7db8b; box-shadow: 0 0 10px 3px #d4a84b; pointer-events: none; animation: cast-spark .65s ease-out forwards; }
+@keyframes cast-spark { to { opacity: 0; transform: rotate(var(--angle)) translateY(-29px) scale(.15); } }
+.footer .signature { color: var(--cream); font-size: .64rem; font-weight: 700; letter-spacing: .1em; }.footer .signature i { margin-left: 8px; color: var(--gold); font-size: .58rem; font-style: normal; font-weight: 500; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; }
+@media (max-width: 980px) { .story-index { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
+@media (max-width: 760px) {
+  :root { scroll-padding-top: 72px; }
+  .brand { font-size: .6rem; }.brand small { font-size: .43rem; }.story-index { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 7px; margin-bottom: 44px; }.story-index a { min-height: 54px; padding: 8px 10px; }
+  .prophecy-orb { top: 85px; left: 8%; width: 118px; }.prophecy-scene .neville-portrait { right: 18%; height: 205px; }.date-neville { top: 163px; left: 5%; }.date-harry { top: 209px; right: 4%; }
+  .footer .signature { order: 3; flex-basis: 100%; }
+}
+@media (max-width: 420px) {
+  .brand { font-size: .5rem; letter-spacing: .1em; }.brand small { font-size: .39rem; }.story-index { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .prophecy-orb { top: 78px; left: 7%; width: 105px; }.prophecy-scene .neville-portrait { right: 18%; height: 180px; }.date-neville { top: 154px; left: 3%; }.date-harry { top: 198px; right: 3%; }
+}
+@media (prefers-reduced-motion: reduce) { .mote, .click-spark { animation: none; display: none; }.motion-ready .story, .motion-ready .intro-heading, .motion-ready .intro-copy, .motion-ready .closing { opacity: 1; transform: none; } }
+
+/* Canon details: Hogwarts fills the opening, characters stay within their frames. */
+.hero { background-image: radial-gradient(ellipse at 77% 28%, #293a5d 0, #141c33 29%, var(--night) 68%), linear-gradient(#0b102044, #0b1020); }
+.castle { right: auto; left: 50%; bottom: -1px; width: min(100%, 1920px); max-width: none; height: auto; opacity: .72; transform: translateX(-50%); filter: drop-shadow(0 -22px 36px #d4a84b18); mask-image: none; }
+.art-dobby img { height: min(70%, 292px); align-self: center; animation: character-float 5s ease-in-out infinite; }
+.art-dobby .art-kicker { right: 25px; left: auto; }
+.art-feather .art-caption { color: #ffd071; }
+.art-snape img { height: min(74%, 276px); align-self: flex-end; animation: character-float 5.8s ease-in-out infinite; }
+.book-runes { top: 105px; z-index: 0; color: #d4a84b40; text-shadow: 0 0 25px #d4a84b40; }
+.prophecy-orb { border-color: #d6e1ec; background: radial-gradient(circle at 34% 29%, #f7fbff 0, #c9d5e0 14%, #8296ad 38%, #394f6b 64%, #18253b 78%); box-shadow: 0 0 38px #9dbad780, inset 0 0 20px #f3f8ff8c; animation: orb-pulse 4.2s ease-in-out infinite; }
+.story-art .prophecy-scene .prophecy-orb { top: 90px; left: 12%; width: 142px; max-height: none; }
+.prophecy-orb::before, .prophecy-orb::after { border-color: #c7d9e99c; }.prophecy-orb::after { border-color: #d4a84b69; }
+.prophecy-orb span { color: #293447; }
+.prophecy-scene .neville-portrait { height: 222px; animation: character-float 5.4s ease-in-out infinite; }
+.date-neville { border-color: #9e2b3a; }.date-harry { border-color: #d4a84b; }
+.art-regulus .art-caption { color: #a9d9b7; }
+.art-map .art-caption { letter-spacing: .22em; }
+.art-dumbledore .art-caption { color: #d6dfed; }
+@keyframes character-float { 0%, 100% { translate: 0 0; } 50% { translate: 0 -6px; } }
+@keyframes phoenix-flight { 0%, 100% { transform: translateY(0) scale(1); filter: drop-shadow(0 0 10px #f5a52e22); } 50% { transform: translateY(-5px) scale(1.025); filter: drop-shadow(0 0 24px #f5a52e70); } }
+@keyframes orb-pulse { 0%, 100% { box-shadow: 0 0 30px #9dbad755, inset 0 0 16px #f3f8ff6b; } 50% { box-shadow: 0 0 52px #c7d9e9b0, inset 0 0 22px #fff; } }
+.wand-spark { position: fixed; z-index: 30; top: 0; left: 0; color: #ffe7a3; font-size: 14px; line-height: 1; text-shadow: 0 0 8px #f4c663, 0 0 18px #d4a84b; pointer-events: none; animation: wand-trail .72s ease-out forwards; }
+@keyframes wand-trail { 0% { opacity: 0; transform: translate3d(-50%, -50%, 0) scale(.4) rotate(0); } 18% { opacity: 1; } 100% { opacity: 0; transform: translate3d(calc(-50% + var(--dx)), calc(-50% + var(--dy)), 0) scale(1.2) rotate(var(--turn)); } }
+@media (max-width: 760px) {
+  .castle { right: auto; left: 50%; width: 100%; height: auto; max-width: none; object-fit: contain; object-position: center bottom; }
+  .story-art .prophecy-scene .prophecy-orb { top: 80px; left: 8%; width: 112px; }.prophecy-scene .neville-portrait { right: 15%; height: 200px; }
+}
+@media (max-width: 420px) {
+  .story-art .prophecy-scene .prophecy-orb { top: 76px; left: 7%; width: 100px; }.prophecy-scene .neville-portrait { right: 14%; height: 178px; }
+}
+@media (prefers-reduced-motion: reduce) { .art-dobby img, .duel-illustration, .art-snape img, .neville-portrait, .prophecy-orb { animation: none; } }
+
+/* Bespoke vector scenes and the anagram display. */
+@font-face {
+  font-family: "Harry P";
+  src: url("assets/harry-p.ttf") format("truetype");
+  font-display: swap;
+}
+
+.art-dobby img { width: min(94%, 445px); height: auto; max-width: 94%; max-height: min(82%, 350px); align-self: center; animation: character-float 5.4s ease-in-out infinite; }
+.art-feather img.duel-illustration { width: min(96%, 470px); max-width: 96%; max-height: min(84%, 365px); animation: phoenix-flight 5.2s ease-in-out infinite; }
+.art-feather .art-caption { color: #ffd58a; }
+.art-snape img { width: min(88%, 370px); height: auto; max-width: 88%; max-height: min(79%, 342px); align-self: center; animation: character-float 5.8s ease-in-out infinite; }
+.art-wand img { width: min(92%, 430px); max-width: 92%; max-height: min(82%, 355px); }
+
+.story-art .prophecy-scene .prophecy-orb {
+  top: 50px;
+  left: 50%;
+  z-index: 4;
+  width: 116px;
+  max-height: none;
+  transform: translateX(-50%);
+}
+.prophecy-orb span { position: relative; z-index: 2; color: #344258; font-size: .45rem; }
+.prophecy-orb i { position: absolute; inset: 19% 23%; border: 1px solid #eef5ff99; border-radius: 50%; transform: rotate(-34deg) scaleX(.72); }
+.prophecy-orb i::before, .prophecy-orb i::after { position: absolute; width: 23px; height: 2px; border-radius: 50%; background: #f4f8ffb8; content: ""; }
+.prophecy-orb i::before { top: 31%; left: 4%; transform: rotate(27deg); }
+.prophecy-orb i::after { right: 1%; bottom: 28%; transform: rotate(-32deg); }
+.prophecy-scene .prophecy-pedestal {
+  position: absolute;
+  top: 145px;
+  left: 50%;
+  z-index: 1;
+  width: 124px;
+  height: 67px;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, transparent 0 28%, #927543 29% 34%, #e4c57e 43% 53%, #8b6b3b 64% 70%, transparent 71%) 50% 12px / 100% 38px no-repeat,
+    linear-gradient(90deg, transparent 0 18%, #6f5636 19% 25%, #e0bd73 31% 68%, #795b34 75% 81%, transparent 82%) 50% 48px / 100% 14px no-repeat;
+  filter: drop-shadow(0 8px 12px #05091480);
+}
+.prophecy-pedestal::before, .prophecy-pedestal::after { position: absolute; left: 50%; border: 2px solid #e3c47d; background: linear-gradient(90deg, #69502f, #d4b36e 45%, #765a35); content: ""; transform: translateX(-50%); }
+.prophecy-pedestal::before { top: 1px; width: 129px; height: 20px; border-radius: 50%; box-shadow: 0 0 16px #d8bd7a58; }
+.prophecy-pedestal::after { bottom: 1px; width: 102px; height: 10px; border-radius: 50%; }
+.prophecy-pedestal span { position: absolute; top: 4px; left: 50%; z-index: 1; width: 91px; height: 13px; border: 2px solid #f3dfa7; border-radius: 50%; transform: translateX(-50%); }
+.prophecy-scene .neville-portrait { right: auto; bottom: 36px; left: 50%; z-index: 2; height: 190px; max-width: 38%; transform: translateX(-50%); }
+.prophecy-date { bottom: 47px; top: auto; z-index: 3; min-width: 74px; text-align: center; }
+.date-neville { left: 7%; }
+.date-harry { right: 7%; }
+.art-prophecy .art-caption { bottom: 17px; }
+
+.art-anagram {
+  background: radial-gradient(ellipse at 50% 45%, #30234a 0%, #1b1b35 46%, #101729 100%);
+}
+.art-anagram::before { background: radial-gradient(circle at var(--light-x, 50%) var(--light-y, 45%), #e7c57924 0, transparent 43%), radial-gradient(ellipse at center, #6b4d8040, transparent 68%); }
+.anagram-composition { position: relative; z-index: 1; display: flex; width: min(90%, 440px); min-height: 270px; flex-direction: column; align-items: center; justify-content: center; gap: 16px; padding: 44px 12px 24px; text-align: center; }
+.anagram-composition::before { position: absolute; z-index: -1; inset: 18px 2px; border: 1px solid #d4a84b52; border-radius: 50%; box-shadow: 0 0 52px #7e5b9a24, inset 0 0 45px #7e5b9a12; content: ""; transform: rotate(-8deg); }
+.anagram-label, .anagram-footnote { color: #d4bd91; font-size: .52rem; font-weight: 700; letter-spacing: .18em; }
+.anagram-name, .anagram-answer { margin: 0; color: #f2ead3; font-family: "Harry P", var(--serif); font-weight: 400; line-height: 1; text-shadow: 0 0 18px #d4a84b35; }
+.anagram-name { font-size: clamp(1.5rem, 3vw, 2.3rem); letter-spacing: -.035em; }
+.anagram-answer { color: #f4d486; font-size: clamp(1.55rem, 3.15vw, 2.35rem); letter-spacing: -.035em; }
+.anagram-spell { display: flex; width: min(74%, 270px); align-items: center; justify-content: center; gap: 13px; color: #ffe8a3; }
+.anagram-spell span { height: 1px; flex: 1; background: linear-gradient(90deg, transparent, #d4a84b); box-shadow: 0 0 9px #d4a84b88; }
+.anagram-spell span:last-child { transform: rotate(180deg); }
+.anagram-spell b { font-size: 1rem; text-shadow: 0 0 16px #ffe8a3; animation: anagram-star 2.8s ease-in-out infinite; }
+.art-anagram .art-caption { color: #d5c2e6; letter-spacing: .2em; }
+@keyframes anagram-star { 50% { transform: rotate(45deg) scale(1.3); text-shadow: 0 0 24px #ffe8a3; } }
+
+@media (max-width: 760px) {
+  .art-dobby img { width: min(95%, 440px); max-height: min(80%, 300px); }
+  .art-feather img.duel-illustration { width: 96%; max-height: min(82%, 300px); }
+  .art-snape img { width: min(88%, 350px); max-height: min(80%, 300px); }
+  .story-art .prophecy-scene .prophecy-orb { top: 42px; width: 96px; }
+  .prophecy-scene .prophecy-pedestal { top: 120px; transform: translateX(-50%) scale(.72); transform-origin: top center; }
+  .prophecy-scene .neville-portrait { bottom: 35px; height: 158px; max-width: 38%; }
+  .prophecy-date { bottom: 43px; min-width: 65px; padding: 7px 8px; }
+  .date-neville { left: 4%; }.date-harry { right: 4%; }
+  .anagram-composition { width: 94%; min-height: 246px; gap: 13px; padding-inline: 5px; }
+  .anagram-name { font-size: clamp(1.45rem, 6.5vw, 2.25rem); }
+  .anagram-answer { font-size: clamp(1.55rem, 6.8vw, 2.35rem); }
+}
+@media (min-width: 761px) and (max-width: 980px) {
+  .anagram-name { font-size: clamp(1.2rem, 3vw, 1.75rem); }
+  .anagram-answer { font-size: clamp(1.28rem, 3.2vw, 1.85rem); }
+  .anagram-composition { width: 96%; padding-inline: 4px; }
+}
+@media (max-width: 420px) {
+  .story-art .prophecy-scene .prophecy-orb { top: 37px; width: 86px; }
+  .prophecy-scene .prophecy-pedestal { top: 96px; transform: translateX(-50%) scale(.68); }
+  .prophecy-scene .neville-portrait { bottom: 37px; height: 143px; max-width: 40%; }
+  .prophecy-date { bottom: 44px; min-width: 59px; padding: 6px; }
+  .prophecy-date b { font-size: .67rem; }.prophecy-date span { font-size: .42rem; }
+  .anagram-composition { min-height: 235px; gap: 12px; }
+  .anagram-label, .anagram-footnote { font-size: .45rem; letter-spacing: .13em; }
+  .anagram-name { font-size: clamp(1.3rem, 6.6vw, 1.8rem); }
+  .anagram-answer { font-size: clamp(1.42rem, 7vw, 1.95rem); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .art-dobby img, .duel-illustration, .art-snape img, .neville-portrait, .prophecy-orb { animation: none !important; }
+  .anagram-spell b { animation: none; }
+}

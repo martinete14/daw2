@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 420" fill="none">
+  <defs>
+    <radialGradient id="halo"><stop stop-color="#D4A84B" stop-opacity=".3"/><stop offset="1" stop-color="#D4A84B" stop-opacity="0"/></radialGradient>
+    <linearGradient id="elder" x1="112" y1="327" x2="417" y2="75"><stop stop-color="#3A251E"/><stop offset=".36" stop-color="#B7955C"/><stop offset=".62" stop-color="#4B3026"/><stop offset="1" stop-color="#D2B67C"/></linearGradient>
+    <linearGradient id="holly" x1="118" y1="339" x2="400" y2="89"><stop stop-color="#E7D5AE"/><stop offset="1" stop-color="#A6B6A8"/></linearGradient>
+  </defs>
+  <ellipse cx="260" cy="211" rx="247" ry="196" fill="url(#halo)"/>
+  <circle cx="260" cy="210" r="159" stroke="#D4A84B" stroke-opacity=".26"/>
+  <!-- Hallows mark in the background; the knotted wand remains the focal object. -->
+  <path d="m260 56 157 272H103L260 56Z" stroke="#D4A84B" stroke-opacity=".4" stroke-width="5"/>
+  <circle cx="260" cy="238" r="59" stroke="#D4A84B" stroke-opacity=".38" stroke-width="5"/>
+  <path d="M260 57v271" stroke="#D4A84B" stroke-opacity=".36" stroke-width="4"/>
+  <!-- The Elder Wand: pale, aged wood, a long taper and unmistakable raised knots. -->
+  <path d="M105 336c45-43 94-85 144-126 56-45 113-87 168-124" stroke="#17151A" stroke-width="30" stroke-linecap="round"/>
+  <path d="M106 334c48-43 95-84 146-125 56-44 112-85 166-122" stroke="url(#elder)" stroke-width="19" stroke-linecap="round"/>
+  <path d="M113 328c43-38 87-77 132-113 56-45 111-84 163-120" stroke="#E4D2A7" stroke-opacity=".5" stroke-width="3" stroke-linecap="round"/>
+  <g fill="#59402F" stroke="#D4B77B" stroke-width="3">
+    <path d="m149 293 1-18 11-11 17 3 8 14-8 16-16 7-12-11Z"/><path d="m197 254 2-18 13-12 17 3 9 14-8 17-17 7-16-11Z"/>
+    <path d="m248 213 1-18 13-12 17 4 8 14-9 16-16 6-14-10Z"/><path d="m299 174 2-18 12-12 17 3 9 14-8 17-17 6-15-10Z"/>
+    <path d="m350 137 2-17 12-12 17 3 8 14-8 16-16 7-15-11Z"/>
+  </g>
+  <path d="m119 327 18-5m49-43 18-7m50-38 19-7m50-39 18-7m50-38 17-7" stroke="#E7D5AE" stroke-width="3" stroke-linecap="round"/>
+  <path d="m107 335-14 19m31-35-21-1m1 1-8-16" stroke="#D4A84B" stroke-width="3" stroke-linecap="round"/>
+  <!-- Fine golden repair light connects the Elder Wand to the restored holly wand. -->
+  <path d="M135 351c59 22 148 28 250 1" stroke="#FFE8A3" stroke-opacity=".8" stroke-width="3" stroke-dasharray="2 9" stroke-linecap="round"/>
+  <path d="M159 376c59 17 125 18 203 0" stroke="url(#holly)" stroke-width="8" stroke-linecap="round"/>
+  <path d="m171 373 28 2m34 3 27 1m36-1 26-3m-128 1-10 9m163-12 10-9" stroke="#F2EAD3" stroke-opacity=".8" stroke-width="2" stroke-linecap="round"/>
+  <path d="m143 185 6 14 15 1-12 10 4 15-13-8-13 8 4-15-12-10 15-1 6-14Zm249 64 5 11 12 1-9 8 3 12-11-6-10 6 2-12-9-8 12-1 5-11Z" fill="#FFE8A3"/>
+  <text x="261" y="405" fill="#D4A84B" font-family="Arial,sans-serif" font-size="9" letter-spacing="2.3" text-anchor="middle">VARITA DE SAÚCO · VARITA DE ACEBO REPARADA</text>
+</svg>

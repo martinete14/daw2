@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 420" fill="none">
+  <defs>
+    <radialGradient id="aura"><stop stop-color="#F28C28" stop-opacity=".36"/><stop offset="1" stop-color="#F28C28" stop-opacity="0"/></radialGradient>
+    <linearGradient id="feather" x1="260" y1="90" x2="260" y2="340"><stop stop-color="#FFE889"/><stop offset=".46" stop-color="#F3982E"/><stop offset="1" stop-color="#B83D28"/></linearGradient>
+    <linearGradient id="robe" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#34415A"/><stop offset="1" stop-color="#111827"/></linearGradient>
+  </defs>
+  <ellipse cx="260" cy="211" rx="246" ry="193" fill="url(#aura)"/>
+  <circle cx="260" cy="213" r="160" stroke="#F2AD50" stroke-opacity=".24"/>
+  <!-- Two recognizable, hand-drawn portraits frame Fawkes. -->
+  <g>
+    <path d="M16 381c6-75 33-116 82-128 54-13 96 22 108 128H16Z" fill="url(#robe)" stroke="#D4A84B" stroke-opacity=".7" stroke-width="3"/>
+    <path d="M88 291 120 343l30-51 20 89H68l20-90Z" fill="#6D2437" stroke="#D4A84B" stroke-width="2"/>
+    <path d="M68 154c-4-56 17-91 52-94 41-3 64 33 59 91-4 48-25 76-57 77-31 1-51-27-54-74Z" fill="#E8C7A9" stroke="#F2EAD3" stroke-opacity=".65" stroke-width="3"/>
+    <path d="M60 156c-5-68 23-108 65-105 34 2 55 27 58 66-20-7-36-20-48-39-14 26-36 42-69 48l-6 30Z" fill="#2C2226"/>
+    <path d="M78 95c13-37 49-52 79-34 12 7 20 17 26 31-32-14-67-12-105 3Z" fill="#514033"/>
+    <path d="M84 158c10-9 20-9 30 0m26 0c10-9 20-9 29 0" stroke="#312932" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="101" cy="160" r="10" stroke="#2D2934" stroke-width="3"/><circle cx="154" cy="160" r="10" stroke="#2D2934" stroke-width="3"/><path d="M111 160h33m-53-3 8 1m54-1 9-1" stroke="#2D2934" stroke-width="3"/>
+    <path d="m122 153-5 25 9 4m-16 12c11 8 25 8 37-1" stroke="#96675C" stroke-width="3" stroke-linecap="round"/>
+    <path d="m104 91 10-17 8 14-13 12" fill="#9E2B3A"/>
+    <path d="M171 245 227 204" stroke="#A9834C" stroke-width="5" stroke-linecap="round"/><path d="m226 204 22-10" stroke="#FFE5A3" stroke-width="4" stroke-linecap="round"/>
+    <text x="104" y="396" fill="#D7C9AA" font-family="Arial,sans-serif" font-size="9" letter-spacing="2" text-anchor="middle">HARRY</text>
+  </g>
+  <g>
+    <path d="M309 381c12-105 54-141 108-128 48 12 75 54 87 128H309Z" fill="#10131D" stroke="#7A303B" stroke-opacity=".85" stroke-width="3"/>
+    <path d="M344 158c-3-57 20-94 58-94 39 0 61 39 56 96-4 48-26 74-57 74-32 0-54-27-57-76Z" fill="#D9D4C9" stroke="#F2EAD3" stroke-opacity=".68" stroke-width="3"/>
+    <path d="M340 143c-3-56 18-94 61-94 41 0 62 39 56 94-10-14-16-30-18-47-15 23-42 37-82 42l-17 5Z" fill="#D8D9D5"/>
+    <path d="M356 157c10-8 20-8 29 0m30 0c10-8 20-8 29 0" stroke="#5B202D" stroke-width="4" stroke-linecap="round"/>
+    <ellipse cx="370" cy="159" rx="4" ry="5" fill="#C62836"/><ellipse cx="427" cy="159" rx="4" ry="5" fill="#C62836"/>
+    <path d="m400 155-4 15 7 2-7 7m-16 26c12 7 25 7 37 0" stroke="#8C8580" stroke-width="3" stroke-linecap="round"/>
+    <path d="M377 241c-16 24-30 47-47 75m98-75c15 24 30 47 46 75" stroke="#171923" stroke-width="13" stroke-linecap="round"/>
+    <path d="M353 205c9 7 17 10 25 9m45 0c8 1 16-2 25-9" stroke="#D9D4C9" stroke-width="4" stroke-linecap="round"/>
+    <path d="M348 247 301 211" stroke="#B18A4F" stroke-width="5" stroke-linecap="round"/><path d="m301 211-22-11" stroke="#C7F6AF" stroke-width="4" stroke-linecap="round"/>
+    <text x="417" y="396" fill="#D7C9AA" font-family="Arial,sans-serif" font-size="9" letter-spacing="2" text-anchor="middle">VOLDEMORT</text>
+  </g>
+  <!-- Fawkes, orange-gold with broad wings and red tail feathers. -->
+  <g transform="translate(57 46) scale(.78)" stroke="#FFE9B7" stroke-opacity=".76" stroke-width="2" stroke-linejoin="round">
+    <path d="M255 190c-22-45-63-77-128-91 18 42 39 72 71 94-37-10-65-27-94-51 18 47 48 76 95 90-30 2-57-4-84-15 30 37 72 52 128 43 55 9 98-6 127-43-26 11-54 17-84 15 48-14 77-43 96-90-30 24-58 41-95 51 31-22 52-52 70-94-65 14-106 46-128 91Z" fill="url(#feather)"/>
+    <path d="M256 178c-15-43-11-83 12-121 19 33 24 67 17 102 20-29 46-47 80-53-15 30-36 53-64 70 33-6 62 0 90 18-33 12-64 12-94 1 28 20 46 46 54 81-38-14-67-38-88-72 3 40-7 75-29 106-20-34-27-70-19-106-21 34-50 58-88 72 8-35 26-61 54-81-30 11-61 11-94-1 28-18 57-24 90-18-28-17-49-40-64-70 34 6 60 24 80 53-7-35-2-69 17-102 23 38 27 78 12 121Z" fill="url(#feather)"/>
+    <path d="M255 186c-16 38-22 80-19 127l25 37 26-37c2-48-5-90-21-127-2-9-8-9-11 0Z" fill="#E76A2A"/>
+    <path d="M259 342c-26 17-43 33-55 55 32-5 50-13 60-27 11 15 29 23 59 27-11-23-28-39-54-55" fill="#B83D28"/>
+    <path d="M254 161c-9-28-1-49 20-64 14 20 16 40 5 60 18-13 36-16 57-9-17 17-36 25-57 25m-21-20c-12 2-21 10-24 24" fill="#EACB70"/>
+    <circle cx="291" cy="144" r="4" fill="#171923" stroke="none"/><path d="m313 151 19 7-19 7" fill="#A83A2A" stroke="none"/>
+    <path d="m219 218-50-45m56 69-69-16m145-8 50-45m-56 69 69-16m-115 85-33 37m60-37 33 37" stroke="#FFE9B7" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  <path d="M248 193c-15 0-29-3-43-8m65 8c16-1 30-4 44-9" stroke="#FFE6A3" stroke-width="3" stroke-linecap="round"/>
+  <path d="m251 80 7-17 7 17m-147 69-13-9m292 8 13-9" stroke="#F2C46A" stroke-width="3" stroke-linecap="round"/>
+</svg>

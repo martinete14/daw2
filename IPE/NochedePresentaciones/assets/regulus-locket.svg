@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 420" fill="none">
+  <defs>
+    <radialGradient id="cave"><stop stop-color="#235140" stop-opacity=".44"/><stop offset="1" stop-color="#0B1020" stop-opacity="0"/></radialGradient>
+    <linearGradient id="mask" x1="126" y1="124" x2="260" y2="287"><stop stop-color="#F2EAD3"/><stop offset="1" stop-color="#9D988C"/></linearGradient>
+    <linearGradient id="locket" x1="354" y1="251" x2="432" y2="365"><stop stop-color="#F0D17D"/><stop offset="1" stop-color="#785D2D"/></linearGradient>
+  </defs>
+  <ellipse cx="255" cy="210" rx="250" ry="208" fill="url(#cave)"/>
+  <path d="M0 343c83-32 152-27 241-6 94 22 186 20 279-15v98H0v-77Z" fill="#12233A"/><path d="M0 346c89-29 154-22 238-4 100 22 189 18 282-16" stroke="#7A9E7E" stroke-opacity=".8" stroke-width="4"/><path d="M23 368c72-14 126-7 190 8m88 1c64 9 124 4 195-17" stroke="#D4A84B" stroke-opacity=".35" stroke-width="2"/>
+  <path d="M75 332c3-74 18-137 51-178 25-32 66-50 111-45 48 5 82 38 93 84 9 37 9 83 12 139H75Z" fill="#10131E" stroke="#9E2B3A" stroke-opacity=".6" stroke-width="3"/>
+  <path d="M107 149c-4-65 31-106 82-109 56-4 94 41 84 108-4 31-25 71-83 83-48-9-80-47-83-82Z" fill="#090B12" stroke="#6C5960" stroke-width="4"/>
+  <path d="M148 149c3-37 24-63 55-64 33-1 54 28 55 64-1 43-22 77-55 82-34-7-55-40-55-82Z" fill="url(#mask)" stroke="#F2EAD3" stroke-opacity=".8" stroke-width="3"/>
+  <path d="m158 151 31-13 11 23-18 12-23-4Zm57 10 12-23 30 13-2 18-23 4Z" fill="#10131E"/><path d="m202 160-7 35 12 7 11-8-8-34Z" fill="#827B70"/><path d="M184 217c13 8 27 8 40 0m-47 14 12 8m29-8-11 8m-38-1 8 16m52-16-8 16" stroke="#514C48" stroke-width="4" stroke-linecap="round"/><path d="M147 129c13-22 31-34 56-35 25 2 44 15 57 38" stroke="#D4A84B" stroke-opacity=".5" stroke-width="3"/>
+  <path d="M91 116c18-38 45-58 82-66m91 7c28 13 45 37 54 69" stroke="#D4A84B" stroke-opacity=".24" stroke-width="3"/>
+  <g transform="translate(365 101)" opacity=".86">
+    <circle cx="53" cy="53" r="48" stroke="#7A9E7E" stroke-width="2" stroke-opacity=".65"/>
+    <path d="M24 72c-9-19-5-37 8-45 13-7 26 1 29 14 7-11 21-13 32-3 11 12 8 32-6 45-12 11-26 9-34-2-8 13-21 7-29-9Z" fill="#D4A84B"/>
+    <path d="M55 82c-6-18-4-34 7-49 9-12 18-11 20 0 2 8-8 15-13 24-4 7-2 16 5 21" stroke="#7A9E7E" stroke-width="7" stroke-linecap="round"/><circle cx="39" cy="51" r="3" fill="#0B1020"/><circle cx="68" cy="49" r="3" fill="#0B1020"/>
+    <text x="53" y="116" fill="#D4A84B" font-family="Arial,sans-serif" font-size="8" letter-spacing="2" text-anchor="middle">MARCA TENEBROSA</text>
+  </g>
+  <path d="M355 256c-20 0-36 16-36 36v43c0 30 18 48 36 64 18-16 36-34 36-64v-43c0-20-16-36-36-36Z" fill="url(#locket)" stroke="#F2EAD3" stroke-width="3"/>
+  <path d="M355 270v115m-15-96c11 7 21 7 31 0m-31 49c11 7 21 7 31 0m-31 25c11 6 21 6 31 0" stroke="#55411F" stroke-width="3"/>
+  <path d="M342 255v-14c0-8 6-14 13-14s13 6 13 14v14" stroke="#D4A84B" stroke-width="6"/><circle cx="355" cy="313" r="4" fill="#9E2B3A"/>
+  <text x="355" y="376" fill="#4C391D" font-family="Georgia,serif" font-size="10" letter-spacing="1.7" text-anchor="middle">R.A.B.</text>
+  <!-- Inferi hands emerge from the lake around the locket, tying it to the cave. -->
+  <g stroke="#8BB99A" stroke-opacity=".8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M205 419c10-24 30-42 57-49l28-26m-24 31 16 7 11-7 17-19m-27 26 8 12 13 2 18-17m-35 5 1 12 10 7 18-9"/>
+    <path d="M471 398c-23-13-35-32-39-56l-12-25m13 29 16-2 8-12-8-22m-16 41-14-1-8-10-3-22m18 32-10 7-11-2-10-17"/>
+  </g>
+  <g fill="#C0CFB9" fill-opacity=".75">
+    <circle cx="286" cy="342" r="6"/><circle cx="304" cy="349" r="6"/><circle cx="316" cy="361" r="6"/><circle cx="300" cy="369" r="6"/>
+    <circle cx="418" cy="316" r="6"/><circle cx="432" cy="326" r="6"/><circle cx="421" cy="339" r="6"/><circle cx="407" cy="337" r="6"/>
+  </g>
+  <path d="M318 293c-14-25-12-58 4-82" stroke="#B9E0C5" stroke-opacity=".8" stroke-width="3" stroke-linecap="round"/>
+  <path d="m168 397 8-14m14 23 11-17m229 1-9-15m-15 25-10-17" stroke="#7A9E7E" stroke-width="2" stroke-linecap="round"/>
+  <text x="258" y="408" fill="#A9D9B7" font-family="Arial,sans-serif" font-size="7" letter-spacing="1.7" text-anchor="middle">LA CUEVA · LOS INFERI · EL GUARDAPELO</text>
+</svg>

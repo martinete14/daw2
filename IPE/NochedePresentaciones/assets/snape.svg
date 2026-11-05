@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 420" fill="none">
+  <defs>
+    <radialGradient id="glow"><stop stop-color="#77638C" stop-opacity=".31"/><stop offset="1" stop-color="#77638C" stop-opacity="0"/></radialGradient>
+    <linearGradient id="robe" x1="262" y1="225" x2="262" y2="410"><stop stop-color="#252535"/><stop offset="1" stop-color="#090C16"/></linearGradient>
+    <linearGradient id="book" x1="80" y1="315" x2="245" y2="385"><stop stop-color="#66453B"/><stop offset="1" stop-color="#291E22"/></linearGradient>
+  </defs>
+  <ellipse cx="260" cy="218" rx="239" ry="192" fill="url(#glow)"/>
+  <circle cx="261" cy="207" r="157" stroke="#B3A5C8" stroke-opacity=".2"/>
+  <!-- Long, straight black hair, pale face, hooked nose and severe expression. -->
+  <path d="M159 112c-15-43 1-78 37-89 48-15 112-3 143 31 29 32 30 93 9 150l-22 143H190l-29-155c-13-25-15-54-2-80Z" fill="#080A10" stroke="#50495A" stroke-width="3"/>
+  <path d="M161 246c-16 26-24 69-22 144h244c-3-72-10-119-30-148-41 24-148 27-192 4Z" fill="url(#robe)" stroke="#B3A5C8" stroke-opacity=".35" stroke-width="3"/>
+  <path d="M215 234c-12 28-22 49-32 73m111-76c11 28 23 51 37 71" stroke="#51505E" stroke-width="7"/>
+  <path d="M191 113c0-60 28-94 70-94 42 0 70 37 65 101-4 57-28 87-68 87-40 0-66-34-67-94Z" fill="#DCCFC1" stroke="#F2EAD3" stroke-opacity=".65" stroke-width="3"/>
+  <path d="M183 114c-6-70 27-111 78-111 48 0 76 41 70 109-10-10-21-25-30-46-22 25-61 43-113 48l-5 0Z" fill="#080A10"/>
+  <path d="M183 116c-13 42-9 107 1 164m147-165c14 49 9 116-2 172" stroke="#191722" stroke-width="10" stroke-linecap="round"/>
+  <path d="M216 119c13-9 27-9 40 0m20 0c12-8 26-8 39 0" stroke="#40373B" stroke-width="5" stroke-linecap="round"/>
+  <ellipse cx="237" cy="123" rx="4" ry="5" fill="#292B35"/><ellipse cx="291" cy="123" rx="4" ry="5" fill="#292B35"/>
+  <path d="m266 120-13 47 13 5m-24 17c15 5 29 4 43-2" stroke="#92756D" stroke-width="4" stroke-linecap="round"/>
+  <path d="M217 195c15-5 29-5 43-1m18 0c11-3 22-3 33 0" stroke="#5D4547" stroke-width="4" stroke-linecap="round"/>
+  <path d="M193 232h135l-20 64H211l-18-64Z" fill="#111522" stroke="#D4A84B" stroke-opacity=".52" stroke-width="3"/>
+  <!-- The annotated potions book gives the portrait its Half-Blood Prince context. -->
+  <g transform="rotate(-8 155 347)">
+    <path d="M54 310c49-19 96-11 133 14v74c-41-23-85-29-132-13l-1-75Z" fill="url(#book)" stroke="#D4A84B" stroke-width="3"/>
+    <path d="M188 324c38-24 81-29 129-13l-1 75c-45-16-87-10-128 13v-75Z" fill="#D8CBAF" stroke="#D4A84B" stroke-width="3"/>
+    <path d="M188 324v75m-113-66 83-8m-83 25 83-8m61 3 76 8m-76 9 68 7" stroke="#806746" stroke-opacity=".7" stroke-width="3"/>
+    <text x="116" y="359" fill="#E6DDBF" font-family="Georgia,serif" font-size="10" letter-spacing="1.5" text-anchor="middle">PRINCE</text>
+    <path d="m270 343 7-12 4 13 12-2-10 9 4 13-10-8-10 7 4-12-9-8 12 0Z" fill="#9E2B3A"/>
+  </g>
+  <path d="m387 130 6 14 15 1-12 10 4 15-13-8-13 8 4-15-12-10 15-1 6-14Z" fill="#D4A84B" fill-opacity=".78"/>
+  <circle cx="130" cy="154" r="3" fill="#D4A84B"/><circle cx="375" cy="207" r="2" fill="#D4A84B"/>
+</svg>

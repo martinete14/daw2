@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 760" fill="none">
+  <defs>
+    <linearGradient id="stone" x1="960" y1="185" x2="960" y2="715"><stop stop-color="#31466D"/><stop offset=".52" stop-color="#1D2D44"/><stop offset="1" stop-color="#11192C"/></linearGradient>
+    <linearGradient id="hill" x1="960" y1="560" x2="960" y2="760"><stop stop-color="#1D2D44"/><stop offset="1" stop-color="#0B1020"/></linearGradient>
+    <linearGradient id="mist" x1="960" y1="462" x2="960" y2="700"><stop stop-color="#A9B1C6" stop-opacity=".19"/><stop offset="1" stop-color="#0B1020" stop-opacity="0"/></linearGradient>
+  </defs>
+  <path d="M0 650c171-93 326-112 498-47 114-104 220-128 345-60 130-144 247-167 399-65 147-95 320-85 480 12 82-33 146-28 198 8v262H0V650Z" fill="url(#hill)"/>
+  <path d="M246 594V424l72-61 70 61v170m-103-4V322l55-71 58 71v268m17 0V416l57-47 60 47v178" fill="url(#stone)" stroke="#445879" stroke-width="5"/>
+  <path d="m286 365 32-119 32 119m-81 58 49-76 50 76m-99-102h98" fill="#10182A" stroke="#667997" stroke-width="4"/>
+  <path d="M480 594V340h87V205h77v389m-164-254 43-60 43 60m-79-18h78m-69-78 39-72 37 72" fill="url(#stone)" stroke="#4B6083" stroke-width="5"/>
+  <path d="m484 342 39-70 39 70m-80-7h80m-62-79h45l-22-52-23 52Z" fill="#11192C" stroke="#667997" stroke-width="4"/>
+  <path d="M605 594V382h149v212m-141-208 68-72 70 72m-127-3h114" fill="url(#stone)" stroke="#4B6083" stroke-width="5"/>
+  <path d="M700 594V258h57V168h74V77h92v181h73V155h82v103h62v336m-430-334 35-51 36 51m-74-3h75m-46-49 38-95 39 95m-104-1h132m-25 84 47-66 47 66m-92-1h91" fill="url(#stone)" stroke="#52688B" stroke-width="6"/>
+  <path d="M829 168 867 76l41 92m-82-1h82m-50-91V35h19v41m-17 185 57-82 56 82m-112-1h112m-36-75 37-70 38 70m-73 0h73m-22-69V96h19v61m-35 101 48-78 49 78m-95 0h95" fill="#11192C" stroke="#7286A2" stroke-width="5"/>
+  <path d="M771 594V367h98V292h95v302m-182-223 43-57 44 57m-82-1h82m-61-57 47-64 47 64m-92-1h93" fill="url(#stone)" stroke="#52688B" stroke-width="5"/>
+  <path d="M948 594V337h121V216h72v378m-188-253 58-68 59 68m-106-1h105m-81-69 48-72 48 72m-92-1h91" fill="url(#stone)" stroke="#52688B" stroke-width="5"/>
+  <path d="M1139 594V407h99v-84h77v271m-160-185 41-52 42 52m-78-1h78m-51-51 43-63 44 63m-85-1h86" fill="url(#stone)" stroke="#4B6083" stroke-width="5"/>
+  <path d="M1283 594V362h69V251h77v343m-132-231 39-57 40 57m-75-1h75m-53-56 43-77 44 77m-86-1h86" fill="url(#stone)" stroke="#4B6083" stroke-width="5"/>
+  <path d="M1420 594V429h79l62-64 64 64v165m-174-1V315l53-73 53 73v279m-103-1V375l76-64 76 64v219m-101-278 28-75 28 75m-57-2h58" fill="url(#stone)" stroke="#445879" stroke-width="5"/>
+  <path d="M1488 314 1541 241l53 73m-105-1h105m-37-72V212h17v30" fill="#11192C" stroke="#667997" stroke-width="4"/>
+  <path d="M1760 594V433l57-49 57 49v161m-99-1V332l43-60 43 60v262m-76-1V408l51-43 52 43v186m-69-263 23-61 24 61m-48-1h48" fill="url(#stone)" stroke="#445879" stroke-width="5"/>
+  <g fill="#D4A84B" opacity=".82">
+    <path d="M315 471h14v27h-14zm80 36h14v26h-14zm147-154h13v27h-13zm51 143h13v28h-13zm106-87h15v31h-15zm52 94h14v28h-14zm92-145h15v30h-15zm62 100h14v30h-14zm88-72h14v27h-14zm57 119h14v28h-14zm102-73h14v28h-14zm81 90h14v28h-14zm97-102h14v27h-14zm69 71h14v28h-14zm93-125h14v27h-14zm59 136h14v28h-14z"/>
+  </g>
+  <path d="M0 605c207-39 343-25 499 15 126-48 235-39 349 8 128-49 247-41 371 12 153-47 298-44 440 6 102-28 188-28 261-6v120H0V605Z" fill="url(#mist)"/>
+  <path d="M0 673c154-36 284-34 434 3 155-44 290-38 432 6 157-40 310-37 455 6 208-50 398-44 599 4v68H0v-87Z" fill="#0B1020" fill-opacity=".8"/>
+</svg>

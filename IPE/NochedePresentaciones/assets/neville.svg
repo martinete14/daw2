@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 430" fill="none">
+  <defs><linearGradient id="robe" x1="156" y1="205" x2="160" y2="420"><stop stop-color="#8D2538"/><stop offset="1" stop-color="#261B2B"/></linearGradient><linearGradient id="blade" x1="250" y1="64" x2="208" y2="335"><stop stop-color="#F2EAD3"/><stop offset="1" stop-color="#9CA9B7"/></linearGradient></defs>
+  <ellipse cx="153" cy="410" rx="110" ry="15" fill="#050914" fill-opacity=".55"/>
+  <path d="M85 248c-32 27-47 88-51 161h212c-6-76-21-134-53-162-34 21-73 22-108 1Z" fill="url(#robe)" stroke="#D4A84B" stroke-opacity=".75" stroke-width="3"/>
+  <path d="m113 251 39 47 39-49m-65 6 26 41-18 92m57-91-17 93" stroke="#D4A84B" stroke-width="5"/>
+  <path d="M101 139c0-57 22-91 59-91 40 0 64 37 61 95-3 54-31 85-62 85-34 0-58-34-58-89Z" fill="#E6C4A3" stroke="#F2EAD3" stroke-opacity=".7" stroke-width="3"/>
+  <path d="M94 134c-4-59 26-103 68-103 43 0 70 32 63 91-17-19-31-35-48-56-18 24-43 39-83 44Z" fill="#624638"/><path d="M100 79c9-42 41-65 77-52 20 7 34 22 42 44-36-14-72-13-119 8Z" fill="#805942"/>
+  <path d="M115 139c13-9 27-9 40 0m20 0c12-8 25-8 37 0" stroke="#4B3B38" stroke-width="5" stroke-linecap="round"/><circle cx="136" cy="142" r="4" fill="#4B5363"/><circle cx="194" cy="142" r="4" fill="#4B5363"/><path d="m163 144-8 28 11 5m-23 18c13 9 28 9 42 0" stroke="#9D6555" stroke-width="4" stroke-linecap="round"/>
+  <path d="M263 78 220 314" stroke="#303744" stroke-width="15" stroke-linecap="round"/><path d="M263 78 220 314" stroke="url(#blade)" stroke-width="8" stroke-linecap="round"/><path d="m204 313 32 6-12 19-31-11m29-11-16 26m19-15-11 19" fill="#D4A84B" stroke="#F2EAD3" stroke-width="3" stroke-linejoin="round"/><path d="m205 331 13-7 12 9-13 15-12-17Z" fill="#9E2B3A" stroke="#D4A84B" stroke-width="2"/>
+  <path d="M132 251h39l-19 22-20-22Z" fill="#F2EAD3"/><path d="m151 275-13 20h27l-14-20Z" fill="#D4A84B"/><path d="M116 300h67v59h-67z" fill="#9E2B3A" stroke="#D4A84B" stroke-width="3"/><path d="m151 309 8 13 15 2-11 10 4 15-16-8-15 8 3-15-11-10 16-2 7-13Z" fill="#D4A84B"/>
+</svg>

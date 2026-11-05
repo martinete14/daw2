@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 420" fill="none">
+  <defs>
+    <linearGradient id="paper" x1="68" y1="56" x2="455" y2="375"><stop stop-color="#F3E7C4"/><stop offset="1" stop-color="#B39A67"/></linearGradient>
+    <linearGradient id="ink" x1="88" y1="70" x2="434" y2="359"><stop stop-color="#61513B"/><stop offset="1" stop-color="#392F27"/></linearGradient>
+    <filter id="shadow" filterUnits="userSpaceOnUse" x="0" y="0" width="520" height="420"><feGaussianBlur stdDeviation="10"/></filter>
+  </defs>
+  <path d="M77 64 221 76l222-17-17 298-201-13-168 21 20-301Z" fill="#050914" fill-opacity=".42" filter="url(#shadow)"/>
+  <path d="m77 58 144 12 222-15-17 301-201-13-168 21 20-306Z" fill="url(#paper)" stroke="#D4A84B" stroke-width="4"/>
+  <path d="m221 70-14 273M89 107l121 10m-126 17 122 9m-124 18 121 9m-125 19 122 9m-121 22 121 8m107 133 196 13m-191-44 192 13m-187-43 188 13m-183-43 184 12" stroke="#6D5C43" stroke-opacity=".52" stroke-width="2"/>
+  <text x="256" y="91" fill="#514432" font-family="Georgia,serif" font-size="11" letter-spacing="2.1" text-anchor="middle">MAPA DEL MERODEADOR</text>
+  <text x="256" y="108" fill="#6D5C43" font-family="Georgia,serif" font-size="8" letter-spacing="2" text-anchor="middle">HOGWARTS Y SUS TERRENOS</text>
+  <!-- Hogwarts, shown as a tiny floor-plan illustration, not a label alone. -->
+  <g stroke="url(#ink)" stroke-width="2" stroke-linejoin="round">
+    <path d="M220 190v-54l13-15v15h10v-27l15-19 15 19v27h11v-14l14 14v54h-78Z" fill="#D5C398"/>
+    <path d="M199 190v-37l13-13 13 13v37m68 0v-42l14-15 14 15v42" fill="#C8B486"/>
+    <path d="M214 190v-19h14v19m24 0v-24h15v24m26 0v-17h14v17"/>
+    <path d="M247 139v-13m34 34v-12m-68 0v-9" stroke="#9E2B3A" stroke-width="2"/>
+  </g>
+  <text x="258" y="203" fill="#514432" font-family="Georgia,serif" font-size="7.5" letter-spacing="1.4" text-anchor="middle">HOGWARTS</text>
+  <!-- Black Lake and paths give the parchment the feel of real grounds. -->
+  <path d="M235 219c21-6 43-6 64 0 14 4 25 11 36 20-19 11-42 15-67 12-23-2-43-8-57-17 6-7 14-12 24-15Z" fill="#81918A" fill-opacity=".55" stroke="#5C6F69" stroke-width="2"/>
+  <path d="M244 229c15 4 33 4 50-1m-44 9c13 3 27 3 41 0" stroke="#EEE0BD" stroke-opacity=".7" stroke-width="2" stroke-linecap="round"/>
+  <path d="M128 229c31 16 63 15 92-5 25-18 48-16 66 0 21 20 48 20 84 3" stroke="#9E2B3A" stroke-width="3" stroke-dasharray="2 8" stroke-linecap="round"/>
+  <path d="M150 231c19 4 34 1 49-8m120 9c16 7 32 6 50-2" stroke="#614C38" stroke-width="2" stroke-dasharray="1 7" stroke-linecap="round"/>
+  <!-- Forbidden Forest: compact cluster of hand-drawn trees. -->
+  <g stroke="#574735" stroke-width="2" stroke-linejoin="round">
+    <path d="m104 270 13-31 13 31h-8v24h-10v-24h-8Zm24 6 11-26 11 26h-7v18h-8v-18h-7Zm-45 1 10-24 10 24h-6v17h-8v-17h-6Z" fill="#7C8061"/>
+    <path d="M116 272v22m23-2v-17m-45 18v-16" stroke="#594733"/>
+  </g>
+  <text x="119" y="309" fill="#514432" font-family="Georgia,serif" font-size="7" letter-spacing=".9" text-anchor="middle">BOSQUE PROHIBIDO</text>
+  <!-- Whomping Willow, tunnel and the Shrieking Shack on the map's grounds. -->
+  <g stroke="#574735" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M359 276c-3-22-1-40 8-53l-17-13m17 13 17-18m-14 43 25-6m-34-4-20-6m21 26-19 8" stroke-width="5"/>
+    <path d="M357 225c-14-8-18-20-12-28 8-9 20-4 23 5 6-11 20-11 25-2 6 10-1 20-13 24-8 3-16 3-23 1Z" fill="#73805A"/>
+    <path d="M351 277h37l-4 25h-29l-4-25Z" fill="#A78D5E"/><path d="M348 276h42"/>
+    <path d="M391 267h39v31h-39v-31Zm-5 0 24-17 25 17m-31 31v-15h13v15" fill="#C2A879"/>
+    <path d="M369 301c4 20 18 31 39 34 17 3 31 1 43-5" stroke="#9E2B3A" stroke-width="3" stroke-dasharray="2 6"/>
+    <path d="M368 298c-5 9-13 14-23 14m31 5c-2 8-1 14 4 20" stroke="#9E2B3A" stroke-width="2" stroke-dasharray="1 6"/>
+  </g>
+  <text x="370" y="315" fill="#514432" font-family="Georgia,serif" font-size="6.4" letter-spacing=".45" text-anchor="middle">SAUCE BOXEADOR</text>
+  <text x="411" y="309" fill="#514432" font-family="Georgia,serif" font-size="6" letter-spacing=".35" text-anchor="middle">CASA DE LOS GRITOS</text>
+  <text x="394" y="349" fill="#7B302E" font-family="Georgia,serif" font-size="6.5" letter-spacing="1" text-anchor="middle">PASADIZO SECRETO</text>
+  <!-- Animated-looking footprints and the four nicknames. -->
+  <g fill="#9E2B3A">
+    <ellipse cx="150" cy="187" rx="3" ry="5" transform="rotate(-24 150 187)"/><ellipse cx="159" cy="193" rx="3" ry="5" transform="rotate(22 159 193)"/>
+    <ellipse cx="175" cy="205" rx="3" ry="5" transform="rotate(-24 175 205)"/><ellipse cx="184" cy="211" rx="3" ry="5" transform="rotate(22 184 211)"/>
+    <ellipse cx="304" cy="167" rx="3" ry="5" transform="rotate(-24 304 167)"/><ellipse cx="313" cy="173" rx="3" ry="5" transform="rotate(22 313 173)"/>
+  </g>
+  <text x="258" y="370" fill="#514432" font-family="Georgia,serif" font-size="7.4" letter-spacing="1.1" text-anchor="middle">LUNÁTICO · COLAGUSANO · CANUTO · CORNAMENTA</text>
+  <path d="m136 75 5 12 13 1-10 8 3 13-11-7-11 7 3-13-10-8 13-1 5-12Z" fill="#9E2B3A"/>
+  <path d="m429 355 5 12 12 1-10 8 3 13-10-7-11 7 3-13-10-8 13-1 5-12Z" fill="#9E2B3A"/>
+</svg>
