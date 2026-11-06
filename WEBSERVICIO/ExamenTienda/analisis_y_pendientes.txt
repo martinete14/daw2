@@ -187,7 +187,7 @@ Las 6 categorías de arriba quedan confirmadas.
 
 Base de datos hecha: pulperia.sql (base "pulperia"). Probada en el MySQL de XAMPP.
 - Tablas: usuarios, categorias, productos, pedidos, pedidos_productos.
-- 6 categorías x 8 productos = 48. "Bombilla de alpaca cincelada" tiene stock 0
+- 16 yerbas + 8 productos en cada una de las otras 5 categorías = 56. "Bombilla de alpaca cincelada" tiene stock 0
   a propósito, para probar "sin stock".
 - pedidos_productos guarda el precio del día de la compra, así un pedido viejo
   no cambia si después sube el precio.
@@ -195,8 +195,9 @@ Base de datos hecha: pulperia.sql (base "pulperia"). Probada en el MySQL de XAMP
     admin@lapulperia.es / admin1234 (rol 1, administrador)
     riquelme@correo.com / 1234      (rol 0, cliente)
     messi@correo.com    / lio10     (rol 0, cliente)
-- Las imágenes son rutas img/productos/... Las 8 de yerbas están en
-  WEBCLIENTE/TiendaYerbas/img; el resto esperan los renders.
+- Las imágenes son rutas img/productos/<nombre>.jpg (todas .jpg, sin espacios
+  ni tildes). Van en ExamenTienda/img/productos/. Las 16 de yerbas las tengo
+  en Descargas; el resto esperan los renders.
 - Si Fran pide el carrito en la BD, se suma una tabla.
 
 ==================================================

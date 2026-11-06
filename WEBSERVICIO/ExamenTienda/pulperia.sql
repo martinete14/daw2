@@ -82,18 +82,27 @@ INSERT INTO categorias (nombre, descripcion) VALUES
     ('Almacén criollo', 'Lo que no puede faltar en la alacena: chimichurri, galletitas, polenta y más'),
     ('Kits y regalos', 'Combos armados para empezar a tomar mate o para regalar');
 
--- 8 productos por categoría. Las fotos de las yerbas son las de WEBCLIENTE/TiendaYerbas,
+-- 16 yerbas y 8 productos en el resto de las categorías (56 en total).
+-- Todas las imágenes son .jpg en img/productos/; las de las yerbas ya están,
 -- el resto de las rutas son para los renders que todavía no están
 INSERT INTO productos (nombre, descripcion, peso, precio, stock, imagen, categoria) VALUES
     -- 1. Yerbas
     ('Playadito Suave 1kg', 'Yerba mate con palo, suave y de sabor parejo. La más pedida', 1000, 9.50, 25, 'img/productos/playadito.jpg', 1),
-    ('Taragüí 4 Flex 1kg', 'Yerba mate con palo, sabor intenso y tradicional', 1000, 8.90, 20, 'img/productos/taragui.png', 1),
+    ('Taragüí 4 Flex 1kg', 'Yerba mate con palo, sabor intenso y tradicional', 1000, 8.90, 20, 'img/productos/taragui.jpg', 1),
     ('Rosamonte 1kg', 'Yerba mate con palo, fuerte y de molienda gruesa', 1000, 9.20, 15, 'img/productos/rosamonte.jpg', 1),
     ('Amanda Tradicional 1kg', 'Yerba mate con palo, equilibrada y rendidora', 1000, 8.50, 18, 'img/productos/amanda.jpg', 1),
     ('Unión Suave 1kg', 'Yerba mate con palo, suave y con poco polvo', 1000, 9.40, 12, 'img/productos/union.jpg', 1),
     ('Canarias 500g', 'Yerba uruguaya sin palo, molienda fina y sabor fuerte', 500, 6.90, 10, 'img/productos/canarias.jpg', 1),
     ('CBSé Hierbas Serranas 1kg', 'Yerba mate compuesta con hierbas serranas', 1000, 9.80, 14, 'img/productos/cbse.jpg', 1),
     ('La Merced De Campo 500g', 'Yerba mate de origen, cosecha de campo, sabor suave', 500, 7.50, 8, 'img/productos/la-merced.jpg', 1),
+    ('Cruz de Malta 1kg', 'Yerba mate con palo, de sabor tradicional', 1000, 8.90, 16, 'img/productos/cruzmalta.jpg', 1),
+    ('Nobleza Gaucha 1kg', 'Yerba mate con palo, sabor fuerte y rendidora', 1000, 8.20, 18, 'img/productos/nobleza-gaucha.jpg', 1),
+    ('Piporé 1kg', 'Yerba mate con palo, sabor suave y equilibrado', 1000, 8.80, 12, 'img/productos/pipore.jpg', 1),
+    ('Verdeflor 1kg', 'Yerba mate de sabor intenso', 1000, 9.90, 10, 'img/productos/verdeflor.jpg', 1),
+    ('Pajarito 500g', 'Yerba paraguaya de sabor fuerte', 500, 6.50, 12, 'img/productos/pajarito.jpg', 1),
+    ('Kurupí 500g', 'Yerba paraguaya compuesta con hierbas', 500, 6.90, 10, 'img/productos/kurupi.jpg', 1),
+    ('Kraus Orgánica 500g', 'Yerba mate orgánica, sin agroquímicos', 500, 8.90, 8, 'img/productos/kraus.jpg', 1),
+    ('Andresito 1kg', 'Yerba mate de cooperativa, sabor suave', 1000, 8.40, 14, 'img/productos/andresito.jpg', 1),
 
     -- 2. Mates y bombillas
     ('Mate imperial de calabaza', 'Calabaza forrada en cuero con virola de alpaca cincelada', 350, 45.00, 6, 'img/productos/mate-imperial.jpg', 2),
