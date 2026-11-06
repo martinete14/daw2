@@ -87,22 +87,24 @@ INSERT INTO categorias (nombre, descripcion) VALUES
 -- el resto de las rutas son para los renders que todavía no están
 INSERT INTO productos (nombre, descripcion, peso, precio, stock, imagen, categoria) VALUES
     -- 1. Yerbas
-    ('Playadito Suave 1kg', 'Yerba mate con palo, suave y de sabor parejo. La más pedida', 1000, 9.50, 25, 'img/productos/playadito.jpg', 1),
-    ('Taragüí 4 Flex 1kg', 'Yerba mate con palo, sabor intenso y tradicional', 1000, 8.90, 20, 'img/productos/taragui.jpg', 1),
-    ('Rosamonte 1kg', 'Yerba mate con palo, fuerte y de molienda gruesa', 1000, 9.20, 15, 'img/productos/rosamonte.jpg', 1),
-    ('Amanda Tradicional 1kg', 'Yerba mate con palo, equilibrada y rendidora', 1000, 8.50, 18, 'img/productos/amanda.jpg', 1),
-    ('Unión Suave 1kg', 'Yerba mate con palo, suave y con poco polvo', 1000, 9.40, 12, 'img/productos/union.jpg', 1),
-    ('Canarias 500g', 'Yerba uruguaya sin palo, molienda fina y sabor fuerte', 500, 6.90, 10, 'img/productos/canarias.jpg', 1),
-    ('CBSé Hierbas Serranas 1kg', 'Yerba mate compuesta con hierbas serranas', 1000, 9.80, 14, 'img/productos/cbse.jpg', 1),
-    ('La Merced De Campo 500g', 'Yerba mate de origen, cosecha de campo, sabor suave', 500, 7.50, 8, 'img/productos/la-merced.jpg', 1),
-    ('Cruz de Malta 1kg', 'Yerba mate con palo, de sabor tradicional', 1000, 8.90, 16, 'img/productos/cruzmalta.jpg', 1),
-    ('Nobleza Gaucha 1kg', 'Yerba mate con palo, sabor fuerte y rendidora', 1000, 8.20, 18, 'img/productos/nobleza-gaucha.jpg', 1),
-    ('Piporé 1kg', 'Yerba mate con palo, sabor suave y equilibrado', 1000, 8.80, 12, 'img/productos/pipore.jpg', 1),
-    ('Verdeflor 1kg', 'Yerba mate de sabor intenso', 1000, 9.90, 10, 'img/productos/verdeflor.jpg', 1),
-    ('Pajarito 500g', 'Yerba paraguaya de sabor fuerte', 500, 6.50, 12, 'img/productos/pajarito.jpg', 1),
-    ('Kurupí 500g', 'Yerba paraguaya compuesta con hierbas', 500, 6.90, 10, 'img/productos/kurupi.jpg', 1),
-    ('Kraus Orgánica 500g', 'Yerba mate orgánica, sin agroquímicos', 500, 8.90, 8, 'img/productos/kraus.jpg', 1),
-    ('Andresito 1kg', 'Yerba mate de cooperativa, sabor suave', 1000, 8.40, 14, 'img/productos/andresito.jpg', 1),
+    -- misma plantilla en todas: tipo, origen, quién la elabora, sabor y un dato propio.
+    -- precios en euros sacados de tiendas europeas (ver sección 10 de analisis_y_pendientes.txt)
+    ('Playadito Suave 1kg', 'Yerba con palo de Colonia Liebig, Corrientes (Argentina). La elabora la Cooperativa Agrícola de la Colonia Liebig. Sabor suave. La más vendida del país.', 1000, 7.90, 25, 'img/productos/playadito.jpg', 1),
+    ('Taragüí Con Palo 1kg', 'Yerba con palo de Gobernador Virasoro, Corrientes (Argentina). La elabora Establecimiento Las Marías. Sabor intenso. Un clásico desde 1924.', 1000, 8.10, 20, 'img/productos/taragui.jpg', 1),
+    ('Rosamonte 1kg', 'Yerba con palo de Apóstoles, Misiones (Argentina). La elabora Hreñuk S.A. Sabor intenso. De las más fuertes del mercado.', 1000, 8.50, 15, 'img/productos/rosamonte.jpg', 1),
+    ('Amanda Tradicional 1kg', 'Yerba con palo de Apóstoles, Misiones (Argentina). La elabora La Cachuera. Sabor medio. Debe su nombre a la actriz Amanda Ledesma.', 1000, 8.30, 18, 'img/productos/amanda.jpg', 1),
+    ('Unión Suave 1kg', 'Yerba con palo de Gobernador Virasoro, Corrientes (Argentina). La elabora Establecimiento Las Marías. Sabor suave. Molienda con poco polvo.', 1000, 8.50, 12, 'img/productos/union.jpg', 1),
+    ('Canarias 1kg', 'Yerba sin palo de Uruguay, elaborada con yerba brasileña. La elabora Canarias S.A. Sabor intenso. Molienda fina, al estilo uruguayo.', 1000, 10.90, 10, 'img/productos/canarias.jpg', 1),
+    ('CBSé Hierbas Serranas 1kg', 'Yerba compuesta de Córdoba (Argentina). La elabora CBSé. Sabor suave. Lleva hierbas serranas mezcladas con la yerba.', 1000, 9.90, 14, 'img/productos/cbse.jpg', 1),
+    ('La Merced Campo Sur 1kg', 'Yerba de origen de Gobernador Virasoro, Corrientes (Argentina). La elabora Establecimiento Las Marías. Sabor medio. Línea premium de yerbas de una sola zona.', 1000, 12.90, 8, 'img/productos/la-merced.jpg', 1),
+    ('Cruz de Malta 1kg', 'Yerba con palo de Argentina. La elabora Molinos Río de la Plata. Sabor medio. Marca histórica, apta para celíacos (sin TACC).', 1000, 8.90, 16, 'img/productos/cruzmalta.jpg', 1),
+    ('Nobleza Gaucha 1kg', 'Yerba con palo de Argentina. La elabora Molinos Río de la Plata. Sabor medio. Rendidora y de precio accesible.', 1000, 7.90, 18, 'img/productos/nobleza-gaucha.jpg', 1),
+    ('Piporé 1kg', 'Yerba con palo de Santo Pipó, Misiones (Argentina). La elabora la cooperativa de productores de Santo Pipó. Sabor suave. Cooperativa fundada en 1933 y de las que más exportan.', 1000, 8.80, 12, 'img/productos/pipore.jpg', 1),
+    ('Verdeflor Hierbas Serranas 1kg', 'Yerba compuesta de Córdoba (Argentina). La elabora Grupo Cordeiro. Sabor suave. Lleva menta, cedrón, poleo y tomillo.', 1000, 8.20, 10, 'img/productos/verdeflor.jpg', 1),
+    ('Pajarito Tradicional 1kg', 'Yerba con palo de Itapúa (Paraguay). La elabora Lauro Raatz S.A. Sabor intenso. Molienda fina, al estilo paraguayo.', 1000, 8.20, 12, 'img/productos/pajarito.jpg', 1),
+    ('Kurupí Menta y Boldo 500g', 'Yerba compuesta de San Juan Bautista, Misiones (Paraguay). La elabora Santa Margarita S.A. Sabor medio. Lleva menta y boldo, la yerba digestiva del Paraguay.', 500, 5.90, 10, 'img/productos/kurupi.jpg', 1),
+    ('Kraus Orgánica 500g', 'Yerba orgánica de San Ignacio, Misiones (Argentina). La elabora la familia Kraus. Sabor suave. Certificada orgánica y secada sin humo.', 500, 7.70, 8, 'img/productos/kraus.jpg', 1),
+    ('Andresito Tradicional 1kg', 'Yerba con palo de Comandante Andresito, Misiones (Argentina). La elabora la Cooperativa Yerbatera Andresito. Sabor medio. Cooperativa de productores fundada en 1983.', 1000, 8.50, 14, 'img/productos/andresito.jpg', 1),
 
     -- 2. Mates y bombillas
     ('Mate imperial de calabaza', 'Calabaza forrada en cuero con virola de alpaca cincelada', 350, 45.00, 6, 'img/productos/mate-imperial.jpg', 2),
