@@ -100,9 +100,14 @@ que poder señalarse en el código. Lo que no se haga va a Limitaciones, nunca a
 [ ] 2. Script de la BD (tienda.sql): usuarios, categorias, productos, pedidos,
        pedidos_productos. Claves con password_hash. Si el carrito va a la BD,
        se suma una tabla.
-[ ] 3. Esqueleto de la memoria: índice, definición, requisitos seguros (partes 2 y 3),
+[x] 3. Esqueleto de la memoria: índice, definición, requisitos seguros (partes 2 y 3),
        E-R y limitaciones. Parte 1 queda pendiente de la duda 1.
-       FALTA DECIDIR: formato de entrega (Word, PDF o Google Docs).
+       HECHO (06/11): Memoria_LaPulperia.docx, en Word y se entrega exportada a PDF.
+       Lo que falta está resaltado en amarillo (PENDIENTE): RF-04, carrito en BD,
+       diagrama E-R, enlace y capturas de Figma. Al cambiar algo, actualizar el
+       índice en Word (clic derecho > Actualizar campos).
+       Decidido ahí: caducidad a los 10 minutos sin actividad y cookie
+       "recordar_correo" de 30 días. El código tiene que usar esos mismos valores.
 [ ] 4. Lista de pantallas para Figma: login, categorías, productos, carrito,
        confirmación, perfil y "sesión caducada", con qué tiene cada una.
 
