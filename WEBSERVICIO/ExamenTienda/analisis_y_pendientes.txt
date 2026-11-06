@@ -182,7 +182,22 @@ Ideas de nombre con raíz cultural real:
 - Cimarrón: el mate amargo, palabra gaucha.
 - Guampa: el cuerno que se usa como mate o para el tereré.
 - Porongo: ojo, en Chile es una palabra vulgar.
-PENDIENTE: elegir nombre y comprobar que no lo use ya otra tienda o marca.
+ELEGIDO (06/11): La Pulpería. No encontré ninguna tienda de mate en Europa con ese nombre.
+Las 6 categorías de arriba quedan confirmadas.
+
+Base de datos hecha: pulperia.sql (base "pulperia"). Probada en el MySQL de XAMPP.
+- Tablas: usuarios, categorias, productos, pedidos, pedidos_productos.
+- 6 categorías x 8 productos = 48. "Bombilla de alpaca cincelada" tiene stock 0
+  a propósito, para probar "sin stock".
+- pedidos_productos guarda el precio del día de la compra, así un pedido viejo
+  no cambia si después sube el precio.
+- Usuarios de prueba (clave guardada con password_hash):
+    admin@lapulperia.es / admin1234 (rol 1, administrador)
+    riquelme@correo.com / 1234      (rol 0, cliente)
+    messi@correo.com    / lio10     (rol 0, cliente)
+- Las imágenes son rutas img/productos/... Las 8 de yerbas están en
+  WEBCLIENTE/TiendaYerbas/img; el resto esperan los renders.
+- Si Fran pide el carrito en la BD, se suma una tabla.
 
 ==================================================
 10. LÍNEAS FUTURAS (para la memoria y para comentarle a Fran)
