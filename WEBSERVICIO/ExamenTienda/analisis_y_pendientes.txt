@@ -120,3 +120,76 @@ Piezas ya hechas para reaprovechar:
 12/11  Memoria
 19/11  Partes 1 y 2 (productos y usuario)
 02/12  Entrega final (carrito y pedidos)
+
+==================================================
+8. DECISIONES (06/11)
+==================================================
+- Fran todavía no contestó las dudas. Intuición: 8 productos POR categoría como mínimo.
+- Vamos más allá del mínimo: tienda argentina con identidad propia y con potencial
+  real (las webs del rubro que existen tienen una visual muy antigua).
+- Lo visual (renders 3D, videos de paquetes de yerba y porongos) lo hago aparte con
+  ChatGPT. Para el servidor son solo archivos: la BD guarda la ruta (imagen / video).
+- Moneda: precio en euros y, en chiquito y entre paréntesis, el precio en pesos (ARS).
+  El tipo de cambio va fijo en UN solo lugar del código / BD -> va a Limitaciones
+  (no se actualiza solo).
+- Regla: lo que no esté programado el 02/12 va a "Líneas futuras" en la memoria,
+  nunca como requisito.
+
+==================================================
+9. INVESTIGACIÓN: TIENDAS ARGENTINAS EN EUROPA (06/11)
+==================================================
+Categorías del menú de cada una:
+- Pampa Drugstore (Barcelona): Yerba Mate / Mates y accesorios (mates, bombillas,
+  termos, portatermos, yerberos) / Alfajores / Golosinas / Galletitas / Dulces
+  (dulce de leche) / Vinos / Bebidas / Almacén (condimentos, harinas, refrigerados) /
+  Sin Gluten / Para regalar
+- Mate-Tee (Alemania): Yerba Mate por país / Saborizadas / Orgánicas / Accesorios
+  (calabazas, bombillas, termos, materas) / Dulces y especialidades / Bebidas /
+  Empanadas / Dulce de Leche / Alfajores / Sets y kits / Regalos
+- MateMundo (UK): Yerba Mate (con bombillas, mates, sets y accesorios adentro) /
+  Café / Té / Especias / Sets de regalo / Bebidas
+- Casa Argentina (Londres): Carnes / Empanadas / Dulce de Leche / Alfajores /
+  Chimichurri y especias / Almacén / Yerba Mate (+ accesorios y kits) / Vinos /
+  Accesorios de parrilla / Regalos
+- Patagonia Online (UK): Alfajores / Yerba Mate / Havanna / Dulce de Leche /
+  Mantecol / Vinos
+- UruShop (UK): Yerba Mate / Accesorios / Comida / Kits y regalos
+- La Reinita (Ámsterdam): Alfajores / Café / Dulce de Leche / Yerba Mate
+
+Cuántas tiendas tienen cada cosa (de 7):
+  Yerba mate 7 | Accesorios de mate 5 | Alfajores 5 | Dulce de leche 5 |
+  Kits y regalos 5 | Vinos y bebidas 5 | Almacén / condimentos 4 |
+  Golosinas y galletitas 4 | Carnes y parrilla 1
+
+Propuesta de 6 categorías:
+  1. Yerbas
+  2. Mates y bombillas
+  3. Termos y materas
+  4. Alfajores y dulce de leche
+  5. Almacén criollo (chimichurri, condimentos, galletitas, harinas)
+  6. Kits y regalos
+
+Nombres que ya usa la competencia (evitarlos): Pampa (2 tiendas), Patagonia,
+Casa Argentina, UruShop, MateMundo, Mate-Tee, La Boutique del Mate, La Bombilla,
+Yvy Mate (ojo: "yvy" ya está usado), Terza Luna, Dolcentina.
+Patrón: geografía (Pampa, Patagonia) o "Mate + algo". Hay que salir de ahí.
+
+Ideas de nombre con raíz cultural real:
+- Yasí: la luna de la leyenda guaraní que les regaló la yerba a los hombres.
+- Ka'a (o Caá): "yerba" en guaraní (también planta y monte).
+- Mati: palabra quechua para la calabacita; de ahí viene "mate".
+- Pulpería: el almacén de campo gaucho donde se compraba la yerba.
+- Cimarrón: el mate amargo, palabra gaucha.
+- Guampa: el cuerno que se usa como mate o para el tereré.
+- Porongo: ojo, en Chile es una palabra vulgar.
+PENDIENTE: elegir nombre y comprobar que no lo use ya otra tienda o marca.
+
+==================================================
+10. LÍNEAS FUTURAS (para la memoria y para comentarle a Fran)
+==================================================
+- Botón EUR <-> ARS para cambiar la moneda de toda la tienda, con cotización
+  actualizada. Comentárselo a Fran: si le gusta, lo hacemos.
+- Vinos y bebidas con alcohol: piden verificar la mayoría de edad.
+- Carnes y parrilla: piden cadena de frío y envíos especiales.
+- Ofrecer la web a tiendas reales del rubro (sus webs tienen una visual muy antigua).
+- Renders 3D / videos de los productos.
