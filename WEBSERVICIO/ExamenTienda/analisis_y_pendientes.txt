@@ -207,32 +207,36 @@ Plantilla de descripción (igual en todas):
   [Tipo] de [lugar] ([país]). La elabora [empresa]. Sabor [suave/medio/intenso]. [Dato propio].
 El "sabor" es orientativo: revisarlo yo, que tomo mate.
 
-Precios. ARS = Argentina (supermercado DIA online, precio de lista sin
-promoción, o los de TiendaYerbas, que coinciden). "est." = estimado, no apareció
-en ninguna web. EUR = Pampa Drugstore (ES) / Mate-Tee (DE) / UruShop (UK, en libras).
+COTIZACIÓN FIJA: 1 € = 1.700 ARS (la decidí el 06/11/2026). Va en UN solo lugar
+del código y en Limitaciones de la memoria (no se actualiza sola).
 
-Yerba                       | ARS 1kg   | Europa                         | Nuestro €
-Playadito Suave 1kg         | 5.208     | 7,69 / 7,70 / £7,50            | 7,90
-Taragüí Con Palo 1kg        | 5.747     | 7,99 / 8,11 / £7,50            | 8,10
-Rosamonte 1kg               | 5.400 est.| 9,77 / 7,29 / £8,50            | 8,50
-Amanda Tradicional 1kg      | 4.989     | 8,97 / 7,70 / £8,99            | 8,30
-Unión Suave 1kg             | 5.369     | 4,50 (500g) / £7,50            | 8,50
-Canarias 1kg                | ~14.900   | 10,45 / 11,09 / £9,99          | 10,90
-  (en Argentina es importada: 7.450 el medio kilo)
-CBSé Hierbas Serranas 1kg   | 5.095     | 9,89 / £4,75 (500g)            | 9,90
-La Merced Campo Sur 1kg     | 6.790     | 6,67 (500g, Mate-Tee)          | 12,90
-Cruz de Malta 1kg           | 5.200     | 8,75 / £9,50                   | 8,90
-Nobleza Gaucha 1kg          | 4.600 est.| 7,99                           | 7,90
-Piporé 1kg                  | 5.000 est.| 8,79                           | 8,80
-Verdeflor Hierbas Serr. 1kg | 5.200 est.| 7,99                           | 8,20
-Pajarito Tradicional 1kg    | 9.000 est.| 7,99 / £7,50                   | 8,20
-  (paraguaya, en Argentina es importada)
-Kurupí Menta y Boldo 500g   | 6.500 est.| 4,35-5,25 / £6,99              | 5,90
-Kraus Orgánica 500g         | 6.500 est.| 7,70 / 7,70 / £5,25            | 7,70
-Andresito Tradicional 1kg   | 4.500 est.| no está en esas 3 tiendas      | 8,50 est.
+Precios en Argentina: consultados el 06/11 en DIA, Jumbo, Vea, Disco, Carrefour y
+ChangoMás (precio normal, sin promociones; si difieren, el valor del medio).
+Precios en Europa: Pampa Drugstore (ES) / Mate-Tee (DE) / UruShop (UK, en libras).
 
-Conclusión: en Europa una yerba de 1kg sale entre 7,50 y 11 €; en Argentina, entre
-5.000 y 7.000 pesos. Las importadas (Canarias, Pajarito) son más caras en Argentina.
+Yerba                       | ARS         | = € (a 1.700) | Europa                  | Nuestro €
+Playadito Suave 1kg         | 5.208       | 3,06          | 7,69 / 7,70 / £7,50     | 7,90
+Taragüí Con Palo 1kg        | 5.790       | 3,41          | 7,99 / 8,11 / £7,50     | 8,10
+Rosamonte 1kg               | 4.490       | 2,64          | 9,77 / 7,29 / £8,50     | 8,50
+Amanda Tradicional 1kg      | 5.490       | 3,23          | 8,97 / 7,70 / £8,99     | 8,30
+Unión Suave 1kg             | 5.790       | 3,41          | 4,50 (500g) / £7,50     | 8,50
+Canarias 1kg                | 13.200      | 7,76          | 10,45 / 11,09 / £9,99   | 10,90
+CBSé Hierbas Serranas 1kg   | 5.190       | 3,05          | 9,89 / £4,75 (500g)     | 9,90
+La Merced Campo Sur 1kg     | 6.790       | 3,99          | 6,67 (500g)             | 12,90
+Cruz de Malta 1kg           | 5.199       | 3,06          | 8,75 / £9,50            | 8,90
+Nobleza Gaucha 1kg          | 4.890       | 2,88          | 7,99                    | 7,90
+Piporé 1kg                  | 5.050       | 2,97          | 8,79                    | 8,80
+Verdeflor Hierbas Serr. 1kg | ~5.200 (*)  | 3,06          | 7,99                    | 8,20
+Pajarito Tradicional 1kg    | no se vende | -             | 7,99 / £7,50            | 8,20
+Kurupí Menta y Boldo 500g   | 4.799       | 2,82          | 4,35-5,25 / £6,99       | 5,90
+Kraus Orgánica 500g         | no se vende | -             | 7,70 / 7,70 / £5,25     | 7,70
+Andresito Tradicional 1kg   | 3.835       | 2,26          | no está en esas tiendas | 8,50 est.
+(*) en Argentina solo hay de 500g (~2.600); el kilo es la cuenta x2.
+Pajarito (paraguaya) y Kraus (casi toda se exporta) no están en ningún súper argentino.
+
+Conclusión: la misma yerba en Europa cuesta entre 2,5 y 3 veces más que en
+Argentina (un kilo allá ronda los 3 € al cambio; acá entre 7,50 y 11 €).
+La excepción es Canarias: es uruguaya, en Argentina también es importada y cara.
 
 Cambios en el script por la investigación:
 - Taragüí 4 Flex -> Taragüí Con Palo (4 Flex es el envase, no la yerba).
@@ -241,11 +245,8 @@ Cambios en el script por la investigación:
 - Verdeflor, Pajarito, Kurupí y Andresito llevan la variedad en el nombre.
   OJO: comprobar que cada imagen muestre esa variedad.
 
-PENDIENTE (decidirlo yo): el precio en pesos entre paréntesis puede ser
-  a) el precio en euros pasado a pesos con una cotización fija, o
-  b) el precio real en Argentina (columna precio_ars en la BD), que muestra la
-     diferencia con Europa y no depende de la cotización.
-La cotización del euro de noviembre 2026 no la encontré: hay que mirarla en el BNA.
+DECIDIDO: el precio en pesos entre paréntesis es el precio en euros x 1.700.
+Ejemplo: Playadito 7,90 € (13.430 ARS). No hace falta columna nueva en la BD.
 
 ==================================================
 11. LÍNEAS FUTURAS (para la memoria y para comentarle a Fran)
