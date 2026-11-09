@@ -76,10 +76,6 @@ h1 { color: var(--cuero); margin: 0.5rem 0 1.2rem; }
 .foto { position: relative; }
 .foto .animada { position: absolute; inset: 0; opacity: 0; transition: opacity 0.2s; }
 .producto:hover .animada { opacity: 1; }
-/* a quien tiene pedido "reducir movimiento" en su sistema no se le muestra la animación */
-@media (prefers-reduced-motion: reduce) {
-  .producto:hover .animada { opacity: 0; }
-}
 
 .sin-imagen {
   display: flex;
