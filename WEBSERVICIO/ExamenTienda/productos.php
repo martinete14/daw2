@@ -28,7 +28,13 @@ $productos = Producto::deCategoria($categoria->codigo);
       <?php foreach ($productos as $producto) { ?>
         <article class="tarjeta producto">
           <?php if ($producto->tieneImagen()) { ?>
-            <img src="<?php echo htmlspecialchars($producto->imagen); ?>" alt="<?php echo htmlspecialchars($producto->nombre); ?>">
+            <div class="foto">
+              <img src="<?php echo htmlspecialchars($producto->imagen); ?>" alt="<?php echo htmlspecialchars($producto->nombre); ?>">
+              <?php if ($producto->gif()) { ?>
+                <!-- el gif va encima, invisible; el CSS lo muestra al pasar el mouse -->
+                <img class="animada" src="<?php echo htmlspecialchars($producto->gif()); ?>" alt="" loading="lazy">
+              <?php } ?>
+            </div>
           <?php } else { ?>
             <div class="sin-imagen">Imagen en preparación</div>
           <?php } ?>

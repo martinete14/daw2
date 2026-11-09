@@ -283,8 +283,16 @@ Carrito se suma en la parte 3, y Pedido gana el método para guardar en transacc
 Las propiedades de cada clase son las columnas de su tabla: PDO llena el objeto
 solo con PDO::FETCH_CLASS.
 
-OJO con las imágenes: Rosamonte, Amanda, Canarias y CBSé muestran el paquete de
-500 g, pero en la tienda se venden de 1 kg. Cambiar la foto o el producto.
+Imágenes (09/11):
+- Rosamonte, Amanda, Canarias y CBSé muestran el paquete de 500 g y se venden
+  de 1 kg. DECIDIDO: por ahora se dejan así.
+- Animación: cada producto tiene la imagen quieta (.jpg) y un gif con el MISMO
+  nombre (playadito.jpg / playadito.gif) en img/productos. Al pasar el mouse por
+  la tarjeta se ve el gif (solo CSS: .producto:hover .animada). Si no hay gif,
+  queda la imagen quieta. Producto::gif() busca el archivo.
+- Pendiente: emparejar todas las imágenes (mismo tamaño y mismo margen) con el
+  mismo recorte en el jpg y en su gif, para que el paquete no salte al pasar el
+  mouse. Nobleza Gaucha tiene el fondo gris, el resto blanco.
 
 ==================================================
 12. LÍNEAS FUTURAS (para la memoria y para comentarle a Fran)

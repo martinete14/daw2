@@ -41,4 +41,11 @@ class Producto {
     public function tieneImagen() {
         return file_exists(__DIR__ . "/../" . $this->imagen);
     }
+
+    // la animación es un gif con el mismo nombre que la imagen (playadito.jpg -> playadito.gif).
+    // Devuelve su ruta, o false si ese producto todavía no tiene gif
+    public function gif() {
+        $gif = preg_replace('/\.jpg$/', '.gif', $this->imagen);
+        return file_exists(__DIR__ . "/../" . $gif) ? $gif : false;
+    }
 }
