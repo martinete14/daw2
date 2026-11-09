@@ -1,0 +1,133 @@
+/* La Pulpería: crema de almacén, verde yerba y marrón cuero */
+:root {
+  --crema: #f6f0e1;
+  --papel: #fffdf7;
+  --yerba: #4b6b2f;
+  --cuero: #6b4226;
+  --texto: #2b2118;
+  --suave: #7a6a58;
+  --celeste: #74acdf;
+  --rojo: #a8322d;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--crema);
+  color: var(--texto);
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* lining-nums: sin esto Georgia dibuja el "1" de "1kg" como una i */
+h1, h2, .logo { font-family: Georgia, "Times New Roman", serif; font-variant-numeric: lining-nums; }
+h1 { color: var(--cuero); margin: 0.5rem 0 1.2rem; }
+
+/* cabecera */
+.cabecera {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1rem 5%;
+  background: var(--cuero);
+  border-bottom: 4px solid var(--celeste);
+}
+.logo { color: var(--crema); font-size: 1.6rem; text-decoration: none; }
+.menu { display: flex; flex-wrap: wrap; align-items: center; gap: 1.2rem; }
+.menu a { color: var(--crema); text-decoration: none; }
+.menu a:hover { text-decoration: underline; }
+.hola { color: #e8d9bd; font-size: 0.9rem; }
+
+.contenido { width: 90%; max-width: 1100px; margin: 1.5rem auto 2rem; }
+
+.pie { margin-top: auto; padding: 1.2rem 5%; text-align: center; font-size: 0.8rem; color: var(--suave); }
+
+/* tarjetas de categorías y productos */
+.rejilla {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 1.2rem;
+}
+.tarjeta {
+  background: var(--papel);
+  border: 1px solid #e3d8c2;
+  border-radius: 10px;
+  padding: 1rem;
+}
+.tarjeta h2 { font-size: 1.1rem; margin: 0.6rem 0 0.4rem; }
+
+.categoria { text-decoration: none; color: inherit; border-top: 5px solid var(--yerba); }
+.categoria:hover { box-shadow: 0 4px 14px rgba(107, 66, 38, 0.18); }
+.categoria p { color: var(--suave); margin: 0; }
+
+.producto img, .sin-imagen {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: contain;
+  border-radius: 6px;
+  background: #fff;
+}
+.sin-imagen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--suave);
+  background: #efe6d2;
+  font-size: 0.9rem;
+}
+.descripcion { font-size: 0.88rem; color: var(--suave); }
+.peso { font-size: 0.85rem; margin: 0.3rem 0; }
+.precio { font-size: 1.25rem; font-weight: bold; color: var(--yerba); margin: 0.4rem 0; }
+.precio small { font-size: 0.75rem; font-weight: normal; color: var(--suave); }
+.sin-stock { color: var(--rojo); font-weight: bold; margin: 0.3rem 0 0; }
+
+.volver { color: var(--cuero); }
+
+/* login */
+.login {
+  max-width: 380px;
+  margin: 2rem auto;
+  background: var(--papel);
+  border: 1px solid #e3d8c2;
+  border-radius: 10px;
+  padding: 1.6rem;
+}
+.login label { display: block; font-size: 0.9rem; color: var(--suave); margin-bottom: 0.3rem; }
+.login input[type=email], .login input[type=password] {
+  width: 100%;
+  font: inherit;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid #cdbf9f;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+.login .casilla { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1.2rem; }
+
+button {
+  font: inherit;
+  width: 100%;
+  padding: 0.65rem;
+  border: none;
+  border-radius: 6px;
+  background: var(--yerba);
+  color: #fff;
+  cursor: pointer;
+}
+button:hover { background: #3c5725; }
+
+.aviso, .error { padding: 0.6rem 0.8rem; border-radius: 6px; }
+.aviso { background: #e5f0fa; border-left: 4px solid var(--celeste); }
+.error { background: #f8e3e1; border-left: 4px solid var(--rojo); color: var(--rojo); }
+
+/* perfil */
+.datos { display: grid; grid-template-columns: max-content 1fr; gap: 0.4rem 1.2rem; }
+.datos dt { color: var(--suave); }
+.datos dd { margin: 0; }
+.tabla { width: 100%; border-collapse: collapse; background: var(--papel); }
+.tabla th, .tabla td { padding: 0.5rem; border-bottom: 1px solid #e3d8c2; text-align: left; }
+.tabla small { color: var(--suave); }

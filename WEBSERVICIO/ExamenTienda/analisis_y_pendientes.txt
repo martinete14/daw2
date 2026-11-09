@@ -254,7 +254,40 @@ DECIDIDO: el precio en pesos entre paréntesis es el precio en euros x 1.700.
 Ejemplo: Playadito 7,90 € (13.430 ARS). No hace falta columna nueva en la BD.
 
 ==================================================
-11. LÍNEAS FUTURAS (para la memoria y para comentarle a Fran)
+11. CÓDIGO: PARTES 1 Y 2 (09/11)
+==================================================
+Hecho y probado con curl (login bien y mal, cookie, caducidad, perfil, inyección SQL).
+Falta solo RF-04 (panel de alta/baja/modificación), que espera la respuesta de Fran.
+
+Para probarlo: XAMPP con MySQL encendido y, desde la carpeta ExamenTienda,
+  C:\xampp\php\php.exe -S localhost:8000
+y abrir http://localhost:8000. Usuarios en el Anexo A de la memoria.
+
+Dónde está cada cosa (lo que va a preguntar Fran):
+- La cookie propia: "recordar_correo", se crea y se borra en login.php
+  (setcookie) y se lee arriba de todo en login.php ($_COOKIE).
+- La cookie de sesión PHPSESSID: la crea session_start() en config.php.
+  Se borra en Usuario::cerrarSesion().
+- $_SESSION['usuario'] y $_SESSION['ultima_actividad']: se crean en
+  Usuario::iniciarSesion() (clases/Usuario.php).
+- La caducidad por inactividad: Usuario::comprobarSesion(), que va arriba de
+  cada página protegida. Los 10 minutos están en config.php (MINUTOS_INACTIVIDAD).
+- La cotización 1.700: config.php (COTIZACION_ARS), y la usan euros() y pesos().
+- La conexión: clases/BaseDatos.php, se abre una sola vez (propiedad static).
+- Las consultas: todas con prepare() + execute() y el dato aparte (con "?").
+- La clave: password_verify en Usuario::login(). En la sesión nunca va la clave.
+- Cada PHP tiene arriba qué RF cumple.
+
+Clases (carpeta clases/): BaseDatos, Categoria, Producto, Usuario, Pedido.
+Carrito se suma en la parte 3, y Pedido gana el método para guardar en transacción.
+Las propiedades de cada clase son las columnas de su tabla: PDO llena el objeto
+solo con PDO::FETCH_CLASS.
+
+OJO con las imágenes: Rosamonte, Amanda, Canarias y CBSé muestran el paquete de
+500 g, pero en la tienda se venden de 1 kg. Cambiar la foto o el producto.
+
+==================================================
+12. LÍNEAS FUTURAS (para la memoria y para comentarle a Fran)
 ==================================================
 - Botón EUR <-> ARS para cambiar la moneda de toda la tienda, con cotización
   actualizada. Comentárselo a Fran: si le gusta, lo hacemos.
