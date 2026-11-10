@@ -209,20 +209,80 @@ h1, h2, h3 {
 .portada-titulo .linea:nth-child(3) { background: var(--celeste); rotate: -.7deg; }
 .portada-bajada { max-width: 36ch; margin: 1.6rem 0; font-size: 1.15rem; }
 
-.portada-stickers { position: relative; aspect-ratio: 1; }
-.portada-stickers picture, .login-stickers picture { position: absolute; display: block; width: 52%; }
-.portada-stickers img, .login-stickers img {
+.portada-cartel { position: relative; padding: 2rem 1rem 1rem; }
+
+/* lista de precios del almacén: hoja impresa, pegada con cinta, con los precios escritos a mano */
+.lista-precios {
+  position: relative;
+  padding: 1.6rem 1.6rem 1.2rem;
+  background: var(--blanco);
+  border: var(--borde);
+  box-shadow: var(--sombra);
+  rotate: 2deg;
+}
+/* dos pedazos de cinta de papel en las esquinas de arriba */
+.lista-precios::before, .lista-precios::after {
+  content: "";
+  position: absolute;
+  top: -14px;
+  width: 92px;
+  height: 28px;
+  background: rgb(255 230 0 / .75);
+  border-inline: 2px dashed rgb(20 20 20 / .25); /* el borde cortado de la cinta */
+}
+.lista-precios::before { left: -22px; rotate: -32deg; }
+.lista-precios::after { right: -22px; rotate: 28deg; }
+
+.lista-titulo {
+  width: fit-content;
+  margin: 0 0 1rem;
+  padding: 0 .3em;
+  font-family: var(--letra-titulo);
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--amarillo);
+  background: var(--tinta);
+  rotate: -2deg;
+}
+.lista-precios ul { margin: 0; padding: 0; list-style: none; }
+.lista-precios li { border-bottom: 2px dashed var(--tinta); }
+.lista-precios li:last-child { border-bottom: 0; }
+.lista-precios a {
+  display: flex;
+  align-items: baseline;
+  gap: .6rem;
+  padding: .55rem .3rem;
+  text-decoration: none;
+  transition: background .15s;
+}
+.lista-precios a:hover { background: var(--color); } /* el renglón se pinta con la tinta de la categoría */
+/* un punto de la tinta de cada categoría, como el marcador del almacenero */
+.lista-nombre::before {
+  content: "";
+  display: inline-block;
+  width: .8rem;
+  height: .8rem;
+  margin-right: .55rem;
+  background: var(--color);
+  border: 2px solid var(--tinta);
+  border-radius: 50%;
+}
+.lista-nombre { font-family: var(--letra-titulo); font-size: 1.25rem; text-transform: uppercase; }
+.lista-precio { margin-left: auto; font-family: var(--letra-mano); font-size: 1.15rem; white-space: nowrap; }
+.lista-pie { margin: .9rem 0 0; font-size: .8rem; font-weight: 700; }
+
+/* yerbas del login, pegadas como stickers */
+.login-stickers picture { position: absolute; display: block; }
+.login-stickers img {
   width: 100%;
   background: var(--blanco);
   border: var(--borde);
   box-shadow: var(--sombra);
 }
-.portada-stickers picture:nth-child(1) { top: 0; left: 4%; rotate: -8deg; }
-.portada-stickers picture:nth-child(2) { top: 22%; right: 0; rotate: 7deg; }
-.portada-stickers picture:nth-child(3) { bottom: 0; left: 20%; rotate: -3deg; }
 
 /* sello redondo que gira, con el texto alrededor del logo */
-.sello-giratorio { position: absolute; top: -7%; right: -3%; z-index: 3; width: 34%; animation: girar 22s linear infinite; }
+.sello-giratorio { position: absolute; top: -4.5rem; right: -2.5rem; z-index: 3; width: 9.5rem; pointer-events: none; animation: girar 22s linear infinite; }
 .sello-giratorio text { font-family: var(--letra-titulo); font-size: 19px; text-transform: uppercase; fill: var(--tinta); }
 @keyframes girar { to { rotate: 360deg; } }
 
@@ -566,7 +626,8 @@ h1, h2, h3 {
 /* ---------- celular ---------- */
 @media (max-width: 820px) {
   .portada, .login, .ficha { grid-template-columns: 1fr; }
-  .portada-stickers { width: min(100%, 420px); }
+  .portada-cartel { width: min(100%, 460px); }
+  .sello-giratorio { right: -.5rem; width: 7.5rem; }
   .login-afiche { min-height: 420px; }
   .banda-cantidad { position: static; display: inline-block; margin-top: 1rem; }
   .banda-foto { display: none; }

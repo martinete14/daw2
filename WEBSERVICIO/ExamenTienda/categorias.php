@@ -1,7 +1,7 @@
 <?php
 // ExamenTienda - La Pulpería
 // Categorías (RF-01): las 6 categorías leídas de la BD, cada una lleva a sus productos.
-// Arriba, la portada con el titular y tres yerbas girando.
+// Arriba, la portada con el titular y una lista de precios pegada como un afiche de almacén.
 require "config.php";
 Usuario::comprobarSesion();
 
@@ -27,16 +27,24 @@ require "inc/cabecera.php";
         <a class="boton boton-chico" href="#categorias">Ver el almacén <i class="ph-bold ph-arrow-down" aria-hidden="true"></i></a>
       </div>
 
-      <div class="portada-stickers" aria-hidden="true">
-        <?php foreach (["playadito", "taragui", "rosamonte"] as $yerba) { ?>
-          <!-- si el sistema pide reducir movimiento, el navegador elige la foto quieta en vez del gif -->
-          <picture data-anima="salta">
-            <source srcset="img/productos/<?php echo $yerba; ?>.jpg" media="(prefers-reduced-motion: reduce)">
-            <img src="img/productos/<?php echo $yerba; ?>.gif" alt="">
-          </picture>
-        <?php } ?>
+      <div class="portada-cartel">
+        <!-- la lista de precios del almacén: cada categoría con su precio más barato, escrito a mano -->
+        <div class="lista-precios" data-anima="salta">
+          <p class="lista-titulo">Precios de hoy</p>
+          <ul>
+            <?php foreach ($categorias as $categoria) { ?>
+              <li class="cat-<?php echo $categoria->codigo; ?>">
+                <a href="productos.php?categoria=<?php echo $categoria->codigo; ?>">
+                  <span class="lista-nombre"><?php echo htmlspecialchars($categoria->nombre); ?></span>
+                  <span class="lista-precio">desde <?php echo euros($categoria->desde); ?></span>
+                </a>
+              </li>
+            <?php } ?>
+          </ul>
+          <p class="lista-pie">1 € = <?php echo number_format(COTIZACION_ARS, 0, ",", "."); ?> ARS · cotización fija</p>
+        </div>
         <!-- sello que gira: el texto sigue un círculo (textPath) y textLength lo estira justo a la vuelta -->
-        <svg class="sello-giratorio" viewBox="0 0 200 200">
+        <svg class="sello-giratorio" viewBox="0 0 200 200" aria-hidden="true">
           <defs><path id="circulo" d="M100,100 m-76,0 a76,76 0 1,1 152,0 a76,76 0 1,1 -152,0"/></defs>
           <circle cx="100" cy="100" r="97" fill="#ffe600" stroke="#141414" stroke-width="4"/>
           <text><textPath href="#circulo" textLength="474">Almacén argentino ✶ Lo de allá, acá ✶</textPath></text>

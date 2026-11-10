@@ -49,7 +49,7 @@ if (!window.gsap || !window.ScrollTrigger || !window.SplitText) {
       });
     });
 
-    // las yerbas de la portada y del login se pegan de a una
+    // la lista de precios de la portada y las yerbas del login se pegan como stickers
     const stickers = gsap.utils.toArray('[data-anima="salta"]');
     stickers.forEach(mostrar);
     gsap.from(stickers, { scale: 0, rotation: -25, duration: 0.9, ease: "back.out(1.7)", stagger: 0.15, delay: 0.3 });

@@ -335,3 +335,45 @@ Identidad visual (10/11): "afiche porteño", los afiches callejeros de Buenos Ai
 - Carnes y parrilla: piden cadena de frío y envíos especiales.
 - Ofrecer la web a tiendas reales del rubro (sus webs tienen una visual muy antigua).
 - Renders 3D / videos de los productos.
+
+==================================================
+13. PROFUNDIDAD DEL CATÁLOGO Y PORTADA (10/11)
+==================================================
+Referencia: Nuestra Pacha Regionales (https://nuestrapacharegionales.com/tienda/),
+tienda real de Córdoba donde compré. Precios en pesos, más de 1.300 productos.
+No vende alfajores ni almacén: sirve para mates, bombillas, termos y materas.
+Cómo describe las cosas (de ahí sale el vocabulario de las descripciones):
+- Mates: calabaza "forrada en cuero" / "cuero crudo", "faja y virola de alpaca",
+  "alpaca cincelada", "base con patas". Imperial premium 90.000-145.000 ARS;
+  imperial nacional (virola de acero) 45.000 ARS.
+- Bombillas de acero inoxidable de 16 a 19 cm: pico de loro, curva, doble pico;
+  filtro de cuchara o de cilindro a rosca; boquilla dorada. 7.000-9.500 ARS.
+- Yerbas que tiene y nosotros no: Baldo, Sara, Rei Verde, Libre, Pindare, Barao
+  y Centenaria (casi todas uruguayas o brasileñas), en 500 g y 1 kg.
+
+Cambios en el catálogo (sin cambiar precios, stock ni la cantidad de productos):
+- Cada categoría tiene su plantilla de descripción, como las yerbas:
+    Mates y bombillas: de qué está hecho, terminación, para quién, cuidado o dato.
+    Termos y materas: material y capacidad, para cebar, cuánto aguanta, dato.
+    Alfajores y dulce de leche: tapas/relleno/baño, quién lo hace, cómo viene, dato.
+    Almacén criollo: qué es, marca, cómo se usa, dato.
+    Kits: qué trae y para quién es.
+- Las 6 descripciones de categoría ahora dicen qué hay adentro (máx. 200 caracteres).
+- Descripciones que no coincidían con la foto, corregidas:
+    "Matera de cuero" -> "Matera Broksol con tapa" (la foto es una matera de tela).
+        La imagen pasa a matera-broksol.jpg.
+    "Yerbera y azucarera de lata" -> "Lata yerbera Broksol" (la foto es una sola lata).
+        La imagen pasa a lata-yerbera.jpg.
+    "Pava eléctrica con corte a 80°C" -> "con control de temperatura" (tiene pantalla).
+    "Bombilla de acero" tenía filtro de resorte: la foto tiene filtro de cuchara.
+    Ají molido y membrillo llevan la marca de la foto (Dos Anclas, Esnaola).
+
+Portada: se sacaron las tres yerbas girando. En su lugar, una "lista de precios"
+pegada con cinta, como la del almacén: cada categoría con su precio más barato
+("desde 2,90 €"), sacado de la BD con MIN(precio) en Categoria::todas()
+(propiedad $desde). Cada renglón lleva a su categoría. El sello giratorio queda.
+
+Candidatos para sumar si hay fotos (de Nuestra Pacha):
+- Yerbas: Canarias Serena, Sara Tradicional, Baldo, Rei Verde Compuesta.
+- Bombillas: doble pico de acero, pico de loro con filtro a rosca.
+- Mates: imperial con virola de acero (más barato que el de alpaca).
