@@ -382,3 +382,28 @@ Memoria (10/11): pasa de Word a Markdown, Memoria_LaPulperia.md (se lee en VS Co
 Ctrl+Shift+V y en GitHub). El índice ya no se actualiza a mano: son enlaces a cada título.
 Los PENDIENTE siguen resaltados (<mark>). Para entregar se exporta a .docx o .pdf.
 El .docx viejo se borró (queda en el historial de git, commit 16651b1 y anteriores).
+
+==================================================
+14. YERBAS: DE 16 A 30 (10/11)
+==================================================
+Las 14 nuevas las busca Martín con ChatGPT (foto sin fondo + gif con el prompt maestro).
+Elegidas para cubrir lo que falta: sin palo, barbacuá, saborizada, orgánica, más
+uruguayas, una brasileña y otra paraguaya. Comprobar que la variedad exista; si no,
+otra del mismo tipo. Entre paréntesis, el nombre del archivo (jpg y gif iguales).
+ 1. Taragüí Despalada 500g          sin palo, Corrientes        (taragui-despalada)
+ 2. Rosamonte Selección Especial    con palo, Misiones          (rosamonte-especial)
+ 3. Mate Rojo Tradicional 1kg       con palo, Misiones          (mate-rojo)
+ 4. Aguantadora Tradicional 1kg     con palo, Misiones          (aguantadora)
+ 5. La Merced Barbacuá 500g         barbacuá (secada a leña)    (la-merced-barbacua)
+ 6. Cachamate Hierbas 500g          compuesta                   (cachamate)
+ 7. CBSé Energía Guaraná 500g       saborizada                  (cbse-guarana)
+ 8. Titrayju Orgánica 500g          orgánica, Misiones          (titrayju)
+ 9. Canarias Serena 1kg             sin palo suave, Uruguay     (canarias-serena)
+10. Baldo 1kg                       sin palo, Uruguay           (baldo)
+11. Sara Tradicional 1kg            sin palo, Uruguay           (sara)
+12. Barão de Cotegipe 1kg           chimarrão, Brasil           (barao)
+13. Selecta Tradicional 500g        con palo, Paraguay          (selecta)
+14. Amanda Despalada 500g           sin palo, Misiones          (amanda-despalada)
+
+Gifs pendientes (5): rehacer kraus, kurupi y verdeflor (img/rehacer/) y hacer
+andresito y pipore, que nunca tuvieron.
