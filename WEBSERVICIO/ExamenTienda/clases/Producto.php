@@ -1,5 +1,5 @@
 <?php
-// Clase Producto: lee los productos de una categoría o uno por su código, y consulta el stock (RF-02, RF-03)
+// Clase Producto: lee los productos de una categoría (todos o de un tipo) o uno por su código, y consulta el stock (RF-02, RF-03, RF-18)
 
 class Producto {
     // una propiedad por columna de la tabla productos
@@ -10,12 +10,20 @@ class Producto {
     public $precio;     // en euros
     public $stock;
     public $imagen;     // ruta, por ejemplo img/productos/playadito.jpg
+    public $tipo;       // tipo dentro de la categoría, por ejemplo "Con palo" (RF-18)
     public $categoria;  // código de la categoría
 
-    // los productos de una categoría, como objetos Producto
-    public static function deCategoria($categoria) {
-        $consulta = BaseDatos::conexion()->prepare("SELECT * FROM productos WHERE categoria = ? ORDER BY codigo");
-        $consulta->execute([$categoria]);
+    // los productos de una categoría, como objetos Producto.
+    // Si llega un tipo, solo los de ese tipo (RF-18): se suma "AND tipo = ?" a la consulta
+    public static function deCategoria($categoria, $tipo = "") {
+        $sql = "SELECT * FROM productos WHERE categoria = ?";
+        $datos = [$categoria];
+        if ($tipo != "") {
+            $sql .= " AND tipo = ?";
+            $datos[] = $tipo;
+        }
+        $consulta = BaseDatos::conexion()->prepare($sql . " ORDER BY codigo");
+        $consulta->execute($datos);
         return $consulta->fetchAll(PDO::FETCH_CLASS, "Producto");
     }
 

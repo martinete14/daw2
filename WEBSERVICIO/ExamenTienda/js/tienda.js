@@ -30,7 +30,11 @@ if (verClave) {
   });
 }
 
-// 3. Animaciones de entrada con GSAP. Si la librería no cargó (sin internet), se saca la clase
+// 3. En el celular el filtro por tipo es una fila que se desliza de costado: se corre sola hasta
+//    la opción elegida, para que se vea cuál está marcada. El filtro en sí lo hace PHP (RF-18).
+document.querySelector(".filtro [aria-current]")?.scrollIntoView({ block: "nearest", inline: "center" });
+
+// 4. Animaciones de entrada con GSAP. Si la librería no cargó (sin internet), se saca la clase
 //    "js" del <html> y el CSS deja de esconder lo que iba a animarse: se ve todo, quieto.
 if (!window.gsap || !window.ScrollTrigger || !window.SplitText) {
   document.documentElement.classList.remove("js");

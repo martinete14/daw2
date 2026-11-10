@@ -404,6 +404,45 @@ h1, h2, h3 {
   rotate: 4deg;
 }
 
+/* ---------- filtro por tipo (RF-18) ----------
+   Fichas redondas como las del menú. La elegida se pinta con la tinta de la categoría
+   y queda despegada, con sombra; el número va en una etiqueta negra como la de los afiches. */
+.filtro {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .6rem;
+  margin: -.6rem 0 2.2rem;
+  scroll-margin-top: 7rem; /* al volver con #filtro, que no quede tapado por la cabecera fija */
+}
+.filtro-nota { margin-right: .3rem; font-family: var(--letra-mano); font-size: 1.2rem; rotate: -3deg; }
+.filtro a {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .3rem .4rem .3rem .9rem;
+  font-weight: 700;
+  font-size: .95rem;
+  text-decoration: none;
+  background: var(--blanco);
+  border: 2px solid var(--tinta);
+  border-radius: 999px;
+  transition: translate .15s, box-shadow .15s, background .15s;
+}
+.filtro a:hover { translate: -2px -2px; box-shadow: 3px 3px 0 var(--tinta); }
+.filtro a[aria-current] { background: var(--color); translate: -2px -2px; box-shadow: 3px 3px 0 var(--tinta); }
+.filtro small {
+  min-width: 1.6rem;
+  padding: .05rem .45rem;
+  font-size: .75rem;
+  font-weight: 800;
+  text-align: center;
+  color: var(--blanco);
+  background: var(--tinta);
+  border-radius: 999px;
+}
+.filtro + .vacio { margin-bottom: 2rem; }
+
 .estantes { display: grid; grid-template-columns: repeat(auto-fill, minmax(245px, 1fr)); gap: 1.8rem; }
 .producto {
   position: relative;
@@ -631,9 +670,13 @@ h1, h2, h3 {
   .login-afiche { min-height: 420px; }
   .banda-cantidad { position: static; display: inline-block; margin-top: 1rem; }
   .banda-foto { display: none; }
+  .filtro { scroll-margin-top: 12rem; } /* en el celular la cabecera ocupa tres renglones */
 }
 @media (max-width: 520px) {
   .logo-sello { display: none; } /* que el logo entre en un renglón */
+  /* el filtro en una sola fila que se desliza de costado, de borde a borde */
+  .filtro { flex-wrap: nowrap; overflow-x: auto; margin-inline: -1rem; padding: .4rem 1rem .6rem; scrollbar-width: none; }
+  .filtro a, .filtro-nota { flex-shrink: 0; }
 }
 /* ---------- movimiento ----------
    Lo que se mueve solo (la cinta, las entradas de GSAP, el cambio de página) respeta

@@ -313,10 +313,11 @@ Identidad visual (10/11): "afiche porteño", los afiches callejeros de Buenos Ai
   Permanent Marker (notas a mano). Desde Google Fonts.
 - Librerías por CDN: GSAP 3.13 (con ScrollTrigger y SplitText) y Phosphor Icons.
   Sin internet la tienda funciona igual: letra del sistema y sin animaciones.
-- JavaScript (js/tienda.js), tres cosas y nada más:
+- JavaScript (js/tienda.js), cuatro cosas y nada más:
   1. reinicia el gif al pasar el mouse (así arranca con el paquete de frente);
   2. el ojo para ver la clave en el login;
-  3. animaciones de entrada con GSAP (titulares letra por letra, yerbas que se
+  3. en el celular, corre la fila del filtro hasta la opción elegida (sumado el 10/11);
+  4. animaciones de entrada con GSAP (titulares letra por letra, yerbas que se
      pegan, tarjetas que aparecen con el scroll).
   La lógica de la tienda (sesión, cookie, datos) sigue toda en PHP.
 - Si el sistema tiene "reducir movimiento" (en Windows: Configuración >
@@ -407,3 +408,29 @@ otra del mismo tipo. Entre paréntesis, el nombre del archivo (jpg y gif iguales
 
 Gifs pendientes (5): rehacer kraus, kurupi y verdeflor (img/rehacer/) y hacer
 andresito y pipore, que nunca tuvieron.
+
+==================================================
+15. FILTRO POR TIPO (RF-18) (10/11)
+==================================================
+Con 30 yerbas (y más mates y bombillas a futuro) hace falta filtrar. Decidido:
+- Columna nueva productos.tipo (VARCHAR 30): el tipo dentro de su categoría.
+    Yerbas: Con palo / Sin palo / Compuesta / Orgánica (las nuevas suman Barbacuá
+    y Saborizada). Mates y bombillas: Mates / Bombillas. Termos y materas: Termos /
+    Materas / Pavas / Yerberas. Alfajores: Alfajores / Dulce de leche. Almacén:
+    Para el mate / Para el asado / Dulces / Para cocinar. Kits: Para el mate / Para comer.
+    OJO: La Merced Campo Sur quedó "Con palo"; confirmarlo en el paquete.
+- El filtro lo hace PHP, no JavaScript (como el resto de la lógica):
+    productos.php lee $_GET['tipo'] y llama a Producto::deCategoria($codigo, $tipo),
+    que suma "AND tipo = ?" a la consulta preparada. Las opciones salen de
+    $categoria->tipos() (GROUP BY tipo, con la cantidad de cada uno).
+- Cada opción es un enlace con #filtro al final: la página vuelve a abrir en el
+  filtro y no arriba de todo. Si el tipo no existe, aviso y botón "Ver todos".
+- Solo aparece si la categoría tiene más de un tipo.
+- Diseño: fichas redondas como las del menú; la elegida con la tinta de la
+  categoría y sombra; el número en etiqueta negra. En el celular, una sola fila
+  que se desliza de costado.
+- Requisito nuevo RF-18 (en la parte 1). No se renumeran los demás: los RF están
+  citados en los comentarios del código.
+- Fotos con loading="lazy": se bajan a medida que se scrollea (con 30 yerbas, mejor).
+- A futuro: filtro por tamaño del paquete (500 g / 1 kg). Por ahora alcanza con la
+  etiqueta del peso.

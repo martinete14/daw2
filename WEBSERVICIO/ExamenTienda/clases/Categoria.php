@@ -1,5 +1,5 @@
 <?php
-// Clase Categoria: lee las categorías de la base de datos (RF-01)
+// Clase Categoria: lee las categorías de la base de datos (RF-01) y los tipos de producto de cada una (RF-18)
 
 class Categoria {
     // una propiedad por columna de la tabla categorias
@@ -21,6 +21,15 @@ class Categoria {
                 ORDER BY c.codigo";
         $consulta = BaseDatos::conexion()->query($sql);
         return $consulta->fetchAll(PDO::FETCH_CLASS, "Categoria");
+    }
+
+    // los tipos de producto de esta categoría y cuántos hay de cada uno, para el filtro (RF-18).
+    // FETCH_KEY_PAIR arma el array con la primera columna de clave: ["Con palo" => 11, "Compuesta" => 3, ...]
+    public function tipos() {
+        $consulta = BaseDatos::conexion()->prepare(
+            "SELECT tipo, COUNT(*) FROM productos WHERE categoria = ? GROUP BY tipo ORDER BY COUNT(*) DESC, tipo");
+        $consulta->execute([$this->codigo]);
+        return $consulta->fetchAll(PDO::FETCH_KEY_PAIR);
     }
 
     // una categoría por su código, o false si no existe

@@ -1,7 +1,8 @@
 <?php
 // ExamenTienda - La Pulpería
 // Productos de una categoría (RF-02, RF-03): imagen, nombre, descripción, peso,
-// precio en euros y en pesos, y el sello "Sin stock" si no quedan
+// precio en euros y en pesos, y el sello "Sin stock" si no quedan.
+// Arriba, el filtro por tipo (RF-18): con palo, sin palo, compuesta...
 require "config.php";
 Usuario::comprobarSesion();
 
@@ -19,7 +20,10 @@ if (!$categoria) { ?>
     exit;
 }
 
-$productos = Producto::deCategoria($categoria->codigo);
+// el tipo elegido también llega por la URL: productos.php?categoria=1&tipo=Sin palo (sin tipo, todos)
+$tipo = $_GET['tipo'] ?? "";
+$tipos = $categoria->tipos();
+$productos = Producto::deCategoria($categoria->codigo, $tipo);
 ?>
     <!-- cat-N: la franja y las tarjetas toman la tinta de la categoría -->
     <div class="cat-<?php echo $categoria->codigo; ?>">
@@ -33,12 +37,37 @@ $productos = Producto::deCategoria($categoria->codigo);
         <?php } ?>
       </section>
 
+      <?php if (count($tipos) > 1) { ?>
+        <!-- RF-18: cada opción es un enlace con el tipo en la URL; filtra la consulta en PHP, no JavaScript.
+             #filtro hace que la página vuelva a abrir acá y no arriba de todo -->
+        <nav class="filtro" id="filtro" aria-label="Filtrar por tipo">
+          <span class="filtro-nota">¿Cuál buscás?</span>
+          <a href="productos.php?categoria=<?php echo $categoria->codigo; ?>#filtro"<?php if ($tipo == "") echo ' aria-current="page"'; ?>>
+            Todos <small><?php echo array_sum($tipos); ?></small>
+          </a>
+          <?php foreach ($tipos as $nombre => $cantidad) { ?>
+            <!-- http_build_query arma "categoria=1&tipo=Sin+palo", con los espacios y las tildes codificados -->
+            <a href="productos.php?<?php echo htmlspecialchars(http_build_query(['categoria' => $categoria->codigo, 'tipo' => $nombre])); ?>#filtro"<?php if ($tipo == $nombre) echo ' aria-current="page"'; ?>>
+              <?php echo htmlspecialchars($nombre); ?> <small><?php echo $cantidad; ?></small>
+            </a>
+          <?php } ?>
+        </nav>
+      <?php } ?>
+
+      <?php if (!$productos) { ?>
+        <div class="vacio">
+          <p>No hay productos de ese tipo.</p>
+          <a class="boton boton-chico" href="productos.php?categoria=<?php echo $categoria->codigo; ?>">Ver todos</a>
+        </div>
+      <?php } ?>
+
       <div class="estantes">
         <?php foreach ($productos as $producto) { ?>
           <article class="producto<?php if ($producto->sinStock()) echo " agotado"; ?>" data-anima="tarjeta">
             <?php if ($producto->tieneImagen()) { ?>
               <div class="foto">
-                <img src="<?php echo htmlspecialchars($producto->imagen); ?>" alt="<?php echo htmlspecialchars($producto->nombre); ?>">
+                <!-- loading="lazy": la foto se baja cuando se acerca con el scroll, no todas al abrir la página -->
+                <img src="<?php echo htmlspecialchars($producto->imagen); ?>" alt="<?php echo htmlspecialchars($producto->nombre); ?>" loading="lazy">
                 <?php if ($producto->gif()) { ?>
                   <!-- el gif va encima, invisible; el CSS lo muestra al pasar el mouse -->
                   <img class="animada" src="<?php echo htmlspecialchars($producto->gif()); ?>" alt="" loading="lazy">
