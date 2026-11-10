@@ -377,3 +377,8 @@ Candidatos para sumar si hay fotos (de Nuestra Pacha):
 - Yerbas: Canarias Serena, Sara Tradicional, Baldo, Rei Verde Compuesta.
 - Bombillas: doble pico de acero, pico de loro con filtro a rosca.
 - Mates: imperial con virola de acero (más barato que el de alpaca).
+
+Memoria (10/11): pasa de Word a Markdown, Memoria_LaPulperia.md (se lee en VS Code con
+Ctrl+Shift+V y en GitHub). El índice ya no se actualiza a mano: son enlaces a cada título.
+Los PENDIENTE siguen resaltados (<mark>). Para entregar se exporta a .docx o .pdf.
+El .docx viejo se borró (queda en el historial de git, commit 16651b1 y anteriores).
