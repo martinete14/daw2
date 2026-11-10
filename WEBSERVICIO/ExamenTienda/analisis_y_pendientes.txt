@@ -434,3 +434,21 @@ Con 30 yerbas (y más mates y bombillas a futuro) hace falta filtrar. Decidido:
 - Fotos con loading="lazy": se bajan a medida que se scrollea (con 30 yerbas, mejor).
 - A futuro: filtro por tamaño del paquete (500 g / 1 kg). Por ahora alcanza con la
   etiqueta del peso.
+
+==================================================
+16. IMÁGENES DE LAS CATEGORÍAS (10/11)
+==================================================
+Antes el afiche de cada categoría mostraba la foto de su primer producto (repetida del
+catálogo y algunas feas). Ahora cada categoría tiene su imagen propia:
+- Carpeta img/categorias/ (antes bancoimg): yerbas, mates, termos, alfajores, almacen
+  y kits en .webp de 800x800 con transparencia (de 84 a 187 KB; los PNG originales
+  pesaban 2 MB cada uno). Los originales de 1600x1600 quedan en img/categorias/originales/
+  para hacer los gifs.
+- Columna nueva categorias.imagen con la ruta. Categoria::todas() ya no saca la foto
+  del primer producto con una subconsulta: la lee de la columna.
+- La franja de arriba de cada categoría (productos.php) sigue con la foto de su primer producto.
+- Diseño: como son recortes sin fondo, van como sticker troquelado (borde blanco que
+  sigue la forma y sombra negra), con filter: drop-shadow en .afiche-foto.
+- Cuando estén los gifs: se guardan con el mismo nombre en img/categorias/ y se cambia
+  la ruta en la tabla (o se suma como en los productos).
+- La Merced Campo Sur: confirmado con palo. Por ahora la única sin palo es Canarias.

@@ -62,9 +62,8 @@ require "inc/cabecera.php";
           <h3 class="afiche-titulo"><?php echo htmlspecialchars($categoria->nombre); ?></h3>
           <p class="afiche-texto"><?php echo htmlspecialchars($categoria->descripcion); ?></p>
           <span class="afiche-cantidad"><?php echo $categoria->cantidad; ?> productos</span>
-          <?php if ($categoria->imagen) { ?>
-            <img class="afiche-foto" src="<?php echo htmlspecialchars($categoria->imagen); ?>" alt="">
-          <?php } ?>
+          <!-- la imagen propia de la categoría, guardada en la tabla categorias (no repite productos del catálogo) -->
+          <img class="afiche-foto" src="<?php echo htmlspecialchars($categoria->imagen); ?>" alt="" loading="lazy">
           <span class="afiche-ir" aria-hidden="true"><i class="ph-bold ph-arrow-up-right"></i></span>
         </a>
       <?php } ?>

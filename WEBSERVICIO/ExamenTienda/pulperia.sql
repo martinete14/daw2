@@ -31,7 +31,8 @@ CREATE TABLE usuarios (
 CREATE TABLE categorias (
     codigo INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(50) NOT NULL UNIQUE,     -- como en el libro, el nombre no se repite
-    descripcion VARCHAR(200) NOT NULL
+    descripcion VARCHAR(200) NOT NULL,
+    imagen VARCHAR(150) NOT NULL            -- ruta de la imagen del afiche en la portada (no repite productos)
 );
 
 CREATE TABLE productos (
@@ -74,14 +75,15 @@ INSERT INTO usuarios (correo, clave, nombre, direccion, ciudad, cp, pais, rol) V
     ('riquelme@correo.com', '$2y$10$nLsFHkbwZmfjZoLSCVxlMOr6dJoJvSX8t28vHHLZbSJTcbp5mGU32', 'Juan Román Riquelme', 'Calle Brandsen 805', 'Barcelona', '08001', 'España', 0),   -- 1234
     ('messi@correo.com', '$2y$10$cGgCo95dlvBnFzzeQfnAF.ttV8lHmwbsdJ01FVBD8Wvr8Omc8KAae', 'Lionel Messi', 'Avinguda Diagonal 10', 'Barcelona', '08019', 'España', 0);           -- lio10
 
--- las 6 categorías salen de mirar 7 tiendas argentinas de Europa (ver analisis_y_pendientes.txt)
-INSERT INTO categorias (nombre, descripcion) VALUES
-    ('Yerbas', 'Con palo, sin palo, compuestas y orgánicas, de Misiones, Corrientes, Córdoba, Paraguay y Uruguay. Suaves para empezar e intensas para el que ceba hace años.'),
-    ('Mates y bombillas', 'Mates de calabaza forrados en cuero y de madera de algarrobo, con virola de alpaca. Bombillas pico de loro, de alpaca cincelada, de acero y de caña.'),
-    ('Termos y materas', 'Termos de acero y de vidrio con pico cebador, la pava que no hierve el agua y materas para llevar el equipo a la plaza, a la facultad o a la ruta.'),
-    ('Alfajores y dulce de leche', 'Del Havanna de Mar del Plata al Guaymallén de kiosco, simples y triples, y dulce de leche para untar, para rellenar o para comer a cucharadas.'),
-    ('Almacén criollo', 'Lo que no puede faltar en la alacena: chimichurri y ají para el asado, galletitas y bizcochitos para el mate, polenta, membrillo y Mantecol.'),
-    ('Kits y regalos', 'Combos armados para empezar a tomar mate, para regalar o para extrañar un poco menos: del kit de iniciación al equipo matero completo.');
+-- las 6 categorías salen de mirar 7 tiendas argentinas de Europa (ver analisis_y_pendientes.txt).
+-- Las imágenes son recortes sin fondo en WebP de 800x800; los originales de 1600 están en img/categorias/originales
+INSERT INTO categorias (nombre, descripcion, imagen) VALUES
+    ('Yerbas', 'Con palo, sin palo, compuestas y orgánicas, de Misiones, Corrientes, Córdoba, Paraguay y Uruguay. Suaves para empezar e intensas para el que ceba hace años.', 'img/categorias/yerbas.webp'),
+    ('Mates y bombillas', 'Mates de calabaza forrados en cuero y de madera de algarrobo, con virola de alpaca. Bombillas pico de loro, de alpaca cincelada, de acero y de caña.', 'img/categorias/mates.webp'),
+    ('Termos y materas', 'Termos de acero y de vidrio con pico cebador, la pava que no hierve el agua y materas para llevar el equipo a la plaza, a la facultad o a la ruta.', 'img/categorias/termos.webp'),
+    ('Alfajores y dulce de leche', 'Del Havanna de Mar del Plata al Guaymallén de kiosco, simples y triples, y dulce de leche para untar, para rellenar o para comer a cucharadas.', 'img/categorias/alfajores.webp'),
+    ('Almacén criollo', 'Lo que no puede faltar en la alacena: chimichurri y ají para el asado, galletitas y bizcochitos para el mate, polenta, membrillo y Mantecol.', 'img/categorias/almacen.webp'),
+    ('Kits y regalos', 'Combos armados para empezar a tomar mate, para regalar o para extrañar un poco menos: del kit de iniciación al equipo matero completo.', 'img/categorias/kits.webp');
 
 -- 16 yerbas y 8 productos en el resto de las categorías (56 en total).
 -- Todas las imágenes son .jpg en img/productos/ (faltan 3, que muestran "Imagen en preparación").

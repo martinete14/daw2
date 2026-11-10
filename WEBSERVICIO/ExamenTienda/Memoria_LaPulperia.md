@@ -6,33 +6,35 @@ Memoria del proyecto · Desarrollo Web en Entorno Servidor · 2.º DAW · ILERNA
 
 | | |
 | --- | --- |
-| **Alumno** | Martín Villagra |
-| **Profesor** | Fran |
+| **Alumno** | Martín Villagra Tejerina |
+| **Profesor** | Fran Soltero |
 | **Entrega de la memoria** | 12 de noviembre de 2026 |
 
 ## Índice
 
-- [1. Definición del proyecto](#1-definición-del-proyecto)
-   - [1.1. Qué es La Pulpería](#11-qué-es-la-pulpería)
-   - [1.2. Por qué este proyecto](#12-por-qué-este-proyecto)
-   - [1.3. Alcance y método de trabajo](#13-alcance-y-método-de-trabajo)
-   - [1.4. Tecnologías](#14-tecnologías)
-   - [1.5. Catálogo](#15-catálogo)
-- [2. Especificación de requisitos (ERS)](#2-especificación-de-requisitos-ers)
-   - [2.1. Propósito](#21-propósito)
-   - [2.2. Usuarios del sistema](#22-usuarios-del-sistema)
-   - [2.3. Requisitos funcionales](#23-requisitos-funcionales)
-   - [2.4. Requisitos no funcionales](#24-requisitos-no-funcionales)
-   - [2.5. Cookie y variables de sesión](#25-cookie-y-variables-de-sesión)
-   - [2.6. Modelo de datos](#26-modelo-de-datos)
-   - [2.7. Clases](#27-clases)
-- [3. Prototipo de pantallas](#3-prototipo-de-pantallas)
-   - [3.1. Flujo de pantallas](#31-flujo-de-pantallas)
-   - [3.2. Pantallas](#32-pantallas)
-- [4. Limitaciones](#4-limitaciones)
-- [5. Líneas futuras](#5-líneas-futuras)
-- [Anexo A. Usuarios de prueba](#anexo-a-usuarios-de-prueba)
-- [Anexo B. Investigación de precios de las yerbas](#anexo-b-investigación-de-precios-de-las-yerbas)
+- [La Pulpería](#la-pulpería)
+  - [Índice](#índice)
+  - [1. Definición del proyecto](#1-definición-del-proyecto)
+    - [1.1. Qué es La Pulpería](#11-qué-es-la-pulpería)
+    - [1.2. Por qué este proyecto](#12-por-qué-este-proyecto)
+    - [1.3. Alcance y método de trabajo](#13-alcance-y-método-de-trabajo)
+    - [1.4. Tecnologías](#14-tecnologías)
+    - [1.5. Catálogo](#15-catálogo)
+  - [2. Especificación de requisitos (ERS)](#2-especificación-de-requisitos-ers)
+    - [2.1. Propósito](#21-propósito)
+    - [2.2. Usuarios del sistema](#22-usuarios-del-sistema)
+    - [2.3. Requisitos funcionales](#23-requisitos-funcionales)
+    - [2.4. Requisitos no funcionales](#24-requisitos-no-funcionales)
+    - [2.5. Cookie y variables de sesión](#25-cookie-y-variables-de-sesión)
+    - [2.6. Modelo de datos](#26-modelo-de-datos)
+    - [2.7. Clases](#27-clases)
+  - [3. Prototipo de pantallas](#3-prototipo-de-pantallas)
+    - [3.1. Flujo de pantallas](#31-flujo-de-pantallas)
+    - [3.2. Pantallas](#32-pantallas)
+  - [4. Limitaciones](#4-limitaciones)
+  - [5. Líneas futuras](#5-líneas-futuras)
+  - [Anexo A. Usuarios de prueba](#anexo-a-usuarios-de-prueba)
+  - [Anexo B. Investigación de precios de las yerbas](#anexo-b-investigación-de-precios-de-las-yerbas)
 
 ## 1. Definición del proyecto
 
@@ -214,6 +216,7 @@ La base de datos «pulperia» tiene cinco tablas. Las relaciones son:
 | codigo | INT, PK | Identificador, autoincremental. |
 | nombre | VARCHAR(50), único | Nombre de la categoría. |
 | descripcion | VARCHAR(200) | Texto que se muestra en el listado de categorías. |
+| imagen | VARCHAR(150) | Ruta de la imagen del afiche de la categoría (img/categorias/…webp). |
 
 **productos**
 
@@ -275,7 +278,7 @@ Desde cualquier pantalla con sesión iniciada se puede ir al perfil, al carrito 
 | --- | --- | --- |
 | Login | Logo, correo, clave con un botón para verla, casilla «Recordar mi correo», botón Entrar y mensaje de error si falla. | RF-05, RF-06, RF-07 |
 | Sesión caducada | El login con un aviso arriba: «Tu sesión caducó por inactividad». | RF-09 |
-| Categorías | Cabecera común (logo, nombre del usuario, carrito con el número de productos, perfil y salir) una lista de precios con el precio más barato de cada categoría («desde 2,90 €») y un afiche por categoría con su descripción, su cantidad de productos y una foto. | RF-01, RF-11 |
+| Categorías | Cabecera común (logo, nombre del usuario, carrito con el número de productos, perfil y salir), una lista de precios con el precio más barato de cada categoría («desde 2,90 €») y un afiche por categoría con su descripción, su cantidad de productos y su imagen, recortada como un sticker. | RF-01, RF-11 |
 | Productos | Arriba, el filtro por tipo: una ficha por tipo con su cantidad de productos, y la elegida resaltada con el color de la categoría. Debajo, una tarjeta por producto: imagen, nombre, descripción, peso, precio en euros (y en pesos), unidades y botón Añadir. Los que no tienen stock muestran «Sin stock». Al pasar el mouse, la foto se cambia por un gif del producto girando. | RF-02, RF-03, RF-12, RF-18 |
 | Carrito | Tabla con producto, unidades, precio, subtotal y botón Quitar. Total en euros y en pesos y botón Confirmar pedido. | RF-13, RF-14 |
 | Confirmación | Número de pedido y resumen. Si falta stock, el aviso correspondiente. | RF-15, RF-16, RF-17 |
@@ -292,7 +295,7 @@ Desde cualquier pantalla con sesión iniciada se puede ir al perfil, al carrito 
 - **Sin pago ni envío.** El pedido queda registrado, pero no hay pasarela de pago. El campo «enviado» existe en la base de datos, pero no se gestiona desde la web.
 - **Precios.** Los precios de las yerbas se fijaron a partir de una investigación de precios reales (Anexo B). Los del resto de categorías son estimados.
 - **Solo en local.** La aplicación funciona en XAMPP y no está desplegada en un servidor público.
-- **Imágenes.** Las fotos de los productos son de los fabricantes y de las tiendas online argentinas donde se venden, y se usan solo con fines académicos. Los kits son fotos armadas juntando las de cada producto.
+- **Imágenes.** Las fotos de los productos son de los fabricantes y de las tiendas online argentinas donde se venden, y se usan solo con fines académicos. Los kits son fotos armadas juntando las de cada producto. Las imágenes de los afiches de las categorías se hicieron aparte para la tienda y no repiten productos del catálogo.
 - <mark>PENDIENTE: si el carrito se queda en la sesión, se pierde al cerrar sesión o al caducar. Confirmar con el profesor.</mark>
 
 ## 5. Líneas futuras
