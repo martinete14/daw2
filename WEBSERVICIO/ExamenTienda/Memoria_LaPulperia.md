@@ -75,7 +75,7 @@ Se sigue un modelo en espiral, como el que propone el libro de la asignatura: en
 | PHP 8.2 | Lógica del servidor, con programación orientada a objetos. |
 | MariaDB 10.4 (MySQL) | Base de datos relacional «pulperia», con codificación utf8mb4. |
 | PDO | Conexión de PHP con la base de datos, con consultas preparadas. |
-| HTML, CSS y JavaScript | Páginas, estilos y efectos visuales. JavaScript solo se usa para animaciones y comodidades (ver la clave, reiniciar el gif); la lógica de la tienda corre en el servidor. |
+| HTML, CSS y JavaScript | Páginas, estilos y efectos visuales. JavaScript solo se usa para animaciones y comodidades (ver la clave, reiniciar el gif, mostrar en el celular la opción elegida del filtro); la lógica de la tienda corre en el servidor. |
 | XAMPP | Servidor local (Apache + MariaDB) para desarrollar y probar. |
 | GSAP, Google Fonts y Phosphor Icons | Animaciones de entrada, tipografías (Anton, Bricolage Grotesque y Permanent Marker) e iconos, cargados desde CDN. |
 | Figma | Prototipo de las pantallas. |
@@ -84,14 +84,14 @@ Se sigue un modelo en espiral, como el que propone el libro de la asignatura: en
 
 La tienda tiene 6 categorías y 56 productos, por encima del mínimo pedido (3 categorías y 8 productos):
 
-| **Categoría** | **Productos** | **Ejemplos** |
-| --- | --- | --- |
-| Yerbas | 16 | Playadito, Taragüí, Rosamonte, Canarias, CBSé, Kraus Orgánica |
-| Mates y bombillas | 8 | Mate imperial, mate camionero, bombilla pico de loro |
-| Termos y materas | 8 | Termo Stanley, termo Lumilagro, pava con control de temperatura, matera Broksol |
-| Alfajores y dulce de leche | 8 | Havanna, Cachafaz, Guaymallén, dulce de leche La Serenísima |
-| Almacén criollo | 8 | Chimichurri, Mantecol, Criollitas, dulce de membrillo Esnaola |
-| Kits y regalos | 8 | Kit de iniciación, kit matero, kit viajero |
+| **Categoría** | **Productos** | **Tipos (filtro, RF-18)** | **Ejemplos** |
+| --- | --- | --- | --- |
+| Yerbas | 16 | Con palo, sin palo, compuesta, orgánica | Playadito, Taragüí, Rosamonte, Canarias, CBSé, Kraus Orgánica |
+| Mates y bombillas | 8 | Mates, bombillas | Mate imperial, mate camionero, bombilla pico de loro |
+| Termos y materas | 8 | Termos, materas, pavas, yerberas | Termo Stanley, termo Lumilagro, pava con control de temperatura, matera Broksol |
+| Alfajores y dulce de leche | 8 | Alfajores, dulce de leche | Havanna, Cachafaz, Guaymallén, dulce de leche La Serenísima |
+| Almacén criollo | 8 | Para el mate, para el asado, dulces, para cocinar | Chimichurri, Mantecol, Criollitas, dulce de membrillo Esnaola |
+| Kits y regalos | 8 | Para el mate, para comer | Kit de iniciación, kit matero, kit viajero |
 
 Cada categoría tiene su propia plantilla de descripción, para que todos los productos de una categoría den la misma información:
 
@@ -123,6 +123,8 @@ Sin iniciar sesión solo se puede ver la pantalla de login.
 
 ### 2.3. Requisitos funcionales
 
+Los códigos no se renumeran: un requisito que se suma después recibe el siguiente número libre (RF-18), aunque se liste en su parte. Así los códigos siguen coincidiendo con los comentarios del código fuente.
+
 **Parte 1. Gestor de productos**
 
 | **Código** | **Requisito** |
@@ -131,6 +133,7 @@ Sin iniciar sesión solo se puede ver la pantalla de login.
 | RF-02 | Al elegir una categoría, mostrar sus productos con imagen, nombre, descripción, peso y precio en euros, con su equivalente en pesos argentinos. |
 | RF-03 | Un producto con stock 0 aparece como «Sin stock» y no se puede añadir al carrito. |
 | RF-04 | <mark>PENDIENTE: confirmar con el profesor si el gestor de productos incluye un panel de alta, modificación y baja.</mark> El administrador puede dar de alta, modificar y dar de baja productos. |
+| RF-18 | En la página de una categoría, filtrar sus productos por tipo (por ejemplo, en Yerbas: con palo, sin palo, compuesta u orgánica). Los tipos y la cantidad de productos de cada uno se leen de la base de datos, y el filtro se aplica en la consulta. Solo aparece si la categoría tiene más de un tipo. |
 
 **Parte 2. Control del usuario**
 
@@ -223,6 +226,7 @@ La base de datos «pulperia» tiene cinco tablas. Las relaciones son:
 | precio | DECIMAL(8,2) | Precio en euros. |
 | stock | INT | Unidades disponibles. |
 | imagen | VARCHAR(150) | Ruta de la imagen (img/productos/…jpg). |
+| tipo | VARCHAR(30) | Tipo dentro de su categoría (con palo, bombillas…), para el filtro (RF-18). |
 | categoria | INT, FK | Categoría a la que pertenece. |
 
 **pedidos**
@@ -249,8 +253,8 @@ La base de datos «pulperia» tiene cinco tablas. Las relaciones son:
 | **Clase** | **Responsabilidad** |
 | --- | --- |
 | BaseDatos | Abre la conexión PDO una sola vez y la comparte con el resto de clases. |
-| Categoria | Lee las categorías de la base de datos, con su cantidad de productos y el precio de su producto más barato. |
-| Producto | Lee los productos de una categoría o un producto por su código, y consulta el stock. |
+| Categoria | Lee las categorías de la base de datos, con su cantidad de productos y el precio de su producto más barato, y los tipos de producto de cada una para el filtro. |
+| Producto | Lee los productos de una categoría (todos o los de un tipo) o un producto por su código, y consulta el stock. |
 | Usuario | Inicia sesión comprobando el hash, comprueba que la sesión siga activa y devuelve los datos del perfil. |
 | Carrito | Maneja $_SESSION['carrito']: añadir, quitar, vaciar y calcular el total. |
 | Pedido | Guarda el pedido en una transacción y lista los pedidos de un usuario. |
@@ -272,7 +276,7 @@ Desde cualquier pantalla con sesión iniciada se puede ir al perfil, al carrito 
 | Login | Logo, correo, clave con un botón para verla, casilla «Recordar mi correo», botón Entrar y mensaje de error si falla. | RF-05, RF-06, RF-07 |
 | Sesión caducada | El login con un aviso arriba: «Tu sesión caducó por inactividad». | RF-09 |
 | Categorías | Cabecera común (logo, nombre del usuario, carrito con el número de productos, perfil y salir) una lista de precios con el precio más barato de cada categoría («desde 2,90 €») y un afiche por categoría con su descripción, su cantidad de productos y una foto. | RF-01, RF-11 |
-| Productos | Una tarjeta por producto: imagen, nombre, descripción, peso, precio en euros (y en pesos), unidades y botón Añadir. Los que no tienen stock muestran «Sin stock». Al pasar el mouse, la foto se cambia por un gif del producto girando. | RF-02, RF-03, RF-12 |
+| Productos | Arriba, el filtro por tipo: una ficha por tipo con su cantidad de productos, y la elegida resaltada con el color de la categoría. Debajo, una tarjeta por producto: imagen, nombre, descripción, peso, precio en euros (y en pesos), unidades y botón Añadir. Los que no tienen stock muestran «Sin stock». Al pasar el mouse, la foto se cambia por un gif del producto girando. | RF-02, RF-03, RF-12, RF-18 |
 | Carrito | Tabla con producto, unidades, precio, subtotal y botón Quitar. Total en euros y en pesos y botón Confirmar pedido. | RF-13, RF-14 |
 | Confirmación | Número de pedido y resumen. Si falta stock, el aviso correspondiente. | RF-15, RF-16, RF-17 |
 | Perfil | Datos del usuario y lista de sus pedidos con fecha, total y estado. | RF-10 |
@@ -299,6 +303,8 @@ Desde cualquier pantalla con sesión iniciada se puede ir al perfil, al carrito 
 - Envío de un correo de confirmación con cada pedido.
 - Nuevas categorías: vinos (exige verificar la mayoría de edad) y carnes (exige cadena de frío y envíos especiales).
 - Renders 3D y vídeos de los productos.
+- Filtro por tamaño del paquete (500 g, 1 kg), sumado al filtro por tipo.
+- Ampliar el catálogo: hasta 30 yerbas (sin palo, barbacuá, saborizadas, uruguayas, brasileñas y paraguayas) y más mates y bombillas.
 - Ofrecer la tienda a comercios reales del rubro.
 
 ## Anexo A. Usuarios de prueba
