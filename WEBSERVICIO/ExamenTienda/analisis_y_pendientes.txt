@@ -298,6 +298,33 @@ Imágenes (09/11):
   (160x160, arranca de canto) están en img/rehacer/ para rehacerlos con el
   mismo encuadre que los otros. Cuando estén, van a img/productos/ con su nombre.
   Faltan los de Andresito y Piporé.
+- HECHO (10/11): fotos de las otras categorías, sacadas del catálogo público de
+  Carrefour y Jumbo (mismo recorte que las yerbas). Los 7 kits son fotos armadas
+  juntando las de lo que trae cada uno. Están 53 de 56.
+  FALTAN (para renders): bombilla-cana.jpg (no hay de caña en ningún súper),
+  ddl-havanna.jpg (Havanna no vende el dulce de leche en súper) y kit-dulce.jpg
+  (lleva ese dulce de leche). Mientras, muestran "Imagen en preparación".
+
+Identidad visual (10/11): "afiche porteño", los afiches callejeros de Buenos Aires.
+- Tintas flúor y una por categoría: Yerbas verde, Mates naranja, Termos celeste,
+  Alfajores rosa, Almacén amarillo, Kits rojo (clases .cat-1 a .cat-6 en estilos.css;
+  el número es el código de la categoría en la BD).
+- Letras: Anton (títulos, letra de madera), Bricolage Grotesque (texto) y
+  Permanent Marker (notas a mano). Desde Google Fonts.
+- Librerías por CDN: GSAP 3.13 (con ScrollTrigger y SplitText) y Phosphor Icons.
+  Sin internet la tienda funciona igual: letra del sistema y sin animaciones.
+- JavaScript (js/tienda.js), tres cosas y nada más:
+  1. reinicia el gif al pasar el mouse (así arranca con el paquete de frente);
+  2. el ojo para ver la clave en el login;
+  3. animaciones de entrada con GSAP (titulares letra por letra, yerbas que se
+     pegan, tarjetas que aparecen con el scroll).
+  La lógica de la tienda (sesión, cookie, datos) sigue toda en PHP.
+- Si el sistema tiene "reducir movimiento" (en Windows: Configuración >
+  Accesibilidad > Efectos visuales > Efectos de animación APAGADO), la cinta, el
+  sello y las entradas no se mueven. El gif al pasar el mouse sí (RNF-09).
+  En esta PC está apagado: para ver todo, prender "Efectos de animación".
+- La memoria ya está actualizada con esto (1.4, RNF-08, RNF-09, pantallas y una
+  limitación sobre el origen de las fotos).
 
 ==================================================
 12. LÍNEAS FUTURAS (para la memoria y para comentarle a Fran)

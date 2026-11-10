@@ -38,31 +38,52 @@ $titulo = "Entrar";
 require "inc/cabecera.php";
 ?>
     <section class="login">
-      <h1>Entrar a la tienda</h1>
+      <div class="login-afiche">
+        <p class="nota">bienvenido al almacén</p>
+        <h1 data-anima="letras"><span>Entrá</span> <span>a la</span> <span>pulpería</span></h1>
+        <div class="login-stickers" aria-hidden="true">
+          <?php foreach (["canarias", "union"] as $yerba) { ?>
+            <picture data-anima="salta">
+              <source srcset="img/productos/<?php echo $yerba; ?>.jpg" media="(prefers-reduced-motion: reduce)">
+              <img src="img/productos/<?php echo $yerba; ?>.gif" alt="">
+            </picture>
+          <?php } ?>
+        </div>
+      </div>
 
-      <?php if (isset($_GET['caducada'])) { ?>
-        <p class="aviso">Tu sesión caducó por inactividad. Volvé a entrar.</p>
-      <?php } elseif (isset($_GET['redirigido'])) { ?>
-        <p class="aviso">Entrá con tu cuenta para continuar.</p>
-      <?php } ?>
+      <div class="login-caja">
+        <h2>Tus datos</h2>
 
-      <?php if ($error) { ?>
-        <p class="error">El correo o la clave no son correctos.</p>
-      <?php } ?>
+        <?php if (isset($_GET['caducada'])) { ?>
+          <p class="aviso"><i class="ph-bold ph-info" aria-hidden="true"></i> Tu sesión caducó por inactividad. Volvé a entrar.</p>
+        <?php } elseif (isset($_GET['redirigido'])) { ?>
+          <p class="aviso"><i class="ph-bold ph-info" aria-hidden="true"></i> Entrá con tu cuenta para continuar.</p>
+        <?php } ?>
 
-      <form method="post" action="login.php">
-        <label for="correo">Correo</label>
-        <input type="email" id="correo" name="correo" required value="<?php echo htmlspecialchars($correo); ?>">
+        <?php if ($error) { ?>
+          <p class="error"><i class="ph-bold ph-warning-circle" aria-hidden="true"></i> El correo o la clave no son correctos.</p>
+        <?php } ?>
 
-        <label for="clave">Clave</label>
-        <input type="password" id="clave" name="clave" required>
+        <form method="post" action="login.php">
+          <div class="campo">
+            <label for="correo">Correo</label>
+            <input type="email" id="correo" name="correo" required value="<?php echo htmlspecialchars($correo); ?>">
+          </div>
 
-        <label class="casilla">
-          <input type="checkbox" name="recordar" <?php if (isset($_COOKIE['recordar_correo'])) echo "checked"; ?>>
-          Recordar mi correo
-        </label>
+          <div class="campo clave">
+            <label for="clave">Clave</label>
+            <input type="password" id="clave" name="clave" required>
+            <!-- el botón del ojo lo muestra tienda.js; sin JavaScript no aparece -->
+            <button type="button" class="ver-clave" aria-label="Mostrar la clave" hidden><i class="ph-bold ph-eye" aria-hidden="true"></i></button>
+          </div>
 
-        <button type="submit">Entrar</button>
-      </form>
+          <label class="casilla">
+            <input type="checkbox" name="recordar" <?php if (isset($_COOKIE['recordar_correo'])) echo "checked"; ?>>
+            Recordar mi correo
+          </label>
+
+          <button class="boton" type="submit">Entrar <i class="ph-bold ph-arrow-right" aria-hidden="true"></i></button>
+        </form>
+      </div>
     </section>
 <?php require "inc/pie.php"; ?>

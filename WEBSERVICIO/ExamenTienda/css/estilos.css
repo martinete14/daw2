@@ -1,138 +1,594 @@
-/* La Pulpería: crema de almacén, verde yerba y marrón cuero */
+/* =====================================================================
+   La Pulpería · identidad "afiche porteño"
+   Inspirada en los afiches callejeros de Buenos Aires: tintas flúor,
+   letra de madera condensada (Anton), tinta negra y papel de diario.
+   Cada categoría tiene su tinta; el código sale de la base de datos.
+   ===================================================================== */
+
 :root {
-  --crema: #f6f0e1;
-  --papel: #fffdf7;
-  --yerba: #4b6b2f;
-  --cuero: #6b4226;
-  --texto: #2b2118;
-  --suave: #7a6a58;
-  --celeste: #74acdf;
-  --rojo: #a8322d;
+  --tinta: #141414;
+  --papel: #f4f3ef;
+  --blanco: #ffffff;
+  --verde: #2ee57a;
+  --naranja: #ff7a1a;
+  --celeste: #3dc1ff;
+  --rosa: #ff4fa3;
+  --amarillo: #ffe600;
+  --rojo: #ff3b30;
+
+  --borde: 3px solid var(--tinta);
+  --sombra: 6px 6px 0 var(--tinta);
+  --rebote: cubic-bezier(.34, 1.56, .64, 1); /* se pasa un poco y vuelve, como un sticker */
+
+  --letra-titulo: "Anton", "Arial Narrow", Impact, sans-serif;
+  --letra-texto: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --letra-mano: "Permanent Marker", "Segoe Print", cursive;
+
+  --color: var(--amarillo); /* la tinta de la categoría; cada .cat-N la cambia */
 }
 
-* { box-sizing: border-box; }
+.cat-1 { --color: var(--verde); }    /* Yerbas */
+.cat-2 { --color: var(--naranja); }  /* Mates y bombillas */
+.cat-3 { --color: var(--celeste); }  /* Termos y materas */
+.cat-4 { --color: var(--rosa); }     /* Alfajores y dulce de leche */
+.cat-5 { --color: var(--amarillo); } /* Almacén criollo */
+.cat-6 { --color: var(--rojo); }     /* Kits y regalos */
+
+/* ---------- base ---------- */
+*, *::before, *::after { box-sizing: border-box; }
 
 body {
   margin: 0;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: var(--crema);
-  color: var(--texto);
-  font-family: "Segoe UI", Arial, sans-serif;
+  background: var(--papel);
+  color: var(--tinta);
+  font-family: var(--letra-texto);
+  line-height: 1.5;
+  overflow-x: clip; /* lo torcido que asoma por los bordes no genera scroll de costado */
 }
 
-/* lining-nums: sin esto Georgia dibuja el "1" de "1kg" como una i */
-h1, h2, .logo { font-family: Georgia, "Times New Roman", serif; font-variant-numeric: lining-nums; }
-h1 { color: var(--cuero); margin: 0.5rem 0 1.2rem; }
+/* grano de papel impreso por encima de todo (un ruido SVG, sin imagen aparte) */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  pointer-events: none;
+  opacity: .08;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
+}
 
-/* cabecera */
+img { display: block; max-width: 100%; }
+a { color: inherit; }
+::selection { background: var(--amarillo); color: var(--tinta); }
+:focus-visible { outline: 3px solid var(--tinta); outline-offset: 3px; }
+
+h1, h2, h3 {
+  margin: 0;
+  font-family: var(--letra-titulo);
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: .95;
+}
+
+/* nota escrita a mano, como la pizarra del almacenero */
+.nota {
+  display: inline-block;
+  margin: 0 0 .8rem;
+  padding: .1rem .7rem;
+  font-family: var(--letra-mano);
+  font-size: 1.3rem;
+  background: var(--amarillo);
+  rotate: -3deg;
+}
+
+.contenido { width: min(1200px, 100% - 2rem); margin: 2.5rem auto 5rem; }
+
+/* ---------- cinta que corre arriba ---------- */
+.cinta { overflow: hidden; background: var(--tinta); color: var(--amarillo); }
+.cinta-pista { display: flex; width: max-content; animation: cinta 45s linear infinite; }
+.cinta:hover .cinta-pista { animation-play-state: paused; }
+.cinta ul {
+  display: flex;
+  margin: 0;
+  padding: .5rem 0;
+  list-style: none;
+  font-family: var(--letra-titulo);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+.cinta li { padding-right: 1.4rem; white-space: nowrap; }
+.cinta li::after { content: "✶"; padding-left: 1.4rem; color: var(--rosa); }
+/* la lista va dos veces: al correr la mitad, la segunda queda donde empezó la primera */
+@keyframes cinta { to { transform: translateX(-50%); } }
+
+/* ---------- cabecera ---------- */
 .cabecera {
+  position: sticky;
+  top: 0;
+  z-index: 50;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   align-items: center;
-  gap: 0.8rem;
-  padding: 1rem 5%;
-  background: var(--cuero);
-  border-bottom: 4px solid var(--celeste);
+  justify-content: space-between;
+  gap: 1rem 2rem;
+  padding: .9rem clamp(1rem, 4vw, 3rem);
+  background: var(--blanco);
+  border-bottom: var(--borde);
+  view-transition-name: cabecera; /* queda quieta al cambiar de página */
 }
-.logo { color: var(--crema); font-size: 1.6rem; text-decoration: none; }
-.menu { display: flex; flex-wrap: wrap; align-items: center; gap: 1.2rem; }
-.menu a { color: var(--crema); text-decoration: none; }
-.menu a:hover { text-decoration: underline; }
-.hola { color: #e8d9bd; font-size: 0.9rem; }
-
-.contenido { width: 90%; max-width: 1100px; margin: 1.5rem auto 2rem; }
-
-.pie { margin-top: auto; padding: 1.2rem 5%; text-align: center; font-size: 0.8rem; color: var(--suave); }
-
-/* tarjetas de categorías y productos */
-.rejilla {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-  gap: 1.2rem;
+.logo { display: flex; align-items: center; gap: .7rem; text-decoration: none; }
+.logo img { transition: rotate .4s var(--rebote); }
+.logo:hover img { rotate: -16deg; }
+.logo-texto {
+  font-family: var(--letra-titulo);
+  font-size: 2rem;
+  line-height: 1;
+  text-transform: uppercase;
+  text-shadow: 3px 3px 0 var(--rosa); /* como una impresión corrida */
 }
-.tarjeta {
-  background: var(--papel);
-  border: 1px solid #e3d8c2;
-  border-radius: 10px;
-  padding: 1rem;
+.logo-sello {
+  padding: .05rem .5rem;
+  font-family: var(--letra-mano);
+  font-size: .85rem;
+  background: var(--amarillo);
+  border: 2px solid var(--tinta);
+  rotate: -4deg;
 }
-.tarjeta h2 { font-size: 1.1rem; margin: 0.6rem 0 0.4rem; }
 
-.categoria { text-decoration: none; color: inherit; border-top: 5px solid var(--yerba); }
-.categoria:hover { box-shadow: 0 4px 14px rgba(107, 66, 38, 0.18); }
-.categoria p { color: var(--suave); margin: 0; }
-
-.producto img, .sin-imagen {
-  width: 100%;
-  aspect-ratio: 1;
-  object-fit: contain;
-  border-radius: 6px;
-  background: #fff;
+.menu { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem; }
+.menu a {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  padding: .4rem .95rem;
+  font-weight: 700;
+  font-size: .95rem;
+  text-decoration: none;
+  background: var(--blanco);
+  border: 2px solid var(--tinta);
+  border-radius: 999px;
+  transition: translate .15s, box-shadow .15s, background .15s;
 }
-/* imagen quieta y el gif encima, que aparece al pasar el mouse por la tarjeta */
-.foto { position: relative; }
-.foto .animada { position: absolute; inset: 0; opacity: 0; transition: opacity 0.2s; }
-.producto:hover .animada { opacity: 1; }
+.menu a:hover { background: var(--amarillo); translate: -2px -2px; box-shadow: 3px 3px 0 var(--tinta); }
+.menu .salir:hover { background: var(--rosa); }
+.hola { margin-right: .3rem; font-family: var(--letra-mano); }
 
-.sin-imagen {
-  display: flex;
+/* ---------- botones ---------- */
+.boton {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: var(--suave);
-  background: #efe6d2;
-  font-size: 0.9rem;
+  gap: .5rem;
+  width: 100%;
+  padding: .8rem 1.2rem;
+  font-family: var(--letra-titulo);
+  font-size: 1.35rem;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--amarillo);
+  background: var(--tinta);
+  border: var(--borde);
+  box-shadow: 4px 4px 0 var(--rosa);
+  cursor: pointer;
+  transition: translate .15s, box-shadow .15s;
 }
-.descripcion { font-size: 0.88rem; color: var(--suave); }
-.peso { font-size: 0.85rem; margin: 0.3rem 0; }
-.precio { font-size: 1.25rem; font-weight: bold; color: var(--yerba); margin: 0.4rem 0; }
-.precio small { font-size: 0.75rem; font-weight: normal; color: var(--suave); }
-.sin-stock { color: var(--rojo); font-weight: bold; margin: 0.3rem 0 0; }
+.boton:hover { translate: -2px -2px; box-shadow: 6px 6px 0 var(--rosa); }
+.boton:active { translate: 3px 3px; box-shadow: 1px 1px 0 var(--rosa); }
+.boton-chico { width: auto; font-size: 1.1rem; padding: .55rem 1.1rem; }
 
-.volver { color: var(--cuero); }
+.aviso, .error {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  margin: 0 0 1.2rem;
+  padding: .7rem 1rem;
+  font-weight: 600;
+  border: var(--borde);
+}
+.aviso { background: var(--celeste); }
+.error { background: var(--rojo); }
 
-/* login */
-.login {
-  max-width: 380px;
-  margin: 2rem auto;
+/* ---------- portada (categorías) ---------- */
+.portada {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+.portada-titulo { font-size: clamp(3.6rem, 9vw, 7.8rem); }
+/* cada línea es una tira de afiche pegada un poco torcida */
+.portada-titulo .linea { display: block; width: fit-content; padding: 0 .15em; }
+.portada-titulo .linea:nth-child(1) { background: var(--verde); rotate: -1.5deg; }
+.portada-titulo .linea:nth-child(2) { background: var(--rosa); rotate: 1deg; margin-left: .5em; }
+.portada-titulo .linea:nth-child(3) { background: var(--celeste); rotate: -.7deg; }
+.portada-bajada { max-width: 36ch; margin: 1.6rem 0; font-size: 1.15rem; }
+
+.portada-stickers { position: relative; aspect-ratio: 1; }
+.portada-stickers picture, .login-stickers picture { position: absolute; display: block; width: 52%; }
+.portada-stickers img, .login-stickers img {
+  width: 100%;
+  background: var(--blanco);
+  border: var(--borde);
+  box-shadow: var(--sombra);
+}
+.portada-stickers picture:nth-child(1) { top: 0; left: 4%; rotate: -8deg; }
+.portada-stickers picture:nth-child(2) { top: 22%; right: 0; rotate: 7deg; }
+.portada-stickers picture:nth-child(3) { bottom: 0; left: 20%; rotate: -3deg; }
+
+/* sello redondo que gira, con el texto alrededor del logo */
+.sello-giratorio { position: absolute; top: -7%; right: -3%; z-index: 3; width: 34%; animation: girar 22s linear infinite; }
+.sello-giratorio text { font-family: var(--letra-titulo); font-size: 19px; text-transform: uppercase; fill: var(--tinta); }
+@keyframes girar { to { rotate: 360deg; } }
+
+.seccion-titulo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: .4rem 1rem;
+  margin-bottom: 1.4rem;
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  scroll-margin-top: 7rem; /* para que el ancla no quede tapada por la cabecera fija */
+}
+.seccion-titulo small { font-family: var(--letra-mano); font-size: 1.1rem; text-transform: none; }
+
+/* ---------- afiches de categoría ----------
+   1 columna en el celular; 2 con Yerbas y Kits a lo ancho; 3 con Yerbas en un bloque de 2x2.
+   Así las 6 categorías llenan la grilla sin huecos. */
+.afiches { display: grid; grid-template-columns: 1fr; gap: 1.6rem; }
+@media (min-width: 640px) {
+  .afiches { grid-template-columns: repeat(2, 1fr); }
+  .afiche:first-child, .afiche:last-child { grid-column: span 2; }
+}
+@media (min-width: 1000px) {
+  .afiches { grid-template-columns: repeat(3, 1fr); }
+  .afiche:last-child { grid-column: auto; }
+  .afiche:first-child { grid-row: span 2; }
+  .afiche:first-child .afiche-titulo { font-size: clamp(4rem, 9vw, 8rem); }
+  .afiche:first-child .afiche-foto { width: 60%; }
+}
+.afiche {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 340px;
+  padding: 1.3rem;
+  overflow: hidden;
+  text-decoration: none;
+  background: var(--color);
+  border: var(--borde);
+  box-shadow: var(--sombra);
+  transition: translate .2s, box-shadow .2s;
+}
+.afiche:hover { translate: -4px -4px; box-shadow: 10px 10px 0 var(--tinta); }
+.afiche-num { font-family: var(--letra-titulo); line-height: 2.8rem; } /* misma altura que la flecha */
+.afiche-titulo { position: relative; z-index: 1; margin: .3rem 0 .7rem; font-size: clamp(2.3rem, 4vw, 3.3rem); }
+.afiche-texto { position: relative; z-index: 1; max-width: 52%; margin: 0 0 1rem; font-size: .95rem; }
+.afiche-cantidad {
+  position: relative;
+  z-index: 1;
+  align-self: flex-start;
+  margin-top: auto;
+  padding: .2rem .7rem;
+  font-weight: 800;
+  color: var(--blanco);
+  background: var(--tinta);
+}
+/* la foto del primer producto, pegada torcida en la esquina */
+.afiche-foto {
+  position: absolute;
+  right: -7%;
+  bottom: -9%;
+  width: 46%;
+  background: var(--blanco);
+  border: var(--borde);
+  rotate: 9deg;
+  transition: rotate .35s var(--rebote), scale .35s var(--rebote);
+}
+.afiche:hover .afiche-foto { rotate: -3deg; scale: 1.08; }
+.afiche-ir {
+  position: absolute;
+  top: 1.3rem;
+  right: 1.3rem;
+  display: grid;
+  place-items: center;
+  width: 2.8rem;
+  height: 2.8rem;
+  font-size: 1.3rem;
+  color: var(--color);
+  background: var(--tinta);
+  border-radius: 50%;
+  transition: rotate .3s var(--rebote);
+}
+.afiche:hover .afiche-ir { rotate: 45deg; }
+
+/* ---------- productos ---------- */
+.banda {
+  position: relative;
+  overflow: hidden; /* recorta la foto que asoma; la sombra propia no se recorta */
+  margin-bottom: 2.6rem;
+  padding: 1.4rem clamp(1.2rem, 4vw, 2.6rem) 2rem;
+  background: var(--color);
+  border: var(--borde);
+  box-shadow: var(--sombra);
+}
+.volver { display: inline-flex; align-items: center; gap: .4rem; font-weight: 700; text-decoration: none; border-bottom: 2px solid; }
+.banda-titulo { margin-top: .8rem; font-size: clamp(3.2rem, 10vw, 8rem); text-shadow: 5px 5px 0 var(--blanco); }
+.banda-texto { max-width: 52ch; margin: .8rem 0 0; font-size: 1.1rem; }
+.volver, .banda-titulo, .banda-texto { position: relative; z-index: 1; } /* por encima de la foto */
+/* la foto del primer producto, pegada torcida y asomando por abajo, como en los afiches */
+.banda-foto {
+  position: absolute;
+  right: 6%;
+  bottom: -80px;
+  width: 230px;
+  background: var(--blanco);
+  border: var(--borde);
+  rotate: -7deg;
+}
+.banda-cantidad {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.4rem;
+  z-index: 1;
+  padding: .15rem .8rem;
+  font-family: var(--letra-mano);
+  font-size: 1.15rem;
+  background: var(--blanco);
+  border: 2px solid var(--tinta);
+  rotate: 4deg;
+}
+
+.estantes { display: grid; grid-template-columns: repeat(auto-fill, minmax(245px, 1fr)); gap: 1.8rem; }
+.producto {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1rem 1.2rem;
+  background: var(--blanco);
+  border: var(--borde);
+  box-shadow: var(--sombra);
+  transition: translate .2s, rotate .2s, box-shadow .2s;
+}
+/* al pasar el mouse la tarjeta se levanta y la sombra toma la tinta de la categoría */
+.producto:hover { translate: -4px -4px; rotate: -.6deg; box-shadow: 10px 10px 0 var(--color); }
+
+.foto { position: relative; }
+.foto img, .sin-imagen { width: 100%; aspect-ratio: 1; object-fit: contain; background: var(--blanco); }
+/* el gif va encima de la foto y aparece al pasar el mouse; tienda.js lo hace arrancar de cero */
+.foto .animada { position: absolute; inset: 0; height: 100%; opacity: 0; transition: opacity .15s; }
+.producto:hover .animada { opacity: 1; }
+.sin-imagen {
+  display: grid;
+  place-items: center;
+  font-family: var(--letra-mano);
+  background: repeating-linear-gradient(-45deg, var(--papel) 0 14px, #e6e4de 14px 28px);
+}
+
+/* precio: sticker redondo de oferta, pegado medio afuera de la tarjeta */
+.sticker {
+  position: absolute;
+  top: -.9rem;
+  right: -.6rem;
+  z-index: 2;
+  display: grid;
+  place-content: center;
+  width: 5.8rem;
+  height: 5.8rem;
+  margin: 0;
+  text-align: center;
+  line-height: 1.1;
+  background: var(--amarillo);
+  border: 2px solid var(--tinta);
+  border-radius: 50%;
+  outline: 2px dashed var(--tinta);
+  outline-offset: -7px;
+  rotate: 10deg;
+  transition: rotate .35s var(--rebote), scale .35s var(--rebote);
+}
+.producto:hover .sticker { rotate: -8deg; scale: 1.08; }
+.sticker strong { font-family: var(--letra-titulo); font-weight: 400; font-size: 1.4rem; }
+.sticker small { font-size: .62rem; font-weight: 700; }
+
+.producto h2 { margin: .9rem 0 .5rem; font-size: 1.5rem; }
+.descripcion { margin: 0 0 1rem; font-size: .9rem; color: #3b3b3b; }
+.peso {
+  display: inline-flex;
+  align-items: center;
+  gap: .3rem;
+  align-self: flex-start;
+  margin: auto 0 0;
+  padding: .1rem .7rem;
+  font-size: .85rem;
+  font-weight: 700;
+  background: var(--color);
+  border: 2px solid var(--tinta);
+  border-radius: 999px;
+}
+
+/* RF-03: sin stock, la foto se apaga y lleva un sello de goma */
+.agotado .foto img { filter: grayscale(1); opacity: .55; }
+.sello {
+  position: absolute;
+  top: 32%;
+  left: 50%;
+  z-index: 3;
+  margin: 0;
+  padding: .1rem .9rem;
+  font-family: var(--letra-titulo);
+  font-size: 2.3rem;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--rojo);
+  border: 4px double var(--rojo);
+  translate: -50% -50%;
+  rotate: -14deg;
+}
+
+/* ---------- login ---------- */
+.login { display: grid; grid-template-columns: 1.1fr 1fr; align-items: stretch; gap: 2.5rem; }
+.login-afiche {
+  position: relative;
+  min-height: 500px;
+  padding: clamp(1.5rem, 4vw, 3rem);
+  overflow: hidden;
+  background: var(--rosa);
+  border: var(--borde);
+  box-shadow: var(--sombra);
+}
+/* el titular va por encima de las yerbas, como un afiche pegado sobre otro */
+.login-afiche .nota, .login-afiche h1 { position: relative; z-index: 2; }
+.login-afiche h1 { font-size: clamp(4rem, 10vw, 8.2rem); line-height: .86; }
+.login-afiche h1 span { display: block; }
+/* la palabra del medio, solo con el contorno */
+.login-afiche h1 span:nth-child(2) { color: var(--blanco); -webkit-text-stroke: 3px var(--tinta); }
+.login-stickers picture { width: 40%; }
+.login-stickers picture:nth-child(1) { right: 20%; bottom: -6%; rotate: -12deg; }
+.login-stickers picture:nth-child(2) { right: -6%; bottom: 8%; rotate: 9deg; }
+
+.login-caja {
+  align-self: center;
+  padding: 2rem;
+  background: var(--blanco);
+  border: var(--borde);
+  box-shadow: var(--sombra);
+}
+.login-caja h2 { margin-bottom: 1.4rem; font-size: 2.4rem; }
+
+.campo { position: relative; margin-bottom: 1.2rem; }
+.campo label { display: block; margin-bottom: .35rem; font-size: .8rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.campo input {
+  width: 100%;
+  padding: .75rem .9rem;
+  font: inherit;
+  font-size: 1.05rem;
   background: var(--papel);
-  border: 1px solid #e3d8c2;
-  border-radius: 10px;
-  padding: 1.6rem;
+  border: var(--borde);
+  transition: background .15s, box-shadow .15s;
 }
-.login label { display: block; font-size: 0.9rem; color: var(--suave); margin-bottom: 0.3rem; }
-.login input[type=email], .login input[type=password] {
-  width: 100%;
-  font: inherit;
-  padding: 0.55rem 0.7rem;
-  border: 1px solid #cdbf9f;
-  border-radius: 6px;
-  margin-bottom: 1rem;
-}
-.login .casilla { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1.2rem; }
-
-button {
-  font: inherit;
-  width: 100%;
-  padding: 0.65rem;
-  border: none;
-  border-radius: 6px;
-  background: var(--yerba);
-  color: #fff;
+/* al escribir el campo se resalta como con un marcador */
+.campo input:focus { outline: none; background: var(--amarillo); box-shadow: 4px 4px 0 var(--tinta); }
+.clave input { padding-right: 3.2rem; }
+.ver-clave {
+  position: absolute;
+  right: .45rem;
+  bottom: .45rem;
+  width: 2.4rem;
+  height: 2.4rem;
+  font-size: 1.3rem;
+  color: var(--tinta);
+  background: none;
+  border: 0;
   cursor: pointer;
 }
-button:hover { background: #3c5725; }
+.casilla { display: flex; align-items: center; gap: .6rem; margin-bottom: 1.5rem; font-weight: 600; cursor: pointer; }
+.casilla input { width: 1.25rem; height: 1.25rem; accent-color: var(--tinta); }
 
-.aviso, .error { padding: 0.6rem 0.8rem; border-radius: 6px; }
-.aviso { background: #e5f0fa; border-left: 4px solid var(--celeste); }
-.error { background: #f8e3e1; border-left: 4px solid var(--rojo); color: var(--rojo); }
+/* ---------- perfil ---------- */
+.ficha {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  padding: clamp(1.4rem, 4vw, 2.4rem);
+  background: var(--blanco);
+  border: var(--borde);
+  box-shadow: var(--sombra);
+}
+.avatar {
+  display: grid;
+  place-items: center;
+  width: 7.5rem;
+  height: 7.5rem;
+  font-family: var(--letra-titulo);
+  font-size: 3rem;
+  background: var(--verde);
+  border: var(--borde);
+  border-radius: 50%;
+  box-shadow: 4px 4px 0 var(--tinta);
+  rotate: -6deg;
+}
+.ficha h1 { font-size: clamp(2.4rem, 6vw, 4.4rem); }
+.datos { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 1.1rem 2rem; margin: 1.8rem 0 0; }
+.datos div { padding-top: .45rem; border-top: 2px solid var(--tinta); }
+.datos dt { font-size: .75rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.datos dd { margin: 0; font-size: 1.1rem; }
 
-/* perfil */
-.datos { display: grid; grid-template-columns: max-content 1fr; gap: 0.4rem 1.2rem; }
-.datos dt { color: var(--suave); }
-.datos dd { margin: 0; }
-.tabla { width: 100%; border-collapse: collapse; background: var(--papel); }
-.tabla th, .tabla td { padding: 0.5rem; border-bottom: 1px solid #e3d8c2; text-align: left; }
-.tabla small { color: var(--suave); }
+.vacio { padding: 2.4rem; text-align: center; border: 3px dashed var(--tinta); }
+.vacio p { margin: 0 0 1.2rem; font-family: var(--letra-mano); font-size: 1.4rem; }
+
+.tabla-envoltura { overflow-x: auto; }
+.tabla { width: 100%; border-collapse: collapse; background: var(--blanco); border: var(--borde); }
+.tabla th {
+  padding: .7rem 1rem;
+  font-family: var(--letra-titulo);
+  font-weight: 400;
+  letter-spacing: .05em;
+  text-align: left;
+  text-transform: uppercase;
+  color: var(--amarillo);
+  background: var(--tinta);
+}
+.tabla td { padding: .85rem 1rem; border-top: 2px dashed var(--tinta); font-variant-numeric: tabular-nums; }
+.tabla small { color: #555; }
+.estado { padding: .1rem .65rem; font-size: .8rem; font-weight: 800; background: var(--amarillo); border: 2px solid var(--tinta); border-radius: 999px; }
+.estado.enviado { background: var(--verde); }
+
+/* ---------- pie ---------- */
+.pie {
+  margin-top: auto;
+  padding: 3rem clamp(1rem, 4vw, 3rem) 2rem;
+  overflow: hidden;
+  color: var(--papel);
+  background: var(--tinta);
+}
+/* el nombre gigante, solo con el contorno */
+.pie-marca {
+  margin: 0;
+  font-family: var(--letra-titulo);
+  font-size: clamp(3.5rem, 16vw, 13rem);
+  line-height: .85;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: transparent;
+  -webkit-text-stroke: 2px var(--papel);
+}
+.pie-nota { width: fit-content; margin: 1rem 0; font-family: var(--letra-mano); font-size: 1.5rem; color: var(--amarillo); rotate: -2deg; }
+.pie-letra { margin: 0; font-size: .85rem; opacity: .75; }
+
+/* ---------- celular ---------- */
+@media (max-width: 820px) {
+  .portada, .login, .ficha { grid-template-columns: 1fr; }
+  .portada-stickers { width: min(100%, 420px); }
+  .login-afiche { min-height: 420px; }
+  .banda-cantidad { position: static; display: inline-block; margin-top: 1rem; }
+  .banda-foto { display: none; }
+}
+@media (max-width: 520px) {
+  .logo-sello { display: none; } /* que el logo entre en un renglón */
+}
+/* ---------- movimiento ----------
+   Lo que se mueve solo (la cinta, las entradas de GSAP, el cambio de página) respeta
+   la opción "reducir movimiento" del sistema. Lo que se mueve al pasar el mouse, no:
+   eso lo pide la persona. */
+@media (prefers-reduced-motion: no-preference) {
+  /* transición suave entre páginas, sin JavaScript (navegadores basados en Chromium) */
+  @view-transition { navigation: auto; }
+  ::view-transition-old(root) { animation: 160ms ease-in both salir; }
+  ::view-transition-new(root) { animation: 360ms cubic-bezier(.2, .8, .2, 1) both entrar; }
+
+  /* lo que anima GSAP arranca escondido; tienda.js lo muestra al animarlo (clase .visto) */
+  .js [data-anima]:not(.visto) { visibility: hidden; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cinta-pista, .sello-giratorio { animation: none; }
+}
+@keyframes salir { to { opacity: 0; } }
+@keyframes entrar { from { opacity: 0; translate: 0 30px; } }
