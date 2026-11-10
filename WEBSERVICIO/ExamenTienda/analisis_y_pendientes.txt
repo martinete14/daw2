@@ -90,7 +90,8 @@ que poder señalarse en el código. Lo que no se haga va a Limitaciones, nunca a
    Respuesta:
 4. Carrito: ¿puede vivir en la sesión (como el libro) o tiene que guardarse en la BD?
    El pedido va a la BD sí o sí.
-   Respuesta:
+   Respuesta: ya estaba en notas_fran.txt ("puede ser desde un simple Array").
+   Queda en la sesión y va a Limitaciones (10/11).
 
 ==================================================
 6. PRÓXIMOS PASOS (no dependen de las dudas)

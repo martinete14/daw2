@@ -184,8 +184,6 @@ Los códigos no se renumeran: un requisito que se suma después recibe el siguie
 | $_SESSION['carrito'] | Variable de sesión | Array código de producto → unidades. | Se crea al añadir el primer producto. Se vacía al confirmar el pedido. |
 | $_SESSION['ultima_actividad'] | Variable de sesión | La hora (time()) de la última página visitada. | Se actualiza en cada página. Si pasan más de 10 minutos, la sesión se destruye (RF-09). |
 
-<mark>PENDIENTE: si el profesor pide que el carrito se guarde en la base de datos, $_SESSION['carrito'] se sustituye por una tabla y se actualiza este apartado.</mark>
-
 ### 2.6. Modelo de datos
 
 La base de datos «pulperia» tiene cinco tablas. Las relaciones son:
@@ -296,7 +294,7 @@ Desde cualquier pantalla con sesión iniciada se puede ir al perfil, al carrito 
 - **Precios.** Los precios de las yerbas se fijaron a partir de una investigación de precios reales (Anexo B); nueve de las catorce que se sumaron el 10/11 no se venden en las tiendas consultadas y su precio es estimado. Los del resto de categorías son estimados.
 - **Solo en local.** La aplicación funciona en XAMPP y no está desplegada en un servidor público.
 - **Imágenes.** Las fotos de los productos son de los fabricantes y de las tiendas online argentinas donde se venden, y se usan solo con fines académicos. Los kits son fotos armadas juntando las de cada producto. Las imágenes de los afiches de las categorías se hicieron aparte para la tienda y no repiten productos del catálogo.
-- <mark>PENDIENTE: si el carrito se queda en la sesión, se pierde al cerrar sesión o al caducar. Confirmar con el profesor.</mark>
+- **Carrito en la sesión.** El carrito vive en $_SESSION['carrito'] y no en la base de datos, así que se pierde al cerrar sesión o al caducar por inactividad. El pedido, en cambio, sí se guarda en la base de datos al confirmarlo.
 
 ## 5. Líneas futuras
 
