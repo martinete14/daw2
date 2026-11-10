@@ -452,3 +452,48 @@ catálogo y algunas feas). Ahora cada categoría tiene su imagen propia:
 - Cuando estén los gifs: se guardan con el mismo nombre en img/categorias/ y se cambia
   la ruta en la tabla (o se suma como en los productos).
 - La Merced Campo Sur: confirmado con palo. Por ahora la única sin palo es Canarias.
+
+==================================================
+17. LAS 14 YERBAS NUEVAS: CATÁLOGO DE 30 (10/11)
+==================================================
+Cambios contra la lista de la sección 14: Mañanita entra por Rosamonte Selección
+Especial, Natura Orgánica por Titrayju, Barão es la Nativa y Cachamate la de Hierbas
+Serranas. Canarias Serena va como Compuesta (el paquete dice "compuesta con hierbas").
+
+Imágenes: renombradas al estilo de las otras (sin espacios ni tildes) y llevadas a
+800x800, fondo blanco y paquete al 88 % del alto, como las 16 de antes. Los archivos
+que trajo Martín están en img/productos/originales/ con el nombre nuevo.
+Los gifs tienen que llamarse igual que el jpg:
+  aguantadora, amanda-despalada, baldo, barao, cachamate, canarias-serena, cbse-guarana,
+  la-merced-barbacua, mananita, mate-rojo, natura, sara, selecta, taragui-despalada (.gif)
+
+Tipos de yerba ahora: Con palo 15, Sin palo 5, Compuesta 5, Orgánica 2, Barbacuá 1,
+Chimarrão 1, Saborizada 1. El filtro los muestra solos (sale de la BD).
+
+Datos de cada una (búsqueda web del 10/11; fuentes comerciales y notas de prensa):
+- Aguantadora: Cooperativa Agrícola Mixta de Montecarlo (Misiones), fundada en 1930,
+  más de 800 socios. OJO: puse 1 kg; confirmar el peso en el paquete.
+- Amanda Despalada: La Cachuera (Apóstoles). Hoja de corte mediano, casi sin palo.
+- Baldo: empresa BRASILEÑA (no uruguaya), de Vespasiano Corrêa, Rio Grande do Sul,
+  fundada en 1920 por inmigrantes italianos. También produce Canarias. Molienda
+  uruguaya. OJO: la puse como Sin palo; confirmarlo en el paquete.
+- Barão de Cotegipe Nativa: chimarrão brasileño, envasado al vacío. Las fuentes no se
+  ponen de acuerdo en el origen de la hoja (Paraná o Rio Grande do Sul); puse
+  "yerbales nativos de Paraná", que es lo que dicen de la Nativa.
+- Cachamate: Cachamai (grupo Werthein desde 2005). "Cachamai" en quechua = "hierbas
+  que hacen bien". Las hierbas exactas varían según la fuente: puse "hierbas serranas".
+- Canarias Serena: toronjil, mburucuyá y tilo. La eligió la Selección para Qatar 2022.
+- CBSé Energía Guaraná: poleo, cedrón, extracto y saborizante de guaraná -> Saborizada.
+- La Merced Barbacuá: Las Marías, secada a leña (método antiguo, jesuítico).
+- Mañanita: Las Marías, lanzada en 1996, suave y con poco polvo.
+- Mate Rojo: Molinos La Misión (Misiones). Estacionamiento: 18 o 24 meses según la
+  fuente; puse "más de un año".
+- Natura Orgánica: NO encontré quién la elabora. PENDIENTE: leer "elaborado por" en el
+  paquete y sumarlo a la descripción ("La elabora ...").
+- Sara: Carrau & Cía. (Uruguay), marca de 1918, con yerba brasileña. Sin palo.
+- Selecta: E.B.S.A., Bella Vista, Itapúa (Paraguay). Barbacuá, molienda granulada.
+- Taragüí Despalada: Las Marías. Sin palo.
+
+Precios: Mate-Tee (Alemania) tiene 5 (Amanda Despalada 5,95; Canarias Serena 12,12;
+CBSé Guaraná 5,09; Sara 12,84; Selecta 6,36). Las otras 9 son estimadas comparando con
+la más parecida del catálogo. Todo está en el Anexo B de la memoria.

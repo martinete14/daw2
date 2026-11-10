@@ -85,13 +85,13 @@ INSERT INTO categorias (nombre, descripcion, imagen) VALUES
     ('Almacén criollo', 'Lo que no puede faltar en la alacena: chimichurri y ají para el asado, galletitas y bizcochitos para el mate, polenta, membrillo y Mantecol.', 'img/categorias/almacen.webp'),
     ('Kits y regalos', 'Combos armados para empezar a tomar mate, para regalar o para extrañar un poco menos: del kit de iniciación al equipo matero completo.', 'img/categorias/kits.webp');
 
--- 16 yerbas y 8 productos en el resto de las categorías (56 en total).
+-- 30 yerbas y 8 productos en el resto de las categorías (70 en total).
 -- Todas las imágenes son .jpg en img/productos/ (faltan 3, que muestran "Imagen en preparación").
 -- Cada categoría tiene su plantilla de descripción, como las yerbas. Los materiales y medidas
 -- de mates, bombillas y termos siguen el catálogo de Nuestra Pacha Regionales (Córdoba),
 -- una tienda real del rubro (ver sección 13 de analisis_y_pendientes.txt)
 -- El tipo es lo que se elige en el filtro de cada categoría (RF-18). En las yerbas: con palo,
--- sin palo, compuesta (con hierbas) u orgánica.
+-- sin palo, compuesta (con hierbas), orgánica, barbacuá (secada a leña), saborizada o chimarrão.
 INSERT INTO productos (nombre, descripcion, peso, precio, stock, imagen, tipo, categoria) VALUES
     -- 1. Yerbas
     -- misma plantilla en todas: tipo, origen, quién la elabora, sabor y un dato propio.
@@ -112,6 +112,22 @@ INSERT INTO productos (nombre, descripcion, peso, precio, stock, imagen, tipo, c
     ('Kurupí Menta y Boldo 500g', 'Yerba compuesta de San Juan Bautista, Misiones (Paraguay). La elabora Santa Margarita S.A. Sabor medio. Lleva menta y boldo, la yerba digestiva del Paraguay.', 500, 5.90, 10, 'img/productos/kurupi.jpg', 'Compuesta', 1),
     ('Kraus Orgánica 500g', 'Yerba orgánica de San Ignacio, Misiones (Argentina). La elabora la familia Kraus. Sabor suave. Certificada orgánica y secada sin humo.', 500, 7.70, 8, 'img/productos/kraus.jpg', 'Orgánica', 1),
     ('Andresito Tradicional 1kg', 'Yerba con palo de Comandante Andresito, Misiones (Argentina). La elabora la Cooperativa Yerbatera Andresito. Sabor medio. Cooperativa de productores fundada en 1983.', 1000, 8.50, 14, 'img/productos/andresito.jpg', 'Con palo', 1),
+    -- las 14 que se sumaron el 10/11 (ver sección 17 de analisis_y_pendientes.txt): más sin palo,
+    -- barbacuá, saborizada, chimarrão y yerbas de Uruguay, Brasil y Paraguay
+    ('Aguantadora Tradicional 1kg', 'Yerba con palo de Montecarlo, Misiones (Argentina). La elabora la Cooperativa Agrícola Mixta de Montecarlo. Sabor medio. Cooperativa fundada en 1930, con más de 800 socios productores.', 1000, 8.20, 14, 'img/productos/aguantadora.jpg', 'Con palo', 1),
+    ('Amanda Despalada 500g', 'Yerba sin palo de Apóstoles, Misiones (Argentina). La elabora La Cachuera. Sabor intenso. Es la Amanda de siempre pero solo con hoja de corte mediano: más fuerte que la Tradicional.', 500, 5.90, 12, 'img/productos/amanda-despalada.jpg', 'Sin palo', 1),
+    ('Baldo 1kg', 'Yerba sin palo de Rio Grande do Sul (Brasil), molida al estilo uruguayo. La elabora Baldo S.A. Sabor intenso. Empresa fundada en 1920 por inmigrantes italianos; también hace la yerba Canarias.', 1000, 11.90, 10, 'img/productos/baldo.jpg', 'Sin palo', 1),
+    ('Barão de Cotegipe Nativa 1kg', 'Yerba para chimarrão de yerbales nativos de Paraná (Brasil). La elabora Barão, marca con el nombre de un pueblo de Rio Grande do Sul. Sabor suave. Verde, molida muy fina y sin estacionar; viene envasada al vacío.', 1000, 9.90, 8, 'img/productos/barao.jpg', 'Chimarrão', 1),
+    ('Cachamate Hierbas Serranas 500g', 'Yerba compuesta de Argentina. La elabora Cachamai, del grupo Werthein. Sabor suave. Lleva hierbas serranas; «Cachamai» viene del quechua y quiere decir «hierbas que hacen bien».', 500, 5.50, 15, 'img/productos/cachamate.jpg', 'Compuesta', 1),
+    ('Canarias Serena 1kg', 'Yerba compuesta de Uruguay, elaborada con yerba brasileña. La elabora Canarias S.A. Sabor suave. Lleva toronjil, mburucuyá y tilo; la llevó la Selección argentina al Mundial de Qatar 2022.', 1000, 11.90, 10, 'img/productos/canarias-serena.jpg', 'Compuesta', 1),
+    ('CBSé Energía Guaraná 500g', 'Yerba saborizada de Córdoba (Argentina). La elabora CBSé. Sabor medio. Lleva poleo, cedrón y extracto de guaraná, una semilla del Amazonas con cafeína: de ahí lo de «Energía».', 500, 5.50, 14, 'img/productos/cbse-guarana.jpg', 'Saborizada', 1),
+    ('La Merced Barbacuá 500g', 'Yerba barbacuá con palo de Gobernador Virasoro, Corrientes (Argentina). La elabora Establecimiento Las Marías. Sabor intenso. Secada a leña, a la manera antigua de los jesuitas: tiene gusto ahumado.', 500, 7.50, 8, 'img/productos/la-merced-barbacua.jpg', 'Barbacuá', 1),
+    ('Mañanita 500g', 'Yerba con palo de Gobernador Virasoro, Corrientes (Argentina). La elabora Establecimiento Las Marías. Sabor suave. Salió en 1996 pensada para ser fácil de tomar desde el primer mate, con poco polvo.', 500, 4.50, 16, 'img/productos/mananita.jpg', 'Con palo', 1),
+    ('Mate Rojo Tradicional 1kg', 'Yerba con palo de Misiones (Argentina). La elabora Molinos La Misión. Sabor medio. Estacionada de forma natural durante más de un año antes de molerla.', 1000, 8.20, 12, 'img/productos/mate-rojo.jpg', 'Con palo', 1),
+    ('Natura Orgánica 500g', 'Yerba orgánica de Misiones (Argentina). Sabor suave. Cultivada sin agroquímicos.', 500, 6.90, 9, 'img/productos/natura.jpg', 'Orgánica', 1),
+    ('Sara Tradicional 1kg', 'Yerba sin palo de Uruguay, elaborada con yerba brasileña. La elabora Carrau & Cía. Sabor intenso. Marca de 1918, de las más antiguas de Uruguay; el paquete rojo es la Tradicional.', 1000, 12.50, 10, 'img/productos/sara.jpg', 'Sin palo', 1),
+    ('Selecta Tradicional 500g', 'Yerba con palo de Bella Vista, Itapúa (Paraguay). La elabora la empresa familiar E.B.S.A. Sabor intenso. Secada a leña (barbacuá) y de molienda granulada.', 500, 6.30, 12, 'img/productos/selecta.jpg', 'Con palo', 1),
+    ('Taragüí Despalada 500g', 'Yerba sin palo de Gobernador Virasoro, Corrientes (Argentina). La elabora Establecimiento Las Marías. Sabor intenso. La Taragüí de siempre pero solo con hoja: más fuerte que la con palo.', 500, 5.50, 14, 'img/productos/taragui-despalada.jpg', 'Sin palo', 1),
 
     -- 2. Mates y bombillas
     -- plantilla: de qué está hecho, cómo está terminado, para quién o cómo se usa, y un cuidado o dato propio

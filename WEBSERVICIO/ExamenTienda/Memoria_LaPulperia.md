@@ -84,11 +84,11 @@ Se sigue un modelo en espiral, como el que propone el libro de la asignatura: en
 
 ### 1.5. Catálogo
 
-La tienda tiene 6 categorías y 56 productos, por encima del mínimo pedido (3 categorías y 8 productos):
+La tienda tiene 6 categorías y 70 productos, por encima del mínimo pedido (3 categorías y 8 productos):
 
 | **Categoría** | **Productos** | **Tipos (filtro, RF-18)** | **Ejemplos** |
 | --- | --- | --- | --- |
-| Yerbas | 16 | Con palo, sin palo, compuesta, orgánica | Playadito, Taragüí, Rosamonte, Canarias, CBSé, Kraus Orgánica |
+| Yerbas | 30 | Con palo, sin palo, compuesta, orgánica, barbacuá, saborizada, chimarrão | Playadito, Taragüí, Canarias, Baldo, Sara, La Merced Barbacuá, Kraus Orgánica |
 | Mates y bombillas | 8 | Mates, bombillas | Mate imperial, mate camionero, bombilla pico de loro |
 | Termos y materas | 8 | Termos, materas, pavas, yerberas | Termo Stanley, termo Lumilagro, pava con control de temperatura, matera Broksol |
 | Alfajores y dulce de leche | 8 | Alfajores, dulce de leche | Havanna, Cachafaz, Guaymallén, dulce de leche La Serenísima |
@@ -135,7 +135,7 @@ Los códigos no se renumeran: un requisito que se suma después recibe el siguie
 | RF-02 | Al elegir una categoría, mostrar sus productos con imagen, nombre, descripción, peso y precio en euros, con su equivalente en pesos argentinos. |
 | RF-03 | Un producto con stock 0 aparece como «Sin stock» y no se puede añadir al carrito. |
 | RF-04 | <mark>PENDIENTE: confirmar con el profesor si el gestor de productos incluye un panel de alta, modificación y baja.</mark> El administrador puede dar de alta, modificar y dar de baja productos. |
-| RF-18 | En la página de una categoría, filtrar sus productos por tipo (por ejemplo, en Yerbas: con palo, sin palo, compuesta u orgánica). Los tipos y la cantidad de productos de cada uno se leen de la base de datos, y el filtro se aplica en la consulta. Solo aparece si la categoría tiene más de un tipo. |
+| RF-18 | En la página de una categoría, filtrar sus productos por tipo (por ejemplo, en Yerbas: con palo, sin palo, compuesta, orgánica o barbacuá). Los tipos y la cantidad de productos de cada uno se leen de la base de datos, y el filtro se aplica en la consulta. Solo aparece si la categoría tiene más de un tipo. |
 
 **Parte 2. Control del usuario**
 
@@ -293,7 +293,7 @@ Desde cualquier pantalla con sesión iniciada se puede ir al perfil, al carrito 
 - **Sin correos.** Al confirmar un pedido no se envía ningún correo. El libro lo hace con PHPMailer, pero eso exige guardar credenciales de una cuenta de correo.
 - **Sin registro.** Los usuarios no se dan de alta desde la web: se crean en la base de datos (ver Anexo A).
 - **Sin pago ni envío.** El pedido queda registrado, pero no hay pasarela de pago. El campo «enviado» existe en la base de datos, pero no se gestiona desde la web.
-- **Precios.** Los precios de las yerbas se fijaron a partir de una investigación de precios reales (Anexo B). Los del resto de categorías son estimados.
+- **Precios.** Los precios de las yerbas se fijaron a partir de una investigación de precios reales (Anexo B); nueve de las catorce que se sumaron el 10/11 no se venden en las tiendas consultadas y su precio es estimado. Los del resto de categorías son estimados.
 - **Solo en local.** La aplicación funciona en XAMPP y no está desplegada en un servidor público.
 - **Imágenes.** Las fotos de los productos son de los fabricantes y de las tiendas online argentinas donde se venden, y se usan solo con fines académicos. Los kits son fotos armadas juntando las de cada producto. Las imágenes de los afiches de las categorías se hicieron aparte para la tienda y no repiten productos del catálogo.
 - <mark>PENDIENTE: si el carrito se queda en la sesión, se pierde al cerrar sesión o al caducar. Confirmar con el profesor.</mark>
@@ -307,7 +307,7 @@ Desde cualquier pantalla con sesión iniciada se puede ir al perfil, al carrito 
 - Nuevas categorías: vinos (exige verificar la mayoría de edad) y carnes (exige cadena de frío y envíos especiales).
 - Renders 3D y vídeos de los productos.
 - Filtro por tamaño del paquete (500 g, 1 kg), sumado al filtro por tipo.
-- Ampliar el catálogo: hasta 30 yerbas (sin palo, barbacuá, saborizadas, uruguayas, brasileñas y paraguayas) y más mates y bombillas.
+- Ampliar el catálogo con más mates, bombillas y termos.
 - Ofrecer la tienda a comercios reales del rubro.
 
 ## Anexo A. Usuarios de prueba
@@ -350,3 +350,24 @@ Precios en Argentina consultados el 06/11/2026 en DIA, Jumbo, Vea, Disco, Carref
 (*) En Argentina solo se vende en paquetes de 500 g; el precio del kilo es el doble del paquete.
 
 Pajarito es paraguaya y Kraus se exporta casi entera, por eso no están en los supermercados argentinos. Canarias es uruguaya y en Argentina también es importada, de ahí su precio más alto.
+
+**Yerbas añadidas el 10/11/2026.** Para las 14 yerbas que se sumaron al catálogo se tomó como referencia el precio de Mate-Tee (Alemania), consultado el 10/11/2026. Cinco están a la venta allí; las otras nueve no, y su precio se estimó comparándolas con la yerba más parecida del catálogo (misma empresa, mismo tipo o mismo tamaño).
+
+| **Yerba** | **Mate-Tee (€)** | **La Pulpería (€)** | **Cómo se fijó** |
+| --- | --- | --- | --- |
+| Aguantadora Tradicional 1 kg | – | 8,20 | Estimado, como las otras con palo de 1 kg |
+| Amanda Despalada 500 g | 5,95 | 5,90 | Mate-Tee |
+| Baldo 1 kg | – | 11,90 | Estimado, a la altura de Canarias (la misma empresa) |
+| Barão de Cotegipe Nativa 1 kg | – | 9,90 | Estimado |
+| Cachamate Hierbas Serranas 500 g | – | 5,50 | Estimado, como CBSé Hierbas Serranas 500 g (5,09 € en Mate-Tee) |
+| Canarias Serena 1 kg | 12,12 | 11,90 | Mate-Tee |
+| CBSé Energía Guaraná 500 g | 5,09 | 5,50 | Mate-Tee |
+| La Merced Barbacuá 500 g | – | 7,50 | Estimado, como La Merced Campo Sur 500 g (6,98 € en Mate-Tee) |
+| Mañanita 500 g | – | 4,50 | Estimado, la mitad de Unión 1 kg (la misma empresa) |
+| Mate Rojo Tradicional 1 kg | – | 8,20 | Estimado, como las otras con palo de 1 kg |
+| Natura Orgánica 500 g | – | 6,90 | Estimado, por debajo de Kraus Orgánica 500 g |
+| Sara Tradicional 1 kg | 12,84 | 12,50 | Mate-Tee |
+| Selecta Tradicional 500 g | 6,36 | 6,30 | Mate-Tee |
+| Taragüí Despalada 500 g | – | 5,50 | Estimado, a partir de Taragüí Con Palo 1 kg |
+
+Las uruguayas (Baldo, Canarias Serena y Sara) quedan por encima de los 11 € el kilo, igual que Canarias: también en Europa son las más caras.
