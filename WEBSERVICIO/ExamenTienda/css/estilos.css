@@ -304,13 +304,16 @@ h1, h2, h3 {
 @media (min-width: 640px) {
   .afiches { grid-template-columns: repeat(2, 1fr); }
   .afiche:first-child, .afiche:last-child { grid-column: span 2; }
+  /* los afiches a lo ancho son bajos: con la mitad del ancho la imagen ya llena el alto */
+  .afiche:first-child .afiche-foto, .afiche:last-child .afiche-foto { width: 50%; }
 }
 @media (min-width: 1000px) {
   .afiches { grid-template-columns: repeat(3, 1fr); }
   .afiche:last-child { grid-column: auto; }
+  .afiche:last-child .afiche-foto { width: 62%; } /* Kits vuelve a ser un afiche común */
   .afiche:first-child { grid-row: span 2; }
   .afiche:first-child .afiche-titulo { font-size: clamp(4rem, 9vw, 8rem); }
-  .afiche:first-child .afiche-foto { width: 60%; }
+  .afiche:first-child .afiche-foto { width: 74%; }
 }
 .afiche {
   position: relative;
@@ -328,7 +331,7 @@ h1, h2, h3 {
 .afiche:hover { translate: -4px -4px; box-shadow: 10px 10px 0 var(--tinta); }
 .afiche-num { font-family: var(--letra-titulo); line-height: 2.8rem; } /* misma altura que la flecha */
 .afiche-titulo { position: relative; z-index: 1; margin: .3rem 0 .7rem; font-size: clamp(2.3rem, 4vw, 3.3rem); }
-.afiche-texto { position: relative; z-index: 1; max-width: 52%; margin: 0 0 1rem; font-size: .95rem; }
+.afiche-texto { position: relative; z-index: 1; max-width: 48%; margin: 0 0 1rem; font-size: .95rem; } /* que no pise la imagen */
 .afiche-cantidad {
   position: relative;
   z-index: 1;
@@ -343,11 +346,11 @@ h1, h2, h3 {
    blanco que sigue la forma (cuatro sombras blancas sin desenfoque) y la sombra negra corrida */
 .afiche-foto {
   position: absolute;
-  right: -5%;
-  bottom: -7%;
-  width: 50%;
-  filter: drop-shadow(3px 0 0 var(--blanco)) drop-shadow(-3px 0 0 var(--blanco))
-          drop-shadow(0 3px 0 var(--blanco)) drop-shadow(0 -3px 0 var(--blanco))
+  right: -8%;
+  bottom: -8%;
+  width: 62%;
+  filter: drop-shadow(2px 0 0 var(--blanco)) drop-shadow(-2px 0 0 var(--blanco))
+          drop-shadow(0 2px 0 var(--blanco)) drop-shadow(0 -2px 0 var(--blanco))
           drop-shadow(6px 6px 0 var(--tinta));
   rotate: 7deg;
   transition: rotate .35s var(--rebote), scale .35s var(--rebote);
