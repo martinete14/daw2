@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!-- La Pulpería · lámina de identidad visual para el prototipo de Figma (apartado 3.1 de la memoria).
+     Página estática: usa la misma hoja de estilos que la tienda, más unos estilos propios abajo. -->
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Identidad visual · La Pulpería</title>
+  <link rel="icon" href="../img/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Permanent+Marker&display=swap">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
+  <link rel="stylesheet" href="../css/estilos.css">
+  <style>
+    .lamina { width: min(1200px, 100% - 2rem); margin: 2.5rem auto 5rem; }
+    .lamina h1 { font-size: clamp(3.4rem, 9vw, 7rem); margin-bottom: 1.2rem; }
+    .lamina h2 { margin: 4rem 0 1.4rem; font-size: clamp(2.2rem, 5vw, 3.4rem); }
+    .bajada { max-width: 62ch; font-size: 1.2rem; }
+
+    /* las tres fuentes de la identidad, cada una en un afiche */
+    .origenes { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.8rem; }
+    .origen { padding: 1.6rem; border: var(--borde); box-shadow: var(--sombra); background: var(--color); }
+    .origen:nth-child(1) { rotate: -1deg; }
+    .origen:nth-child(2) { rotate: .8deg; }
+    .origen:nth-child(3) { rotate: -.5deg; }
+    .origen h3 { margin: .6rem 0 .8rem; font-size: 2.2rem; }
+    .origen p { margin: 0 0 .8rem; }
+    .origen .lleva { font-weight: 700; }
+
+    /* las chapas de La Boca: franjas de colores, como las paredes de Caminito */
+    .chapas { display: flex; height: 70px; margin: -.4rem -.4rem 1rem; border: var(--borde); }
+    .chapas span { flex: 1; border-right: 3px solid var(--tinta); background: repeating-linear-gradient(90deg, rgb(0 0 0 / .12) 0 3px, transparent 3px 14px), var(--c); }
+    .chapas span:last-child { border-right: 0; }
+
+    /* paleta */
+    .paleta { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.4rem; }
+    .tinta { background: var(--blanco); border: var(--borde); box-shadow: var(--sombra); }
+    .tinta-muestra { height: 120px; border-bottom: var(--borde); background: var(--c); }
+    .tinta-datos { padding: .9rem 1rem 1.1rem; }
+    .tinta-datos strong { display: block; font-family: var(--letra-titulo); font-size: 1.6rem; font-weight: 400; text-transform: uppercase; }
+    .tinta-datos code { font-weight: 700; }
+    .tinta-datos p { margin: .4rem 0 0; font-size: .9rem; }
+
+    /* tipografías */
+    .letras { display: grid; gap: 1.4rem; }
+    .letra { display: grid; grid-template-columns: 260px 1fr; gap: 1.5rem; align-items: center; padding: 1.4rem; background: var(--blanco); border: var(--borde); }
+    .letra-muestra { font-size: 3.4rem; line-height: 1; }
+    .letra-datos p { margin: .3rem 0 0; }
+
+    /* piezas */
+    .piezas { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.8rem; align-items: start; }
+    .pieza { position: relative; min-height: 210px; padding: 1.4rem; background: var(--blanco); border: 3px dashed var(--tinta); }
+    .pieza > p:last-child { margin: 1.2rem 0 0; font-size: .9rem; }
+    .pieza .sticker, .pieza .sello { position: static; translate: none; }
+    .pieza .sello { display: inline-block; margin-top: .6rem; }
+    @media (max-width: 640px) { .letra { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <main class="lamina">
+    <p class="nota">la historia detrás del diseño</p>
+    <h1>De dónde sale<br>La Pulpería</h1>
+    <p class="bajada">La tienda no se parece a las webs del rubro, que suelen ser blancas y de catálogo. Se parece a la calle: a los afiches pegados en las paredes, a las chapas pintadas de La Boca y al almacén de barrio. Cada color, cada letra y cada pieza tiene un origen.</p>
+
+    <h2>Tres fuentes</h2>
+    <div class="origenes">
+      <article class="origen" style="--color: var(--amarillo)">
+        <span class="afiche-cantidad">01</span>
+        <h3>Los afiches de la calle</h3>
+        <p>Los afiches que se pegan en las paredes y en las persianas de Buenos Aires y del centro de Córdoba para anunciar recitales, bailes y obras: tintas flúor, letras gruesas y condensadas, uno pegado encima de otro.</p>
+        <p class="lleva">En la tienda: la letra Anton, las tintas flúor, los títulos torcidos como tiras de papel y la cinta que corre arriba.</p>
+      </article>
+      <article class="origen" style="--color: var(--celeste)">
+        <div class="chapas" aria-hidden="true">
+          <span style="--c: var(--rojo)"></span><span style="--c: var(--amarillo)"></span><span style="--c: var(--verde)"></span><span style="--c: var(--celeste)"></span><span style="--c: var(--naranja)"></span><span style="--c: var(--rosa)"></span>
+        </div>
+        <h3>Las chapas de La Boca</h3>
+        <p>Las casas de chapa del barrio de La Boca se pintaban con la pintura que sobraba en los astilleros del Riachuelo, y cada pared quedaba de un color. En Caminito, Quinquela Martín hizo de esos colores la cara del barrio.</p>
+        <p class="lleva">En la tienda: cada categoría tiene su color propio, como cada chapa, y juntas forman la paleta.</p>
+      </article>
+      <article class="origen" style="--color: var(--rosa)">
+        <span class="afiche-cantidad">03</span>
+        <h3>El almacén de barrio</h3>
+        <p>La pulpería era el almacén del campo; el almacén de barrio es su heredero. Precios escritos a mano en la pizarra, la lista pegada con cinta, el ticket que se lleva el cliente.</p>
+        <p class="lleva">En la tienda: las notas con letra de marcador, la lista de precios de la portada y la cuenta del carrito como un ticket.</p>
+      </article>
+    </div>
+
+    <h2>Las tintas</h2>
+    <div class="paleta">
+      <div class="tinta"><div class="tinta-muestra" style="--c: var(--verde)"></div><div class="tinta-datos"><strong>Verde yerba</strong><code>#2EE57A</code> · Yerbas<p>El verde de la hoja de yerba, subido a flúor como un afiche.</p></div></div>
+      <div class="tinta"><div class="tinta-muestra" style="--c: var(--naranja)"></div><div class="tinta-datos"><strong>Naranja</strong><code>#FF7A1A</code> · Mates y bombillas<p>El calor de la calabaza y del cuero curtido.</p></div></div>
+      <div class="tinta"><div class="tinta-muestra" style="--c: var(--celeste)"></div><div class="tinta-datos"><strong>Celeste</strong><code>#3DC1FF</code> · Termos y materas<p>El celeste de la bandera y del agua del termo.</p></div></div>
+      <div class="tinta"><div class="tinta-muestra" style="--c: var(--rosa)"></div><div class="tinta-datos"><strong>Rosa</strong><code>#FF4FA3</code> · Alfajores y dulce de leche<p>Lo dulce, en el rosa chillón de los afiches de bailes.</p></div></div>
+      <div class="tinta"><div class="tinta-muestra" style="--c: var(--amarillo)"></div><div class="tinta-datos"><strong>Amarillo</strong><code>#FFE600</code> · Almacén criollo<p>El amarillo de las chapas de Caminito y de la cinta de papel.</p></div></div>
+      <div class="tinta"><div class="tinta-muestra" style="--c: var(--rojo)"></div><div class="tinta-datos"><strong>Rojo</strong><code>#FF3B30</code> · Kits y regalos<p>El rojo de los sellos de goma y de lo que se regala.</p></div></div>
+      <div class="tinta"><div class="tinta-muestra" style="--c: var(--tinta)"></div><div class="tinta-datos"><strong>Tinta</strong><code>#141414</code> · Textos, bordes y sombras<p>La tinta negra de la imprenta: todos los bordes y sombras son negros y sin desenfoque, como un sello.</p></div></div>
+      <div class="tinta"><div class="tinta-muestra" style="--c: var(--papel)"></div><div class="tinta-datos"><strong>Papel</strong><code>#F4F3EF</code> · Fondo<p>Papel de diario, con un grano de impresión por encima de toda la página.</p></div></div>
+    </div>
+
+    <h2>Las letras</h2>
+    <div class="letras">
+      <div class="letra"><span class="letra-muestra" style="font-family: var(--letra-titulo); text-transform: uppercase">Yerba mate</span><div class="letra-datos"><strong>Anton</strong><p>Títulos. Condensada y gruesa, como las letras de madera de las imprentas de afiches.</p></div></div>
+      <div class="letra"><span class="letra-muestra" style="font-family: var(--letra-mano); font-size: 2.6rem">lo de allá, acá</span><div class="letra-datos"><strong>Permanent Marker</strong><p>Notas a mano. El marcador del almacenero en la pizarra y en la lista de precios.</p></div></div>
+      <div class="letra"><span class="letra-muestra" style="font-size: 2.4rem; font-weight: 600">Bricolage</span><div class="letra-datos"><strong>Bricolage Grotesque</strong><p>Texto, precios y formularios. Una grotesca con carácter que se lee bien en tamaño chico.</p></div></div>
+    </div>
+
+    <h2>Las piezas</h2>
+    <div class="piezas">
+      <div class="pieza"><p class="sticker"><strong>7,90 €</strong><small>13.430 ARS</small></p><p>El precio, como el sticker redondo de oferta: euros grande y pesos chico (RNF-05).</p></div>
+      <div class="pieza"><p class="sello">Sin stock</p><p>El sello de goma para lo que no se puede comprar (RF-03).</p></div>
+      <div class="pieza"><span class="boton boton-chico"><i class="ph-bold ph-shopping-cart-simple" aria-hidden="true"></i> Añadir</span><p>El botón: tinta negra, letra de afiche y una sombra corrida, como mal impreso a propósito.</p></div>
+      <div class="pieza"><nav class="filtro" style="margin: 0"><a aria-current="page" class="cat-1">Con palo <small>15</small></a><a>Sin palo <small>5</small></a></nav><p>Las fichas del filtro: la elegida toma la tinta de la categoría (RF-18).</p></div>
+      <div class="pieza"><p class="nota">lo que vas a llevar</p><p>La nota a mano, pegada torcida sobre cada título.</p></div>
+      <div class="pieza" style="border-style: solid; background: var(--papel)"><div class="ticket"><p class="lista-titulo" style="font-size: 1.8rem">La cuenta</p><p style="margin: 0; font-family: var(--letra-titulo); font-size: 1.8rem">Total 64,00 €</p></div><p>El ticket del almacén, pegado con cinta: la cuenta del carrito (RF-13).</p></div>
+    </div>
+  </main>
+</body>
+</html>

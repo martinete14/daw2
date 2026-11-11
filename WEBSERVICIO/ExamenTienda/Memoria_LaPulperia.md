@@ -30,8 +30,9 @@ Memoria del proyecto · Desarrollo Web en Entorno Servidor · 2.º DAW · ILERNA
     - [2.7. Clases](#27-clases)
     - [2.8. Ficheros de la aplicación](#28-ficheros-de-la-aplicación)
   - [3. Prototipo de pantallas](#3-prototipo-de-pantallas)
-    - [3.1. Flujo de pantallas](#31-flujo-de-pantallas)
-    - [3.2. Pantallas](#32-pantallas)
+    - [3.1. Identidad visual](#31-identidad-visual)
+    - [3.2. Flujo de pantallas](#32-flujo-de-pantallas)
+    - [3.3. Pantallas](#33-pantallas)
   - [4. Limitaciones](#4-limitaciones)
   - [5. Líneas futuras](#5-líneas-futuras)
   - [Anexo A. Usuarios de prueba](#anexo-a-usuarios-de-prueba)
@@ -287,7 +288,36 @@ Los ficheros del gestor de productos (RF-04) se suman a esta tabla con la entreg
 
 El prototipo está hecho en Figma. <mark>PENDIENTE: enlace al proyecto de Figma.</mark>
 
-### 3.1. Flujo de pantallas
+Tiene dos páginas: «Identidad», con el origen de la estética, la paleta, las letras y las piezas, y «Pantallas», con las pantallas de la tienda unidas según el flujo. Las pantallas se importaron a Figma desde la propia web con el plugin html.to.design, así que son capas editables y no capturas. La identidad y el gestor de productos, que todavía no está programado, se armaron como páginas estáticas en la carpeta prototipo/ (identidad.html y gestor.html) y se importaron igual.
+
+### 3.1. Identidad visual
+
+La tienda no se parece a las webs del rubro, que suelen ser blancas y de catálogo: se parece a la calle. Su estética sale de tres fuentes:
+
+- **Los afiches de la calle.** Los afiches que se pegan en las paredes y en las persianas de Buenos Aires y del centro de Córdoba para anunciar recitales, bailes y obras: tintas flúor, letras gruesas y condensadas, uno pegado encima de otro. De ahí salen la letra de los títulos, las tintas, los títulos torcidos como tiras de papel y la cinta que corre arriba de cada página.
+- **Las chapas de La Boca.** Las casas de chapa del barrio de La Boca se pintaban con la pintura que sobraba en los astilleros del Riachuelo, y cada pared quedaba de un color; en Caminito, Quinquela Martín hizo de esos colores la cara del barrio. De ahí sale que cada categoría tenga su color propio y que juntas formen la paleta.
+- **El almacén de barrio.** La pulpería era el almacén del campo; el almacén de barrio es su heredero. De ahí salen las notas escritas a mano, la lista de precios de la portada, pegada con cinta, y la cuenta del carrito como un ticket.
+
+| **Tinta** | **Código** | **Dónde se usa** |
+| --- | --- | --- |
+| Verde yerba | #2EE57A | Yerbas |
+| Naranja | #FF7A1A | Mates y bombillas |
+| Celeste | #3DC1FF | Termos y materas |
+| Rosa | #FF4FA3 | Alfajores y dulce de leche |
+| Amarillo | #FFE600 | Almacén criollo, notas y cinta de papel |
+| Rojo | #FF3B30 | Kits y regalos, sellos |
+| Tinta | #141414 | Textos, bordes y sombras (siempre negras y sin desenfoque, como un sello) |
+| Papel | #F4F3EF | Fondo, con un grano de impresión encima |
+
+| **Letra** | **Uso** | **Por qué** |
+| --- | --- | --- |
+| Anton | Títulos | Condensada y gruesa, como las letras de madera de las imprentas de afiches. |
+| Permanent Marker | Notas a mano | El marcador del almacenero en la pizarra. |
+| Bricolage Grotesque | Texto, precios y formularios | Tiene carácter y se lee bien en tamaño chico. |
+
+El color de cada categoría sale de su código en la base de datos (clases .cat-1 a .cat-6 en css/estilos.css), así que la tinta acompaña a la categoría en todas las pantallas: su afiche, su franja, la sombra de sus tarjetas y su aviso al añadir al carrito.
+
+### 3.2. Flujo de pantallas
 
 Login → Categorías → Productos → Carrito → Confirmación del pedido.
 
@@ -295,7 +325,7 @@ Desde cualquier pantalla con sesión iniciada se puede ir al perfil, al carrito 
 
 Al añadir un producto, la página vuelve a la tarjeta de ese producto, con el mismo filtro, y muestra un aviso con un enlace al carrito. En el libro, añadir lleva directo al carrito; quedarse en la lista es su ejercicio propuesto 1 del capítulo 4, y deja seguir comprando sin perder el sitio.
 
-### 3.2. Pantallas
+### 3.3. Pantallas
 
 | **Pantalla** | **Qué muestra** | **Requisitos** |
 | --- | --- | --- |
