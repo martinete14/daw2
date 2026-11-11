@@ -134,7 +134,7 @@ Los códigos no se renumeran: un requisito que se suma después recibe el siguie
 | RF-01 | Mostrar las categorías leídas de la base de datos, con su nombre y su descripción. |
 | RF-02 | Al elegir una categoría, mostrar sus productos con imagen, nombre, descripción, peso y precio en euros, con su equivalente en pesos argentinos. |
 | RF-03 | Un producto con stock 0 aparece como «Sin stock» y no se puede añadir al carrito. |
-| RF-04 | <mark>PENDIENTE: confirmar con el profesor si el gestor de productos incluye un panel de alta, modificación y baja.</mark> El administrador puede dar de alta, modificar y dar de baja productos. |
+| RF-04 | El administrador puede dar de alta, modificar y dar de baja productos desde el gestor de productos. Solo los usuarios con rol de administrador ven el enlace al gestor y pueden entrar en él; si un cliente lo intenta, vuelve a las categorías. Un producto que ya aparece en algún pedido no se puede dar de baja, para no romper los pedidos antiguos. |
 | RF-18 | En la página de una categoría, filtrar sus productos por tipo (por ejemplo, en Yerbas: con palo, sin palo, compuesta, orgánica o barbacuá). Los tipos y la cantidad de productos de cada uno se leen de la base de datos, y el filtro se aplica en la consulta. Solo aparece si la categoría tiene más de un tipo. |
 
 **Parte 2. Control del usuario**
@@ -255,7 +255,7 @@ La base de datos «pulperia» tiene cinco tablas. Las relaciones son:
 | --- | --- |
 | BaseDatos | Abre la conexión PDO una sola vez y la comparte con el resto de clases. |
 | Categoria | Lee las categorías de la base de datos, con su cantidad de productos y el precio de su producto más barato, y los tipos de producto de cada una para el filtro. |
-| Producto | Lee los productos de una categoría (todos o los de un tipo) o un producto por su código, y consulta el stock. |
+| Producto | Lee los productos de una categoría (todos o los de un tipo) o un producto por su código, y consulta el stock. Para el gestor, da de alta, modifica y da de baja productos. |
 | Usuario | Inicia sesión comprobando el hash, comprueba que la sesión siga activa y devuelve los datos del perfil. |
 | Carrito | Maneja $_SESSION['carrito']: añadir, quitar, vaciar y calcular el total. |
 | Pedido | Guarda el pedido en una transacción y lista los pedidos de un usuario. |
@@ -281,7 +281,7 @@ Desde cualquier pantalla con sesión iniciada se puede ir al perfil, al carrito 
 | Carrito | Tabla con producto, unidades, precio, subtotal y botón Quitar. Total en euros y en pesos y botón Confirmar pedido. | RF-13, RF-14 |
 | Confirmación | Número de pedido y resumen. Si falta stock, el aviso correspondiente. | RF-15, RF-16, RF-17 |
 | Perfil | Datos del usuario y lista de sus pedidos con fecha, total y estado. | RF-10 |
-| Gestor de productos | <mark>PENDIENTE (RF-04).</mark> Listado de productos con botones de alta, modificación y baja. | RF-04 |
+| Gestor de productos | Solo para el administrador. Listado de todos los productos con su categoría, precio y stock, y botones de alta, modificación y baja. El alta y la modificación usan el mismo formulario. | RF-04 |
 
 <mark>PENDIENTE: insertar una captura de Figma por pantalla.</mark>
 

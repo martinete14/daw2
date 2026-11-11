@@ -82,7 +82,9 @@ que poder señalarse en el código. Lo que no se haga va a Limitaciones, nunca a
 1. "Gestor de productos": ¿alcanza con mostrar el catálogo desde la BD,
    o quiere un panel para dar de alta, modificar y borrar productos?
    Es lo que más cambia el trabajo de la parte 1.
-   Respuesta:
+   Respuesta: sin respuesta todavía. DECIDIDO (11/11): panel de alta, modificación
+   y baja, solo para el administrador. No se borra un producto que esté en un pedido.
+   Va en la memoria como RF-04 y se programa para el 19/11. Mail a Fran pendiente.
 2. "3 categorías / 8 productos": ¿8 en total o 8 por categoría?
    Respuesta:
 3. "Token vivo": ¿alcanza con la sesión de PHP + caducidad por inactividad,
