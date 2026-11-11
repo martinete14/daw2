@@ -20,6 +20,11 @@ spl_autoload_register(function ($clase) {
     require __DIR__ . "/clases/" . $clase . ".php";
 });
 
+// la cookie de sesión (PHPSESSID): HttpOnly, JavaScript no la puede leer; SameSite=Lax, el
+// navegador no la manda en formularios que vengan de otra web, así otra página no puede
+// hacer un pedido en nombre del usuario
+session_set_cookie_params(['httponly' => true, 'samesite' => 'Lax']);
+
 // todas las páginas usan la sesión, así que se arranca acá una sola vez
 session_start();
 

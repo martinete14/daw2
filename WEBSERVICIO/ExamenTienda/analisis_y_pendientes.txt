@@ -500,3 +500,66 @@ Datos de cada una (búsqueda web del 10/11; fuentes comerciales y notas de prens
 Precios: Mate-Tee (Alemania) tiene 5 (Amanda Despalada 5,95; Canarias Serena 12,12;
 CBSé Guaraná 5,09; Sara 12,84; Selecta 6,36). Las otras 9 son estimadas comparando con
 la más parecida del catálogo. Todo está en el Anexo B de la memoria.
+
+==================================================
+18. PARTE 3: CARRITO Y PEDIDOS (11/11)
+==================================================
+Hecho y probado (RF-12 a RF-17). Sigue el diseño del libro, capítulo 4: los mismos
+ficheros que su cuadro 4.1 (anadir.php, eliminar.php, carrito.php, procesar_pedido.php),
+el carrito como array código => unidades (4.3.4) y el pedido en una transacción
+(insertar_pedido, 4.4.10). El código es nuestro y con clases, no el del libro.
+OJO: el PDF escaneado salta de la página 113 a la 116 (faltan 4.4.7 ver carrito y
+4.4.8 eliminar). Lo que hacen está en el diseño (4.3.4) y en el resumen del capítulo.
+
+Dónde está cada cosa (lo que va a preguntar Fran):
+- El carrito: $_SESSION['carrito'], array [código => unidades]. Lo maneja SOLO la clase
+  Carrito (clases/Carrito.php). Se crea la primera vez que se añade algo
+  (Carrito::anadir) y se vacía al confirmar (Carrito::vaciar).
+- ¿Por qué solo códigos y unidades y no todo el producto? (actividad 4.2 del libro)
+  Porque el precio y el stock pueden cambiar: se leen de la BD cada vez que se muestra
+  el carrito (Carrito::lineas -> Producto::varios, una sola consulta con IN).
+- El IN con prepare: Producto::varios arma "?, ?, ?" (un ? por código) y pasa los
+  códigos aparte. El libro pega los códigos con implode -> inyección SQL.
+- Añadir (RF-12): productos.php tiene un formulario por tarjeta (cod oculto + unidades,
+  como el libro 4.4.5) que va a anadir.php. anadir.php no muestra nada: cambia el
+  carrito y redirige. No deja pasar del stock: Carrito::anadir usa min(lo pedido, stock).
+- Después de añadir NO va al carrito (el libro sí): vuelve a la tarjeta del producto
+  (#p-codigo) con el mismo filtro y un aviso abajo. Es el ejercicio propuesto 1 del cap. 4.
+  El aviso viaja en la URL (?anadido=código o ?tope=código), como ?caducada=1 del login.
+- Quitar (RF-14): eliminar.php recibe cod y unidades (como el libro). El botón − manda 1;
+  Quitar manda todas. Si quedan 0 o menos, unset (Carrito::quitar).
+- (int) en anadir.php y eliminar.php: lo que llega por POST se convierte en número.
+  Unidades de menos de 1, un producto que no existe o sin stock: el carrito no cambia.
+- Confirmar (RF-15): el botón es un formulario POST, no un enlace, porque cambia la BD.
+  procesar_pedido.php llama a Pedido::guardar(). Sin POST o con el carrito vacío, vuelve
+  al carrito: recargar o tocar dos veces el botón no hace otro pedido.
+- La transacción: Pedido::guardar (clases/Pedido.php). beginTransaction ->
+  1) RF-16: relee precio y stock de cada producto con SELECT ... FOR UPDATE
+  2) INSERT en pedidos (fecha NOW(), enviado 0 por defecto) y lastInsertId() = número
+  3) por cada producto: INSERT en pedidos_productos con el precio del día y
+     UPDATE productos SET stock = stock - unidades
+  -> commit. Si falta stock: rollBack y devuelve false. Si falla la BD: rollBack y la
+  excepción sube a procesar_pedido.php, que muestra el error (no queda nada a medias).
+- FOR UPDATE: bloquea esas filas hasta el commit. Si dos clientes confirman la última
+  unidad a la vez, el segundo espera y, cuando le toca, ya ve el stock en 0: no hay
+  stock negativo. ksort ordena los códigos para que dos pedidos bloqueen en el mismo
+  orden y no se traben entre sí.
+- Precio del día: pedidos_productos.precio. Si mañana sube el precio, el pedido de hoy
+  no cambia (el perfil suma unidades x ese precio).
+- El número de la cabecera: Carrito::cantidad() (suma de unidades), en inc/cabecera.php.
+- La cookie de sesión (config.php, session_set_cookie_params antes de session_start):
+  HttpOnly = JavaScript no la lee; SameSite=Lax = no viaja en un formulario que venga de
+  otra web. Sin eso, otra página podría mandar un POST a procesar_pedido.php y hacer un
+  pedido con la sesión del usuario (CSRF). Cambio sumado con el carrito.
+- Diferencias con el libro, todas a propósito: clases en vez de funciones sueltas,
+  consultas preparadas, control de stock (el libro dice que no lo controla), precio
+  del día, sin correo (va en Limitaciones).
+
+Pruebas hechas (11/11, por HTTP con dos usuarios, 44 comprobaciones, todas bien): añadir, tope de
+stock, + y −, quitar, entradas inválidas (-5, "abc", 0, producto inexistente, sin stock),
+GET a anadir/procesar, confirmar (stock descontado, precio guardado, perfil), RF-16 con
+dos clientes uno detrás del otro y 10 rondas de dos clientes confirmando A LA VEZ
+(dos servidores): siempre ganó uno solo y el stock nunca quedó negativo.
+Capturas de computadora y celular revisadas. La base quedó como antes de las pruebas.
+
+Pendiente de la parte 3: nada de código. Si Fran pide el correo, se suma.

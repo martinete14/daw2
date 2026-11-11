@@ -28,6 +28,7 @@ Memoria del proyecto · Desarrollo Web en Entorno Servidor · 2.º DAW · ILERNA
     - [2.5. Cookie y variables de sesión](#25-cookie-y-variables-de-sesión)
     - [2.6. Modelo de datos](#26-modelo-de-datos)
     - [2.7. Clases](#27-clases)
+    - [2.8. Ficheros de la aplicación](#28-ficheros-de-la-aplicación)
   - [3. Prototipo de pantallas](#3-prototipo-de-pantallas)
     - [3.1. Flujo de pantallas](#31-flujo-de-pantallas)
     - [3.2. Pantallas](#32-pantallas)
@@ -157,7 +158,7 @@ Los códigos no se renumeran: un requisito que se suma después recibe el siguie
 | RF-13 | Ver el carrito: producto, unidades, precio unitario, subtotal y total, en euros y en pesos. |
 | RF-14 | Quitar unidades o un producto entero del carrito. |
 | RF-15 | Confirmar el pedido: se guardan el pedido y una línea por producto con sus unidades y el precio del día, y se descuenta el stock. Todo va en una transacción: si algo falla, no se guarda nada. |
-| RF-16 | Antes de guardar el pedido se vuelve a comprobar el stock en la base de datos. Si otro cliente compró las últimas unidades, el pedido no se hace y se avisa al usuario. |
+| RF-16 | Antes de guardar el pedido se vuelve a comprobar el stock en la base de datos. Si otro cliente compró las últimas unidades, el pedido no se hace y se avisa al usuario. Durante la comprobación, las filas de esos productos quedan bloqueadas hasta el final de la transacción (SELECT … FOR UPDATE): si dos clientes confirman a la vez, el segundo espera y ve el stock ya descontado, así que nunca se venden más unidades de las que hay. |
 | RF-17 | Tras confirmar, se muestra el número de pedido y el carrito queda vacío. |
 
 ### 2.4. Requisitos no funcionales
@@ -179,9 +180,9 @@ Los códigos no se renumeran: un requisito que se suma después recibe el siguie
 | **Nombre** | **Tipo** | **Qué guarda** | **Vida** |
 | --- | --- | --- | --- |
 | recordar_correo | Cookie propia | El correo del usuario. Nunca la clave. | Se crea al entrar con la casilla marcada y dura 30 días. Se borra al entrar con la casilla desmarcada. |
-| PHPSESSID | Cookie de sesión de PHP | El identificador de la sesión. La crea PHP solo. | Hasta cerrar el navegador o cerrar sesión. |
+| PHPSESSID | Cookie de sesión de PHP | El identificador de la sesión. La crea PHP solo, con HttpOnly (JavaScript no la puede leer) y SameSite=Lax (no viaja en formularios de otras webs, así nadie puede hacer un pedido en nombre del usuario). | Hasta cerrar el navegador o cerrar sesión. |
 | $_SESSION['usuario'] | Variable de sesión | Código, correo, nombre y rol del usuario. | Se crea al iniciar sesión. Se borra al cerrar sesión o al caducar. |
-| $_SESSION['carrito'] | Variable de sesión | Array código de producto → unidades. | Se crea al añadir el primer producto. Se vacía al confirmar el pedido. |
+| $_SESSION['carrito'] | Variable de sesión | Array código de producto → unidades, como en el libro. Solo los códigos y las unidades: el nombre, el precio y el stock se leen de la base de datos cada vez, así están siempre al día. | Se crea al añadir el primer producto. Se vacía al confirmar el pedido. |
 | $_SESSION['ultima_actividad'] | Variable de sesión | La hora (time()) de la última página visitada. | Se actualiza en cada página. Si pasan más de 10 minutos, la sesión se destruye (RF-09). |
 
 ### 2.6. Modelo de datos
@@ -255,10 +256,32 @@ La base de datos «pulperia» tiene cinco tablas. Las relaciones son:
 | --- | --- |
 | BaseDatos | Abre la conexión PDO una sola vez y la comparte con el resto de clases. |
 | Categoria | Lee las categorías de la base de datos, con su cantidad de productos y el precio de su producto más barato, y los tipos de producto de cada una para el filtro. |
-| Producto | Lee los productos de una categoría (todos o los de un tipo) o un producto por su código, y consulta el stock. Para el gestor, da de alta, modifica y da de baja productos. |
+| Producto | Lee los productos de una categoría (todos o los de un tipo), un producto por su código o varios por sus códigos (los del carrito, en una sola consulta), y consulta el stock. Para el gestor, da de alta, modifica y da de baja productos. |
 | Usuario | Inicia sesión comprobando el hash, comprueba que la sesión siga activa y devuelve los datos del perfil. |
-| Carrito | Maneja $_SESSION['carrito']: añadir, quitar, vaciar y calcular el total. |
+| Carrito | Maneja $_SESSION['carrito']: añadir sin pasar del stock, quitar, vaciar, contar las unidades y calcular los subtotales y el total. |
 | Pedido | Guarda el pedido en una transacción y lista los pedidos de un usuario. |
+
+### 2.8. Ficheros de la aplicación
+
+Como en el diseño del libro (apartado 4.3.6), cada página es un fichero y los datos pasan de uno a otro por la URL (GET) o por formularios (POST). Todas las páginas, salvo el login y el cierre de sesión, empiezan con Usuario::comprobarSesion(), que lleva a login.php?redirigido=1 si no hay sesión y a login.php?caducada=1 si caducó.
+
+| **Fichero** | **Qué hace** | **Recibe** | **Redirige a** |
+| --- | --- | --- | --- |
+| config.php | Datos de la base de datos, cotización, minutos de inactividad, carga de las clases e inicio de la sesión. Lo incluyen todas las páginas. | | |
+| inc/cabecera.php, inc/pie.php | Cabecera común (logo, menú, carrito con su número de unidades, cerrar sesión) y pie. | | |
+| index.php | Entrada a la tienda. | | categorias.php |
+| login.php | Formulario de login y su comprobación (RF-05 a RF-07). | POST correo, clave, recordar · GET redirigido, caducada | categorias.php si entra |
+| logout.php | Cierra la sesión (RF-11). | | login.php |
+| categorias.php | Categorías y lista de precios (RF-01). | | |
+| productos.php | Productos de una categoría, filtro por tipo y formulario para añadir al carrito (RF-02, RF-03, RF-12, RF-18). | GET categoria, tipo, anadido, tope | |
+| anadir.php | Añade unidades al carrito sin pasar del stock (RF-12). No muestra nada. | POST cod, unidades, tipo, volver | productos.php, a la tarjeta del producto, o carrito.php |
+| eliminar.php | Quita unidades del carrito (RF-14). No muestra nada. | POST cod, unidades | carrito.php |
+| carrito.php | Muestra el carrito (RF-13, RF-14). | GET tope | |
+| procesar_pedido.php | Guarda el pedido y muestra el número o el error (RF-15 a RF-17). | POST del botón «Confirmar pedido» | carrito.php si se abre sin POST o con el carrito vacío |
+| perfil.php | Datos del usuario y sus pedidos (RF-10). | | |
+| clases/ | Las clases del apartado 2.7, una por fichero. | | |
+
+Los ficheros del gestor de productos (RF-04) se suman a esta tabla con la entrega del 19/11.
 
 ## 3. Prototipo de pantallas
 
@@ -270,16 +293,18 @@ Login → Categorías → Productos → Carrito → Confirmación del pedido.
 
 Desde cualquier pantalla con sesión iniciada se puede ir al perfil, al carrito y cerrar sesión. Si la sesión caduca, cualquier pantalla lleva al login con el aviso de sesión caducada.
 
+Al añadir un producto, la página vuelve a la tarjeta de ese producto, con el mismo filtro, y muestra un aviso con un enlace al carrito. En el libro, añadir lleva directo al carrito; quedarse en la lista es su ejercicio propuesto 1 del capítulo 4, y deja seguir comprando sin perder el sitio.
+
 ### 3.2. Pantallas
 
 | **Pantalla** | **Qué muestra** | **Requisitos** |
 | --- | --- | --- |
 | Login | Logo, correo, clave con un botón para verla, casilla «Recordar mi correo», botón Entrar y mensaje de error si falla. | RF-05, RF-06, RF-07 |
 | Sesión caducada | El login con un aviso arriba: «Tu sesión caducó por inactividad». | RF-09 |
-| Categorías | Cabecera común (logo, nombre del usuario, carrito con el número de productos, perfil y salir), una lista de precios con el precio más barato de cada categoría («desde 2,90 €») y un afiche por categoría con su descripción, su cantidad de productos y su imagen, recortada como un sticker. | RF-01, RF-11 |
-| Productos | Arriba, el filtro por tipo: una ficha por tipo con su cantidad de productos, y la elegida resaltada con el color de la categoría. Debajo, una tarjeta por producto: imagen, nombre, descripción, peso, precio en euros (y en pesos), unidades y botón Añadir. Los que no tienen stock muestran «Sin stock». Al pasar el mouse, la foto se cambia por un gif del producto girando. | RF-02, RF-03, RF-12, RF-18 |
-| Carrito | Tabla con producto, unidades, precio, subtotal y botón Quitar. Total en euros y en pesos y botón Confirmar pedido. | RF-13, RF-14 |
-| Confirmación | Número de pedido y resumen. Si falta stock, el aviso correspondiente. | RF-15, RF-16, RF-17 |
+| Categorías | Cabecera común (logo, nombre del usuario, carrito con el número de unidades que tiene, perfil y salir), una lista de precios con el precio más barato de cada categoría («desde 2,90 €») y un afiche por categoría con su descripción, su cantidad de productos y su imagen, recortada como un sticker. | RF-01, RF-11 |
+| Productos | Arriba, el filtro por tipo: una ficha por tipo con su cantidad de productos, y la elegida resaltada con el color de la categoría. Debajo, una tarjeta por producto: imagen, nombre, descripción, peso, precio en euros (y en pesos), unidades y botón Añadir. Los que no tienen stock muestran «Sin stock» y no tienen botón. Si el producto ya está en el carrito, la tarjeta lo indica y no deja pedir más unidades de las que quedan. Después de añadir, un aviso abajo de la pantalla con un enlace al carrito. Al pasar el mouse, la foto se cambia por un gif del producto girando. | RF-02, RF-03, RF-12, RF-18 |
+| Carrito | Tabla con producto, precio, unidades (con botones − y + para quitar o sumar una), subtotal y botón Quitar. Si hay más unidades de las que quedan en stock, el producto se marca y no se puede confirmar hasta corregirlo. Al lado, la cuenta, como el ticket del almacén: unidades, total en euros y en pesos y botón Confirmar pedido. En el celular, cada fila es una ficha. Si está vacío, un aviso y un enlace a las categorías. | RF-12, RF-13, RF-14 |
+| Confirmación | Número de pedido con un sello «Confirmado» y resumen con el total. Si falta stock, el aviso con los productos afectados (cuántas unidades quedan y cuántas había en el carrito) y un enlace al carrito. | RF-15, RF-16, RF-17 |
 | Perfil | Datos del usuario y lista de sus pedidos con fecha, total y estado. | RF-10 |
 | Gestor de productos | Solo para el administrador. Listado de todos los productos con su categoría, precio y stock, y botones de alta, modificación y baja. El alta y la modificación usan el mismo formulario. | RF-04 |
 

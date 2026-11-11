@@ -1,5 +1,6 @@
 <?php
-// Clase Producto: lee los productos de una categoría (todos o de un tipo) o uno por su código, y consulta el stock (RF-02, RF-03, RF-18)
+// Clase Producto: lee los productos de una categoría (todos o de un tipo), uno por su código o varios
+// por sus códigos (los del carrito), y consulta el stock (RF-02, RF-03, RF-13, RF-18)
 
 class Producto {
     // una propiedad por columna de la tabla productos
@@ -33,6 +34,20 @@ class Producto {
         $consulta->execute([$codigo]);
         $consulta->setFetchMode(PDO::FETCH_CLASS, "Producto");
         return $consulta->fetch();
+    }
+
+    // varios productos por sus códigos (los del carrito), en una sola consulta.
+    // El libro arma el IN pegando los códigos con implode (cargar_productos, 4.4.10); acá cada
+    // código lleva su ? y los valores van aparte, como en el resto de las consultas (RNF-02)
+    public static function varios($codigos) {
+        if (!$codigos) {
+            return []; // "IN ()" vacío es un error de SQL
+        }
+        // 3 códigos -> "?, ?, ?": en la consulta solo se pegan signos de pregunta, nunca un dato
+        $huecos = implode(", ", array_fill(0, count($codigos), "?"));
+        $consulta = BaseDatos::conexion()->prepare("SELECT * FROM productos WHERE codigo IN ($huecos)");
+        $consulta->execute(array_values($codigos));
+        return $consulta->fetchAll(PDO::FETCH_CLASS, "Producto");
     }
 
     // RF-03: con stock 0 no se puede añadir al carrito

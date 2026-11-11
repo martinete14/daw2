@@ -1,5 +1,5 @@
 <?php
-// Cabecera común: cinta de afiche, logo, nombre del usuario, menú y cerrar sesión (RF-11).
+// Cabecera común: cinta de afiche, logo, nombre del usuario, menú con el carrito y cerrar sesión (RF-11).
 // Antes de incluirla, cada página define $titulo.
 
 // lo que pasa en la cinta de arriba (va dos veces seguidas para que el giro no tenga corte)
@@ -45,6 +45,12 @@ $cinta = ["Yerba mate", "Mates y bombillas", "Termos", "Alfajores", "Dulce de le
         <span class="hola">Hola, <?php echo htmlspecialchars(strtok($_SESSION['usuario']['nombre'], " ")); ?></span>
         <a href="categorias.php"><i class="ph-bold ph-squares-four" aria-hidden="true"></i> Categorías</a>
         <a href="perfil.php"><i class="ph-bold ph-user-circle" aria-hidden="true"></i> Mi perfil</a>
+        <!-- el número son las unidades que hay en $_SESSION['carrito'] -->
+        <?php $enCarrito = Carrito::cantidad(); ?>
+        <a class="menu-carrito" href="carrito.php" aria-label="Carrito, <?php echo $enCarrito . ($enCarrito == 1 ? " unidad" : " unidades"); ?>">
+          <i class="ph-bold ph-shopping-cart-simple" aria-hidden="true"></i> Carrito
+          <?php if ($enCarrito > 0) { ?><span class="contador"><?php echo $enCarrito; ?></span><?php } ?>
+        </a>
         <a class="salir" href="logout.php"><i class="ph-bold ph-sign-out" aria-hidden="true"></i> Salir</a>
       </nav>
     <?php } ?>

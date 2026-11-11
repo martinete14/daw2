@@ -3,6 +3,7 @@
 // Productos de una categoría (RF-02, RF-03): imagen, nombre, descripción, peso,
 // precio en euros y en pesos, y el sello "Sin stock" si no quedan.
 // Arriba, el filtro por tipo (RF-18): con palo, sin palo, compuesta...
+// Cada tarjeta tiene el formulario para añadir unidades al carrito (RF-12), que va a anadir.php.
 require "config.php";
 Usuario::comprobarSesion();
 
@@ -24,6 +25,11 @@ if (!$categoria) { ?>
 $tipo = $_GET['tipo'] ?? "";
 $tipos = $categoria->tipos();
 $productos = Producto::deCategoria($categoria->codigo, $tipo);
+
+// anadir.php vuelve con ?anadido=codigo (se añadió) o ?tope=codigo (no quedaba más stock)
+$anadido = (int)($_GET['anadido'] ?? 0);
+$tope = (int)($_GET['tope'] ?? 0);
+$avisado = null; // el producto del aviso, si está en esta página y en el carrito
 ?>
     <!-- cat-N: la franja y las tarjetas toman la tinta de la categoría -->
     <div class="cat-<?php echo $categoria->codigo; ?>">
@@ -62,8 +68,15 @@ $productos = Producto::deCategoria($categoria->codigo, $tipo);
       <?php } ?>
 
       <div class="estantes">
-        <?php foreach ($productos as $producto) { ?>
-          <article class="producto<?php if ($producto->sinStock()) echo " agotado"; ?>" data-anima="tarjeta">
+        <?php foreach ($productos as $producto) {
+            // RF-12: lo que ya está en el carrito cuenta, no se puede pedir más de lo que queda
+            $enCarrito = Carrito::unidades($producto->codigo);
+            $quedan = $producto->stock - $enCarrito;
+            if ($enCarrito > 0 && ($producto->codigo == $anadido || $producto->codigo == $tope)) {
+                $avisado = $producto;
+            } ?>
+          <!-- id="p-codigo": anadir.php vuelve justo a esta tarjeta con #p-codigo en la dirección -->
+          <article class="producto<?php if ($producto->sinStock()) echo " agotado"; ?>" id="p-<?php echo $producto->codigo; ?>" data-anima="tarjeta">
             <?php if ($producto->tieneImagen()) { ?>
               <div class="foto">
                 <!-- loading="lazy": la foto se baja cuando se acerca con el scroll, no todas al abrir la página -->
@@ -86,11 +99,46 @@ $productos = Producto::deCategoria($categoria->codigo, $tipo);
               <p class="sello">Sin stock</p>
             <?php } ?>
 
+            <?php if ($enCarrito > 0) { ?>
+              <p class="en-carrito"><i class="ph-bold ph-shopping-cart-simple" aria-hidden="true"></i> <?php echo $enCarrito; ?> en tu carrito</p>
+            <?php } ?>
+
             <h2><?php echo htmlspecialchars($producto->nombre); ?></h2>
             <p class="descripcion"><?php echo htmlspecialchars($producto->descripcion); ?></p>
             <p class="peso"><i class="ph-bold ph-scales" aria-hidden="true"></i> <?php echo $producto->pesoTexto(); ?></p>
+
+            <?php if (!$producto->sinStock()) { // RF-03: sin stock no hay formulario ?>
+              <?php if ($quedan > 0) { ?>
+                <!-- como el formulario del libro (4.4.5): el código va oculto y las unidades se eligen.
+                     "tipo" es el filtro elegido, para volver a la misma lista -->
+                <form class="comprar" action="anadir.php" method="post">
+                  <input type="hidden" name="cod" value="<?php echo $producto->codigo; ?>">
+                  <input type="hidden" name="tipo" value="<?php echo htmlspecialchars($tipo); ?>">
+                  <label class="oculto" for="unidades-<?php echo $producto->codigo; ?>">Unidades de <?php echo htmlspecialchars($producto->nombre); ?></label>
+                  <input type="number" id="unidades-<?php echo $producto->codigo; ?>" name="unidades" value="1" min="1" max="<?php echo $quedan; ?>">
+                  <button class="boton boton-chico" type="submit"><i class="ph-bold ph-shopping-cart-simple" aria-hidden="true"></i> Añadir</button>
+                </form>
+              <?php } else { ?>
+                <p class="comprar-nota">Ya tenés en el carrito todas las que quedan.</p>
+              <?php } ?>
+            <?php } ?>
           </article>
         <?php } ?>
       </div>
+
+      <?php if ($avisado) { ?>
+        <!-- el aviso de anadir.php va fijo abajo de la pantalla, porque la página se abre en la tarjeta del producto -->
+        <p class="avisito<?php if ($avisado->codigo == $tope) echo " tope"; ?>" role="status">
+          <i class="ph-bold <?php echo $avisado->codigo == $tope ? "ph-info" : "ph-check-circle"; ?>" aria-hidden="true"></i>
+          <span>
+            <?php if ($avisado->codigo == $tope) { ?>
+              No quedan más de <strong><?php echo htmlspecialchars($avisado->nombre); ?></strong>: las que hay ya están en tu carrito.
+            <?php } else { ?>
+              Añadiste <strong><?php echo htmlspecialchars($avisado->nombre); ?></strong> al carrito. Tenés <?php echo Carrito::unidades($avisado->codigo); ?>.
+            <?php } ?>
+          </span>
+          <a href="carrito.php">Ver carrito <i class="ph-bold ph-arrow-right" aria-hidden="true"></i></a>
+        </p>
+      <?php } ?>
     </div>
 <?php require "inc/pie.php"; ?>
