@@ -286,9 +286,9 @@ Los ficheros del gestor de productos (RF-04) se suman a esta tabla con la entreg
 
 ## 3. Prototipo de pantallas
 
-El prototipo está hecho en Figma. <mark>PENDIENTE: enlace al proyecto de Figma.</mark>
+El prototipo está hecho en Figma: [figma.com/design/VB6f1rX09R3Qyy5VzsDVG9/LA-PULPERIA](https://www.figma.com/design/VB6f1rX09R3Qyy5VzsDVG9/LA-PULPERIA).
 
-Tiene dos páginas: «Identidad», con el origen de la estética, la paleta, las letras y las piezas, y «Pantallas», con las pantallas de la tienda unidas según el flujo. Las pantallas se importaron a Figma desde la propia web con el plugin html.to.design, así que son capas editables y no capturas. La identidad y el gestor de productos, que todavía no está programado, se armaron como páginas estáticas en la carpeta prototipo/ (identidad.html y gestor.html) y se importaron igual.
+Tiene dos páginas: «Identidad», con el origen de la estética, la paleta, las letras y las piezas, y «Pantallas», con las ocho pantallas de la tienda ordenadas según el flujo del apartado 3.2 y numeradas de 01 a 08. Las pantallas se importaron a Figma desde la propia web con el plugin html.to.design, así que son capas editables y no capturas. La identidad y el gestor de productos, que todavía no está programado, se armaron como páginas estáticas en la carpeta prototipo/ (identidad.html y gestor.html) y se importaron igual.
 
 ### 3.1. Identidad visual
 
@@ -338,7 +338,39 @@ Al añadir un producto, la página vuelve a la tarjeta de ese producto, con el m
 | Perfil | Datos del usuario y lista de sus pedidos con fecha, total y estado. | RF-10 |
 | Gestor de productos | Solo para el administrador. Listado de todos los productos con su categoría, precio y stock, y botones de alta, modificación y baja. El alta y la modificación usan el mismo formulario. | RF-04 |
 
-<mark>PENDIENTE: insertar una captura de Figma por pantalla.</mark>
+Las capturas siguientes son los frames de la página «Pantallas», exportados desde Figma. Los datos son los de la base de prueba, con la sesión de Juan Román Riquelme (anexo A); el gestor, con la del administrador. Los PNG están en la carpeta prototipo/figma/.
+
+**01 Login**
+
+![01 Login](prototipo/figma/01%20Login.png)
+
+**02 Sesión caducada**
+
+![02 Sesión caducada](prototipo/figma/02%20Sesi%C3%B3n%20caducada.png)
+
+**03 Categorías**
+
+![03 Categorías](prototipo/figma/03%20Categor%C3%ADas.png)
+
+**04 Productos** (categoría Yerbas)
+
+![04 Productos](prototipo/figma/04%20Productos.png)
+
+**05 Carrito**
+
+![05 Carrito](prototipo/figma/05%20Carrito.png)
+
+**06 Confirmación**
+
+![06 Confirmación](prototipo/figma/06%20Confirmaci%C3%B3n.png)
+
+**07 Perfil**
+
+![07 Perfil](prototipo/figma/07%20Perfil.png)
+
+**08 Gestor de productos (RF-04)**
+
+![08 Gestor de productos](prototipo/figma/08%20Gestor%20%28RF-04%29.png)
 
 ## 4. Limitaciones
 
