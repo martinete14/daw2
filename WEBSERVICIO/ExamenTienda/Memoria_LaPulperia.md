@@ -145,7 +145,7 @@ Los códigos no se renumeran: un requisito que se suma después recibe el siguie
 | RF-05 | Iniciar sesión con correo y clave. La clave se comprueba contra el hash guardado en la base de datos. |
 | RF-06 | Si el correo o la clave no son correctos, se muestra un error sin indicar cuál de los dos falló. |
 | RF-07 | Casilla «Recordar mi correo»: si se marca, el correo se guarda en una cookie y aparece escrito la próxima vez que se abre el login. |
-| RF-08 | Todas las páginas, salvo el login, exigen sesión iniciada. Sin sesión, redirigen al login. |
+| RF-08 | Todas las páginas, salvo el login y el cierre de sesión, exigen sesión iniciada. Sin sesión, redirigen al login. |
 | RF-09 | La sesión caduca tras 10 minutos sin actividad. Al volver, el usuario ve un aviso de sesión caducada y tiene que entrar de nuevo. |
 | RF-10 | Página de perfil con los datos del usuario (nombre, correo, dirección, ciudad, código postal, país y fecha de alta) y la lista de sus pedidos. |
 | RF-11 | Cerrar sesión desde cualquier página. |
