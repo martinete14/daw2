@@ -12,31 +12,27 @@ Memoria del proyecto · Desarrollo Web en Entorno Servidor · 2.º DAW · ILERNA
 
 ## Índice
 
-- [La Pulpería](#la-pulpería)
-  - [Índice](#índice)
-  - [1. Definición del proyecto](#1-definición-del-proyecto)
-    - [1.1. Qué es La Pulpería](#11-qué-es-la-pulpería)
-    - [1.2. Por qué este proyecto](#12-por-qué-este-proyecto)
-    - [1.3. Alcance y método de trabajo](#13-alcance-y-método-de-trabajo)
-    - [1.4. Tecnologías](#14-tecnologías)
-    - [1.5. Catálogo](#15-catálogo)
-  - [2. Especificación de requisitos (ERS)](#2-especificación-de-requisitos-ers)
-    - [2.1. Propósito](#21-propósito)
-    - [2.2. Usuarios del sistema](#22-usuarios-del-sistema)
-    - [2.3. Requisitos funcionales](#23-requisitos-funcionales)
-    - [2.4. Requisitos no funcionales](#24-requisitos-no-funcionales)
-    - [2.5. Cookie y variables de sesión](#25-cookie-y-variables-de-sesión)
-    - [2.6. Modelo de datos](#26-modelo-de-datos)
-    - [2.7. Clases](#27-clases)
-    - [2.8. Ficheros de la aplicación](#28-ficheros-de-la-aplicación)
-  - [3. Prototipo de pantallas](#3-prototipo-de-pantallas)
-    - [3.1. Identidad visual](#31-identidad-visual)
-    - [3.2. Flujo de pantallas](#32-flujo-de-pantallas)
-    - [3.3. Pantallas](#33-pantallas)
-  - [4. Limitaciones](#4-limitaciones)
-  - [5. Líneas futuras](#5-líneas-futuras)
-  - [Anexo A. Usuarios de prueba](#anexo-a-usuarios-de-prueba)
-  - [Anexo B. Investigación de precios de las yerbas](#anexo-b-investigación-de-precios-de-las-yerbas)
+- [1. Definición del proyecto](#1-definición-del-proyecto)
+  - [1.1. Qué es La Pulpería](#11-qué-es-la-pulpería)
+  - [1.2. Por qué este proyecto](#12-por-qué-este-proyecto)
+  - [1.3. Alcance y método de trabajo](#13-alcance-y-método-de-trabajo)
+  - [1.4. Tecnologías](#14-tecnologías)
+  - [1.5. Catálogo](#15-catálogo)
+- [2. Especificación de requisitos (ERS)](#2-especificación-de-requisitos-ers)
+  - [2.1. Propósito](#21-propósito)
+  - [2.2. Usuarios del sistema](#22-usuarios-del-sistema)
+  - [2.3. Requisitos funcionales](#23-requisitos-funcionales)
+  - [2.4. Requisitos no funcionales](#24-requisitos-no-funcionales)
+  - [2.5. Cookie y variables de sesión](#25-cookie-y-variables-de-sesión)
+  - [2.6. Modelo de datos](#26-modelo-de-datos)
+  - [2.7. Clases](#27-clases)
+  - [2.8. Ficheros de la aplicación](#28-ficheros-de-la-aplicación)
+- [3. Prototipo de pantallas](#3-prototipo-de-pantallas)
+  - [3.1. Identidad visual](#31-identidad-visual)
+  - [3.2. Flujo de pantallas](#32-flujo-de-pantallas)
+  - [3.3. Pantallas](#33-pantallas)
+- [4. Limitaciones](#4-limitaciones)
+- [5. Líneas futuras](#5-líneas-futuras)
 
 ## 1. Definición del proyecto
 
@@ -56,7 +52,7 @@ De esa revisión salen tres conclusiones:
 
 - Todas venden yerba mate, y la mayoría también accesorios de mate, alfajores, dulce de leche y kits de regalo. Con eso se definieron las seis categorías de la tienda (apartado 1.5).
 - Las webs del rubro, también las de Argentina y Uruguay, tienen en general un diseño anticuado. Hay lugar para una tienda con una imagen cuidada.
-- La misma yerba cuesta en Europa entre 2,5 y 3 veces más que en Argentina. Los precios de la tienda se fijaron con esa referencia (Anexo B).
+- La misma yerba cuesta en Europa entre 2,5 y 3 veces más que en Argentina. Los precios de la tienda se fijaron con esa referencia (apartado 4, Precios).
 
 Ninguna de las tiendas revisadas usa el nombre «La Pulpería».
 
@@ -124,6 +120,16 @@ Este apartado describe qué hace la aplicación. Cada requisito lleva un código
 | Administrador | 1 | Lo mismo que el cliente y, además, gestionar los productos (RF-04). |
 
 Sin iniciar sesión solo se puede ver la pantalla de login.
+
+Usuarios de prueba (la clave se guarda en la base de datos con password_hash):
+
+| **Correo** | **Clave** | **Rol** |
+| --- | --- | --- |
+| admin@lapulperia.es | admin1234 | 1 (administrador) |
+| riquelme@correo.com | 1234 | 0 (cliente) |
+| messi@correo.com | lio10 | 0 (cliente) |
+
+El producto «Bombilla de alpaca cincelada» tiene stock 0 a propósito, para probar RF-03.
 
 ### 2.3. Requisitos funcionales
 
@@ -294,26 +300,15 @@ Tiene dos páginas: «Identidad», con el origen de la estética, la paleta, las
 
 La tienda no se parece a las webs del rubro, que suelen ser blancas y de catálogo: se parece a la calle. Su estética sale de tres fuentes:
 
-- **Los afiches de la calle.** Los afiches que se pegan en las paredes y en las persianas de Buenos Aires y del centro de Córdoba para anunciar recitales, bailes y obras: tintas flúor, letras gruesas y condensadas, uno pegado encima de otro. De ahí salen la letra de los títulos, las tintas, los títulos torcidos como tiras de papel y la cinta que corre arriba de cada página.
-- **Las chapas de La Boca.** Las casas de chapa del barrio de La Boca se pintaban con la pintura que sobraba en los astilleros del Riachuelo, y cada pared quedaba de un color; en Caminito, Quinquela Martín hizo de esos colores la cara del barrio. De ahí sale que cada categoría tenga su color propio y que juntas formen la paleta.
-- **El almacén de barrio.** La pulpería era el almacén del campo; el almacén de barrio es su heredero. De ahí salen las notas escritas a mano, la lista de precios de la portada, pegada con cinta, y la cuenta del carrito como un ticket.
+- **Los afiches de la calle.** Los que se pegan en las paredes y en las persianas de Buenos Aires y de Córdoba para anunciar recitales, bailes y obras. De ahí salen la letra de los títulos, las tintas flúor, los títulos torcidos como tiras de papel y la cinta que corre arriba de cada página.
+- **Las chapas de La Boca.** Cada casa de chapa se pintaba con la pintura que sobraba en los astilleros del Riachuelo y cada pared quedaba de un color. De ahí sale que cada categoría tenga su color propio y que juntas formen la paleta.
+- **El almacén de barrio.** El heredero de la pulpería del campo. De ahí salen las notas escritas a mano, la lista de precios de la portada, pegada con cinta, y la cuenta del carrito como un ticket.
 
-| **Tinta** | **Código** | **Dónde se usa** |
-| --- | --- | --- |
-| Verde yerba | #2EE57A | Yerbas |
-| Naranja | #FF7A1A | Mates y bombillas |
-| Celeste | #3DC1FF | Termos y materas |
-| Rosa | #FF4FA3 | Alfajores y dulce de leche |
-| Amarillo | #FFE600 | Almacén criollo, notas y cinta de papel |
-| Rojo | #FF3B30 | Kits y regalos, sellos |
-| Tinta | #141414 | Textos, bordes y sombras (siempre negras y sin desenfoque, como un sello) |
-| Papel | #F4F3EF | Fondo, con un grano de impresión encima |
+La página «Identidad» del prototipo lo reúne en una lámina (Figura 2): las tres fuentes, las tintas con su código y su uso, las tres letras (Anton para los títulos, Permanent Marker para las notas a mano y Bricolage Grotesque para el texto) y las piezas de la interfaz.
 
-| **Letra** | **Uso** | **Por qué** |
-| --- | --- | --- |
-| Anton | Títulos | Condensada y gruesa, como las letras de madera de las imprentas de afiches. |
-| Permanent Marker | Notas a mano | El marcador del almacenero en la pizarra. |
-| Bricolage Grotesque | Texto, precios y formularios | Tiene carácter y se lee bien en tamaño chico. |
+![Lámina de identidad visual](prototipo/identidad.png)
+
+*Figura 2. Lámina de la página «Identidad» del prototipo: fuentes, tintas, letras y piezas.*
 
 El color de cada categoría sale de su código en la base de datos (clases .cat-1 a .cat-6 en css/estilos.css), así que la tinta acompaña a la categoría en todas las pantallas: su afiche, su franja, la sombra de sus tarjetas y su aviso al añadir al carrito.
 
@@ -327,48 +322,53 @@ Al añadir un producto, la página vuelve a la tarjeta de ese producto, con el m
 
 ### 3.3. Pantallas
 
-| **Pantalla** | **Qué muestra** | **Requisitos** |
-| --- | --- | --- |
-| Login | Logo, correo, clave con un botón para verla, casilla «Recordar mi correo», botón Entrar y mensaje de error si falla. | RF-05, RF-06, RF-07 |
-| Sesión caducada | El login con un aviso arriba: «Tu sesión caducó por inactividad». | RF-09 |
-| Categorías | Cabecera común (logo, nombre del usuario, carrito con el número de unidades que tiene, perfil y salir), una lista de precios con el precio más barato de cada categoría («desde 2,90 €») y un afiche por categoría con su descripción, su cantidad de productos y su imagen, recortada como un sticker. | RF-01, RF-11 |
-| Productos | Arriba, el filtro por tipo: una ficha por tipo con su cantidad de productos, y la elegida resaltada con el color de la categoría. Debajo, una tarjeta por producto: imagen, nombre, descripción, peso, precio en euros (y en pesos), unidades y botón Añadir. Los que no tienen stock muestran «Sin stock» y no tienen botón. Si el producto ya está en el carrito, la tarjeta lo indica y no deja pedir más unidades de las que quedan. Después de añadir, un aviso abajo de la pantalla con un enlace al carrito. Al pasar el mouse, la foto se cambia por un gif del producto girando. | RF-02, RF-03, RF-12, RF-18 |
-| Carrito | Tabla con producto, precio, unidades (con botones − y + para quitar o sumar una), subtotal y botón Quitar. Si hay más unidades de las que quedan en stock, el producto se marca y no se puede confirmar hasta corregirlo. Al lado, la cuenta, como el ticket del almacén: unidades, total en euros y en pesos y botón Confirmar pedido. En el celular, cada fila es una ficha. Si está vacío, un aviso y un enlace a las categorías. | RF-12, RF-13, RF-14 |
-| Confirmación | Número de pedido con un sello «Confirmado» y resumen con el total. Si falta stock, el aviso con los productos afectados (cuántas unidades quedan y cuántas había en el carrito) y un enlace al carrito. | RF-15, RF-16, RF-17 |
-| Perfil | Datos del usuario y lista de sus pedidos con fecha, total y estado. | RF-10 |
-| Gestor de productos | Solo para el administrador. Listado de todos los productos con su categoría, precio y stock, y botones de alta, modificación y baja. El alta y la modificación usan el mismo formulario. | RF-04 |
+Cada pantalla es un frame de la página «Pantallas», exportado desde Figma (los PNG están en la carpeta prototipo/figma/), con lo que muestra y los requisitos que cubre. Los datos son los de la base de prueba, con la sesión de Juan Román Riquelme (apartado 2.2); el gestor, con la del administrador.
 
-Las capturas siguientes son los frames de la página «Pantallas», exportados desde Figma. Los datos son los de la base de prueba, con la sesión de Juan Román Riquelme (anexo A); el gestor, con la del administrador. Los PNG están en la carpeta prototipo/figma/.
+**01 Login** · RF-05, RF-06, RF-07
 
-**01 Login**
+Logo, correo, clave con un botón para verla, casilla «Recordar mi correo», botón Entrar y mensaje de error si falla.
 
 ![01 Login](prototipo/figma/01%20Login.png)
 
-**02 Sesión caducada**
+**02 Sesión caducada** · RF-09
+
+El login con un aviso arriba: «Tu sesión caducó por inactividad».
 
 ![02 Sesión caducada](prototipo/figma/02%20Sesi%C3%B3n%20caducada.png)
 
-**03 Categorías**
+**03 Categorías** · RF-01, RF-11
+
+Cabecera común (logo, nombre del usuario, carrito con el número de unidades que tiene, perfil y salir), una lista de precios con el precio más barato de cada categoría («desde 2,90 €») y un afiche por categoría con su descripción, su cantidad de productos y su imagen, recortada como un sticker.
 
 ![03 Categorías](prototipo/figma/03%20Categor%C3%ADas.png)
 
-**04 Productos** (categoría Yerbas)
+**04 Productos** (categoría Yerbas) · RF-02, RF-03, RF-12, RF-18
+
+Arriba, el filtro por tipo: una ficha por tipo con su cantidad de productos, y la elegida resaltada con el color de la categoría. Debajo, una tarjeta por producto: imagen, nombre, descripción, peso, precio en euros (y en pesos), unidades y botón Añadir. Los que no tienen stock muestran «Sin stock» y no tienen botón. Si el producto ya está en el carrito, la tarjeta lo indica y no deja pedir más unidades de las que quedan. Después de añadir, un aviso abajo de la pantalla con un enlace al carrito. Al pasar el mouse, la foto se cambia por un gif del producto girando.
 
 ![04 Productos](prototipo/figma/04%20Productos.png)
 
-**05 Carrito**
+**05 Carrito** · RF-12, RF-13, RF-14
+
+Tabla con producto, precio, unidades (con botones − y + para quitar o sumar una), subtotal y botón Quitar. Si hay más unidades de las que quedan en stock, el producto se marca y no se puede confirmar hasta corregirlo. Al lado, la cuenta, como el ticket del almacén: unidades, total en euros y en pesos y botón Confirmar pedido. En el celular, cada fila es una ficha. Si está vacío, un aviso y un enlace a las categorías.
 
 ![05 Carrito](prototipo/figma/05%20Carrito.png)
 
-**06 Confirmación**
+**06 Confirmación** · RF-15, RF-16, RF-17
+
+Número de pedido con un sello «Confirmado» y resumen con el total. Si falta stock, el aviso con los productos afectados (cuántas unidades quedan y cuántas había en el carrito) y un enlace al carrito.
 
 ![06 Confirmación](prototipo/figma/06%20Confirmaci%C3%B3n.png)
 
-**07 Perfil**
+**07 Perfil** · RF-10
+
+Datos del usuario y lista de sus pedidos con fecha, total y estado.
 
 ![07 Perfil](prototipo/figma/07%20Perfil.png)
 
-**08 Gestor de productos (RF-04)**
+**08 Gestor de productos** · RF-04
+
+Solo para el administrador. Listado de todos los productos con su categoría, precio y stock, y botones de alta, modificación y baja. El alta y la modificación usan el mismo formulario.
 
 ![08 Gestor de productos](prototipo/figma/08%20Gestor%20%28RF-04%29.png)
 
@@ -376,9 +376,9 @@ Las capturas siguientes son los frames de la página «Pantallas», exportados d
 
 - **Cotización fija.** El precio en pesos se calcula con 1 € = 1.700 ARS, el valor tomado el 06/11/2026. No se actualiza solo.
 - **Sin correos.** Al confirmar un pedido no se envía ningún correo. El libro lo hace con PHPMailer, pero eso exige guardar credenciales de una cuenta de correo.
-- **Sin registro.** Los usuarios no se dan de alta desde la web: se crean en la base de datos (ver Anexo A).
+- **Sin registro.** Los usuarios no se dan de alta desde la web: se crean en la base de datos (ver los usuarios de prueba del apartado 2.2).
 - **Sin pago ni envío.** El pedido queda registrado, pero no hay pasarela de pago. El campo «enviado» existe en la base de datos, pero no se gestiona desde la web.
-- **Precios.** Los precios de las yerbas se fijaron a partir de una investigación de precios reales (Anexo B); nueve de las catorce que se sumaron el 10/11 no se venden en las tiendas consultadas y su precio es estimado. Los del resto de categorías son estimados.
+- **Precios.** Los precios de las yerbas se fijaron a partir de precios reales: los de los supermercados argentinos (DIA, Jumbo, Vea, Disco, Carrefour y ChangoMás, consultados el 06/11/2026) y los de las tiendas europeas Pampa Drugstore, Mate-Tee y UruShop. Nueve de las catorce que se sumaron el 10/11 no se venden en las tiendas consultadas y su precio es estimado. Los del resto de categorías son estimados.
 - **Solo en local.** La aplicación funciona en XAMPP y no está desplegada en un servidor público.
 - **Imágenes.** Las fotos de los productos son de los fabricantes y de las tiendas online argentinas donde se venden, y se usan solo con fines académicos. Los kits son fotos armadas juntando las de cada producto. Las imágenes de los afiches de las categorías se hicieron aparte para la tienda y no repiten productos del catálogo.
 - **Carrito en la sesión.** El carrito vive en $_SESSION['carrito'] y no en la base de datos, así que se pierde al cerrar sesión o al caducar por inactividad. El pedido, en cambio, sí se guarda en la base de datos al confirmarlo.
@@ -394,65 +394,3 @@ Las capturas siguientes son los frames de la página «Pantallas», exportados d
 - Filtro por tamaño del paquete (500 g, 1 kg), sumado al filtro por tipo.
 - Ampliar el catálogo con más mates, bombillas y termos.
 - Ofrecer la tienda a comercios reales del rubro.
-
-## Anexo A. Usuarios de prueba
-
-La clave se guarda en la base de datos con password_hash. Estas son las claves para probar la aplicación:
-
-| **Correo** | **Clave** | **Rol** |
-| --- | --- | --- |
-| admin@lapulperia.es | admin1234 | 1 (administrador) |
-| riquelme@correo.com | 1234 | 0 (cliente) |
-| messi@correo.com | lio10 | 0 (cliente) |
-
-El producto «Bombilla de alpaca cincelada» tiene stock 0 a propósito, para probar RF-03.
-
-## Anexo B. Investigación de precios de las yerbas
-
-Precios en Argentina consultados el 06/11/2026 en DIA, Jumbo, Vea, Disco, Carrefour y ChangoMás (precio normal, sin promociones). Conversión a 1 € = 1.700 ARS. Las tiendas europeas de referencia fueron Pampa Drugstore, Mate-Tee y UruShop.
-
-**Conclusión:** un kilo de yerba cuesta en Argentina unos 3 € al cambio y en las tiendas europeas entre 7,50 y 11 €. Los precios de La Pulpería están dentro de ese rango, salvo La Merced Campo Sur (12,90 €), que en Europa también se vende más cara (6,67 € el paquete de 500 g).
-
-| **Yerba** | **Argentina (ARS)** | **Argentina (€)** | **La Pulpería (€)** |
-| --- | --- | --- | --- |
-| Playadito Suave 1 kg | 5.208 | 3,06 | 7,90 |
-| Taragüí Con Palo 1 kg | 5.790 | 3,41 | 8,10 |
-| Rosamonte 1 kg | 4.490 | 2,64 | 8,50 |
-| Amanda Tradicional 1 kg | 5.490 | 3,23 | 8,30 |
-| Unión Suave 1 kg | 5.790 | 3,41 | 8,50 |
-| Canarias 1 kg | 13.200 | 7,76 | 10,90 |
-| CBSé Hierbas Serranas 1 kg | 5.190 | 3,05 | 9,90 |
-| La Merced Campo Sur 1 kg | 6.790 | 3,99 | 12,90 |
-| Cruz de Malta 1 kg | 5.199 | 3,06 | 8,90 |
-| Nobleza Gaucha 1 kg | 4.890 | 2,88 | 7,90 |
-| Piporé 1 kg | 5.050 | 2,97 | 8,80 |
-| Verdeflor Hierbas Serranas 1 kg | 5.200 (*) | 3,06 | 8,20 |
-| Pajarito Tradicional 1 kg | No se vende | – | 8,20 |
-| Kurupí Menta y Boldo 500 g | 4.799 | 2,82 | 5,90 |
-| Kraus Orgánica 500 g | No se vende | – | 7,70 |
-| Andresito Tradicional 1 kg | 3.835 | 2,26 | 8,50 |
-
-(*) En Argentina solo se vende en paquetes de 500 g; el precio del kilo es el doble del paquete.
-
-Pajarito es paraguaya y Kraus se exporta casi entera, por eso no están en los supermercados argentinos. Canarias es uruguaya y en Argentina también es importada, de ahí su precio más alto.
-
-**Yerbas añadidas el 10/11/2026.** Para las 14 yerbas que se sumaron al catálogo se tomó como referencia el precio de Mate-Tee (Alemania), consultado el 10/11/2026. Cinco están a la venta allí; las otras nueve no, y su precio se estimó comparándolas con la yerba más parecida del catálogo (misma empresa, mismo tipo o mismo tamaño).
-
-| **Yerba** | **Mate-Tee (€)** | **La Pulpería (€)** | **Cómo se fijó** |
-| --- | --- | --- | --- |
-| Aguantadora Tradicional 1 kg | – | 8,20 | Estimado, como las otras con palo de 1 kg |
-| Amanda Despalada 500 g | 5,95 | 5,90 | Mate-Tee |
-| Baldo 1 kg | – | 11,90 | Estimado, a la altura de Canarias (la misma empresa) |
-| Barão de Cotegipe Nativa 1 kg | – | 9,90 | Estimado |
-| Cachamate Hierbas Serranas 500 g | – | 5,50 | Estimado, como CBSé Hierbas Serranas 500 g (5,09 € en Mate-Tee) |
-| Canarias Serena 1 kg | 12,12 | 11,90 | Mate-Tee |
-| CBSé Energía Guaraná 500 g | 5,09 | 5,50 | Mate-Tee |
-| La Merced Barbacuá 500 g | – | 7,50 | Estimado, como La Merced Campo Sur 500 g (6,98 € en Mate-Tee) |
-| Mañanita 500 g | – | 4,50 | Estimado, la mitad de Unión 1 kg (la misma empresa) |
-| Mate Rojo Tradicional 1 kg | – | 8,20 | Estimado, como las otras con palo de 1 kg |
-| Natura Orgánica 500 g | – | 6,90 | Estimado, por debajo de Kraus Orgánica 500 g |
-| Sara Tradicional 1 kg | 12,84 | 12,50 | Mate-Tee |
-| Selecta Tradicional 500 g | 6,36 | 6,30 | Mate-Tee |
-| Taragüí Despalada 500 g | – | 5,50 | Estimado, a partir de Taragüí Con Palo 1 kg |
-
-Las uruguayas (Baldo, Canarias Serena y Sara) quedan por encima de los 11 € el kilo, igual que Canarias: también en Europa son las más caras.
