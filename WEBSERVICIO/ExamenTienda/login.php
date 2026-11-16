@@ -43,10 +43,7 @@ require "inc/cabecera.php";
         <h1 data-anima="letras"><span>Entrá</span> <span>a la</span> <span>pulpería</span></h1>
         <div class="login-stickers" aria-hidden="true">
           <?php foreach (["canarias", "union"] as $yerba) { ?>
-            <picture data-anima="salta">
-              <source srcset="img/productos/<?php echo $yerba; ?>.jpg" media="(prefers-reduced-motion: reduce)">
-              <img src="img/productos/<?php echo $yerba; ?>.gif" alt="">
-            </picture>
+            <span data-anima="salta"><img src="img/productos/<?php echo $yerba; ?>.jpg" alt=""></span>
           <?php } ?>
         </div>
       </div>

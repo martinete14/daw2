@@ -19,6 +19,9 @@
   --borde: 3px solid var(--tinta);
   --sombra: 6px 6px 0 var(--tinta);
   --rebote: cubic-bezier(.34, 1.56, .64, 1); /* se pasa un poco y vuelve, como un sticker */
+  /* un resorte: linear() une estos puntos, así que el valor se pasa (1.34), vuelve de menos (.88)
+     y se pasa cada vez menos hasta quedarse en 1. Lo usa la foto de cada producto */
+  --resorte: linear(0, .47 6%, 1.13 12%, 1.34 18%, 1.16 24%, .88 35%, 1.04 52%, .99 70%, 1);
 
   --letra-titulo: "Anton", "Arial Narrow", Impact, sans-serif;
   --letra-texto: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
@@ -274,7 +277,7 @@ h1, h2, h3 {
 .lista-pie { margin: .9rem 0 0; font-size: .8rem; font-weight: 700; }
 
 /* yerbas del login, pegadas como stickers */
-.login-stickers picture { position: absolute; display: block; }
+.login-stickers span { position: absolute; display: block; }
 .login-stickers img {
   width: 100%;
   background: var(--blanco);
@@ -463,11 +466,12 @@ h1, h2, h3 {
 /* al pasar el mouse la tarjeta se levanta y la sombra toma la tinta de la categoría */
 .producto:hover { translate: -4px -4px; rotate: -.6deg; box-shadow: 10px 10px 0 var(--color); }
 
-.foto { position: relative; }
 .foto img, .sin-imagen { width: 100%; aspect-ratio: 1; object-fit: contain; background: var(--blanco); }
-/* el gif va encima de la foto y aparece al pasar el mouse; tienda.js lo hace arrancar de cero */
-.foto .animada { position: absolute; inset: 0; height: 100%; opacity: 0; transition: opacity .15s; }
-.producto:hover .animada { opacity: 1; }
+/* al pasar el mouse el producto se agranda, se inclina y se bambolea antes de quedarse quieto, como si
+   lo sacaras del estante; al salir, vuelve a su lugar igual. Es la misma foto, sin otra imagen ni JavaScript.
+   multiply: el blanco de la foto deja ver lo que tiene debajo, así al moverse no tapa el borde de la tarjeta */
+.foto img { mix-blend-mode: multiply; transition: rotate .8s var(--resorte), scale .8s var(--resorte); }
+.producto:hover .foto img { rotate: 3deg; scale: 1.05; }
 .sin-imagen {
   display: grid;
   place-items: center;
@@ -553,9 +557,9 @@ h1, h2, h3 {
 .login-afiche h1 span { display: block; }
 /* la palabra del medio, solo con el contorno */
 .login-afiche h1 span:nth-child(2) { color: var(--blanco); -webkit-text-stroke: 3px var(--tinta); }
-.login-stickers picture { width: 40%; }
-.login-stickers picture:nth-child(1) { right: 20%; bottom: -6%; rotate: -12deg; }
-.login-stickers picture:nth-child(2) { right: -6%; bottom: 8%; rotate: 9deg; }
+.login-stickers span { width: 40%; }
+.login-stickers span:nth-child(1) { right: 20%; bottom: -6%; rotate: -12deg; }
+.login-stickers span:nth-child(2) { right: -6%; bottom: 8%; rotate: 9deg; }
 
 .login-caja {
   align-self: center;
@@ -879,7 +883,7 @@ h1, h2, h3 {
   .filtro a, .filtro-nota { flex-shrink: 0; }
 }
 /* ---------- movimiento ----------
-   Lo que se mueve solo (la cinta, las entradas de GSAP, el cambio de página) respeta
+   Lo que se mueve solo (la cinta, las entradas de GSAP, las yerbas del login, el cambio de página) respeta
    la opción "reducir movimiento" del sistema. Lo que se mueve al pasar el mouse, no:
    eso lo pide la persona. */
 @media (prefers-reduced-motion: no-preference) {
@@ -897,8 +901,13 @@ h1, h2, h3 {
 
   /* el aviso de "añadiste…" sube desde abajo de la pantalla */
   .avisito { animation: asoma .5s var(--rebote) both; }
+
+  /* las yerbas del login se hamacan despacio, cada una a destiempo */
+  .login-stickers img { animation: hamaca 2.8s ease-in-out infinite alternate; }
+  .login-stickers span + span img { animation-delay: -1.4s; }
 }
 @keyframes asoma { from { translate: -50% 160%; } }
+@keyframes hamaca { from { rotate: -4deg; } to { rotate: 4deg; } }
 @media (prefers-reduced-motion: reduce) {
   .cinta-pista, .sello-giratorio { animation: none; }
 }

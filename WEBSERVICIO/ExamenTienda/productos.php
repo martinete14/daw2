@@ -81,10 +81,6 @@ $avisado = null; // el producto del aviso, si está en esta página y en el carr
               <div class="foto">
                 <!-- loading="lazy": la foto se baja cuando se acerca con el scroll, no todas al abrir la página -->
                 <img src="<?php echo htmlspecialchars($producto->imagen); ?>" alt="<?php echo htmlspecialchars($producto->nombre); ?>" loading="lazy">
-                <?php if ($producto->gif()) { ?>
-                  <!-- el gif va encima, invisible; el CSS lo muestra al pasar el mouse -->
-                  <img class="animada" src="<?php echo htmlspecialchars($producto->gif()); ?>" alt="" loading="lazy">
-                <?php } ?>
               </div>
             <?php } else { ?>
               <div class="sin-imagen">Imagen en preparación</div>

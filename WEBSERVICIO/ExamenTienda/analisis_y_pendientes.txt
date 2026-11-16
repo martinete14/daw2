@@ -294,6 +294,7 @@ Imágenes (09/11):
   nombre (playadito.jpg / playadito.gif) en img/productos. Al pasar el mouse por
   la tarjeta se ve el gif (solo CSS: .producto:hover .animada). Si no hay gif,
   queda la imagen quieta. Producto::gif() busca el archivo.
+  CAMBIÓ (16/11): ya no hay gifs, la foto se mueve con CSS. Ver la sección 20.
 - HECHO (10/11): los 16 jpg quedaron en 800x800, fondo blanco, con el paquete
   centrado al 88 % del alto (igual que los gifs, que rondan el 90 %).
   Nobleza Gaucha tenía fondo gris: su jpg ahora es el primer cuadro de su gif.
@@ -302,6 +303,7 @@ Imágenes (09/11):
   (160x160, arranca de canto) están en img/rehacer/ para rehacerlos con el
   mismo encuadre que los otros. Cuando estén, van a img/productos/ con su nombre.
   Faltan los de Andresito y Piporé.
+  CAMBIÓ (16/11): se sacaron todos los gifs y la carpeta img/rehacer. Ver la sección 20.
 - HECHO (10/11): fotos de las otras categorías, sacadas del catálogo público de
   Carrefour y Jumbo (mismo recorte que las yerbas). Los 7 kits son fotos armadas
   juntando las de lo que trae cada uno. Están 53 de 56.
@@ -324,9 +326,10 @@ Identidad visual (10/11): "afiche porteño", los afiches callejeros de Buenos Ai
   4. animaciones de entrada con GSAP (titulares letra por letra, yerbas que se
      pegan, tarjetas que aparecen con el scroll).
   La lógica de la tienda (sesión, cookie, datos) sigue toda en PHP.
+  CAMBIÓ (16/11): el 1 ya no está (no hay gifs); quedan tres, numeradas 1 a 3. Ver la sección 20.
 - Si el sistema tiene "reducir movimiento" (en Windows: Configuración >
   Accesibilidad > Efectos visuales > Efectos de animación APAGADO), la cinta, el
-  sello y las entradas no se mueven. El gif al pasar el mouse sí (RNF-09).
+  sello y las entradas no se mueven. Lo que pasa al pasar el mouse sí (RNF-09).
   En esta PC está apagado: para ver todo, prender "Efectos de animación".
 - La memoria ya está actualizada con esto (1.4, RNF-08, RNF-09, pantallas y una
   limitación sobre el origen de las fotos).
@@ -612,3 +615,57 @@ gestor_baja.php, código inexistente y ?cod=abc no hacen nada. Tildes y ñ se gu
 Capturas de computadora y celular revisadas. La base quedó como antes de las pruebas.
 Confirmación probada en Chrome: con Cancelar no se manda nada y la pregunta sale bien con un
 nombre que tiene comillas dobles y simples.
+
+==================================================
+20. SIN GIFS: LA FOTO SE MUEVE CON CSS (16/11)
+==================================================
+Por qué: solo 25 de las 30 yerbas tenían gif (3 más esperaban en img/rehacer), los otros
+40 productos no tenían nada y los gifs pesaban 11 MB (img/ bajó de 30 a 19 MB). Además
+hacía falta JavaScript para que cada gif arrancara de cero.
+Ahora los 70 productos hacen lo mismo con su foto de siempre, sin ningún archivo más.
+
+Dónde está cada cosa (lo que va a preguntar Fran):
+- css/estilos.css, regla .foto img: al pasar el mouse por la tarjeta (.producto:hover),
+  la foto se agranda (scale: 1.05) y se inclina (rotate: 3deg). Es una transition, como
+  la de los botones: al sacar el mouse vuelve sola a su lugar.
+- El rebote es la curva --resorte, en :root, al lado de --rebote. linear() une los
+  puntos que se le pasan: el valor sube hasta 1,34 (se pasa del final), baja a 0,88,
+  sube a 1,04... y se queda en 1. Por eso la foto se bambolea antes de quedarse quieta.
+  No es JavaScript ni una librería: es CSS. Un navegador muy viejo que no conozca
+  linear() cambia la foto igual, sin animar.
+- mix-blend-mode: multiply en la foto: el blanco del jpg deja ver lo que tiene debajo
+  (blanco por cualquier color da ese color). Así, al agrandarse, la esquina blanca de la
+  foto no tapa el borde negro de la tarjeta.
+- Las dos yerbas del login (canarias y union) eran gifs: ahora son los jpg y se hamacan
+  despacio (@keyframes hamaca). Eso se mueve solo, así que va dentro de
+  @media (prefers-reduced-motion: no-preference), como la cinta.
+- Se borraron: los 25 gifs de img/productos, la carpeta img/rehacer, Producto::gif(),
+  el <img class="animada"> de productos.php, sus reglas en el CSS y la parte 1 de
+  tienda.js (la que reiniciaba el gif). tienda.js hace ahora tres cosas: el ojo de la
+  clave, la fila del filtro en el celular y las animaciones de entrada.
+  Los gifs siguen en el historial de git (commit anterior a este) por si hicieran falta.
+- Lo que dicen de los gifs las secciones 11, 14, 16 y 17 queda viejo.
+
+Tres errores que ya estaban y se arreglaron de paso (tienda.js y estilos.css):
+- Con las animaciones del sistema prendidas (lo normal en casi todas las PC), las
+  tarjetas y los afiches NO se levantaban al pasar el mouse: solo cambiaba la sombra.
+  GSAP, al terminar la entrada, dejaba escrito en cada uno style="translate: none;
+  rotate: none", y el estilo escrito en el elemento le gana al CSS. Con "reducir
+  movimiento" GSAP no anima y por eso ahí se veía bien.
+  Solución: clearProps: "all" en los gsap.from(), que borra esos estilos al terminar.
+- Los títulos animados perdían las tildes: se leía "ENTRA A LA PULPERIA", "ALMACEN
+  CRIOLLO" o "JUAN ROMAN". SplitText mete cada letra en una máscara que recorta lo que
+  sale de su renglón, y la tilde de una mayúscula sale. Solución: charsClass: "letra"
+  (así cada máscara tiene la clase letra-mask) y en el CSS .letra-mask { padding-top:
+  .3em; margin-top: -.3em }: la máscara crece hacia arriba y la letra no se mueve.
+- En las páginas sin stickers (productos, carrito, perfil, gestor) GSAP avisaba
+  "GSAP target not found" en la consola. Ahora solo anima los stickers si hay.
+
+La memoria está al día: 1.4 (JavaScript ya no reinicia ningún gif y ahora también dice
+que pregunta antes de dar de baja un producto, el confirm del gestor), RNF-09 y la
+pantalla 04. OJO: el PDF de la memoria es el del 12/11; regenerarlo antes del 02/12.
+
+Probado (16/11, Chrome sin ventana): cuadro por cuadro al entrar y salir el mouse en
+yerbas, mates y kits (la foto no se sale de la tarjeta); las 7 páginas con animaciones,
+con "reducir movimiento" y en celular (390 px): consola limpia, ningún 404, títulos con
+tildes y del mismo alto que sin animación.

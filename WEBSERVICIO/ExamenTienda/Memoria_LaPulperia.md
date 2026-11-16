@@ -75,7 +75,7 @@ Se sigue un modelo en espiral, como el que propone el libro de la asignatura: en
 | PHP 8.2 | Lógica del servidor, con programación orientada a objetos. |
 | MariaDB 10.4 (MySQL) | Base de datos relacional «pulperia», con codificación utf8mb4. |
 | PDO | Conexión de PHP con la base de datos, con consultas preparadas. |
-| HTML, CSS y JavaScript | Páginas, estilos y efectos visuales. JavaScript solo se usa para animaciones y comodidades (ver la clave, reiniciar el gif, mostrar en el celular la opción elegida del filtro); la lógica de la tienda corre en el servidor. |
+| HTML, CSS y JavaScript | Páginas, estilos y efectos visuales. JavaScript solo se usa para animaciones y comodidades (ver la clave, mostrar en el celular la opción elegida del filtro, preguntar antes de dar de baja un producto); la lógica de la tienda corre en el servidor. |
 | XAMPP | Servidor local (Apache + MariaDB) para desarrollar y probar. |
 | GSAP, Google Fonts y Phosphor Icons | Animaciones de entrada, tipografías (Anton, Bricolage Grotesque y Permanent Marker) e iconos, cargados desde CDN. |
 | Figma | Prototipo de las pantallas. |
@@ -180,7 +180,7 @@ Los códigos no se renumeran: un requisito que se suma después recibe el siguie
 | RNF-06 | Todo en UTF-8 (base de datos y páginas), para que se vean bien las tildes, la ñ y la diéresis (Taragüí). |
 | RNF-07 | Los datos que se muestran en las páginas se escapan con htmlspecialchars, para evitar que se inyecte HTML. |
 | RNF-08 | Funciona en local con XAMPP. Las tipografías, los iconos y GSAP se cargan desde internet; sin conexión la tienda funciona igual, con la letra del sistema y sin animaciones. |
-| RNF-09 | Lo que se mueve solo (la cinta de arriba, las animaciones de entrada y el cambio de página) respeta la opción «reducir movimiento» del sistema. El gif al pasar el mouse sí se muestra, porque lo pide la persona. |
+| RNF-09 | Lo que se mueve solo (la cinta de arriba, las animaciones de entrada, las yerbas del login y el cambio de página) respeta la opción «reducir movimiento» del sistema. Lo que se mueve al pasar el mouse (las tarjetas y la foto de cada producto) sí se ve, porque lo pide la persona. |
 
 ### 2.5. Cookie y variables de sesión
 
@@ -344,7 +344,7 @@ Cabecera común (logo, nombre del usuario, carrito con el número de unidades qu
 
 **04 Productos** (categoría Yerbas) · RF-02, RF-03, RF-12, RF-18
 
-Arriba, el filtro por tipo: una ficha por tipo con su cantidad de productos, y la elegida resaltada con el color de la categoría. Debajo, una tarjeta por producto: imagen, nombre, descripción, peso, precio en euros (y en pesos), unidades y botón Añadir. Los que no tienen stock muestran «Sin stock» y no tienen botón. Si el producto ya está en el carrito, la tarjeta lo indica y no deja pedir más unidades de las que quedan. Después de añadir, un aviso abajo de la pantalla con un enlace al carrito. Al pasar el mouse, la foto se cambia por un gif del producto girando.
+Arriba, el filtro por tipo: una ficha por tipo con su cantidad de productos, y la elegida resaltada con el color de la categoría. Debajo, una tarjeta por producto: imagen, nombre, descripción, peso, precio en euros (y en pesos), unidades y botón Añadir. Los que no tienen stock muestran «Sin stock» y no tienen botón. Si el producto ya está en el carrito, la tarjeta lo indica y no deja pedir más unidades de las que quedan. Después de añadir, un aviso abajo de la pantalla con un enlace al carrito. Al pasar el mouse, la tarjeta se levanta y la foto del producto se agranda y se inclina con un rebote, como un paquete que se saca del estante. Es una transición de CSS, igual para todos los productos y sin imágenes aparte.
 
 ![04 Productos](prototipo/figma/04%20Productos.png)
 

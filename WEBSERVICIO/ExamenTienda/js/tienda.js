@@ -2,22 +2,7 @@
 // La tienda funciona igual sin este archivo: la sesión, la cookie y los datos los maneja PHP.
 // Acá solo hay comodidades y animaciones.
 
-// 1. El gif de cada producto arranca desde el primer cuadro (el paquete de frente, igual que
-//    la foto) cada vez que entra el mouse. Si no, seguiría girando de fondo y aparecería por la mitad.
-document.querySelectorAll(".producto").forEach((tarjeta) => {
-  const gif = tarjeta.querySelector(".animada");
-  if (!gif) return;
-  const original = gif.src;
-  let copia; // el gif se baja una sola vez y se guarda en memoria
-
-  tarjeta.addEventListener("mouseenter", async () => {
-    copia ??= await fetch(original).then((respuesta) => respuesta.blob());
-    if (gif.src.startsWith("blob:")) URL.revokeObjectURL(gif.src); // libera la copia anterior
-    gif.src = URL.createObjectURL(copia); // dirección nueva = la animación empieza de cero
-  });
-});
-
-// 2. Botón del ojo para ver la clave en el login. Sin JavaScript el botón queda oculto.
+// 1. Botón del ojo para ver la clave en el login. Sin JavaScript el botón queda oculto.
 const verClave = document.querySelector(".ver-clave");
 if (verClave) {
   const clave = document.getElementById("clave");
@@ -30,11 +15,11 @@ if (verClave) {
   });
 }
 
-// 3. En el celular el filtro por tipo es una fila que se desliza de costado: se corre sola hasta
+// 2. En el celular el filtro por tipo es una fila que se desliza de costado: se corre sola hasta
 //    la opción elegida, para que se vea cuál está marcada. El filtro en sí lo hace PHP (RF-18).
 document.querySelector(".filtro [aria-current]")?.scrollIntoView({ block: "nearest", inline: "center" });
 
-// 4. Animaciones de entrada con GSAP. Si la librería no cargó (sin internet), se saca la clase
+// 3. Animaciones de entrada con GSAP. Si la librería no cargó (sin internet), se saca la clase
 //    "js" del <html> y el CSS deja de esconder lo que iba a animarse: se ve todo, quieto.
 //    clearProps: al terminar, GSAP borra los estilos que dejó escritos en cada elemento. Si no,
 //    su "translate: none" pisaría el CSS y las tarjetas no se levantarían al pasar el mouse.
