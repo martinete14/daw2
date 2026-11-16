@@ -1,6 +1,7 @@
 <?php
 // Clase Producto: lee los productos de una categoría (todos o de un tipo), uno por su código o varios
-// por sus códigos (los del carrito), y consulta el stock (RF-02, RF-03, RF-13, RF-18)
+// por sus códigos (los del carrito), y consulta el stock (RF-02, RF-03, RF-13, RF-18).
+// Para el gestor, lista todos los productos y los da de alta, los modifica y los da de baja (RF-04)
 
 class Producto {
     // una propiedad por columna de la tabla productos
@@ -13,6 +14,8 @@ class Producto {
     public $imagen;     // ruta, por ejemplo img/productos/playadito.jpg
     public $tipo;       // tipo dentro de la categoría, por ejemplo "Con palo" (RF-18)
     public $categoria;  // código de la categoría
+    // no es columna: la calcula todos() para el gestor
+    public $pedidos;    // en cuántos pedidos aparece; si es más de 0, no se puede dar de baja (RF-04)
 
     // los productos de una categoría, como objetos Producto.
     // Si llega un tipo, solo los de ese tipo (RF-18): se suma "AND tipo = ?" a la consulta
@@ -48,6 +51,48 @@ class Producto {
         $consulta = BaseDatos::conexion()->prepare("SELECT * FROM productos WHERE codigo IN ($huecos)");
         $consulta->execute(array_values($codigos));
         return $consulta->fetchAll(PDO::FETCH_CLASS, "Producto");
+    }
+
+    // RF-04: todos los productos para el gestor, ordenados por categoría, con la cantidad de pedidos
+    // en los que aparece cada uno (la subconsulta cuenta sus líneas en pedidos_productos)
+    public static function todos() {
+        $sql = "SELECT p.*,
+                    (SELECT COUNT(*) FROM pedidos_productos pp WHERE pp.producto = p.codigo) AS pedidos
+                FROM productos p
+                ORDER BY p.categoria, p.codigo";
+        $consulta = BaseDatos::conexion()->query($sql);
+        return $consulta->fetchAll(PDO::FETCH_CLASS, "Producto");
+    }
+
+    // RF-04: alta. Guarda este producto como uno nuevo; la base le da el código (AUTO_INCREMENT)
+    public function insertar() {
+        $bd = BaseDatos::conexion();
+        $consulta = $bd->prepare("INSERT INTO productos (nombre, descripcion, peso, precio, stock, imagen, tipo, categoria)
+                                  VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+        $consulta->execute([$this->nombre, $this->descripcion, $this->peso, $this->precio,
+                            $this->stock, $this->imagen, $this->tipo, $this->categoria]);
+        $this->codigo = (int)$bd->lastInsertId();
+    }
+
+    // RF-04: modificación. Cambia en la base los datos del producto con este código
+    public function modificar() {
+        $consulta = BaseDatos::conexion()->prepare("UPDATE productos SET nombre = ?, descripcion = ?, peso = ?, precio = ?,
+                                  stock = ?, imagen = ?, tipo = ?, categoria = ? WHERE codigo = ?");
+        $consulta->execute([$this->nombre, $this->descripcion, $this->peso, $this->precio,
+                            $this->stock, $this->imagen, $this->tipo, $this->categoria, $this->codigo]);
+    }
+
+    // RF-04: baja. Si el producto aparece en algún pedido no se borra, para no romper los pedidos
+    // antiguos, y devuelve false (la clave ajena de pedidos_productos tampoco dejaría borrarlo)
+    public function borrar() {
+        $bd = BaseDatos::conexion();
+        $consulta = $bd->prepare("SELECT COUNT(*) FROM pedidos_productos WHERE producto = ?");
+        $consulta->execute([$this->codigo]);
+        if ($consulta->fetchColumn() > 0) {
+            return false;
+        }
+        $bd->prepare("DELETE FROM productos WHERE codigo = ?")->execute([$this->codigo]);
+        return true;
     }
 
     // RF-03: con stock 0 no se puede añadir al carrito

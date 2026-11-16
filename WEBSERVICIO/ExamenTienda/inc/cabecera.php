@@ -1,5 +1,6 @@
 <?php
-// Cabecera común: cinta de afiche, logo, nombre del usuario, menú con el carrito y cerrar sesión (RF-11).
+// Cabecera común: cinta de afiche, logo, nombre del usuario, menú con el carrito y cerrar sesión (RF-11),
+// y el enlace al gestor de productos solo para el administrador (RF-04).
 // Antes de incluirla, cada página define $titulo.
 
 // lo que pasa en la cinta de arriba (va dos veces seguidas para que el giro no tenga corte)
@@ -44,6 +45,9 @@ $cinta = ["Yerba mate", "Mates y bombillas", "Termos", "Alfajores", "Dulce de le
         <!-- strtok corta el nombre en el primer espacio: "Juan Román Riquelme" -> "Juan" -->
         <span class="hola">Hola, <?php echo htmlspecialchars(strtok($_SESSION['usuario']['nombre'], " ")); ?></span>
         <a href="categorias.php"><i class="ph-bold ph-squares-four" aria-hidden="true"></i> Categorías</a>
+        <?php if (Usuario::esAdmin()) { // RF-04: el cliente no ve este enlace ?>
+          <a class="menu-gestor" href="gestor.php"><i class="ph-bold ph-wrench" aria-hidden="true"></i> Gestor</a>
+        <?php } ?>
         <a href="perfil.php"><i class="ph-bold ph-user-circle" aria-hidden="true"></i> Mi perfil</a>
         <!-- el número son las unidades que hay en $_SESSION['carrito'] -->
         <?php $enCarrito = Carrito::cantidad(); ?>

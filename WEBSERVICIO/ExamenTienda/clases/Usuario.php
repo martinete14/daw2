@@ -1,6 +1,7 @@
 <?php
 // Clase Usuario: inicia sesión comprobando el hash, comprueba que la sesión siga activa
-// y devuelve los datos del perfil (RF-05, RF-08, RF-09, RF-10, RF-11)
+// y devuelve los datos del perfil (RF-05, RF-08, RF-09, RF-10, RF-11).
+// Para el gestor, comprueba que el usuario sea administrador (RF-04)
 
 class Usuario {
     // una propiedad por columna de la tabla usuarios
@@ -63,6 +64,21 @@ class Usuario {
         }
         // hubo actividad: el reloj vuelve a empezar
         $_SESSION['ultima_actividad'] = time();
+    }
+
+    // RF-04: ¿el usuario de la sesión es administrador (rol 1)? La cabecera lo usa para mostrar el enlace al gestor
+    public static function esAdmin() {
+        return isset($_SESSION['usuario']) && $_SESSION['usuario']['rol'] == 1;
+    }
+
+    // RF-04: va al principio de las páginas del gestor, en lugar de comprobarSesion(). Además de la
+    // sesión, pide que sea administrador: si entra un cliente (escribiendo la dirección a mano), vuelve a las categorías
+    public static function comprobarAdmin() {
+        self::comprobarSesion();
+        if (!self::esAdmin()) {
+            header("Location: categorias.php");
+            exit;
+        }
     }
 
     // borra las variables de sesión, la sesión y su cookie (RF-11)

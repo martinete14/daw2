@@ -263,14 +263,14 @@ La base de datos «pulperia» tiene cinco tablas. Las relaciones son:
 | --- | --- |
 | BaseDatos | Abre la conexión PDO una sola vez y la comparte con el resto de clases. |
 | Categoria | Lee las categorías de la base de datos, con su cantidad de productos y el precio de su producto más barato, y los tipos de producto de cada una para el filtro. |
-| Producto | Lee los productos de una categoría (todos o los de un tipo), un producto por su código o varios por sus códigos (los del carrito, en una sola consulta), y consulta el stock. Para el gestor, da de alta, modifica y da de baja productos. |
-| Usuario | Inicia sesión comprobando el hash, comprueba que la sesión siga activa y devuelve los datos del perfil. |
+| Producto | Lee los productos de una categoría (todos o los de un tipo), un producto por su código o varios por sus códigos (los del carrito, en una sola consulta), y consulta el stock. Para el gestor, lista todos los productos con la cantidad de pedidos en los que aparece cada uno, y da de alta, modifica y da de baja productos (la baja se niega si el producto está en algún pedido). |
+| Usuario | Inicia sesión comprobando el hash, comprueba que la sesión siga activa, devuelve los datos del perfil y, para el gestor, comprueba que el usuario sea administrador. |
 | Carrito | Maneja $_SESSION['carrito']: añadir sin pasar del stock, quitar, vaciar, contar las unidades y calcular los subtotales y el total. |
 | Pedido | Guarda el pedido en una transacción y lista los pedidos de un usuario. |
 
 ### 2.8. Ficheros de la aplicación
 
-Como en el diseño del libro (apartado 4.3.6), cada página es un fichero y los datos pasan de uno a otro por la URL (GET) o por formularios (POST). Todas las páginas, salvo el login y el cierre de sesión, empiezan con Usuario::comprobarSesion(), que lleva a login.php?redirigido=1 si no hay sesión y a login.php?caducada=1 si caducó.
+Como en el diseño del libro (apartado 4.3.6), cada página es un fichero y los datos pasan de uno a otro por la URL (GET) o por formularios (POST). Todas las páginas, salvo el login y el cierre de sesión, empiezan con Usuario::comprobarSesion(), que lleva a login.php?redirigido=1 si no hay sesión y a login.php?caducada=1 si caducó. Las del gestor empiezan con Usuario::comprobarAdmin(), que hace lo mismo y, además, manda a categorias.php a quien no es administrador.
 
 | **Fichero** | **Qué hace** | **Recibe** | **Redirige a** |
 | --- | --- | --- | --- |
@@ -286,15 +286,15 @@ Como en el diseño del libro (apartado 4.3.6), cada página es un fichero y los 
 | carrito.php | Muestra el carrito (RF-13, RF-14). | GET tope | |
 | procesar_pedido.php | Guarda el pedido y muestra el número o el error (RF-15 a RF-17). | POST del botón «Confirmar pedido» | carrito.php si se abre sin POST o con el carrito vacío |
 | perfil.php | Datos del usuario y sus pedidos (RF-10). | | |
+| gestor.php | Gestor de productos, solo para el administrador (RF-04): la lista de todos los productos y el formulario de alta y modificación, que se manda a esta misma página, como el login. | GET cod, alta, modificado, enpedidos, baja · POST cod, nombre, descripcion, categoria, tipo, precio, stock, peso, imagen | gestor.php, a la fila del producto, al guardar |
+| gestor_baja.php | Da de baja un producto, salvo que esté en algún pedido (RF-04). No muestra nada. | POST cod | gestor.php |
 | clases/ | Las clases del apartado 2.7, una por fichero. | | |
-
-Los ficheros del gestor de productos (RF-04) se suman a esta tabla con la entrega del 19/11.
 
 ## 3. Prototipo de pantallas
 
 El prototipo está hecho en Figma: [figma.com/design/VB6f1rX09R3Qyy5VzsDVG9/LA-PULPERIA](https://www.figma.com/design/VB6f1rX09R3Qyy5VzsDVG9/LA-PULPERIA).
 
-Tiene dos páginas: «Identidad», con el origen de la estética, la paleta, las letras y las piezas, y «Pantallas», con las ocho pantallas de la tienda ordenadas según el flujo del apartado 3.2 y numeradas de 01 a 08. Las pantallas se importaron a Figma desde la propia web con el plugin html.to.design, así que son capas editables y no capturas. La identidad y el gestor de productos, que todavía no está programado, se armaron como páginas estáticas en la carpeta prototipo/ (identidad.html y gestor.html) y se importaron igual.
+Tiene dos páginas: «Identidad», con el origen de la estética, la paleta, las letras y las piezas, y «Pantallas», con las ocho pantallas de la tienda ordenadas según el flujo del apartado 3.2 y numeradas de 01 a 08. Las pantallas se importaron a Figma desde la propia web con el plugin html.to.design, así que son capas editables y no capturas. La identidad y el gestor de productos se armaron como páginas estáticas en la carpeta prototipo/ (identidad.html y gestor.html) y se importaron igual; el gestor se maquetó así antes de programarlo, y gestor.php quedó como esa maqueta.
 
 ### 3.1. Identidad visual
 
@@ -316,7 +316,7 @@ El color de cada categoría sale de su código en la base de datos (clases .cat-
 
 Login → Categorías → Productos → Carrito → Confirmación del pedido.
 
-Desde cualquier pantalla con sesión iniciada se puede ir al perfil, al carrito y cerrar sesión. Si la sesión caduca, cualquier pantalla lleva al login con el aviso de sesión caducada.
+Desde cualquier pantalla con sesión iniciada se puede ir al perfil, al carrito y cerrar sesión; el administrador ve, además, el enlace al gestor de productos. Si la sesión caduca, cualquier pantalla lleva al login con el aviso de sesión caducada.
 
 Al añadir un producto, la página vuelve a la tarjeta de ese producto, con el mismo filtro, y muestra un aviso con un enlace al carrito. En el libro, añadir lleva directo al carrito; quedarse en la lista es su ejercicio propuesto 1 del capítulo 4, y deja seguir comprando sin perder el sitio.
 
@@ -368,7 +368,7 @@ Datos del usuario y lista de sus pedidos con fecha, total y estado.
 
 **08 Gestor de productos** · RF-04
 
-Solo para el administrador. Listado de todos los productos con su categoría, precio y stock, y botones de alta, modificación y baja. El alta y la modificación usan el mismo formulario.
+Solo para el administrador. Listado de todos los productos con su categoría, precio y stock, y botones de alta, modificación y baja. El alta y la modificación usan el mismo formulario, que queda a la vista al bajar por la lista. Un producto que está en algún pedido lo indica en su fila y tiene el botón Baja apagado. Después de guardar, la página vuelve a la fila del producto con un aviso abajo y un enlace para verlo en la tienda.
 
 ![08 Gestor de productos](prototipo/figma/08%20Gestor%20%28RF-04%29.png)
 
@@ -381,12 +381,15 @@ Solo para el administrador. Listado de todos los productos con su categoría, pr
 - **Precios.** Los precios de las yerbas se fijaron a partir de precios reales: los de los supermercados argentinos (DIA, Jumbo, Vea, Disco, Carrefour y ChangoMás, consultados el 06/11/2026) y los de las tiendas europeas Pampa Drugstore, Mate-Tee y UruShop. Nueve de las catorce que se sumaron el 10/11 no se venden en las tiendas consultadas y su precio es estimado. Los del resto de categorías son estimados.
 - **Solo en local.** La aplicación funciona en XAMPP y no está desplegada en un servidor público.
 - **Imágenes.** Las fotos de los productos son de los fabricantes y de las tiendas online argentinas donde se venden, y se usan solo con fines académicos. Los kits son fotos armadas juntando las de cada producto. Las imágenes de los afiches de las categorías se hicieron aparte para la tienda y no repiten productos del catálogo.
+- **Imagen de los productos nuevos.** El gestor guarda la ruta de la imagen (img/productos/…jpg), pero no sube el archivo: hay que copiarlo a esa carpeta. Mientras no esté, la tienda muestra «Imagen en preparación».
+- **Categorías fijas.** El gestor maneja los productos. Las seis categorías se crean en la base de datos y no se cambian desde la web.
 - **Carrito en la sesión.** El carrito vive en $_SESSION['carrito'] y no en la base de datos, así que se pierde al cerrar sesión o al caducar por inactividad. El pedido, en cambio, sí se guarda en la base de datos al confirmarlo.
 
 ## 5. Líneas futuras
 
 - Botón para cambiar la moneda de toda la tienda entre euros y pesos, con la cotización del día.
 - Registro de usuarios desde la web.
+- Subir la imagen del producto desde el gestor y gestionar también las categorías.
 - Pasarela de pago y seguimiento del envío.
 - Envío de un correo de confirmación con cada pedido.
 - Nuevas categorías: vinos (exige verificar la mayoría de edad) y carnes (exige cadena de frío y envíos especiales).

@@ -85,6 +85,7 @@ que poder señalarse en el código. Lo que no se haga va a Limitaciones, nunca a
    Respuesta: sin respuesta todavía. DECIDIDO (11/11): panel de alta, modificación
    y baja, solo para el administrador. No se borra un producto que esté en un pedido.
    Va en la memoria como RF-04 y se programa para el 19/11. Mail a Fran pendiente.
+   HECHO (16/11): programado y probado, ver la sección 19.
 2. "3 categorías / 8 productos": ¿8 en total o 8 por categoría?
    Respuesta:
 3. "Token vivo": ¿alcanza con la sesión de PHP + caducidad por inactividad,
@@ -563,3 +564,44 @@ dos clientes uno detrás del otro y 10 rondas de dos clientes confirmando A LA V
 Capturas de computadora y celular revisadas. La base quedó como antes de las pruebas.
 
 Pendiente de la parte 3: nada de código. Si Fran pide el correo, se suma.
+
+==================================================
+19. GESTOR DE PRODUCTOS (RF-04) (16/11)
+==================================================
+Hecho y probado. La pantalla quedó igual que la maqueta prototipo/gestor.html (la del Figma).
+Para verlo: entrar con admin@lapulperia.es / admin1234; en el menú aparece "Gestor".
+
+Dónde está cada cosa (lo que va a preguntar Fran):
+- ¿Quién puede entrar? Usuario::comprobarAdmin() (clases/Usuario.php), arriba de gestor.php y
+  gestor_baja.php en lugar de comprobarSesion(). Primero llama a comprobarSesion() (sesión y
+  caducidad) y después mira $_SESSION['usuario']['rol']: si no es 1, a categorias.php.
+  El rol se guardó en la sesión al hacer login (Usuario::iniciarSesion).
+- El enlace "Gestor": inc/cabecera.php, solo si Usuario::esAdmin(). Ocultar el enlace no alcanza
+  (un cliente puede escribir gestor.php a mano): por eso cada página del gestor lo comprueba otra vez.
+- La lista: Producto::todos(). La subconsulta cuenta en cuántos pedidos aparece cada producto
+  (propiedad $pedidos). Si es más de 0, la fila lo avisa y el botón Baja sale apagado.
+  El nombre de la categoría sale de array_column($categorias, "nombre", "codigo").
+- El formulario: el mismo para alta y modificación. gestor.php?cod=5 lo llena con el producto 5
+  (Producto::buscar); sin cod queda vacío. El código va en un campo oculto: 0 = alta.
+- Guardar: el formulario se manda a gestor.php (como login.php), así si falta un dato la página
+  vuelve con lo escrito y el error. Se arma un objeto Producto con lo que llegó por POST;
+  (float) y (int) convierten los números como en anadir.php. Si está bien: insertar() o modificar()
+  y redirige a gestor.php?alta=N o ?modificado=N#p-N (por eso recargar no lo guarda dos veces).
+- insertar(): INSERT con prepare y lastInsertId() = el código nuevo, como en Pedido::guardar.
+- modificar(): UPDATE ... WHERE codigo = ?.
+- La baja: gestor_baja.php, POST y sin salida, como eliminar.php. Producto::borrar() cuenta las
+  líneas de pedidos_productos de ese producto: si hay alguna, no borra y devuelve false
+  (aviso ?enpedidos=N). Además la clave ajena de pedidos_productos tampoco dejaría borrarlo.
+- ¿Y si el producto borrado estaba en el carrito de un cliente? Carrito::lineas() ya lo saca
+  del carrito la próxima vez que se muestra (no se rompe nada).
+- La imagen: el gestor guarda la ruta, no sube el archivo (va en Limitaciones). Si el archivo no
+  está, la tienda muestra "Imagen en preparación".
+
+Pruebas hechas (16/11, por HTTP con un cliente y el admin, 46 comprobaciones): sin sesión al login;
+cliente en gestor.php y gestor_baja.php vuelve a categorías y no borra; el cliente no ve el enlace;
+alta (redirige a la fila, se ve en la tienda, sin imagen muestra el aviso); alta con precio 0,
+categoría 99, nombre vacío, precio "abc" o stock -2 da error y vuelve con lo escrito; modificación
+(con cambio de categoría); baja de un producto que estaba en el carrito de un cliente (sale del
+carrito); baja de un producto comprado (botón apagado y, forzada por POST, igual no borra); GET a
+gestor_baja.php, código inexistente y ?cod=abc no hacen nada. Tildes y ñ se guardan bien.
+Capturas de computadora y celular revisadas. La base quedó como antes de las pruebas.

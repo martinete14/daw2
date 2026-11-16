@@ -802,6 +802,29 @@ h1, h2, h3 {
 .faltan { margin: 0 0 1.5rem; padding-left: 1.4rem; font-size: 1.05rem; }
 .faltan li { margin-bottom: .4rem; }
 
+/* ---------- gestor de productos (RF-04): la tabla y, al lado, el formulario ---------- */
+.menu .menu-gestor { background: var(--amarillo); }
+.gestor-cabeza { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 1rem; margin-bottom: 1.4rem; }
+.gestor-cabeza .pagina-titulo { margin: 0; }
+.gestor { display: grid; grid-template-columns: minmax(0, 1fr) 360px; align-items: start; gap: 2.5rem; }
+.gestor .tabla td { vertical-align: middle; }
+.gestor .tabla td:nth-child(4) { white-space: nowrap; }
+.gestor .tabla tr { scroll-margin-top: 8rem; } /* al volver con #p-N, que la cabecera fija no tape la fila */
+.gestor .linea-producto small { display: block; font-size: .75rem; }
+.stock-cero { font-weight: 800; color: #b3150c; }
+.acciones-fila { display: flex; gap: .4rem; }
+.acciones-fila .quitar { text-decoration: none; }
+.quitar:disabled { opacity: .35; cursor: not-allowed; background: none; }
+/* el formulario queda a la vista al bajar por la lista, como la cuenta del carrito */
+.ficha-form { position: sticky; top: 7.5rem; padding: 1.6rem; background: var(--blanco); border: var(--borde); box-shadow: var(--sombra); scroll-margin-top: 8rem; }
+.ficha-form h2 { margin-bottom: 1.2rem; font-size: 1.7rem; }
+.campo select, .campo textarea { width: 100%; padding: .75rem .9rem; font: inherit; background: var(--papel); border: var(--borde); }
+.campo textarea { min-height: 6.5rem; resize: vertical; }
+.campo select:focus, .campo textarea:focus { outline: none; background: var(--amarillo); box-shadow: 4px 4px 0 var(--tinta); }
+.campos-dos { display: grid; grid-template-columns: 1fr 1fr; gap: 0 1rem; }
+.ficha-form .volver { margin-top: 1rem; }
+.nota-baja { margin: 1.4rem 0 0; font-size: .85rem; font-weight: 700; }
+
 /* ---------- pie ---------- */
 .pie {
   margin-top: auto;
@@ -835,6 +858,8 @@ h1, h2, h3 {
   .filtro, .producto { scroll-margin-top: 12rem; } /* en el celular la cabecera ocupa tres renglones */
   .carrito { grid-template-columns: minmax(0, 1fr); } /* minmax(0, …): que la tabla no estire la columna */
   .resumen { position: static; }
+  .gestor { grid-template-columns: minmax(0, 1fr); }
+  .ficha-form { position: static; scroll-margin-top: 12rem; }
 }
 /* en el celular, cada fila del carrito pasa a ser una ficha: el producto arriba y los datos debajo,
    cada uno con su título (data-titulo) porque la fila de títulos de la tabla se esconde */
