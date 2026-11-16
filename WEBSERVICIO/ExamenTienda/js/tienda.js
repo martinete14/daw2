@@ -36,6 +36,8 @@ document.querySelector(".filtro [aria-current]")?.scrollIntoView({ block: "neare
 
 // 4. Animaciones de entrada con GSAP. Si la librería no cargó (sin internet), se saca la clase
 //    "js" del <html> y el CSS deja de esconder lo que iba a animarse: se ve todo, quieto.
+//    clearProps: al terminar, GSAP borra los estilos que dejó escritos en cada elemento. Si no,
+//    su "translate: none" pisaría el CSS y las tarjetas no se levantarían al pasar el mouse.
 if (!window.gsap || !window.ScrollTrigger || !window.SplitText) {
   document.documentElement.classList.remove("js");
 } else {
@@ -47,7 +49,8 @@ if (!window.gsap || !window.ScrollTrigger || !window.SplitText) {
     // títulos grandes: cada letra sube desde abajo, como si se estuviera imprimiendo
     document.fonts.ready.then(() => {
       document.querySelectorAll('[data-anima="letras"]').forEach((titulo) => {
-        const partes = SplitText.create(titulo, { type: "words,chars", mask: "chars" });
+        // cada letra va en una máscara (clase letra-mask) que la esconde mientras sube; el CSS la agranda para la tilde
+        const partes = SplitText.create(titulo, { type: "words,chars", mask: "chars", charsClass: "letra" });
         mostrar(titulo);
         gsap.from(partes.chars, { yPercent: 110, duration: 0.8, ease: "power4.out", stagger: 0.03 });
       });
@@ -56,7 +59,9 @@ if (!window.gsap || !window.ScrollTrigger || !window.SplitText) {
     // la lista de precios de la portada y las yerbas del login se pegan como stickers
     const stickers = gsap.utils.toArray('[data-anima="salta"]');
     stickers.forEach(mostrar);
-    gsap.from(stickers, { scale: 0, rotation: -25, duration: 0.9, ease: "back.out(1.7)", stagger: 0.15, delay: 0.3 });
+    if (stickers.length) { // solo están en la portada y el login; sin esto GSAP avisa en la consola
+      gsap.from(stickers, { scale: 0, rotation: -25, duration: 0.9, ease: "back.out(1.7)", stagger: 0.15, delay: 0.3, clearProps: "all" });
+    }
 
     // afiches y tarjetas: aparecen en tandas a medida que llegan con el scroll
     ScrollTrigger.batch('[data-anima="tarjeta"]', {
@@ -64,7 +69,7 @@ if (!window.gsap || !window.ScrollTrigger || !window.SplitText) {
       once: true,
       onEnter: (tarjetas) => {
         tarjetas.forEach(mostrar);
-        gsap.from(tarjetas, { y: 70, opacity: 0, duration: 0.7, ease: "power3.out", stagger: 0.08 });
+        gsap.from(tarjetas, { y: 70, opacity: 0, duration: 0.7, ease: "power3.out", stagger: 0.08, clearProps: "all" });
       },
     });
   });

@@ -891,6 +891,10 @@ h1, h2, h3 {
   /* lo que anima GSAP arranca escondido; tienda.js lo muestra al animarlo (clase .visto) */
   .js [data-anima]:not(.visto) { visibility: hidden; }
 
+  /* la máscara de cada letra de los títulos recorta lo que sale de su renglón, y los títulos tienen
+     el renglón justo: se agranda hacia arriba para que entre la tilde de "Entrá", sin mover la letra */
+  .letra-mask { padding-top: .3em; margin-top: -.3em; }
+
   /* el aviso de "añadiste…" sube desde abajo de la pantalla */
   .avisito { animation: asoma .5s var(--rebote) both; }
 }
