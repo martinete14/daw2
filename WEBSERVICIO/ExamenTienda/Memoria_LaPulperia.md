@@ -368,7 +368,7 @@ Datos del usuario y lista de sus pedidos con fecha, total y estado.
 
 **08 Gestor de productos** · RF-04
 
-Solo para el administrador. Listado de todos los productos con su categoría, precio y stock, y botones de alta, modificación y baja. El alta y la modificación usan el mismo formulario, que queda a la vista al bajar por la lista. Un producto que está en algún pedido lo indica en su fila y tiene el botón Baja apagado. Después de guardar, la página vuelve a la fila del producto con un aviso abajo y un enlace para verlo en la tienda.
+Solo para el administrador. Listado de todos los productos con su categoría, precio y stock, y botones de alta, modificación y baja. El alta y la modificación usan el mismo formulario, que queda a la vista al bajar por la lista. Un producto que está en algún pedido lo indica en su fila y tiene el botón Baja apagado. Antes de dar de baja un producto, la página pregunta si de verdad se quiere borrar, con su nombre, por si fue un clic sin querer. Después de guardar, la página vuelve a la fila del producto con un aviso abajo y un enlace para verlo en la tienda.
 
 ![08 Gestor de productos](prototipo/figma/08%20Gestor%20%28RF-04%29.png)
 

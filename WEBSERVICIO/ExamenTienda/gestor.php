@@ -105,9 +105,11 @@ require "inc/cabecera.php";
                 <td>
                   <div class="acciones-fila">
                     <!-- Modificar es un enlace: solo abre el formulario. La baja es un formulario POST,
-                         como Quitar en el carrito, porque cambia la base de datos -->
+                         como Quitar en el carrito, porque cambia la base de datos. Antes de mandarla pregunta
+                         con confirm(), por si fue un clic sin querer; json_encode pone el nombre entre comillas
+                         de JavaScript, así un nombre con comillas no rompe la pregunta -->
                     <a class="quitar" href="gestor.php?cod=<?php echo $fila->codigo; ?>#formulario" aria-label="Modificar <?php echo $nombre; ?>"><i class="ph-bold ph-pencil-simple" aria-hidden="true"></i> Modificar</a>
-                    <form action="gestor_baja.php" method="post">
+                    <form action="gestor_baja.php" method="post" onsubmit="return confirm(<?php echo htmlspecialchars(json_encode("¿Seguro que querés dar de baja " . $fila->nombre . "? No se puede deshacer.", JSON_UNESCAPED_UNICODE)); ?>)">
                       <input type="hidden" name="cod" value="<?php echo $fila->codigo; ?>">
                       <button class="quitar" type="submit" aria-label="Dar de baja <?php echo $nombre; ?>"<?php if ($fila->pedidos > 0) echo " disabled"; ?>><i class="ph-bold ph-trash" aria-hidden="true"></i> Baja</button>
                     </form>

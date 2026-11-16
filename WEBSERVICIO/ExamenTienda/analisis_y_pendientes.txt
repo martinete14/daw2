@@ -592,6 +592,11 @@ Dónde está cada cosa (lo que va a preguntar Fran):
 - La baja: gestor_baja.php, POST y sin salida, como eliminar.php. Producto::borrar() cuenta las
   líneas de pedidos_productos de ese producto: si hay alguna, no borra y devuelve false
   (aviso ?enpedidos=N). Además la clave ajena de pedidos_productos tampoco dejaría borrarlo.
+- La confirmación de la baja (16/11): onsubmit="return confirm(...)" en el formulario de cada
+  fila. Pregunta "¿Seguro que querés dar de baja <nombre>? No se puede deshacer."; si se toca
+  Cancelar, confirm devuelve false y el formulario no se manda. json_encode arma el texto entre
+  comillas de JavaScript, así un nombre con comillas (Mate "Imperial" d'Oro) no rompe la pregunta.
+  Es solo para el clic sin querer: quien llega a gestor_baja.php igual pasa por comprobarAdmin().
 - ¿Y si el producto borrado estaba en el carrito de un cliente? Carrito::lineas() ya lo saca
   del carrito la próxima vez que se muestra (no se rompe nada).
 - La imagen: el gestor guarda la ruta, no sube el archivo (va en Limitaciones). Si el archivo no
@@ -605,3 +610,5 @@ categoría 99, nombre vacío, precio "abc" o stock -2 da error y vuelve con lo e
 carrito); baja de un producto comprado (botón apagado y, forzada por POST, igual no borra); GET a
 gestor_baja.php, código inexistente y ?cod=abc no hacen nada. Tildes y ñ se guardan bien.
 Capturas de computadora y celular revisadas. La base quedó como antes de las pruebas.
+Confirmación probada en Chrome: con Cancelar no se manda nada y la pregunta sale bien con un
+nombre que tiene comillas dobles y simples.
