@@ -1,0 +1,30 @@
+          SUPERMERCADOS EL AHORRO
+        Av. Principal #123 - Madrid
+         CIF: B12345678  Tel: 910123456
+
+------------------------------------------------
+Fecha: 11/09/2025        Hora: 17:01
+Cajero: 015 - Juan Pérez
+Ticket: 20010001
+------------------------------------------------
+CANT  DESCRIPCIÓN                  IMPORTE
+------------------------------------------------
+  2   Pasta Spaghetti 500g              1.70 €
+  1   Café Molido 250g                  3.80 €
+  2   Arroz Redondo 1kg                 2.30 €
+  2   Aceite de Oliva 1L               13.00 €
+  3   Sal Fina 1kg                      1.50 €
+  2.500 Manzana Golden (kg)               3.12 €
+------------------------------------------------
+SUBTOTAL                        25.42 €
+IVA (21%)                        5.34 €
+------------------------------------------------
+TOTAL A PAGAR                   30.76 €
+------------------------------------------------
+
+FORMA DE PAGO: TARJETA
+Autorización: 741486
+------------------------------------------------
+
+        ¡GRACIAS POR SU COMPRA!
+     Conserve su ticket para cambios

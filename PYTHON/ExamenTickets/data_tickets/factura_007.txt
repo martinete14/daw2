@@ -1,0 +1,33 @@
+          SUPERMERCADOS EL AHORRO
+        Av. Principal #123 - Madrid
+         CIF: B12345678  Tel: 910123456
+
+------------------------------------------------
+Fecha: 17/09/2025        Hora: 10:57
+Cajero: 024 - Marta López
+Ticket: 20010007
+------------------------------------------------
+CANT  DESCRIPCIÓN                  IMPORTE
+------------------------------------------------
+  2   Huevos Camperos 12u               6.20 €
+  1   Queso Manchego 250g               4.20 €
+  1   Aceite de Oliva 1L                6.50 €
+  1   Pechuga de Pollo (kg)             6.20 €
+  1   Azúcar 1kg                        1.10 €
+  2   Leche Entera 1L                   1.90 €
+  2   Galletas María 200g               1.60 €
+  1   Sal Fina 1kg                      0.50 €
+  2   Yogur Natural 125g                0.90 €
+------------------------------------------------
+SUBTOTAL                        29.10 €
+IVA (21%)                        6.11 €
+------------------------------------------------
+TOTAL A PAGAR                   35.21 €
+------------------------------------------------
+
+FORMA DE PAGO: TARJETA
+Autorización: 286629
+------------------------------------------------
+
+        ¡GRACIAS POR SU COMPRA!
+     Conserve su ticket para cambios

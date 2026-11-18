@@ -1,0 +1,31 @@
+          SUPERMERCADOS EL AHORRO
+        Av. Principal #123 - Madrid
+         CIF: B12345678  Tel: 910123456
+
+------------------------------------------------
+Fecha: 26/09/2025        Hora: 10:34
+Cajero: 033 - Laura García
+Ticket: 20010016
+------------------------------------------------
+CANT  DESCRIPCIÓN                  IMPORTE
+------------------------------------------------
+  1   Pechuga de Pollo (kg)             6.20 €
+  1   Queso Manchego 250g               4.20 €
+  2   Mantequilla 250g                  3.20 €
+  3   Galletas María 200g               2.40 €
+  1   Pimiento Rojo (kg)                2.40 €
+  2   Pan Baguette 250g                 1.40 €
+  3   Arroz Redondo 1kg                 3.45 €
+------------------------------------------------
+SUBTOTAL                        23.25 €
+IVA (21%)                        4.88 €
+------------------------------------------------
+TOTAL A PAGAR                   28.13 €
+------------------------------------------------
+
+FORMA DE PAGO: TARJETA
+Autorización: 819358
+------------------------------------------------
+
+        ¡GRACIAS POR SU COMPRA!
+     Conserve su ticket para cambios

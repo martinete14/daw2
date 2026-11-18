@@ -1,0 +1,30 @@
+          SUPERMERCADOS EL AHORRO
+        Av. Principal #123 - Madrid
+         CIF: B12345678  Tel: 910123456
+
+------------------------------------------------
+Fecha: 23/09/2025        Hora: 16:10
+Cajero: 042 - Diego Gómez
+Ticket: 20010013
+------------------------------------------------
+CANT  DESCRIPCIÓN                  IMPORTE
+------------------------------------------------
+  3   Yogur Natural 125g                1.35 €
+  3   Queso Manchego 250g              12.60 €
+  2   Galletas María 200g               1.60 €
+  1   Refresco Cola 2L                  1.30 €
+  3   Arroz Redondo 1kg                 3.45 €
+  1.250 Pechuga de Pollo (kg)             7.75 €
+------------------------------------------------
+SUBTOTAL                        28.05 €
+IVA (21%)                        5.89 €
+------------------------------------------------
+TOTAL A PAGAR                   33.94 €
+------------------------------------------------
+
+FORMA DE PAGO: TARJETA
+Autorización: 997874
+------------------------------------------------
+
+        ¡GRACIAS POR SU COMPRA!
+     Conserve su ticket para cambios

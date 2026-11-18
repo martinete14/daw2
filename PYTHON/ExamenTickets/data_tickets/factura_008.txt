@@ -1,0 +1,31 @@
+          SUPERMERCADOS EL AHORRO
+        Av. Principal #123 - Madrid
+         CIF: B12345678  Tel: 910123456
+
+------------------------------------------------
+Fecha: 18/09/2025        Hora: 19:12
+Cajero: 015 - Juan Pérez
+Ticket: 20010008
+------------------------------------------------
+CANT  DESCRIPCIÓN                  IMPORTE
+------------------------------------------------
+  2   Sal Fina 1kg                      1.00 €
+  2.500 Pechuga de Pollo (kg)            15.50 €
+  1   Pimiento Rojo (kg)                2.40 €
+  3   Tomate Triturado 400g             2.70 €
+  3   Queso Manchego 250g              12.60 €
+  3   Leche Entera 1L                   2.85 €
+  1   Cebolla (kg)                      1.10 €
+------------------------------------------------
+SUBTOTAL                        38.15 €
+IVA (21%)                        8.01 €
+------------------------------------------------
+TOTAL A PAGAR                   46.16 €
+------------------------------------------------
+
+FORMA DE PAGO: TARJETA
+Autorización: 656754
+------------------------------------------------
+
+        ¡GRACIAS POR SU COMPRA!
+     Conserve su ticket para cambios

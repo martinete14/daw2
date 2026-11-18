@@ -1,0 +1,31 @@
+          SUPERMERCADOS EL AHORRO
+        Av. Principal #123 - Madrid
+         CIF: B12345678  Tel: 910123456
+
+------------------------------------------------
+Fecha: 21/09/2025        Hora: 11:53
+Cajero: 028 - Ana Fernández
+Ticket: 20010011
+------------------------------------------------
+CANT  DESCRIPCIÓN                  IMPORTE
+------------------------------------------------
+  3   Azúcar 1kg                        3.30 €
+  2   Galletas María 200g               1.60 €
+  2   Huevos Camperos 12u               6.20 €
+  1   Aceite de Oliva 1L                6.50 €
+  3   Café Molido 250g                 11.40 €
+  2   Queso Manchego 250g               8.40 €
+  2   Refresco Cola 2L                  2.60 €
+------------------------------------------------
+SUBTOTAL                        40.00 €
+IVA (21%)                        8.40 €
+------------------------------------------------
+TOTAL A PAGAR                   48.40 €
+------------------------------------------------
+
+FORMA DE PAGO: TARJETA
+Autorización: 539623
+------------------------------------------------
+
+        ¡GRACIAS POR SU COMPRA!
+     Conserve su ticket para cambios

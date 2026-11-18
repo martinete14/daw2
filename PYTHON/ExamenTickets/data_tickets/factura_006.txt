@@ -1,0 +1,34 @@
+          SUPERMERCADOS EL AHORRO
+        Av. Principal #123 - Madrid
+         CIF: B12345678  Tel: 910123456
+
+------------------------------------------------
+Fecha: 16/09/2025        Hora: 17:35
+Cajero: 042 - Diego Gómez
+Ticket: 20010006
+------------------------------------------------
+CANT  DESCRIPCIÓN                  IMPORTE
+------------------------------------------------
+  2   Sal Fina 1kg                      1.00 €
+  1   Banana (kg)                       1.75 €
+  1   Arroz Redondo 1kg                 1.15 €
+  1   Café Molido 250g                  3.80 €
+  1   Queso Manchego 250g               4.20 €
+  2   Aceite de Oliva 1L               13.00 €
+  1   Manzana Golden (kg)               1.25 €
+  3   Leche Entera 1L                   2.85 €
+  1   Yogur Natural 125g                0.45 €
+  2   Pimiento Rojo (kg)                4.80 €
+------------------------------------------------
+SUBTOTAL                        34.25 €
+IVA (21%)                        7.19 €
+------------------------------------------------
+TOTAL A PAGAR                   41.44 €
+------------------------------------------------
+
+FORMA DE PAGO: TARJETA
+Autorización: 253659
+------------------------------------------------
+
+        ¡GRACIAS POR SU COMPRA!
+     Conserve su ticket para cambios

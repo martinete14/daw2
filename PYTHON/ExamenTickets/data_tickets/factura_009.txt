@@ -1,0 +1,34 @@
+          SUPERMERCADOS EL AHORRO
+        Av. Principal #123 - Madrid
+         CIF: B12345678  Tel: 910123456
+
+------------------------------------------------
+Fecha: 19/09/2025        Hora: 13:36
+Cajero: 033 - Laura García
+Ticket: 20010009
+------------------------------------------------
+CANT  DESCRIPCIÓN                  IMPORTE
+------------------------------------------------
+  3   Pasta Spaghetti 500g              2.55 €
+  3   Refresco Cola 2L                  3.90 €
+  2   Banana (kg)                       3.50 €
+  0.500 Pechuga de Pollo (kg)             3.10 €
+  3   Leche Entera 1L                   2.85 €
+  0.500 Cebolla (kg)                      0.55 €
+  1   Azúcar 1kg                        1.10 €
+  2   Arroz Redondo 1kg                 2.30 €
+  3   Pan Baguette 250g                 2.10 €
+  3   Huevos Camperos 12u               9.30 €
+------------------------------------------------
+SUBTOTAL                        31.25 €
+IVA (21%)                        6.56 €
+------------------------------------------------
+TOTAL A PAGAR                   37.81 €
+------------------------------------------------
+
+FORMA DE PAGO: TARJETA
+Autorización: 388285
+------------------------------------------------
+
+        ¡GRACIAS POR SU COMPRA!
+     Conserve su ticket para cambios

@@ -1,0 +1,33 @@
+          SUPERMERCADOS EL AHORRO
+        Av. Principal #123 - Madrid
+         CIF: B12345678  Tel: 910123456
+
+------------------------------------------------
+Fecha: 29/09/2025        Hora: 10:47
+Cajero: 019 - Sofía Martínez
+Ticket: 20010019
+------------------------------------------------
+CANT  DESCRIPCIÓN                  IMPORTE
+------------------------------------------------
+  2   Café Molido 250g                  7.60 €
+  2   Yogur Natural 125g                0.90 €
+  2   Azúcar 1kg                        2.20 €
+  3   Galletas María 200g               2.40 €
+  0.500 Manzana Golden (kg)               0.62 €
+  1   Arroz Redondo 1kg                 1.15 €
+  1   Cebolla (kg)                      1.10 €
+  3   Leche Entera 1L                   2.85 €
+  3   Huevos Camperos 12u               9.30 €
+  2   Queso Manchego 250g               8.40 €
+------------------------------------------------
+SUBTOTAL                        36.52 €
+IVA (21%)                        7.67 €
+------------------------------------------------
+TOTAL A PAGAR                   44.19 €
+------------------------------------------------
+
+FORMA DE PAGO: EFECTIVO
+------------------------------------------------
+
+        ¡GRACIAS POR SU COMPRA!
+     Conserve su ticket para cambios

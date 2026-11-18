@@ -1,0 +1,31 @@
+          SUPERMERCADOS EL AHORRO
+        Av. Principal #123 - Madrid
+         CIF: B12345678  Tel: 910123456
+
+------------------------------------------------
+Fecha: 12/09/2025        Hora: 18:26
+Cajero: 033 - Laura García
+Ticket: 20010002
+------------------------------------------------
+CANT  DESCRIPCIÓN                  IMPORTE
+------------------------------------------------
+  0.500 Manzana Golden (kg)               0.62 €
+  1   Pechuga de Pollo (kg)             6.20 €
+  2   Sal Fina 1kg                      1.00 €
+  1.250 Cebolla (kg)                      1.38 €
+  1   Huevos Camperos 12u               3.10 €
+  1.500 Pimiento Rojo (kg)                3.60 €
+  2   Queso Manchego 250g               8.40 €
+  1   Café Molido 250g                  3.80 €
+------------------------------------------------
+SUBTOTAL                        28.10 €
+IVA (21%)                        5.90 €
+------------------------------------------------
+TOTAL A PAGAR                   34.00 €
+------------------------------------------------
+
+FORMA DE PAGO: EFECTIVO
+------------------------------------------------
+
+        ¡GRACIAS POR SU COMPRA!
+     Conserve su ticket para cambios

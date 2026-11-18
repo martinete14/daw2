@@ -1,0 +1,31 @@
+          SUPERMERCADOS EL AHORRO
+        Av. Principal #123 - Madrid
+         CIF: B12345678  Tel: 910123456
+
+------------------------------------------------
+Fecha: 27/09/2025        Hora: 18:14
+Cajero: 011 - Carlos Ruiz
+Ticket: 20010017
+------------------------------------------------
+CANT  DESCRIPCIÓN                  IMPORTE
+------------------------------------------------
+  2   Arroz Redondo 1kg                 2.30 €
+  0.500 Banana (kg)                       0.88 €
+  2.500 Cebolla (kg)                      2.75 €
+  1   Pimiento Rojo (kg)                2.40 €
+  1   Huevos Camperos 12u               3.10 €
+  1   Tomate Triturado 400g             0.90 €
+  3   Café Molido 250g                 11.40 €
+------------------------------------------------
+SUBTOTAL                        23.73 €
+IVA (21%)                        4.98 €
+------------------------------------------------
+TOTAL A PAGAR                   28.71 €
+------------------------------------------------
+
+FORMA DE PAGO: TARJETA
+Autorización: 199052
+------------------------------------------------
+
+        ¡GRACIAS POR SU COMPRA!
+     Conserve su ticket para cambios

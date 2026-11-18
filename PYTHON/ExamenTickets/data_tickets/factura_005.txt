@@ -1,0 +1,34 @@
+          SUPERMERCADOS EL AHORRO
+        Av. Principal #123 - Madrid
+         CIF: B12345678  Tel: 910123456
+
+------------------------------------------------
+Fecha: 15/09/2025        Hora: 13:37
+Cajero: 019 - Sofía Martínez
+Ticket: 20010005
+------------------------------------------------
+CANT  DESCRIPCIÓN                  IMPORTE
+------------------------------------------------
+  2   Tomate Triturado 400g             1.80 €
+  1   Huevos Camperos 12u               3.10 €
+  1   Azúcar 1kg                        1.10 €
+  2.500 Pimiento Rojo (kg)                6.00 €
+  2   Pan Baguette 250g                 1.40 €
+  1   Galletas María 200g               0.80 €
+  3   Mantequilla 250g                  4.80 €
+  3   Café Molido 250g                 11.40 €
+  1   Yogur Natural 125g                0.45 €
+  2   Leche Entera 1L                   1.90 €
+------------------------------------------------
+SUBTOTAL                        32.75 €
+IVA (21%)                        6.88 €
+------------------------------------------------
+TOTAL A PAGAR                   39.63 €
+------------------------------------------------
+
+FORMA DE PAGO: TARJETA
+Autorización: 114488
+------------------------------------------------
+
+        ¡GRACIAS POR SU COMPRA!
+     Conserve su ticket para cambios

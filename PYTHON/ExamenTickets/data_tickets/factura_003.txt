@@ -1,0 +1,30 @@
+          SUPERMERCADOS EL AHORRO
+        Av. Principal #123 - Madrid
+         CIF: B12345678  Tel: 910123456
+
+------------------------------------------------
+Fecha: 13/09/2025        Hora: 10:15
+Cajero: 011 - Carlos Ruiz
+Ticket: 20010003
+------------------------------------------------
+CANT  DESCRIPCIÓN                  IMPORTE
+------------------------------------------------
+  2   Cebolla (kg)                      2.20 €
+  1   Huevos Camperos 12u               3.10 €
+  3   Pasta Spaghetti 500g              2.55 €
+  2   Queso Manchego 250g               8.40 €
+  1   Sal Fina 1kg                      0.50 €
+  3   Leche Entera 1L                   2.85 €
+  3   Tomate Triturado 400g             2.70 €
+------------------------------------------------
+SUBTOTAL                        22.30 €
+IVA (21%)                        4.68 €
+------------------------------------------------
+TOTAL A PAGAR                   26.98 €
+------------------------------------------------
+
+FORMA DE PAGO: EFECTIVO
+------------------------------------------------
+
+        ¡GRACIAS POR SU COMPRA!
+     Conserve su ticket para cambios

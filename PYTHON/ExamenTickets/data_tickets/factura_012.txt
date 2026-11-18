@@ -1,0 +1,29 @@
+          SUPERMERCADOS EL AHORRO
+        Av. Principal #123 - Madrid
+         CIF: B12345678  Tel: 910123456
+
+------------------------------------------------
+Fecha: 22/09/2025        Hora: 13:25
+Cajero: 019 - Sofía Martínez
+Ticket: 20010012
+------------------------------------------------
+CANT  DESCRIPCIÓN                  IMPORTE
+------------------------------------------------
+  1   Refresco Cola 2L                  1.30 €
+  1   Pasta Spaghetti 500g              0.85 €
+  1   Yogur Natural 125g                0.45 €
+  3   Tomate Triturado 400g             2.70 €
+  1   Sal Fina 1kg                      0.50 €
+  2   Queso Manchego 250g               8.40 €
+------------------------------------------------
+SUBTOTAL                        14.20 €
+IVA (21%)                        2.98 €
+------------------------------------------------
+TOTAL A PAGAR                   17.18 €
+------------------------------------------------
+
+FORMA DE PAGO: EFECTIVO
+------------------------------------------------
+
+        ¡GRACIAS POR SU COMPRA!
+     Conserve su ticket para cambios

@@ -1,0 +1,34 @@
+          SUPERMERCADOS EL AHORRO
+        Av. Principal #123 - Madrid
+         CIF: B12345678  Tel: 910123456
+
+------------------------------------------------
+Fecha: 25/09/2025        Hora: 15:58
+Cajero: 015 - Juan Pérez
+Ticket: 20010015
+------------------------------------------------
+CANT  DESCRIPCIÓN                  IMPORTE
+------------------------------------------------
+  1   Pimiento Rojo (kg)                2.40 €
+  2   Pan Baguette 250g                 1.40 €
+  3   Tomate Triturado 400g             2.70 €
+  3   Galletas María 200g               2.40 €
+  1   Mantequilla 250g                  1.60 €
+  2   Cebolla (kg)                      2.20 €
+  1   Huevos Camperos 12u               3.10 €
+  2   Sal Fina 1kg                      1.00 €
+  1   Arroz Redondo 1kg                 1.15 €
+  1   Refresco Cola 2L                  1.30 €
+------------------------------------------------
+SUBTOTAL                        19.25 €
+IVA (21%)                        4.04 €
+------------------------------------------------
+TOTAL A PAGAR                   23.29 €
+------------------------------------------------
+
+FORMA DE PAGO: TARJETA
+Autorización: 134875
+------------------------------------------------
+
+        ¡GRACIAS POR SU COMPRA!
+     Conserve su ticket para cambios

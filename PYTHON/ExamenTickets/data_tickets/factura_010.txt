@@ -1,0 +1,32 @@
+          SUPERMERCADOS EL AHORRO
+        Av. Principal #123 - Madrid
+         CIF: B12345678  Tel: 910123456
+
+------------------------------------------------
+Fecha: 20/09/2025        Hora: 17:58
+Cajero: 011 - Carlos Ruiz
+Ticket: 20010010
+------------------------------------------------
+CANT  DESCRIPCIÓN                  IMPORTE
+------------------------------------------------
+  1   Azúcar 1kg                        1.10 €
+  2   Pasta Spaghetti 500g              1.70 €
+  2   Mantequilla 250g                  3.20 €
+  1   Aceite de Oliva 1L                6.50 €
+  1   Cebolla (kg)                      1.10 €
+  2   Café Molido 250g                  7.60 €
+  1   Yogur Natural 125g                0.45 €
+  1   Sal Fina 1kg                      0.50 €
+------------------------------------------------
+SUBTOTAL                        22.15 €
+IVA (21%)                        4.65 €
+------------------------------------------------
+TOTAL A PAGAR                   26.80 €
+------------------------------------------------
+
+FORMA DE PAGO: TARJETA
+Autorización: 132091
+------------------------------------------------
+
+        ¡GRACIAS POR SU COMPRA!
+     Conserve su ticket para cambios

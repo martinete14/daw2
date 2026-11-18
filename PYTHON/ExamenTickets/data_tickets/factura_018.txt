@@ -1,0 +1,31 @@
+          SUPERMERCADOS EL AHORRO
+        Av. Principal #123 - Madrid
+         CIF: B12345678  Tel: 910123456
+
+------------------------------------------------
+Fecha: 28/09/2025        Hora: 14:51
+Cajero: 028 - Ana Fernández
+Ticket: 20010018
+------------------------------------------------
+CANT  DESCRIPCIÓN                  IMPORTE
+------------------------------------------------
+  2   Arroz Redondo 1kg                 2.30 €
+  3   Aceite de Oliva 1L               19.50 €
+  2   Yogur Natural 125g                0.90 €
+  3   Galletas María 200g               2.40 €
+  1   Café Molido 250g                  3.80 €
+  2.500 Pechuga de Pollo (kg)            15.50 €
+  2   Mantequilla 250g                  3.20 €
+------------------------------------------------
+SUBTOTAL                        47.60 €
+IVA (21%)                       10.00 €
+------------------------------------------------
+TOTAL A PAGAR                   57.60 €
+------------------------------------------------
+
+FORMA DE PAGO: TARJETA
+Autorización: 643300
+------------------------------------------------
+
+        ¡GRACIAS POR SU COMPRA!
+     Conserve su ticket para cambios

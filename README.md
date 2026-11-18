@@ -4,7 +4,7 @@ Mis cosas de 2º de DAW en ILERNA. Lo subo todo acá para poder seguir en la PC 
 
 Una carpeta por asignatura, y va creciendo a medida que avanzo.
 
-- `PYTHON`: lo de Python. El hola mundo y `actividad_10_programas`, diez programas sueltos con variables, `input()`, operadores y f-strings (sin `if` ni bucles porque todavía no los vimos).
+- `PYTHON`: lo de Python. El hola mundo y `actividad_10_programas`, diez programas sueltos con variables, `input()`, operadores y f-strings (sin `if` ni bucles porque todavía no los vimos). `ActBusquedayConteo`: contar cuántas veces aparece una palabra en un archivo de texto. `ExamenTickets`: el examen, un script que lee los 20 tickets de un supermercado (`.txt`) y genera los `INSERT` para la base `tickets_db` (`schema.sql`), sin repetir empleados ni productos y descartando los tickets con datos mal.
 - `WEBCLIENTE`: JavaScript en el navegador. Una carpeta por actividad:
   - `EjercicioBOTON`: un botón que cuenta los clics y cambia la foto de fondo.
   - `ValidacionDeFormularios`: formulario de inscripción a un gimnasio con validación nativa de HTML y reglas propias en JavaScript.

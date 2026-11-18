@@ -1,0 +1,30 @@
+          SUPERMERCADOS EL AHORRO
+        Av. Principal #123 - Madrid
+         CIF: B12345678  Tel: 910123456
+
+------------------------------------------------
+Fecha: 14/09/2025        Hora: 10:29
+Cajero: 028 - Ana Fernández
+Ticket: 20010004
+------------------------------------------------
+CANT  DESCRIPCIÓN                  IMPORTE
+------------------------------------------------
+  2   Galletas María 200g               1.60 €
+  3   Arroz Redondo 1kg                 3.45 €
+  1   Banana (kg)                       1.75 €
+  1   Huevos Camperos 12u               3.10 €
+  1   Aceite de Oliva 1L                6.50 €
+  2   Pasta Spaghetti 500g              1.70 €
+------------------------------------------------
+SUBTOTAL                        18.10 €
+IVA (21%)                        3.80 €
+------------------------------------------------
+TOTAL A PAGAR                   21.90 €
+------------------------------------------------
+
+FORMA DE PAGO: TARJETA
+Autorización: 257572
+------------------------------------------------
+
+        ¡GRACIAS POR SU COMPRA!
+     Conserve su ticket para cambios

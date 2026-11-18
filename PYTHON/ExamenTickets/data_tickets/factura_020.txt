@@ -1,0 +1,29 @@
+          SUPERMERCADOS EL AHORRO
+        Av. Principal #123 - Madrid
+         CIF: B12345678  Tel: 910123456
+
+------------------------------------------------
+Fecha: 30/09/2025        Hora: 12:55
+Cajero: 042 - Diego Gómez
+Ticket: 20010020
+------------------------------------------------
+CANT  DESCRIPCIÓN                  IMPORTE
+------------------------------------------------
+  2.500 Pechuga de Pollo (kg)            15.50 €
+  1   Aceite de Oliva 1L                6.50 €
+  3   Pan Baguette 250g                 2.10 €
+  2   Galletas María 200g               1.60 €
+  1   Tomate Triturado 400g             0.90 €
+  3   Café Molido 250g                 11.40 €
+------------------------------------------------
+SUBTOTAL                        38.00 €
+IVA (21%)                        7.98 €
+------------------------------------------------
+TOTAL A PAGAR                   45.98 €
+------------------------------------------------
+
+FORMA DE PAGO: EFECTIVO
+------------------------------------------------
+
+        ¡GRACIAS POR SU COMPRA!
+     Conserve su ticket para cambios

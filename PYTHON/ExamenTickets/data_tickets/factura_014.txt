@@ -1,0 +1,33 @@
+          SUPERMERCADOS EL AHORRO
+        Av. Principal #123 - Madrid
+         CIF: B12345678  Tel: 910123456
+
+------------------------------------------------
+Fecha: 24/09/2025        Hora: 11:21
+Cajero: 024 - Marta López
+Ticket: 20010014
+------------------------------------------------
+CANT  DESCRIPCIÓN                  IMPORTE
+------------------------------------------------
+  2   Arroz Redondo 1kg                 2.30 €
+  2   Banana (kg)                       3.50 €
+  1   Pechuga de Pollo (kg)             6.20 €
+  2   Sal Fina 1kg                      1.00 €
+  2   Pan Baguette 250g                 1.40 €
+  2   Azúcar 1kg                        2.20 €
+  1   Aceite de Oliva 1L                6.50 €
+  1.250 Manzana Golden (kg)               1.56 €
+  3   Pasta Spaghetti 500g              2.55 €
+  0.500 Cebolla (kg)                      0.55 €
+------------------------------------------------
+SUBTOTAL                        27.76 €
+IVA (21%)                        5.83 €
+------------------------------------------------
+TOTAL A PAGAR                   33.59 €
+------------------------------------------------
+
+FORMA DE PAGO: EFECTIVO
+------------------------------------------------
+
+        ¡GRACIAS POR SU COMPRA!
+     Conserve su ticket para cambios
