@@ -15,6 +15,7 @@ Martin Villagra Tejerina - DAW 2
 - `schema.sql`: crea la base `tickets_db` con sus 6 tablas.
 - `insert_ticket.sql`: los `INSERT` que genera el script.
 - `data_tickets/`: los 20 tickets que nos pasó el profe (`factura_001.txt` a `factura_020.txt`).
+- `APUNTES_ExamenTickets.md`: mis notas, con lo que falta para entregar y cómo explicar el script.
 
 ## Base de datos
 
