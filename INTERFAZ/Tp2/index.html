@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#74acdf" />
+    <meta name="description" content="Guía de estilos y sistema de componentes del portfolio de Martín Villagra Tejerina." />
+    <title>Guía de estilos · Martín Villagra Tejerina</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="spread">
+      <article class="guide" aria-label="Guía de estilos del portfolio">
+        <header class="cover" id="portada">
+          <div class="topline"><span>Martín Villagra Tejerina / Portfolio</span><span>Guía de estilos · v2 · web</span></div>
+          <h1>Martín Villagra Tejerina</h1>
+          <p class="cover-subtitle">Guía de estilos</p>
+          <span class="sun-rule" aria-hidden="true"></span>
+          <p class="intro">Estudiante de Desarrollo de Aplicaciones Web con formación en diseño gráfico.<br />Un portfolio para mostrar conocimientos, experiencia y ganas de aprender.</p>
+          <div class="cover-index">
+            <div class="identity"><span class="eyebrow">Identidad argentina</span><div class="dots" aria-label="Celeste, blanco y amarillo sol"><i></i><i></i><i></i></div><span>Celeste · blanco · amarillo sol</span></div>
+            <nav class="contents" aria-label="Contenido de la guía"><span class="eyebrow">Contenido</span><div class="contents-grid">
+              <a href="#portada"><b>01</b>Portada</a><a href="#identidad"><b>02</b>Color e identidad</a><a href="#tipografia"><b>03</b>Tipografía</a><a href="#estructura"><b>04</b>Espaciado y retícula</a><a href="#interfaz"><b>05</b>Componentes y estados</a><a href="#aplicacion"><b>06</b>Aplicación y criterios</a><a href="#perfil"><b>07</b>Perfil profesional</a>
+            </div></nav>
+          </div>
+        </header>
+
+        <section class="guide-section" id="identidad">
+          <div class="section-heading"><div><span class="eyebrow">02 — Color e identidad</span><h2>Una identidad argentina.</h2></div><p>Celeste y blanco como base; amarillo sol para destacar. Azul oscuro para textos y controles con buen contraste.</p></div>
+          <div class="swatches">
+            <div class="swatch"><div class="swatch-color navy"></div><b>Azul profundo</b><strong>#12324A</strong><small>color/brand/primary<br />Texto y acciones</small></div>
+            <div class="swatch"><div class="swatch-color white"></div><b>Blanco</b><strong>#FFFFFF</strong><small>color/background/default<br />Fondo principal · 70 %</small></div>
+            <div class="swatch"><div class="swatch-color sky"></div><b>Celeste</b><strong>#74ACDF</strong><small>color/brand/secondary<br />Identidad y superficies · 20 %</small></div>
+            <div class="swatch"><div class="swatch-color sun"></div><b>Amarillo sol</b><strong>#F6B40E</strong><small>color/accent/highlight<br />Detalles y destacados · 10 %</small></div>
+            <div class="swatch"><div class="swatch-color slate"></div><b>Azul gris</b><strong>#45647A</strong><small>color/text/secondary<br />Texto secundario</small></div>
+            <div class="swatch"><div class="swatch-color mist"></div><b>Bruma celeste</b><strong>#C9DCEF</strong><small>color/border/default<br />Bordes y divisores</small></div>
+          </div>
+          <div class="usage-row"><div><span class="eyebrow">Proporción de uso</span><p>El blanco da aire, el celeste identifica y el amarillo sol solo señala. Si el acento supera el 10 %, deja de destacar.</p></div><div class="usage-visual"><div class="ratio"><i></i><i></i><i></i></div><div class="legend"><span>Blanco · 70 %</span><span>Celeste · 20 %</span><span>Amarillo sol · 10 %</span></div></div></div>
+          <div class="contrast-row"><div class="contrast-copy"><span class="eyebrow">Contraste y significado</span><p>Combinaciones evaluadas con WCAG 2.2: texto normal ≥ 4,5:1 (AA) y ≥ 7:1 (AAA); bordes de controles e indicadores de foco ≥ 3:1.</p><b class="danger-text">No usar blanco sobre celeste o amarillo.</b><small>Estados: éxito #246B45 · error #B8321E. Acompaña siempre el color con un mensaje claro.</small></div><div class="contrast-list">
+            <div class="contrast-item"><span class="sample navy">Aa</span><div><b>Azul profundo sobre blanco</b><small>Texto principal, títulos y botones</small></div><strong>13,3:1</strong><em>AAA</em></div>
+            <div class="contrast-item"><span class="sample sky">Aa</span><div><b>Azul profundo sobre celeste</b><small>Portada y bloques de identidad</small></div><strong>5,5:1</strong><em>AA</em></div>
+            <div class="contrast-item"><span class="sample sun">Aa</span><div><b>Azul profundo sobre amarillo sol</b><small>Texto sobre acentos puntuales</small></div><strong>7,2:1</strong><em>AAA</em></div>
+            <div class="contrast-item"><span class="sample slate">Aa</span><div><b>Azul gris sobre blanco</b><small>Texto secundario y metadatos</small></div><strong>6,3:1</strong><em>AA</em></div>
+            <div class="contrast-item"><span class="sample navy inverse">Aa</span><div><b>Blanco sobre azul profundo</b><small>Botón principal y bloques inversos</small></div><strong>13,3:1</strong><em>AAA</em></div>
+            <div class="contrast-item"><span class="sample error">Aa</span><div><b>Error sobre blanco</b><small>Mensajes de validación</small></div><strong>6,5:1</strong><em>AA</em></div>
+            <div class="contrast-item"><span class="sample success">Aa</span><div><b>Éxito sobre blanco</b><small>Confirmaciones</small></div><strong>6,4:1</strong><em>AA</em></div>
+            <div class="contrast-item"><span class="sample pale">Aa</span><div><b>Blanco sobre celeste</b><small>Falla incluso en texto grande</small></div><strong>2,4:1</strong><em class="no-use">No usar</em></div>
+          </div></div>
+          <div class="examples-row"><div><span class="eyebrow">Ejemplos de aplicación</span><p>Cada color tiene una función. Así se combinan en piezas reales del portfolio.</p></div><div class="mini-cards">
+            <article class="mini-card"><span class="eyebrow">Proyecto</span><h3>Guía de estilos</h3><p>Texto de apoyo en azul gris sobre blanco.</p><small>Lectura · blanco, azul profundo y azul gris</small></article>
+            <article class="mini-card mini-sky"><i class="sun-rule"></i><h3>Hablemos</h3><p>martinvillagra73@gmail.com</p><small>Identidad · celeste, azul profundo y acento sol</small></article>
+            <article class="mini-card mini-mist"><button class="button">Ver proyectos</button><p>Leer el caso de estudio</p><small>Acción · azul profundo y foco visible</small></article>
+          </div></div>
+        </section>
+
+        <section class="guide-section" id="tipografia">
+          <div class="section-heading"><div><span class="eyebrow">03 / Tipografía</span><h2>Dos voces, una jerarquía.</h2></div><p>Playfair Display aporta personalidad en los títulos. Inter mantiene la interfaz nítida y fácil de leer.</p></div>
+          <div class="type-specimen"><div class="type-poster"><span class="big-aa">Aa</span><h3>Playfair Display</h3><p>Inter · Regular / Medium / Semi Bold</p><small>Títulos con carácter.<br />Interfaces sin ruido.</small></div><div class="type-scale"><div><small>H1 · 48 / 58</small><h2>Diseño y desarrollo.</h2></div><div><small>H2 · 32 / 40</small><h3>Proyectos seleccionados</h3></div><div><small>H3 · 24 / 32</small><h4>Creatividad y aprendizaje continuo</h4></div><div><small>Cuerpo · 16 / 26</small><p>HTML5, CSS3, JavaScript y diseño gráfico.</p></div><div><small>Etiqueta · 14 / 20</small><b>Ver proyecto&nbsp;&nbsp; · &nbsp;&nbsp;Contactar</b></div></div></div>
+          <p class="rule-note"><b>Reglas de uso</b><span>Alinear a la izquierda · 45–75 caracteres por línea · 16 px mínimo en cuerpo · Evitar párrafos en mayúsculas.</span></p>
+        </section>
+
+        <section class="guide-section" id="estructura">
+          <div class="section-heading"><div><span class="eyebrow">04 / Estructura</span><h2>El espacio también diseña.</h2></div><p>Una base de 8 px ordena distancias y tamaños. Mantén la misma lógica en todas las páginas.</p></div>
+          <div class="structure-grid"><div><span class="eyebrow">Escala de espaciado</span><div class="spacing-scale"><div><i style="--size:8px"></i><b>08</b></div><div><i style="--size:16px"></i><b>16</b></div><div><i style="--size:24px"></i><b>24</b></div><div><i style="--size:32px"></i><b>32</b></div><div><i style="--size:48px"></i><b>48</b></div><div><i style="--size:64px"></i><b>64</b></div></div><p>8: icono + texto · 16: interior · 24: grupos<br />32: tarjetas · 48–64: secciones</p></div><div><span class="eyebrow">Retícula responsive</span><div class="grid-sample" aria-label="Retícula de doce columnas"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><p>Escritorio ≥ 1024: 12 columnas · margen 64 · calle 24<br />Tablet 768–1023: 8 columnas · margen 32 · calle 24<br />Móvil &lt; 768: 4 columnas · margen 24 · calle 16</p></div></div>
+        </section>
+
+        <section class="guide-section" id="interfaz">
+          <div class="section-heading"><div><span class="eyebrow">05 / Interfaz</span><h2>Consistencia en cada clic.</h2></div><p>Botones de 48 px de alto, foco visible y mensajes explícitos. Aquí los estados se muestran como referencia visual.</p></div>
+          <div class="interface-grid"><div><span class="eyebrow">Botón principal</span><div class="button-states"><label>Reposo<button class="button">Ver proyectos</button></label><label>Hover<button class="button hover-demo">Ver proyectos</button></label><label>Foco<button class="button focus-demo">Ver proyectos</button></label><label>Desactivado<button class="button" disabled>Ver proyectos</button></label></div><p>Una sola acción principal por bloque. El estado desactivado no recibe interacción.</p><span class="eyebrow sub-eyebrow">Acciones complementarias</span><div class="secondary-actions"><a class="outline-button" href="#aplicacion">Contactar</a><a class="text-link" href="#aplicacion">Leer el caso de estudio</a></div><p>Secundario: acción alternativa.<br />Enlace subrayado: navegación dentro del contenido.</p><div class="callout">Radio 8 px · Padding horizontal 24 px · Separación 16 px<br />Objetivo táctil ≥ 44 × 44 px · No depender solo del color</div></div>
+            <div class="form-guidance"><span class="eyebrow">Campos de formulario</span><label class="field"><span>Email</span><input type="email" placeholder="tu@correo.com" /><small>La etiqueta siempre permanece visible.</small></label><label class="field has-error"><span>Email · error</span><input type="email" value="hola@" aria-invalid="true" /><small>Introduce un email válido.</small></label><label class="field has-success"><span>Email · completado</span><input type="email" value="martinvillagra73@gmail.com" /><small>Email válido.</small></label><p>Incluye etiqueta, ayuda y mensaje de error.<br />Nunca uses el placeholder como única etiqueta.</p></div></div>
+        </section>
+
+        <section class="guide-section" id="aplicacion">
+          <div class="section-heading"><div><span class="eyebrow">06 / Aplicación</span><h2>Del sistema a la pantalla.</h2></div><p>Ejemplo aplicado al perfil de Martín: formación en desarrollo web, diseño gráfico y prácticas en Guadalweb.</p></div>
+          <div class="application-grid"><article class="portfolio-preview"><header><b>Martín Villagra</b><nav><a href="#perfil">Proyectos</a><a href="#perfil">Sobre mí</a><a href="#contacto">Contacto</a></nav></header><div class="preview-body"><div><span class="eyebrow">Estudiante de DAW · Diseño gráfico</span><h3>Diseño visual.<br />Desarrollo web.</h3><p>Formación en diseño gráfico y desarrollo web.<br />Aprendizaje, compromiso y trabajo en equipo.</p><button class="button">Ver proyectos</button></div><div class="preview-project"><span class="eyebrow">Prácticas · 2026</span><i class="sun-rule"></i><h4>Guadalweb<br />Desarrollo web</h4><p>HTML · CSS · JavaScript</p></div></div></article><ol class="principles"><li><b>01&nbsp; Identidad</b><p>Celeste, blanco y amarillo sol dan una referencia argentina sin perder legibilidad.</p></li><li><b>02&nbsp; Jerarquía</b><p>El tamaño, el contraste y el espacio separan el mensaje principal de la información de apoyo.</p></li><li><b>03&nbsp; Usabilidad</b><p>Estados claros, foco visible y etiquetas persistentes facilitan el uso de la interfaz.</p></li></ol></div>
+          <div class="profile-note"><b>Tu perfil, tu estilo</b><span>Formación y experiencia tomadas del CV de Martín. El ejemplo destaca sus prácticas de desarrollo web.<br />En móvil: una columna, H1 de 32/40 y controles a ancho disponible. Mantén el contraste al cambiar colores.</span></div>
+          <footer class="guide-footer"><span>Martín Villagra Tejerina / Guía de estilos</span><span>Continúa · 06</span></footer>
+        </section>
+
+        <section class="guide-section profile-section" id="perfil">
+          <div class="section-heading"><div><span class="eyebrow">07 / Perfil</span><h2>El perfil detrás del portfolio.</h2></div><p>Desarrollo web y diseño gráfico, con experiencia en coordinación, atención al público y trabajo en equipo.</p></div>
+          <div class="profile-columns"><article><h3>Formación</h3><b>Desarrollo de Aplicaciones Web</b><p>Grado Superior · Ilerna, Madrid<br />2025–Actualidad</p><b>Diseño Gráfico</b><p>Técnico Superior · Lino Enea Spilimbergo<br />2021–2023</p><b>Artes Visuales</b><p>Bachillerato · Instituto Jesús María<br />2009–2020</p></article><article><h3>Experiencia</h3><b>Prácticas de Desarrollo Web</b><p>Guadalweb · 2026</p><b>Coordinador de Vuelo y Operaciones en Tierra</b><p>Azul Handling · Madrid · 2026–Actualidad</p><b>Segundo Cocinero</b><p>La Torino · Madrid · 2025–Actualidad</p><b>Staff de Hotel</b><p>Brander Lodge · 2024–2025</p><b>Asesor de Ventas / Backoffice</b><p>Claro · 2022–2024</p><b>Editor, Diseñador Gráfico y Community Manager</b><p>2019–2025</p></article><article><h3>Habilidades</h3><b class="eyebrow">Web y programación</b><p>HTML5, CSS3, JavaScript, PHP, Java, Python, Spring Boot y Thymeleaf.</p><b class="eyebrow">Datos y herramientas</b><p>MySQL, SQL, JPA, Git, GitHub, VS Code, MySQL Workbench, responsive y SEO.</p><b class="eyebrow">Diseño y ofimática</b><p>Photoshop, Premiere Pro, diseño gráfico, Word y Excel.</p><b class="eyebrow">Idiomas</b><p>Español nativo · Inglés avanzado<br />Portugués medio</p></article></div>
+          <div class="contact-bar" id="contacto"><span>Hablemos</span><a href="mailto:martinvillagra73@gmail.com">martinvillagra73@gmail.com</a><a href="tel:+3461317290">Tel. (34) 61317290</a></div>
+          <footer class="guide-footer"><span>Martín Villagra Tejerina · Diseño y desarrollo web</span><span>Fin · 01—06</span></footer>
+        </section>
+      </article>
+
+      <aside class="library" aria-label="Biblioteca de componentes">
+        <header class="library-heading"><h2>Biblioteca de componentes</h2><p>Componentes maestros del sistema. La guía usa instancias de estos componentes: cualquier cambio aquí se propaga.</p></header>
+        <section class="library-group"><span class="eyebrow">Botón · tipo × estado</span><div class="button-matrix"><button class="button">Ver proyectos</button><button class="button hover-demo">Ver proyectos</button><button class="button focus-demo">Ver proyectos</button><button class="button" disabled>Ver proyectos</button><button class="outline-button">Ver proyectos</button><button class="outline-button hover-outline">Ver proyectos</button><button class="outline-button focus-outline">Ver proyectos</button><button class="outline-button" disabled>Ver proyectos</button></div></section>
+        <section class="library-group"><span class="eyebrow">Enlace · estado</span><div class="link-states"><a href="#aplicacion">Leer el caso de estudio</a><a class="hover-link" href="#aplicacion">Leer el caso de estudio</a><a class="focus-link" href="#aplicacion">Leer el caso de estudio</a></div></section>
+        <section class="library-group"><span class="eyebrow">Campo de texto · estado</span><div class="input-matrix"><label class="field"><span>Email</span><input type="email" placeholder="tu@correo.com" /><small>La etiqueta siempre permanece visible.</small></label><label class="field is-focused"><span>Email</span><input type="email" value="tu@correo.com" /><small>La etiqueta siempre permanece visible.</small></label><label class="field has-error"><span>Email</span><input type="email" value="tu@correo.com" /><small>La etiqueta siempre permanece visible.</small></label><label class="field has-success"><span>Email</span><input type="email" value="tu@correo.com" /><small>La etiqueta siempre permanece visible.</small></label><label class="field is-disabled"><span>Email</span><input type="email" placeholder="tu@correo.com" disabled /><small>La etiqueta siempre permanece visible.</small></label></div></section>
+        <section class="library-group"><span class="eyebrow">Distintivo</span><div class="badges"><span class="badge">AAA</span><span class="badge badge-error">AAA</span></div></section>
+        <section class="library-group"><span class="eyebrow">Muestra de color</span><div class="large-swatch"><div class="swatch-color navy"></div><b>Azul profundo</b><strong>#12324A</strong><small>color/brand/primary<br />Texto y acciones</small></div></section>
+        <section class="library-group"><span class="eyebrow">Par de contraste</span><div class="contrast-item library-contrast"><span class="sample">Aa</span><div><b>Azul profundo sobre blanco</b><small>Texto principal y botones</small></div><strong>13,3:1</strong><em>AAA</em></div></section>
+        <section class="library-group"><span class="eyebrow">Entrada de perfil</span><div class="profile-entry"><b>Prácticas de Desarrollo Web</b><span>Guadalweb · 2026</span></div></section>
+        <section class="library-group"><span class="eyebrow">Tarjeta · estilo</span><div class="project-cards"><article class="project-card"><i class="sun-rule"></i><span class="eyebrow">Prácticas · 2026</span><h3>Guadalweb — Desarrollo web</h3><p>HTML · CSS · JavaScript</p></article><article class="project-card project-card-blue"><i class="sun-rule"></i><span class="eyebrow">Prácticas · 2026</span><h3>Guadalweb — Desarrollo web</h3><p>HTML · CSS · JavaScript</p></article></div></section>
+        <section class="library-group library-section-heading"><span class="eyebrow">Encabezado de sección</span><div class="section-heading"><div><span class="eyebrow">01 — Color e identidad</span><h2>Una identidad argentina.</h2></div><p>Celeste y blanco como base; amarillo sol para destacar.</p></div></section>
+      </aside>
+    </main>
+  </body>
+</html>
