@@ -153,8 +153,11 @@ def guardar_ticket(ticket: dict, datos: dict) -> None:
         "telefono": ticket["telefono"],
     })
 
+    # la sucursal va en el ticket: un empleado puede rotar de sucursal según la semana
+    ticket["sucursal_id"] = sucursal["id"]
+
     codigo, nombre = ticket["cajero"]
-    datos["empleado"].setdefault(codigo, {"nombre": nombre, "sucursal_id": sucursal["id"]})
+    datos["empleado"].setdefault(codigo, nombre)
 
     datos["forma_pago"].setdefault(ticket["forma_pago"], len(datos["forma_pago"]) + 1)
 
@@ -189,9 +192,8 @@ def generar_sql(datos: dict) -> list[str]:
                    f"VALUES ({s['id']}, '{cif}', '{s['nombre']}', '{s['direccion']}', '{s['telefono']}');")
 
     sql += ["", "-- empleado"]
-    for codigo, e in datos["empleado"].items():
-        sql.append(f"INSERT INTO empleado (id, nombre, sucursal_id) "
-                   f"VALUES ({codigo}, '{e['nombre']}', {e['sucursal_id']});")
+    for codigo, nombre in datos["empleado"].items():
+        sql.append(f"INSERT INTO empleado (id, nombre) VALUES ({codigo}, '{nombre}');")
 
     sql += ["", "-- forma_pago"]
     for nombre, id_pago in datos["forma_pago"].items():
@@ -205,8 +207,8 @@ def generar_sql(datos: dict) -> list[str]:
     sql += ["", "-- ticket y ticket_linea"]
     for numero, t in datos["ticket"].items():
         autorizacion = f"'{t['autorizacion']}'" if t["autorizacion"] else "NULL"
-        sql.append(f"INSERT INTO ticket (numero, fecha_hora, empleado_id, subtotal, iva, total, forma_pago_id, autorizacion) "
-                   f"VALUES ({numero}, '{t['fecha']}', {t['cajero'][0]}, {t['subtotal']:.2f}, {t['iva']:.2f}, "
+        sql.append(f"INSERT INTO ticket (numero, fecha_hora, sucursal_id, empleado_id, subtotal, iva, total, forma_pago_id, autorizacion) "
+                   f"VALUES ({numero}, '{t['fecha']}', {t['sucursal_id']}, {t['cajero'][0]}, {t['subtotal']:.2f}, {t['iva']:.2f}, "
                    f"{t['total']:.2f}, {datos['forma_pago'][t['forma_pago']]}, {autorizacion});")
         for cantidad, descripcion, importe in t["lineas"]:
             sql.append(f"INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) "

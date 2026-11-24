@@ -4,13 +4,13 @@ USE tickets_db;
 INSERT INTO sucursal (id, cif, nombre, direccion, telefono) VALUES (1, 'B12345678', 'SUPERMERCADOS EL AHORRO', 'Av. Principal #123 - Madrid', '910123456');
 
 -- empleado
-INSERT INTO empleado (id, nombre, sucursal_id) VALUES (15, 'Juan Pérez', 1);
-INSERT INTO empleado (id, nombre, sucursal_id) VALUES (33, 'Laura García', 1);
-INSERT INTO empleado (id, nombre, sucursal_id) VALUES (11, 'Carlos Ruiz', 1);
-INSERT INTO empleado (id, nombre, sucursal_id) VALUES (28, 'Ana Fernández', 1);
-INSERT INTO empleado (id, nombre, sucursal_id) VALUES (19, 'Sofía Martínez', 1);
-INSERT INTO empleado (id, nombre, sucursal_id) VALUES (42, 'Diego Gómez', 1);
-INSERT INTO empleado (id, nombre, sucursal_id) VALUES (24, 'Marta López', 1);
+INSERT INTO empleado (id, nombre) VALUES (15, 'Juan Pérez');
+INSERT INTO empleado (id, nombre) VALUES (33, 'Laura García');
+INSERT INTO empleado (id, nombre) VALUES (11, 'Carlos Ruiz');
+INSERT INTO empleado (id, nombre) VALUES (28, 'Ana Fernández');
+INSERT INTO empleado (id, nombre) VALUES (19, 'Sofía Martínez');
+INSERT INTO empleado (id, nombre) VALUES (42, 'Diego Gómez');
+INSERT INTO empleado (id, nombre) VALUES (24, 'Marta López');
 
 -- forma_pago
 INSERT INTO forma_pago (id, nombre) VALUES (1, 'TARJETA');
@@ -39,14 +39,14 @@ INSERT INTO producto (id, descripcion, precio) VALUES (19, 'Yogur Natural 125g',
 INSERT INTO producto (id, descripcion, precio) VALUES (20, 'Refresco Cola 2L', 1.30);
 
 -- ticket y ticket_linea
-INSERT INTO ticket (numero, fecha_hora, empleado_id, subtotal, iva, total, forma_pago_id, autorizacion) VALUES (20010001, '2025-09-11 17:01:00', 15, 25.42, 5.34, 30.76, 1, '741486');
+INSERT INTO ticket (numero, fecha_hora, sucursal_id, empleado_id, subtotal, iva, total, forma_pago_id, autorizacion) VALUES (20010001, '2025-09-11 17:01:00', 1, 15, 25.42, 5.34, 30.76, 1, '741486');
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010001, 1, 2, 1.70);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010001, 2, 1, 3.80);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010001, 3, 2, 2.30);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010001, 4, 2, 13.00);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010001, 5, 3, 1.50);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010001, 6, 2.5, 3.12);
-INSERT INTO ticket (numero, fecha_hora, empleado_id, subtotal, iva, total, forma_pago_id, autorizacion) VALUES (20010002, '2025-09-12 18:26:00', 33, 28.10, 5.90, 34.00, 2, NULL);
+INSERT INTO ticket (numero, fecha_hora, sucursal_id, empleado_id, subtotal, iva, total, forma_pago_id, autorizacion) VALUES (20010002, '2025-09-12 18:26:00', 1, 33, 28.10, 5.90, 34.00, 2, NULL);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010002, 6, 0.5, 0.62);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010002, 7, 1, 6.20);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010002, 5, 2, 1.00);
@@ -55,7 +55,7 @@ INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES 
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010002, 10, 1.5, 3.60);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010002, 11, 2, 8.40);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010002, 2, 1, 3.80);
-INSERT INTO ticket (numero, fecha_hora, empleado_id, subtotal, iva, total, forma_pago_id, autorizacion) VALUES (20010003, '2025-09-13 10:15:00', 11, 22.30, 4.68, 26.98, 2, NULL);
+INSERT INTO ticket (numero, fecha_hora, sucursal_id, empleado_id, subtotal, iva, total, forma_pago_id, autorizacion) VALUES (20010003, '2025-09-13 10:15:00', 1, 11, 22.30, 4.68, 26.98, 2, NULL);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010003, 8, 2, 2.20);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010003, 9, 1, 3.10);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010003, 1, 3, 2.55);
@@ -63,14 +63,14 @@ INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES 
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010003, 5, 1, 0.50);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010003, 12, 3, 2.85);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010003, 13, 3, 2.70);
-INSERT INTO ticket (numero, fecha_hora, empleado_id, subtotal, iva, total, forma_pago_id, autorizacion) VALUES (20010004, '2025-09-14 10:29:00', 28, 18.10, 3.80, 21.90, 1, '257572');
+INSERT INTO ticket (numero, fecha_hora, sucursal_id, empleado_id, subtotal, iva, total, forma_pago_id, autorizacion) VALUES (20010004, '2025-09-14 10:29:00', 1, 28, 18.10, 3.80, 21.90, 1, '257572');
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010004, 14, 2, 1.60);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010004, 3, 3, 3.45);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010004, 15, 1, 1.75);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010004, 9, 1, 3.10);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010004, 4, 1, 6.50);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010004, 1, 2, 1.70);
-INSERT INTO ticket (numero, fecha_hora, empleado_id, subtotal, iva, total, forma_pago_id, autorizacion) VALUES (20010005, '2025-09-15 13:37:00', 19, 32.75, 6.88, 39.63, 1, '114488');
+INSERT INTO ticket (numero, fecha_hora, sucursal_id, empleado_id, subtotal, iva, total, forma_pago_id, autorizacion) VALUES (20010005, '2025-09-15 13:37:00', 1, 19, 32.75, 6.88, 39.63, 1, '114488');
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010005, 13, 2, 1.80);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010005, 9, 1, 3.10);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010005, 16, 1, 1.10);
@@ -81,7 +81,7 @@ INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES 
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010005, 2, 3, 11.40);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010005, 19, 1, 0.45);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010005, 12, 2, 1.90);
-INSERT INTO ticket (numero, fecha_hora, empleado_id, subtotal, iva, total, forma_pago_id, autorizacion) VALUES (20010006, '2025-09-16 17:35:00', 42, 34.25, 7.19, 41.44, 1, '253659');
+INSERT INTO ticket (numero, fecha_hora, sucursal_id, empleado_id, subtotal, iva, total, forma_pago_id, autorizacion) VALUES (20010006, '2025-09-16 17:35:00', 1, 42, 34.25, 7.19, 41.44, 1, '253659');
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010006, 5, 2, 1.00);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010006, 15, 1, 1.75);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010006, 3, 1, 1.15);
@@ -92,7 +92,7 @@ INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES 
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010006, 12, 3, 2.85);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010006, 19, 1, 0.45);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010006, 10, 2, 4.80);
-INSERT INTO ticket (numero, fecha_hora, empleado_id, subtotal, iva, total, forma_pago_id, autorizacion) VALUES (20010007, '2025-09-17 10:57:00', 24, 29.10, 6.11, 35.21, 1, '286629');
+INSERT INTO ticket (numero, fecha_hora, sucursal_id, empleado_id, subtotal, iva, total, forma_pago_id, autorizacion) VALUES (20010007, '2025-09-17 10:57:00', 1, 24, 29.10, 6.11, 35.21, 1, '286629');
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010007, 9, 2, 6.20);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010007, 11, 1, 4.20);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010007, 4, 1, 6.50);
@@ -102,7 +102,7 @@ INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES 
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010007, 14, 2, 1.60);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010007, 5, 1, 0.50);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010007, 19, 2, 0.90);
-INSERT INTO ticket (numero, fecha_hora, empleado_id, subtotal, iva, total, forma_pago_id, autorizacion) VALUES (20010008, '2025-09-18 19:12:00', 15, 38.15, 8.01, 46.16, 1, '656754');
+INSERT INTO ticket (numero, fecha_hora, sucursal_id, empleado_id, subtotal, iva, total, forma_pago_id, autorizacion) VALUES (20010008, '2025-09-18 19:12:00', 1, 15, 38.15, 8.01, 46.16, 1, '656754');
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010008, 5, 2, 1.00);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010008, 7, 2.5, 15.50);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010008, 10, 1, 2.40);
@@ -110,7 +110,7 @@ INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES 
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010008, 11, 3, 12.60);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010008, 12, 3, 2.85);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010008, 8, 1, 1.10);
-INSERT INTO ticket (numero, fecha_hora, empleado_id, subtotal, iva, total, forma_pago_id, autorizacion) VALUES (20010009, '2025-09-19 13:36:00', 33, 31.25, 6.56, 37.81, 1, '388285');
+INSERT INTO ticket (numero, fecha_hora, sucursal_id, empleado_id, subtotal, iva, total, forma_pago_id, autorizacion) VALUES (20010009, '2025-09-19 13:36:00', 1, 33, 31.25, 6.56, 37.81, 1, '388285');
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010009, 1, 3, 2.55);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010009, 20, 3, 3.90);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010009, 15, 2, 3.50);
@@ -121,7 +121,7 @@ INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES 
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010009, 3, 2, 2.30);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010009, 17, 3, 2.10);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010009, 9, 3, 9.30);
-INSERT INTO ticket (numero, fecha_hora, empleado_id, subtotal, iva, total, forma_pago_id, autorizacion) VALUES (20010010, '2025-09-20 17:58:00', 11, 22.15, 4.65, 26.80, 1, '132091');
+INSERT INTO ticket (numero, fecha_hora, sucursal_id, empleado_id, subtotal, iva, total, forma_pago_id, autorizacion) VALUES (20010010, '2025-09-20 17:58:00', 1, 11, 22.15, 4.65, 26.80, 1, '132091');
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010010, 16, 1, 1.10);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010010, 1, 2, 1.70);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010010, 18, 2, 3.20);
@@ -130,7 +130,7 @@ INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES 
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010010, 2, 2, 7.60);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010010, 19, 1, 0.45);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010010, 5, 1, 0.50);
-INSERT INTO ticket (numero, fecha_hora, empleado_id, subtotal, iva, total, forma_pago_id, autorizacion) VALUES (20010011, '2025-09-21 11:53:00', 28, 40.00, 8.40, 48.40, 1, '539623');
+INSERT INTO ticket (numero, fecha_hora, sucursal_id, empleado_id, subtotal, iva, total, forma_pago_id, autorizacion) VALUES (20010011, '2025-09-21 11:53:00', 1, 28, 40.00, 8.40, 48.40, 1, '539623');
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010011, 16, 3, 3.30);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010011, 14, 2, 1.60);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010011, 9, 2, 6.20);
@@ -138,21 +138,21 @@ INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES 
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010011, 2, 3, 11.40);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010011, 11, 2, 8.40);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010011, 20, 2, 2.60);
-INSERT INTO ticket (numero, fecha_hora, empleado_id, subtotal, iva, total, forma_pago_id, autorizacion) VALUES (20010012, '2025-09-22 13:25:00', 19, 14.20, 2.98, 17.18, 2, NULL);
+INSERT INTO ticket (numero, fecha_hora, sucursal_id, empleado_id, subtotal, iva, total, forma_pago_id, autorizacion) VALUES (20010012, '2025-09-22 13:25:00', 1, 19, 14.20, 2.98, 17.18, 2, NULL);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010012, 20, 1, 1.30);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010012, 1, 1, 0.85);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010012, 19, 1, 0.45);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010012, 13, 3, 2.70);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010012, 5, 1, 0.50);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010012, 11, 2, 8.40);
-INSERT INTO ticket (numero, fecha_hora, empleado_id, subtotal, iva, total, forma_pago_id, autorizacion) VALUES (20010013, '2025-09-23 16:10:00', 42, 28.05, 5.89, 33.94, 1, '997874');
+INSERT INTO ticket (numero, fecha_hora, sucursal_id, empleado_id, subtotal, iva, total, forma_pago_id, autorizacion) VALUES (20010013, '2025-09-23 16:10:00', 1, 42, 28.05, 5.89, 33.94, 1, '997874');
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010013, 19, 3, 1.35);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010013, 11, 3, 12.60);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010013, 14, 2, 1.60);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010013, 20, 1, 1.30);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010013, 3, 3, 3.45);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010013, 7, 1.25, 7.75);
-INSERT INTO ticket (numero, fecha_hora, empleado_id, subtotal, iva, total, forma_pago_id, autorizacion) VALUES (20010014, '2025-09-24 11:21:00', 24, 27.76, 5.83, 33.59, 2, NULL);
+INSERT INTO ticket (numero, fecha_hora, sucursal_id, empleado_id, subtotal, iva, total, forma_pago_id, autorizacion) VALUES (20010014, '2025-09-24 11:21:00', 1, 24, 27.76, 5.83, 33.59, 2, NULL);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010014, 3, 2, 2.30);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010014, 15, 2, 3.50);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010014, 7, 1, 6.20);
@@ -163,7 +163,7 @@ INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES 
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010014, 6, 1.25, 1.56);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010014, 1, 3, 2.55);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010014, 8, 0.5, 0.55);
-INSERT INTO ticket (numero, fecha_hora, empleado_id, subtotal, iva, total, forma_pago_id, autorizacion) VALUES (20010015, '2025-09-25 15:58:00', 15, 19.25, 4.04, 23.29, 1, '134875');
+INSERT INTO ticket (numero, fecha_hora, sucursal_id, empleado_id, subtotal, iva, total, forma_pago_id, autorizacion) VALUES (20010015, '2025-09-25 15:58:00', 1, 15, 19.25, 4.04, 23.29, 1, '134875');
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010015, 10, 1, 2.40);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010015, 17, 2, 1.40);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010015, 13, 3, 2.70);
@@ -174,7 +174,7 @@ INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES 
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010015, 5, 2, 1.00);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010015, 3, 1, 1.15);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010015, 20, 1, 1.30);
-INSERT INTO ticket (numero, fecha_hora, empleado_id, subtotal, iva, total, forma_pago_id, autorizacion) VALUES (20010016, '2025-09-26 10:34:00', 33, 23.25, 4.88, 28.13, 1, '819358');
+INSERT INTO ticket (numero, fecha_hora, sucursal_id, empleado_id, subtotal, iva, total, forma_pago_id, autorizacion) VALUES (20010016, '2025-09-26 10:34:00', 1, 33, 23.25, 4.88, 28.13, 1, '819358');
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010016, 7, 1, 6.20);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010016, 11, 1, 4.20);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010016, 18, 2, 3.20);
@@ -182,7 +182,7 @@ INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES 
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010016, 10, 1, 2.40);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010016, 17, 2, 1.40);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010016, 3, 3, 3.45);
-INSERT INTO ticket (numero, fecha_hora, empleado_id, subtotal, iva, total, forma_pago_id, autorizacion) VALUES (20010017, '2025-09-27 18:14:00', 11, 23.73, 4.98, 28.71, 1, '199052');
+INSERT INTO ticket (numero, fecha_hora, sucursal_id, empleado_id, subtotal, iva, total, forma_pago_id, autorizacion) VALUES (20010017, '2025-09-27 18:14:00', 1, 11, 23.73, 4.98, 28.71, 1, '199052');
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010017, 3, 2, 2.30);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010017, 15, 0.5, 0.88);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010017, 8, 2.5, 2.75);
@@ -190,7 +190,7 @@ INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES 
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010017, 9, 1, 3.10);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010017, 13, 1, 0.90);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010017, 2, 3, 11.40);
-INSERT INTO ticket (numero, fecha_hora, empleado_id, subtotal, iva, total, forma_pago_id, autorizacion) VALUES (20010018, '2025-09-28 14:51:00', 28, 47.60, 10.00, 57.60, 1, '643300');
+INSERT INTO ticket (numero, fecha_hora, sucursal_id, empleado_id, subtotal, iva, total, forma_pago_id, autorizacion) VALUES (20010018, '2025-09-28 14:51:00', 1, 28, 47.60, 10.00, 57.60, 1, '643300');
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010018, 3, 2, 2.30);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010018, 4, 3, 19.50);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010018, 19, 2, 0.90);
@@ -198,7 +198,7 @@ INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES 
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010018, 2, 1, 3.80);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010018, 7, 2.5, 15.50);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010018, 18, 2, 3.20);
-INSERT INTO ticket (numero, fecha_hora, empleado_id, subtotal, iva, total, forma_pago_id, autorizacion) VALUES (20010019, '2025-09-29 10:47:00', 19, 36.52, 7.67, 44.19, 2, NULL);
+INSERT INTO ticket (numero, fecha_hora, sucursal_id, empleado_id, subtotal, iva, total, forma_pago_id, autorizacion) VALUES (20010019, '2025-09-29 10:47:00', 1, 19, 36.52, 7.67, 44.19, 2, NULL);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010019, 2, 2, 7.60);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010019, 19, 2, 0.90);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010019, 16, 2, 2.20);
@@ -209,7 +209,7 @@ INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES 
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010019, 12, 3, 2.85);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010019, 9, 3, 9.30);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010019, 11, 2, 8.40);
-INSERT INTO ticket (numero, fecha_hora, empleado_id, subtotal, iva, total, forma_pago_id, autorizacion) VALUES (20010020, '2025-09-30 12:55:00', 42, 38.00, 7.98, 45.98, 2, NULL);
+INSERT INTO ticket (numero, fecha_hora, sucursal_id, empleado_id, subtotal, iva, total, forma_pago_id, autorizacion) VALUES (20010020, '2025-09-30 12:55:00', 1, 42, 38.00, 7.98, 45.98, 2, NULL);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010020, 7, 2.5, 15.50);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010020, 4, 1, 6.50);
 INSERT INTO ticket_linea (ticket_numero, producto_id, cantidad, importe) VALUES (20010020, 17, 3, 2.10);

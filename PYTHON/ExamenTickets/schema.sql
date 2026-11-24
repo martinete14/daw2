@@ -15,11 +15,10 @@ CREATE TABLE sucursal (
 );
 
 -- el id es el código del cajero que sale en el ticket (015, 033...)
+-- sin sucursal: un empleado puede rotar de sucursal, por eso la sucursal va en el ticket
 CREATE TABLE empleado (
-    id          INT PRIMARY KEY,
-    nombre      VARCHAR(100) NOT NULL,
-    sucursal_id INT NOT NULL,
-    FOREIGN KEY (sucursal_id) REFERENCES sucursal(id)
+    id     INT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL
 );
 
 -- el precio es el de una unidad (o de un kg)
@@ -40,12 +39,14 @@ CREATE TABLE forma_pago (
 CREATE TABLE ticket (
     numero        INT PRIMARY KEY,
     fecha_hora    DATETIME     NOT NULL,
+    sucursal_id   INT          NOT NULL,
     empleado_id   INT          NOT NULL,
     subtotal      DECIMAL(8,2) NOT NULL,
     iva           DECIMAL(8,2) NOT NULL,
     total         DECIMAL(8,2) NOT NULL,
     forma_pago_id INT          NOT NULL,
     autorizacion  VARCHAR(10)  NULL,
+    FOREIGN KEY (sucursal_id)   REFERENCES sucursal(id),
     FOREIGN KEY (empleado_id)   REFERENCES empleado(id),
     FOREIGN KEY (forma_pago_id) REFERENCES forma_pago(id)
 );

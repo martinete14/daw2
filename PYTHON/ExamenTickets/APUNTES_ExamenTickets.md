@@ -61,7 +61,7 @@ Un diccionario por tabla. La **clave** es lo que hace que no se repita:
 
 ```python
 datos["sucursal"]   = {'B12345678': {'id': 1, 'nombre': ..., 'direccion': ..., 'telefono': ...}}
-datos["empleado"]   = {15: {'nombre': 'Juan Pérez', 'sucursal_id': 1}, 33: {...}, ...}   # 7
+datos["empleado"]   = {15: 'Juan Pérez', 33: 'Laura García', ...}                        # 7
 datos["forma_pago"] = {'TARJETA': 1, 'EFECTIVO': 2}
 datos["producto"]   = {'Pasta Spaghetti 500g': {'id': 1, 'precio': 0.85}, ...}          # 20
 datos["ticket"]     = {20010001: {...el ticket de arriba...}, ...}                      # 20
@@ -88,10 +88,10 @@ Juan Pérez sale en varios tickets, pero como la clave es `15`, `setdefault` lo 
 ## La base, en criollo
 
 - **sucursal**: hay una sola (El Ahorro, Madrid), pero la tabla queda por si aparecen otras. Se distingue por el CIF.
-- **empleado**: el `id` es directamente el código del cajero del ticket (`015` → 15). No hace falta inventar otro.
+- **empleado**: el `id` es directamente el código del cajero del ticket (`015` → 15). No hace falta inventar otro. No lleva sucursal: un empleado puede trabajar una semana en una y la siguiente en otra.
 - **producto**: se distingue por la descripción. El precio es por unidad o por kg: `importe / cantidad` del primer ticket donde aparece.
 - **forma_pago**: TARJETA y EFECTIVO, así no se repite el texto en cada ticket.
-- **ticket**: la clave es el número del ticket. `autorizacion` queda en `NULL` si se pagó en efectivo.
+- **ticket**: la clave es el número del ticket. Lleva `sucursal_id`, porque la sucursal es la de esa compra, no la del empleado. `autorizacion` queda en `NULL` si se pagó en efectivo.
 - **ticket_linea**: une ticket y producto (relación muchos a muchos). La clave son las dos juntas. `cantidad` con 3 decimales por el `2.500` de los kg.
 
 Orden de los `INSERT`: sucursal → empleado → forma_pago → producto → ticket → ticket_linea. Siempre el "padre" antes que el "hijo", si no la clave foránea falla.

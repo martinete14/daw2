@@ -24,10 +24,10 @@ Las tablas mínimas que sugería el profe eran `sucursal`, `empleado`, `producto
 | Tabla | Clave | Qué guarda |
 |---|---|---|
 | `sucursal` | `id` | Nombre, dirección, CIF (único) y teléfono |
-| `empleado` | `id` = código del cajero (`015` → 15) | Nombre y la sucursal donde trabaja |
+| `empleado` | `id` = código del cajero (`015` → 15) | Nombre (sin sucursal: puede rotar de una a otra) |
 | `producto` | `id` | Descripción (única) y precio por unidad o por kg |
 | `forma_pago` | `id` | `TARJETA` o `EFECTIVO` |
-| `ticket` | `numero` (`20010001`) | Fecha y hora, cajero, subtotal, IVA, total, forma de pago y autorización (`NULL` si es en efectivo) |
+| `ticket` | `numero` (`20010001`) | Fecha y hora, sucursal, cajero, subtotal, IVA, total, forma de pago y autorización (`NULL` si es en efectivo) |
 | `ticket_linea` | `ticket_numero` + `producto_id` | Cantidad (con 3 decimales por los productos por kg, como `2.500`) e importe |
 
 ## Estructura del script
