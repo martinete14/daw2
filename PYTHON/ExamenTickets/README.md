@@ -50,7 +50,7 @@ Las tablas mínimas que sugería el profe eran `sucursal`, `empleado`, `producto
 | `parsear_fecha` | `Fecha:` | Fecha y hora juntas como `datetime` |
 | `parsear_cajero` | `Cajero:` | Tupla (código, nombre) |
 | `parsear_numero` | `Ticket:` | Número del ticket como entero |
-| `parsear_producto` | Las que empiezan con espacio y un número | Tupla (cantidad, descripción, importe) |
+| `parsear_producto` | Las que empiezan con espacio y terminan en `€` | Tupla (cantidad, descripción, importe) |
 | `parsear_totales` | `SUBTOTAL`, `IVA`, `TOTAL` | Los tres importes como `float` |
 | `parsear_pago` | `FORMA DE PAGO:` y `Autorización:` | Forma de pago y código de autorización |
 
@@ -64,21 +64,37 @@ El precio de cada producto se calcula la primera vez que aparece: `importe / can
 
 `generar_sql()` escribe sucursal, empleado, forma_pago, producto y después cada ticket con sus líneas, para que cada clave foránea ya exista cuando se inserta.
 
-## Validaciones
+## Validaciones y log de auditoría
 
-Cada ticket se procesa dentro de un `try`. Si algo falla se muestra `Descarto 'archivo': motivo` y se sigue con el siguiente.
+Cada ticket se procesa dentro de un `try`. Si algo falla, se lanza un `ErrorTicket` con un **tipo** y la **línea** del ticket donde está el error. El `except` de `procesar_carpeta()` lo anota en `tickets.log`, muestra `Descarto 'archivo': TIPO en la línea N` y sigue con el siguiente.
 
-| Validación | Dónde | Mensaje |
-|---|---|---|
-| Ticket repetido | `guardar_ticket` | `ticket repetido: N` |
-| Campos obligatorios (número, cajero, fecha, forma de pago, subtotal, IVA, total) | `validar_ticket` | `falta el campo X` |
-| Al menos un producto | `validar_ticket` | `ticket sin productos` |
-| Subtotal + IVA = total | `validar_ticket` | `subtotal + IVA no coincide con el total` |
-| Suma de las líneas = subtotal | `validar_ticket` | `la suma de productos no coincide con el subtotal` |
-| Fecha que exista | `parsear_fecha` | el `ValueError` de `strptime` |
-| CIF de 9 caracteres | `parsear_sucursal` | `CIF incorrecto: X` |
-| Número de ticket y código de cajero numéricos | `parsear_numero`, `parsear_cajero` | `número de ticket incorrecto: X`, `código de cajero incorrecto: X` |
-| Cantidad e importe mayores que 0 | `parsear_producto` | `cantidad o importe incorrecto: línea` |
+| Tipo | Qué controla | Dónde | Línea |
+|---|---|---|---|
+| `CIF_INVALIDO` | El CIF tiene 9 caracteres | `parsear_sucursal` | 3 |
+| `FECHA_INVALIDA` | La fecha existe (no 31/02) | `parsear_fecha` | la de `Fecha:` |
+| `CAJERO_INVALIDO` | El código de cajero es un número | `parsear_cajero` | la de `Cajero:` |
+| `NUMERO_TICKET_INVALIDO` | El número de ticket es un número | `parsear_numero` | la de `Ticket:` |
+| `CANTIDAD_INVALIDA` | La cantidad es un número mayor que 0 (`JJ` → error) | `parsear_producto` | la del producto |
+| `IMPORTE_INVALIDO` | El importe es un número mayor que 0 | `parsear_producto`, `parsear_totales` | la del importe |
+| `FORMATO_INCORRECTO` | Una línea con etiqueta que no se puede leer | `parsear_lineas` | la de esa línea |
+| `TOTAL_NO_CUADRA` | Subtotal + IVA = total | `validar_ticket` | la de `TOTAL A PAGAR` |
+| `SUBTOTAL_NO_CUADRA` | Suma de los productos = subtotal | `validar_ticket` | la de `SUBTOTAL` |
+| `FALTA_CAMPO` | Están número, cajero, fecha, forma de pago, subtotal, IVA y total | `validar_ticket` | `-` (es del ticket entero) |
+| `SIN_PRODUCTOS` | Hay al menos un producto | `validar_ticket` | `-` |
+| `TICKET_REPETIDO` | El número no se cargó antes | `guardar_ticket` | `-` |
+
+### `tickets.log`
+
+Se configura con el módulo `logging` en `configurar_log()`. Cada ejecución se agrega al final del archivo, así queda el historial: el inicio, cada ticket cargado (`INFO`), cada ticket descartado (`ERROR`) y el fin. Cada línea es `fecha | nivel | ticket | tipo | línea | detalle`:
+
+```
+2026-11-24 13:23:53 | INFO  | INICIO | carpeta tickets
+2026-11-24 13:23:53 | INFO  | ticket 20010010 | CARGADO | 8 productos, total 26.80 €
+2026-11-24 13:23:53 | ERROR | ticket 20010011 (factura_011.txt) | CANTIDAD_INVALIDA | línea 12 | la cantidad 'JJ' no es un número
+2026-11-24 13:23:53 | INFO  | FIN | 17 tickets cargados en insert_ticket.sql
+```
+
+En los errores va el número del ticket y también el archivo, por si el error está antes de la línea `Ticket:`.
 
 ## Ejecución
 
@@ -100,6 +116,7 @@ Sale:
   Formas de pago       2
 ----------------------------------
   SQL listo en insert_ticket.sql
+  Auditoría en tickets.log
 ```
 
 Después, en MySQL (Workbench o la consola), ejecutar primero `schema.sql` y después `insert_ticket.sql`.
@@ -110,16 +127,13 @@ Con los 20 tickets quedan 1 sucursal, 7 empleados, 20 productos, 2 formas de pag
 
 Para probar las validaciones, copié algunos tickets a otra carpeta y les cambié un dato a cada uno:
 
-| Cambio | Resultado |
+| Cambio | Resultado en `tickets.log` |
 |---|---|
-| El mismo ticket dos veces | `ticket repetido: 20010001` |
-| `TOTAL A PAGAR` cambiado | `subtotal + IVA no coincide con el total` |
-| CIF `B1234` | `CIF incorrecto: B1234` |
-| Fecha `31/02/2025` | `day is out of range for month` |
-| Sin la línea `Cajero:` | `falta el campo cajero` |
-| Ticket `2001X006` | `número de ticket incorrecto: 2001X006` |
-| Cantidad `0` | `cantidad o importe incorrecto: ...` |
-| Sin argumento | `Pasá la carpeta de los tickets: ...` |
-| Carpeta que no existe | `No existe la carpeta 'no_existe'` |
+| Cantidad `JJ` en el Azúcar del ticket 11 | `CANTIDAD_INVALIDA \| línea 12` |
+| Fecha `31/02/2025` | `FECHA_INVALIDA \| línea 6` |
+| `TOTAL A PAGAR` cambiado | `TOTAL_NO_CUADRA \| línea 25` |
+| El mismo ticket dos veces | `TICKET_REPETIDO \| línea -` |
+| Sin argumento | por pantalla: `Pasá la carpeta de los tickets: ...` |
+| Carpeta que no existe | por pantalla: `No existe la carpeta 'no_existe'` |
 
 Los productos por kg tienen una diferencia de un céntimo según el ticket (la Manzana Golden sale a 1.24 o a 1.25 el kg) por el redondeo del supermercado. Se guarda el precio del primer ticket donde aparece.

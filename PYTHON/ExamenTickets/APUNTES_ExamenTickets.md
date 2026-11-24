@@ -100,9 +100,13 @@ Orden de los `INSERT`: sucursal → empleado → forma_pago → producto → tic
 
 - **¿Por qué `round(..., 2)` al comparar?** Porque los `float` no son exactos. En el ticket 20010001 la suma de las líneas da `25.419999999999998` y no `25.42`. Sin el `round` lo descartaría estando bien.
 - **¿Por qué `parsear_sucursal` es distinta?** Porque sus datos no tienen etiqueta, son siempre las 3 primeras líneas. Por eso recibe todas las líneas y se llama una sola vez.
-- **¿Cómo sabe que una línea es un producto?** Empieza con espacio y lo primero es un número (`  2   Pasta...`). La cabecera también empieza con espacios, pero con letras (`Av.`, `CIF:`).
+- **¿Cómo sabe que una línea es un producto?** Empieza con espacio y termina en `€` (`  2   Pasta...   1.70 €`). La cabecera también empieza con espacios, pero no termina en `€`. Así, si la cantidad viene mal (`JJ`), igual la reconoce como producto y avisa `CANTIDAD_INVALIDA` en esa línea.
 - **¿Y `TOTAL` no se confunde con `SUBTOTAL`?** No, porque mira con qué *empieza* la línea: `SUBTOTAL` empieza con S.
-- **¿Qué pasa si un ticket viene mal?** `raise ValueError` con el motivo, el `except` de `procesar_carpeta` lo atrapa, muestra `Descarto 'archivo': motivo` y sigue. Los demás se cargan igual.
+- **¿Qué pasa si un ticket viene mal?** `raise ErrorTicket("TIPO", "detalle")`. En `parsear_lineas` el `except` le agrega el número de línea (`enumerate(lineas, start=1)`) y lo vuelve a lanzar. El `except` de `procesar_carpeta` lo anota en `tickets.log`, muestra `Descarto ...` y sigue. Los demás se cargan igual.
+- **¿Qué es `ErrorTicket`?** Una excepción mía (hereda de `Exception`) que además del mensaje lleva `tipo` y `linea`. Con un `ValueError` común solo tendría el texto.
+- **¿Qué guarda el log?** Fecha y hora, nivel (`INFO` si se cargó, `ERROR` si se descartó), número de ticket, tipo de error, línea y detalle. Se abre en modo agregar, así queda el historial de todas las ejecuciones: eso es la auditoría.
+- **¿Por qué `logging` y no `open(...).write`?** Es el módulo de Python para esto: pone la fecha y el nivel solo, con el formato de `basicConfig`.
+- **¿Por qué `línea -` en algunos?** `FALTA_CAMPO`, `SIN_PRODUCTOS` y `TICKET_REPETIDO` son del ticket entero, no de una línea.
 - **¿Por qué el precio sale de `importe / cantidad`?** El ticket no trae el precio unitario, solo el total de la línea. En los productos por kg puede variar un céntimo entre tickets por el redondeo (Manzana 1.24 o 1.25); me quedo con el primero.
 - **¿Por qué `sys.argv` y no `input()`?** Así se ejecuta de una pasándole la carpeta, sin preguntar nada, y sirve para cualquier carpeta de tickets.
 - **¿Por qué `with open`?** Cierra el archivo solo, aunque haya un error.
@@ -117,7 +121,7 @@ python build_insert_from_tickets.py                   # sin carpeta: avisa
 python build_insert_from_tickets.py no_existe         # carpeta mal: avisa
 ```
 
-Para probar una validación: copiar un ticket a otra carpeta, romperle un dato (el total, el CIF, poner fecha 31/02...) y correr el script con esa carpeta. Tiene que decir `Descarto ...` con el motivo.
+Para probar una validación: copiar un ticket a otra carpeta, romperle un dato (el total, el CIF, poner fecha 31/02...) y correr el script con esa carpeta. Tiene que decir `Descarto ...` con el tipo y la línea, y quedar anotado en `tickets.log`.
 
 Para comprobar en MySQL que todo cuadra:
 
