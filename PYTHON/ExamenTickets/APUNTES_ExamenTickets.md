@@ -29,7 +29,7 @@ main()
  │    └─ guardar_ticket()       lo suma a `datos` sin repetir
  ├─ generar_sql()          `datos` → lista de INSERT
  ├─ escribir_sql()         → insert_ticket.sql
- └─ mostrar_resumen()      Tickets: 20 | Empleados: 7 | ...
+ └─ mostrar_resumen()      RESUMEN DE LA CARGA: 20 / 7 / 20 / 2
 ```
 
 El truco de las `parsear_*`: **todas reciben todas las líneas**, pero cada una solo hace algo si la línea empieza con *su* etiqueta (`Fecha:`, `Cajero:`...). Las demás la ignoran.

@@ -224,9 +224,15 @@ def escribir_sql(sql: list[str], fichero: str) -> None:
 
 def mostrar_resumen(datos: dict) -> None:
     """Muestra cuántos registros quedaron de cada cosa."""
-    print(f"Tickets: {len(datos['ticket'])} | Empleados: {len(datos['empleado'])} | "
-          f"Productos: {len(datos['producto'])} | Formas de pago: {len(datos['forma_pago'])}")
-    print(f"Generado {FICHERO_SALIDA}")
+    print("=" * 34)
+    print("  RESUMEN DE LA CARGA")
+    print("=" * 34)
+    print(f"  {'Tickets':<16}{len(datos['ticket']):>6}")
+    print(f"  {'Empleados':<16}{len(datos['empleado']):>6}")
+    print(f"  {'Productos':<16}{len(datos['producto']):>6}")
+    print(f"  {'Formas de pago':<16}{len(datos['forma_pago']):>6}")
+    print("-" * 34)
+    print(f"  SQL listo en {FICHERO_SALIDA}")
 
 
 def main():

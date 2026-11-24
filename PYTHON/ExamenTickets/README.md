@@ -91,8 +91,15 @@ python build_insert_from_tickets.py data_tickets
 Sale:
 
 ```
-Tickets: 20 | Empleados: 7 | Productos: 20 | Formas de pago: 2
-Generado insert_ticket.sql
+==================================
+  RESUMEN DE LA CARGA
+==================================
+  Tickets             20
+  Empleados            7
+  Productos           20
+  Formas de pago       2
+----------------------------------
+  SQL listo en insert_ticket.sql
 ```
 
 Después, en MySQL (Workbench o la consola), ejecutar primero `schema.sql` y después `insert_ticket.sql`.
