@@ -1,4 +1,4 @@
-const revealItems = document.querySelectorAll(".guide-section, .library-group");
+const revealItems = document.querySelectorAll(".cv-section, .timeline-item, .education-card, .skill-group, .portfolio-footer");
 
 if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
   document.body.classList.add("motion-ready");
