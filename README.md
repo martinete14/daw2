@@ -8,6 +8,7 @@ Una carpeta por asignatura, y va creciendo a medida que avanzo.
 - `WEBCLIENTE`: JavaScript en el navegador. Una carpeta por actividad:
   - `EjercicioBOTON`: un botón que cuenta los clics y cambia la foto de fondo.
   - `ValidacionDeFormularios`: formulario de inscripción a un gimnasio con validación nativa de HTML y reglas propias en JavaScript.
+  - `ValidacionDeFormularios-Simple`: el examen, el mismo formulario validado en un solo archivo JS. Cada campo se valida al salir de él (`blur`) con un mensaje debajo, y al enviar se revisan todos y un `alert` dice si se envió o no.
   - `ActividadContraseña`: generador y evaluador de contraseñas, con Vite.
   - `ActividadSessionStorage`: la primera versión del login con sessionStorage y el carrito de yerbas, con Vite.
   - `TiendaYerbas`: la versión que entregué de la actividad de sessionStorage y localStorage. Login con 3 usuarios de prueba, catálogo de yerbas sacado de `data/productos.json`, carrito en el sessionStorage e inventario en el localStorage que se actualiza entre pestañas. Se abre con Live Server; el detalle está en su README.
