@@ -664,6 +664,8 @@ Tres errores que ya estaban y se arreglaron de paso (tienda.js y estilos.css):
 La memoria está al día: 1.4 (JavaScript ya no reinicia ningún gif y ahora también dice
 que pregunta antes de dar de baja un producto, el confirm del gestor), RNF-09 y la
 pantalla 04. OJO: el PDF de la memoria es el del 12/11; regenerarlo antes del 02/12.
+HECHO (26/11): PDF regenerado desde el .md, mismo diseño y 13 páginas. Ya trae el gestor
+(ficheros gestor.php y gestor_baja.php en 2.8, el confirm en la pantalla 08) y no habla de gifs.
 
 Probado (16/11, Chrome sin ventana): cuadro por cuadro al entrar y salir el mouse en
 yerbas, mates y kits (la foto no se sale de la tarjeta); las 7 páginas con animaciones,
