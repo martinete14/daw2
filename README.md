@@ -20,5 +20,5 @@ Una carpeta por asignatura, y va creciendo a medida que avanzo.
 - `INGLES_TECNICO`: inglés técnico. `SuperSearch` es el prototipo web del pitch *My First App Idea* que hicimos con Jesús y Cristina: elegís una receta y te compara cuánto sale la compra en cada supermercado.
 - `INTERFAZ`: diseño de interfaces web. Por ahora el inicio de sesión y recuperar contraseña en HTML crudo, con logo y favicon.
 - `IPE`: Itinerario Personal para la Empleabilidad. No es de programar, pero la pongo para tener todo junto. Por ahora está mi CV.
-- `DESPLIEGUE`: despliegue de aplicaciones web. Por ahora vacía, solo el README.
+- `DESPLIEGUE`: despliegue de aplicaciones web. Dos webs clonadas de GitHub y servidas con nginx en un Ubuntu Server dentro de VirtualBox: mi portfolio ([martin-portfolio](https://github.com/martinete14/martin-portfolio)) y La Pulpería ([la-pulperia](https://github.com/martinete14/la-pulperia)). En su README están la configuración de VirtualBox y nginx, y `webs.sh`, el script que las despliega.
 - `TFG`: el Trabajo de Fin de Grado. Por ahora vacía, solo el README.
