@@ -114,6 +114,7 @@ fi
 
 nginx -t
 systemctl reload nginx
+sleep 2   # que terminen los workers viejos antes de comprobar
 
 echo
 echo "=== 5/5 Comprobación (200 = bien, 301 = redirige a la barra final) ==="
