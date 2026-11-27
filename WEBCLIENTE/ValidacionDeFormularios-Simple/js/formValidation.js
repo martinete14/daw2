@@ -40,7 +40,6 @@ const pesoInput = document.getElementById("peso")
 const nivelInput = document.getElementById("nivel")
 const objetivosInput = document.getElementById("objetivos")
 const condicionesInputs = document.querySelectorAll('input[name="condiciones[]"]')
-const condicionesChips = condicionesInputs[0].closest(".chips")
 
 // 4) Plan y horarios
 const planInput = document.getElementById("plan")
@@ -60,6 +59,13 @@ const tosInput = document.querySelector('input[name="tos"]')
 const rgpdInput = document.querySelector('input[name="rgpd"]')
 const tosLabel = tosInput.parentElement
 const rgpdLabel = rgpdInput.parentElement
+
+// Botón de enviar: se habilita cuando todos los obligatorios están bien
+// (preferencia de contacto y franja horaria no están porque siempre vienen elegidas)
+const botonEnviar = formulario.querySelector('button[type="submit"]')
+const obligatorios = [nombreInput, apellidoInput, dniInput, fechaNacimientoInput, emailInput, telefonoInput,
+    direccionInput, ciudadInput, codigoPostalInput, alturaInput, pesoInput, planInput, diasChips,
+    ibanInput, tosLabel, rgpdLabel]
 
 // ---------- Eventos ----------
 // Los campos de texto se validan al salir (blur); los select, radios y checkbox al cambiar (change)
@@ -88,7 +94,7 @@ alturaInput.addEventListener("blur", handleValidarAltura)
 pesoInput.addEventListener("blur", handleValidarPeso)
 nivelInput.addEventListener("change", handleValidarNivel)
 objetivosInput.addEventListener("blur", handleValidarObjetivos)
-condicionesInputs.forEach(input => input.addEventListener("change", handleValidarCondiciones))
+condicionesInputs.forEach(input => input.addEventListener("change", handleMarcarCondicion))
 
 // 4) Plan y horarios
 planInput.addEventListener("change", handleValidarPlan)
@@ -128,7 +134,6 @@ function handleEnviar(event){
     handleValidarPeso()
     handleValidarNivel()
     handleValidarObjetivos()
-    handleValidarCondiciones()
     handleValidarPlan()
     handleValidarDias()
     handleValidarHora()
@@ -154,17 +159,33 @@ function handleLimpiar(event){
     formulario.querySelectorAll(".error-msg").forEach(error => error.remove())
     formulario.querySelectorAll('[aria-invalid="true"]').forEach(campo => campo.setAttribute("aria-invalid", "false"))
     formulario.querySelectorAll('[data-valid="true"]').forEach(campo => campo.removeAttribute("data-valid"))
+    actualizarBoton()
+}
+
+// El botón de enviar solo se puede pulsar si todos los obligatorios están bien y no hay ningún error
+function actualizarBoton(){
+    const completos = obligatorios.every(campo => campo.getAttribute("data-valid") === "true")
+    const errores = formulario.querySelectorAll(".error-msg")
+    botonEnviar.disabled = !completos || errores.length > 0
 }
 
 // ---------- 1) Datos personales ----------
 
+// Nombre y apellidos: solo letras y espacios, y que parezca un nombre real
 function handleValidarNombre(event){
     const valor = nombreInput.value.trim()
+    const regexLetras = /^[A-Za-zÁÉÍÓÚáéíóúÜüÑñ\s]+$/
     if(valor === ""){
         showError(nombreInput, "El nombre es obligatorio")
     }
     else if(valor.length < 3){
         showError(nombreInput, "El nombre debe tener al menos 3 caracteres")
+    }
+    else if(!regexLetras.test(valor)){
+        showError(nombreInput, "El nombre solo puede tener letras")
+    }
+    else if(!pareceNombreReal(valor)){
+        showError(nombreInput, "Escribe un nombre real")
     }
     else{
         clearError(nombreInput)
@@ -172,15 +193,37 @@ function handleValidarNombre(event){
 }
 function handleValidarApellido(event){
     const valor = apellidoInput.value.trim()
+    const regexLetras = /^[A-Za-zÁÉÍÓÚáéíóúÜüÑñ\s]+$/
     if(valor === ""){
         showError(apellidoInput, "El apellido es obligatorio")
     }
     else if(valor.length < 3){
         showError(apellidoInput, "El apellido debe tener al menos 3 caracteres")
     }
+    else if(!regexLetras.test(valor)){
+        showError(apellidoInput, "El apellido solo puede tener letras")
+    }
+    else if(!pareceNombreReal(valor)){
+        showError(apellidoInput, "Escribe un apellido real")
+    }
     else{
         clearError(apellidoInput)
     }
+}
+// Un nombre real tiene alguna vocal, no repite la misma letra 3 veces seguidas (aaa)
+// y no tiene 3 letras seguidas del abecedario (abc, bcd, xyz...)
+function pareceNombreReal(valor){
+    const texto = valor.toLowerCase()
+    const abecedario = "abcdefghijklmnopqrstuvwxyz"
+    if(!/[aeiouáéíóúü]/.test(texto) || /(.)\1\1/.test(texto)){
+        return false
+    }
+    for(let i = 0; i < texto.length - 2; i++){
+        if(abecedario.includes(texto.substring(i, i + 3))){
+            return false
+        }
+    }
+    return true
 }
 function handleValidarDNI(event){
     const valor = dniInput.value.trim()
@@ -372,15 +415,19 @@ function handleValidarObjetivos(event){
         clearError(objetivosInput)
     }
 }
-// "Ninguna" no se puede marcar junto con otra condición
-function handleValidarCondiciones(event){
-    const marcadas = document.querySelectorAll('input[name="condiciones[]"]:checked')
+// "Ninguna" no va con otras condiciones: al marcarla se desmarcan las demás,
+// y al marcar otra condición se desmarca "Ninguna"
+function handleMarcarCondicion(event){
     const ninguna = document.querySelector('input[name="condiciones[]"][value="ninguna"]')
-    if(ninguna.checked && marcadas.length > 1){
-        showError(condicionesChips, "Si marcas «Ninguna» no puedes marcar otras condiciones")
+    if(event.target === ninguna && ninguna.checked){
+        condicionesInputs.forEach(input => {
+            if(input !== ninguna){
+                input.checked = false
+            }
+        })
     }
-    else{
-        clearError(condicionesChips)
+    else if(event.target.checked){
+        ninguna.checked = false
     }
 }
 
@@ -523,6 +570,7 @@ function showError(input, message){
         const error = input.parentElement.querySelector(".error-msg")
         error.innerText = message
     }
+    actualizarBoton()
 }
 // Marca el campo como válido y, si tenía un error, lo borra
 function clearError(input){
@@ -532,4 +580,8 @@ function clearError(input){
         const error = input.parentElement.querySelector(".error-msg")
         error.remove()
     }
+    actualizarBoton()
 }
+
+// Al abrir la página el botón empieza deshabilitado
+actualizarBoton()

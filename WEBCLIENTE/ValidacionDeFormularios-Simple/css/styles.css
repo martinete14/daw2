@@ -224,3 +224,10 @@ input[data-valid="true"] {
   border-radius: 8px;
 }
 
+
+/* Botón de enviar deshabilitado hasta que el formulario esté completo */
+.btn-primary:disabled {
+  opacity: .45;
+  cursor: not-allowed;
+  box-shadow: none;
+}

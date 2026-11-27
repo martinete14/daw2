@@ -37,7 +37,7 @@ El CSS pinta de rojo los `input[aria-invalid="true"]` y de azul los `input[data-
 
 | Campo | Obligatorio | Regla | Mensaje |
 |---|---|---|---|
-| Nombre / Apellidos | Sí | Al menos 3 caracteres | `El nombre debe tener al menos 3 caracteres` |
+| Nombre / Apellidos | Sí | Al menos 3 caracteres, solo letras y que parezca real (ver abajo) | `El nombre solo puede tener letras` / `Escribe un nombre real` |
 | DNI | Sí | `/^[A-Za-z0-9]{5,15}$/` | `El DNI no es válido, debe tener entre 5 y 15 caracteres alfanuméricos` |
 | Fecha de nacimiento | Sí | No futura, entre 15 y 100 años | `Debes tener al menos 15 años` |
 | Sexo / Estado civil / Nivel | No | Una de las opciones del select | `El sexo seleccionado no es válido` |
@@ -50,7 +50,7 @@ El CSS pinta de rojo los `input[aria-invalid="true"]` y de azul los `input[data-
 | Altura | Sí | Número entre 120 y 230 | `La altura debe estar entre 120 y 230 cm` |
 | Peso | Sí | Número entre 35 y 250 | `El peso debe estar entre 35 y 250 kg` |
 | Objetivos | No | Máximo 500 caracteres | `Los objetivos no pueden superar los 500 caracteres` |
-| Condiciones médicas | No | «Ninguna» no va con otras | `Si marcas «Ninguna» no puedes marcar otras condiciones` |
+| Condiciones médicas | No | «Ninguna» no va con otras: se desmarcan solas | — |
 | Plan | Sí | Elegir uno | `El plan es obligatorio` |
 | Días preferidos | Sí | Al menos un día | `Elige al menos un día` |
 | Franja horaria | Siempre tiene una elegida | Una de las 5 franjas | `Elige una franja horaria válida` |
@@ -64,6 +64,12 @@ El CSS pinta de rojo los `input[aria-invalid="true"]` y de azul los `input[data-
 Los campos obligatorios vacíos dan `El ... es obligatorio`. Los opcionales vacíos están bien; si se escriben, se validan.
 
 En **Clases grupales**, `handleMarcarClase` hace que un clic marque o desmarque la clase sin mantener Ctrl.
+
+### Pensado para facilitarle el formulario al usuario
+
+- **Nombre real:** `pareceNombreReal` rechaza lo que no es un nombre aunque tenga 3 letras: sin vocales (`bcdf`), la misma letra 3 veces seguidas (`aaaa`) o 3 letras seguidas del abecedario (`abcd`, `xyz`). Sirve para nombre y apellidos.
+- **Condiciones médicas:** `handleMarcarCondicion` desmarca las demás al marcar «Ninguna», y desmarca «Ninguna» al marcar otra. Así el usuario no puede equivocarse y no hace falta un mensaje de error.
+- **Botón Enviar deshabilitado:** `actualizarBoton` se llama en cada `showError` y `clearError`. El botón se habilita solo cuando todos los obligatorios tienen `data-valid="true"` y no queda ningún `.error-msg`. Si después se rompe un campo, se vuelve a deshabilitar. Preferencia de contacto y franja horaria no cuentan porque siempre vienen elegidas.
 
 ## Ejecución
 
@@ -85,7 +91,14 @@ Probado en Chrome tecleando en los campos:
 | CP `123` | `El código postal no es válido, debe tener 5 dígitos` |
 | Altura `100` | `La altura debe estar entre 120 y 230 cm` |
 | Nombre `Ma` después de vacío | Cambia el texto del mensaje, no agrega otro |
-| Enviar con errores | `alert`: `Formulario no enviado. Revisa los campos marcados en rojo.` y 16 campos marcados |
-| «Ninguna» + «Lesiones recientes» | `Si marcas «Ninguna» no puedes marcar otras condiciones` |
+| Nombre `abcd` / `aaaa` / `bcdf` | `Escribe un nombre real` |
+| Nombre `Juan3` | `El nombre solo puede tener letras` |
+| Nombre `Luz`, `Ana María`, `Christian` | Correctos |
+| Marcar «Cardíacas» y «Lesiones», después «Ninguna» | Se desmarcan Cardíacas y Lesiones |
+| Con «Ninguna» marcada, marcar «Respiratorias» | Se desmarca «Ninguna» |
+| Abrir la página | Botón Enviar deshabilitado |
+| Completar todo menos la casilla de privacidad | Sigue deshabilitado |
+| Marcar la última casilla | Se habilita |
+| Romper el CP (`123`) con todo completo | Se vuelve a deshabilitar |
 | Todo bien y Enviar | `alert`: `Formulario enviado` |
-| Limpiar | Sin mensajes ni bordes |
+| Limpiar | Sin mensajes ni bordes y botón deshabilitado |
