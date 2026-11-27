@@ -214,8 +214,8 @@ function handleValidarFechaNacimiento(event){
     else if(edad < 15){
         showError(fechaNacimientoInput, "Debes tener al menos 15 años")
     }
-    else if(edad > 120){
-        showError(fechaNacimientoInput, "La edad no puede superar los 120 años")
+    else if(edad > 100){
+        showError(fechaNacimientoInput, "La edad no puede superar los 100 años")
     }
     else{
         clearError(fechaNacimientoInput)

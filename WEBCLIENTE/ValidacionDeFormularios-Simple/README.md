@@ -39,7 +39,7 @@ El CSS pinta de rojo los `input[aria-invalid="true"]` y de azul los `input[data-
 |---|---|---|---|
 | Nombre / Apellidos | Sí | Al menos 3 caracteres | `El nombre debe tener al menos 3 caracteres` |
 | DNI | Sí | `/^[A-Za-z0-9]{5,15}$/` | `El DNI no es válido, debe tener entre 5 y 15 caracteres alfanuméricos` |
-| Fecha de nacimiento | Sí | No futura, entre 15 y 120 años | `Debes tener al menos 15 años` |
+| Fecha de nacimiento | Sí | No futura, entre 15 y 100 años | `Debes tener al menos 15 años` |
 | Sexo / Estado civil / Nivel | No | Una de las opciones del select | `El sexo seleccionado no es válido` |
 | Email | Sí | `/^[^\s@]+@[^\s@]+\.[^\s@]+$/` | `El email no es válido` |
 | Teléfono | Sí | `/^[0-9\s+()-]{9,20}$/` | `El teléfono no es válido, usa entre 9 y 20 caracteres: ...` |
@@ -79,6 +79,7 @@ Probado en Chrome tecleando en los campos:
 | Apellido `Pe` | `El apellido debe tener al menos 3 caracteres` |
 | DNI `12-34` | `El DNI no es válido, ...` |
 | Fecha 01/01/2015 | `Debes tener al menos 15 años` |
+| Fecha 01/01/1920 | `La edad no puede superar los 100 años` |
 | Email `martin@correo` | `El email no es válido` |
 | Teléfono `600 12` | `El teléfono no es válido, ...` |
 | CP `123` | `El código postal no es válido, debe tener 5 dígitos` |
